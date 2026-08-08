@@ -1,0 +1,184 @@
+---
+interface Props {
+  locale: 'en' | 'fr' | 'sw';
+}
+
+const { locale } = Astro.props;
+
+const content: Record<string, {
+  heading: string;
+  subtext: string;
+  cta: string;
+  ctaHref: string;
+  capabilities: Array<{ title: string; description: string; href: string }>;
+}> = {
+  en: {
+    heading: 'Connected capabilities, not disconnected tools',
+    subtext: 'Six core modules run every day. Thirteen add-on modules activate when your organisation needs them.',
+    cta: 'Explore all capabilities',
+    ctaHref: '/en/capabilities/',
+    capabilities: [
+      { title: 'Finance & Accounting', description: 'Double-entry GL, AP/AR, bank reconciliation, multi-currency, VAT/WHT, budgets, and financial statements.', href: '/en/capabilities/accounting/' },
+      { title: 'Inventory & Warehousing', description: 'Item catalogue, stock tracking, FIFO/weighted-average costing, GRN, transfers, and reorder levels.', href: '/en/capabilities/inventory/' },
+      { title: 'Sales & Customer Operations', description: 'Quotations, orders, invoices, delivery notes, credit notes, receipts, and customer management.', href: '/en/capabilities/sales/' },
+      { title: 'Procurement & Suppliers', description: 'Supplier master, requisitions, RFQ, purchase orders, three-way matching, and supplier payments.', href: '/en/capabilities/procurement/' },
+      { title: 'Manufacturing & Production', description: 'BOM, routings, work centres, production orders, QC, genealogy, OEE, and yield tracking.', href: '/en/capabilities/manufacturing/' },
+      { title: 'HR & Payroll', description: 'Employee master, contracts, leave, attendance, payroll processing, and multi-country statutory compliance.', href: '/en/capabilities/hr-payroll/' },
+      { title: 'Projects & Work Planning', description: 'Project register, budget, milestones, tasks, timesheets, resource allocation, and project P&L.', href: '/en/capabilities/projects/' },
+      { title: 'Reporting & Insight', description: 'Real-time dashboards, management reports, drill-down analytics, and AI-powered financial commentary.', href: '/en/capabilities/reporting/' },
+    ],
+  },
+  fr: {
+    heading: 'Des capacités connectées, pas des outils dispersés',
+    subtext: 'Six modules de base fonctionnent au quotidien. Treize modules complémentaires s\'activent selon vos besoins.',
+    cta: 'Explorer toutes les capacités',
+    ctaHref: '/fr/capacites/',
+    capabilities: [
+      { title: 'Finance et comptabilité', description: 'Grand livre, fournisseurs/clients, rapprochement bancaire, multi-devises, TVA/TS et états financiers.', href: '/fr/capacites/comptabilite/' },
+      { title: 'Inventaire et entrepôts', description: 'Catalogue d\'articles, suivi des stocks, coût FIFO/moyen pondéré, réceptions et transferts.', href: '/fr/capacites/inventaire/' },
+      { title: 'Ventes et opérations clients', description: 'Devis, commandes, factures, bons de livraison, avoirs et gestion client.', href: '/fr/capacites/ventes/' },
+      { title: 'Achats et fournisseurs', description: 'Fournisseurs, demandes d\'achat, bons de commande, rapprochement trois voies et paiements.', href: '/fr/capacites/achats/' },
+      { title: 'Fabrication et production', description: 'Nomenclatures, gammes, centres de travail, ordres de production, contrôle qualité et suivi de rendement.', href: '/fr/capacites/fabrication/' },
+      { title: 'RH et paie', description: 'Fiche employé, contrats, congés, présence, traitement de paie et conformité multi-pays.', href: '/fr/capacites/rh-paie/' },
+      { title: 'Projets et planification', description: 'Registre projets, budget, jalons, tâches, feuilles de temps et rentabilité projet.', href: '/fr/capacites/projets/' },
+      { title: 'Rapports et analyse', description: 'Tableaux de bord, rapports de gestion, analyses détaillées et commentaires financiers IA.', href: '/fr/capacites/rapports/' },
+    ],
+  },
+  sw: {
+    heading: 'Uwezo uliounganishwa, si zana zilizotenganishwa',
+    subtext: 'Moduli sita za msingi zinaendesha kila siku. Moduli kumi na tatu za nyongeza zinaamilika shirika linapohitaji.',
+    cta: 'Chunguza uwezo wote',
+    ctaHref: '/sw/uwezo/',
+    capabilities: [
+      { title: 'Fedha na Uhasibu', description: 'GL ya kuingia mara mbili, AP/AR, upatanisho wa benki, sarafu nyingi, VAT/WHT, bajeti, na taarifa za kifedha.', href: '/sw/uwezo/hasibu/' },
+      { title: 'Hisa na Ghala', description: 'Orodha ya bidhaa, ufuatiliaji wa hisa, gharama FIFO/wastani, GRN, na uhamisho.', href: '/sw/uwezo/hisa/' },
+      { title: 'Mauzo na Huduma kwa Wateja', description: 'Nukuu, amana, ankara, utoaji, mikopo, risiti, na usimamizi wa wateja.', href: '/sw/uwezo/mauzo/' },
+      { title: 'Manunuzi na Wasambazaji', description: 'Wasambazaji, maombi ya ununuzi, PO, ulinganisho wa njia tatu, na malipo.', href: '/sw/uwezo/manunuzi/' },
+      { title: 'Uzalishaji na Utengenezaji', description: 'BOM, njia, vituo vya kazi, amana za uzalishaji, QC, na ufuatiliaji wa mazao.', href: '/sw/uwezo/uzalishaji/' },
+      { title: 'HR na Mishahara', description: 'Ficha mfanyakazi, mikataba, likizo, mahudhuryo, usindikaji wa mshahara, na kufuata sheria za nchi nyingi.', href: '/sw/uwezo/hr-mishahara/' },
+      { title: 'Miradi na Kupanga Kazi', description: 'Sajili ya miradi, bajeti, hatua, kazi, karatasi za wakati, na ugavi wa rasilimali.', href: '/sw/uwezo/miradi/' },
+      { title: 'Ripati na Maarifa', description: 'Dashibodi za wakati halisi, ripati za usimamizi, uchambuzi, na maoni ya kifedha ya AI.', href: '/sw/uwezo/ripoti/' },
+    ],
+  },
+};
+
+const t = content[locale];
+---
+
+<section class="cap-section section--dark" aria-labelledby="cap-heading">
+  <div class="container">
+    <div class="cap-header">
+      <h2 id="cap-heading">{t.heading}</h2>
+      <p>{t.subtext}</p>
+    </div>
+    <div class="cap-grid">
+      {t.capabilities.map((cap) => (
+        <a href={cap.href} class="cap-card">
+          <h3>{cap.title}</h3>
+          <p>{cap.description}</p>
+          <span class="cap-arrow" aria-hidden="true">→</span>
+        </a>
+      ))}
+    </div>
+    <div class="cap-cta">
+      <a href={t.ctaHref} class="btn btn--inverse">{t.cta}</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cap-header {
+    max-width: 560px;
+    margin-bottom: var(--kc-space-12);
+  }
+
+  .cap-header h2 {
+    font-size: var(--kc-text-3xl);
+  }
+
+  .cap-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--kc-space-4);
+    margin-bottom: var(--kc-space-10);
+  }
+
+  .cap-card {
+    display: flex;
+    flex-direction: column;
+    padding: var(--kc-space-6);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--kc-border-dark);
+    border-radius: var(--kc-radius-lg);
+    transition: all var(--kc-transition-fast);
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+  }
+
+  .cap-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--kc-teal);
+  }
+
+  .cap-card h3 {
+    font-family: var(--kc-font-body);
+    font-size: var(--kc-text-base);
+    font-weight: var(--kc-weight-semibold);
+    color: var(--kc-text-inverse);
+    margin-bottom: var(--kc-space-2);
+  }
+
+  .cap-card p {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-inverse-muted);
+    margin: 0;
+    flex: 1;
+  }
+
+  .cap-arrow {
+    color: var(--kc-teal-light);
+    font-size: var(--kc-text-lg);
+    margin-top: var(--kc-space-4);
+    transition: transform var(--kc-transition-fast);
+  }
+
+  .cap-card:hover .cap-arrow {
+    transform: translateX(4px);
+  }
+
+  .cap-cta {
+    text-align: center;
+  }
+
+  .btn--inverse {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--kc-space-3) var(--kc-space-6);
+    font-weight: var(--kc-weight-semibold);
+    font-size: var(--kc-text-sm);
+    border-radius: var(--kc-radius-lg);
+    background: transparent;
+    color: var(--kc-text-inverse);
+    border: 2px solid var(--kc-teal-light);
+    transition: all var(--kc-transition-fast);
+    text-decoration: none;
+  }
+
+  .btn--inverse:hover {
+    background: var(--kc-teal);
+    border-color: var(--kc-teal);
+  }
+
+  @media (max-width: 1024px) {
+    .cap-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .cap-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

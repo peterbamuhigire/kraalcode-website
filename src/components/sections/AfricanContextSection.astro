@@ -1,0 +1,138 @@
+---
+interface Props {
+  locale: 'en' | 'fr' | 'sw';
+}
+
+const { locale } = Astro.props;
+
+const content: Record<string, {
+  heading: string;
+  subtext: string;
+  points: Array<{ title: string; description: string }>;
+}> = {
+  en: {
+    heading: 'Built for how African organisations actually work',
+    subtext: 'Kraal Code was designed from the ground up for the operating realities of East and Central African businesses — not adapted from a template built for another market.',
+    points: [
+      { title: 'Multi-branch and distributed operations', description: 'Manage inventory, approvals, and reporting across multiple locations, cities, and countries from one platform.' },
+      { title: 'Field and mobile work', description: 'Record transactions, capture attendance, submit reports, and approve requests from a phone — even with intermittent connectivity.' },
+      { title: 'Local currencies, tax, and payroll', description: 'UGX-denominated pricing. Multi-country statutory compliance for Uganda, Kenya, Tanzania, and Rwanda. EFRIS, MTN MoMo, and Airtel Money integrations.' },
+      { title: 'Usable without weeks of training', description: 'Designed so any employee can complete core tasks on their first day — enforced by an 85% unassisted task success target.' },
+      { title: 'Support grounded in the region', description: 'Implementation and support from a team that understands local business practices, regulatory requirements, and operating constraints.' },
+    ],
+  },
+  fr: {
+    heading: 'Conçu pour la réalité des organisations africaines',
+    subtext: 'Kraal Code a été conçu dès le départ pour les réalités opérationnelles des entreprises d\'Afrique de l\'Est et Centrale.',
+    points: [
+      { title: 'Opérations multi-sites et distribuées', description: 'Gérez l\'inventaire, les approbations et les rapports sur plusieurs sites depuis une seule plateforme.' },
+      { title: 'Travail terrain et mobile', description: 'Enregistrez les transactions, capturez la présence et soumettez des rapports depuis un téléphone.' },
+      { title: 'Devises, fiscalité et paie locaux', description: 'Tarification en UGX. Conformité multi-pays pour l\'Ouganda, le Kenya, la Tanzanie et le Rwanda.' },
+      { title: 'Utilisable sans semaines de formation', description: 'Conçu pour que tout employé puisse accomplir les tâches de base dès le premier jour.' },
+      { title: 'Support ancré dans la région', description: 'Implémentation et support d\'une équipe qui comprend les pratiques commerciales locales.' },
+    ],
+  },
+  sw: {
+    heading: 'Imejengwa kwa jinsi mashirika ya Kiafrika yanavyofanya kazi',
+    subtext: 'Kraal Code ilibuniwa kutoka mwanzo kwa hali za uendeshaji wa biashara za Afrika Mashariki na Kati.',
+    points: [
+      { title: 'Shughuli za matawi mengi na zilizosambazwa', description: 'Simamia hisa, idhini, na ripoti katika maeneo mengi kutoka jukwaa moja.' },
+      { title: 'Kazi ya uwanja na ya rununu', description: 'Rekodi miamala, pata mahudhuryo, na wasilisha ripoti kutoka simu.' },
+      { title: 'Sarafu za ndani, kodi, na mishahara', description: 'Bei katika UGX. Kufuata sheria za nchi nyingi kwa Uganda, Kenya, Tanzania, na Rwanda.' },
+      { title: 'Inatumika bila mafunzo ya wiki', description: 'Imebuniwa ili mfanyakazi aweze kumaliza kazi za msingi siku ya kwanza.' },
+      { title: 'Msaada uliokita katika eneo', description: 'Utekelezaji na msaada kutoka timu inayoelewa mazoea ya biashara ya ndani.' },
+    ],
+  },
+};
+
+const t = content[locale];
+---
+
+<section class="africa-section section" aria-labelledby="africa-heading">
+  <div class="container africa-inner">
+    <div class="africa-image">
+      <img
+        src="/src/assets/images/home/african-context-smart-farming.jpg"
+        alt="Woman farmer using digital tablet to check crops in greenhouse — representing African innovation and technology adoption"
+        width="560"
+        height="400"
+        loading="lazy"
+      />
+    </div>
+    <div class="africa-content">
+      <h2 id="africa-heading">{t.heading}</h2>
+      <p class="africa-subtext">{t.subtext}</p>
+      <ul class="africa-points" role="list">
+        {t.points.map((point) => (
+          <li>
+            <strong>{point.title}</strong>
+            <span>{point.description}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .africa-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--kc-space-12);
+    align-items: center;
+  }
+
+  .africa-image {
+    border-radius: var(--kc-radius-lg);
+    overflow: hidden;
+  }
+
+  .africa-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .africa-content h2 {
+    font-size: var(--kc-text-3xl);
+    color: var(--kc-charcoal);
+    margin-bottom: var(--kc-space-4);
+  }
+
+  .africa-subtext {
+    font-size: var(--kc-text-base);
+    color: var(--kc-text-secondary);
+    margin-bottom: var(--kc-space-8);
+  }
+
+  .africa-points {
+    display: flex;
+    flex-direction: column;
+    gap: var(--kc-space-5);
+  }
+
+  .africa-points li {
+    padding-left: var(--kc-space-5);
+    border-left: 3px solid var(--kc-teal);
+  }
+
+  .africa-points strong {
+    display: block;
+    font-family: var(--kc-font-body);
+    font-size: var(--kc-text-base);
+    color: var(--kc-charcoal);
+    margin-bottom: var(--kc-space-1);
+  }
+
+  .africa-points span {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-secondary);
+  }
+
+  @media (max-width: 768px) {
+    .africa-inner {
+      grid-template-columns: 1fr;
+      gap: var(--kc-space-8);
+    }
+  }
+</style>

@@ -1,0 +1,130 @@
+---
+interface Props {
+  locale: 'en' | 'fr' | 'sw';
+}
+
+const { locale } = Astro.props;
+
+const content: Record<string, {
+  heading: string;
+  subtext: string;
+  outcomes: Array<{ icon: string; title: string; description: string }>;
+}> = {
+  en: {
+    heading: 'Run the organisation, not a collection of apps',
+    subtext: 'Disconnected spreadsheets, manual handoffs, and delayed reports cost growing organisations time, money, and control. Kraal Code replaces fragmentation with one connected system.',
+    outcomes: [
+      {
+        icon: '◎',
+        title: 'One source of operational truth',
+        description: 'Every transaction, approval, and record lives in one governed environment. No more reconciling five spreadsheets to find out what actually happened.',
+      },
+      {
+        icon: '⊘',
+        title: 'Controlled approvals and accountability',
+        description: 'Role-based permissions, approval workflows, and an immutable audit trail mean every action has an owner and every change leaves a trace.',
+      },
+      {
+        icon: '◉',
+        title: 'Real-time visibility across locations',
+        description: 'See what is happening across branches, warehouses, projects, and field teams from one dashboard — without waiting for end-of-month reports.',
+      },
+      {
+        icon: '◈',
+        title: 'Faster, cleaner financial operations',
+        description: 'Double-entry accounting, automated postings, bank reconciliation, and multi-currency support keep your books accurate and your close cycle short.',
+      },
+    ],
+  },
+  fr: {
+    heading: 'Gérez l\'organisation, pas une collection d\'applications',
+    subtext: 'Les tableurs dispersés, les transferts manuels et les rapports retardés coûtent du temps, de l\'argent et du contrôle aux organisations en croissance.',
+    outcomes: [
+      { icon: '◎', title: 'Une seule source de vérité opérationnelle', description: 'Chaque transaction, approbation et enregistrement vit dans un environnement gouverné unique.' },
+      { icon: '⊘', title: 'Approbations contrôlées et responsabilité', description: 'Les permissions basées sur les rôles, les flux d\'approbation et la piste d\'audit garantissent la traçabilité.' },
+      { icon: '◉', title: 'Visibilité en temps réel sur les sites', description: 'Voyez ce qui se passe dans les succursales, entrepôts, projets et équipes terrain depuis un seul tableau de bord.' },
+      { icon: '◈', title: 'Opérations financières plus rapides', description: 'La comptabilité en partie double, les écritures automatisées et le rapprochement bancaire maintiennent la précision.' },
+    ],
+  },
+  sw: {
+    heading: 'Simamia shirika, si mkusanyiko wa programu',
+    subtext: 'Karatasi zilizotawanywa, mikono ya mikono, na ripoti zilizochelewa gharamia wakati, pesa, na udhibiti kwa shirika zinazokua.',
+    outcomes: [
+      { icon: '◎', title: 'Chanzo kimoja cha ukweli wa uendeshaji', caption: 'Kila miamala, idhini, na rekodi iko katika mazingira moja ya utawala.' },
+      { icon: '⊘', title: 'Idhini zinazodhibitiwa na uwajibikaji', description: 'Ruhusa za msingi wa majukumu, mtiririko wa idhini, na njia ya ukaguzi isiyo na mabadiliko.' },
+      { icon: '◉', title: 'Mwonekano wa wakati halisi katika maeneo', description: 'Ona kinachotokea katika matawi, maghaza, miradi, na timu za uwanja kutoka dashibodi moja.' },
+      { icon: '◈', title: 'Operesheni za kifedha za haraka', description: 'Uhasibu wa kuingia mara mbili, machapisho ya otomatiki, na upatanisho wa benki.' },
+    ],
+  },
+};
+
+const t = content[locale];
+---
+
+<section class="outcome-section section--warm" aria-labelledby="outcome-heading">
+  <div class="container">
+    <div class="outcome-header">
+      <h2 id="outcome-heading">{t.heading}</h2>
+      <p>{t.subtext}</p>
+    </div>
+    <div class="outcome-grid grid grid--2">
+      {t.outcomes.map((outcome) => (
+        <div class="outcome-card">
+          <span class="outcome-icon" aria-hidden="true">{outcome.icon}</span>
+          <div>
+            <h3>{outcome.title}</h3>
+            <p>{outcome.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .outcome-header {
+    max-width: 640px;
+    margin-bottom: var(--kc-space-12);
+  }
+
+  .outcome-header h2 {
+    font-size: var(--kc-text-3xl);
+    color: var(--kc-charcoal);
+  }
+
+  .outcome-card {
+    display: flex;
+    gap: var(--kc-space-5);
+    padding: var(--kc-space-6);
+    background: var(--kc-surface-light);
+    border-radius: var(--kc-radius-lg);
+    border: 1px solid var(--kc-border-subtle);
+  }
+
+  .outcome-icon {
+    font-size: var(--kc-text-2xl);
+    color: var(--kc-teal);
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(70, 105, 107, 0.08);
+    border-radius: var(--kc-radius-md);
+  }
+
+  .outcome-card h3 {
+    font-family: var(--kc-font-body);
+    font-size: var(--kc-text-lg);
+    font-weight: var(--kc-weight-semibold);
+    color: var(--kc-charcoal);
+    margin-bottom: var(--kc-space-2);
+  }
+
+  .outcome-card p {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-secondary);
+    margin: 0;
+  }
+</style>

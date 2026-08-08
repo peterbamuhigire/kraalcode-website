@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/sections/HeroSection.astro';
+import OutcomeSection from '../../components/sections/OutcomeSection.astro';
+import WorkAnywhereSection from '../../components/sections/WorkAnywhereSection.astro';
+import CapabilityMapSection from '../../components/sections/CapabilityMapSection.astro';
+import AfricanContextSection from '../../components/sections/AfricanContextSection.astro';
+import SecuritySection from '../../components/sections/SecuritySection.astro';
+import PricingSection from '../../components/sections/PricingSection.astro';
+import ImplementationSection from '../../components/sections/ImplementationSection.astro';
+import FinalCTASection from '../../components/sections/FinalCTASection.astro';
+
+const locale = 'en';
+---
+
+<BaseLayout
+  title="Kraal Code — The Operating System for the Modern African Organisation"
+  description="One secure cloud platform for running finance, people, stock, sales, procurement, production, projects, and management — from wherever work happens. From UGX 250,000/month."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/"
+>
+  {/* Structured Data: WebSite + SoftwareApplication */}
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Kraal Code",
+    "url": "https://kraalcode.com",
+    "inLanguage": ["en", "fr", "sw"],
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://kraalcode.com/en/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  })} />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Kraal Code",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, Android, iOS",
+    "description": "Cloud ERP platform for African organisations — finance, inventory, sales, procurement, manufacturing, HR, and projects in one secure system.",
+    "offers": {
+      "@type": "Offer",
+      "price": "250000",
+      "priceCurrency": "UGX",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "billingDuration": "P1M"
+      }
+    },
+    "featureList": [
+      "Accounting & General Ledger",
+      "Inventory Management",
+      "Sales & Customer Operations",
+      "Procurement & Suppliers",
+      "Manufacturing & Production",
+      "HR & Payroll",
+      "Project Management",
+      "Point of Sale",
+      "Sales & CRM",
+      "AI Intelligence"
+    ],
+    "screenshot": "https://kraalcode.com/static/kraalcode-screenshot.jpg"
+  })} />
+
+  <HeroSection locale={locale} />
+  <OutcomeSection locale={locale} />
+  <WorkAnywhereSection locale={locale} />
+  <CapabilityMapSection locale={locale} />
+  <AfricanContextSection locale={locale} />
+  <SecuritySection locale={locale} />
+  <PricingSection locale={locale} />
+  <ImplementationSection locale={locale} />
+  <FinalCTASection locale={locale} />
+</BaseLayout>

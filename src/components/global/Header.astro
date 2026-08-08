@@ -1,0 +1,324 @@
+---
+interface Props {
+  locale: 'en' | 'fr' | 'sw';
+  currentPath: string;
+}
+
+const { locale, currentPath } = Astro.props;
+
+const nav: Record<string, Record<string, string>> = {
+  en: {
+    product: 'Product',
+    capabilities: 'Capabilities',
+    sectors: 'Sectors',
+    why: 'Why Kraal Code',
+    security: 'Security',
+    resources: 'Resources',
+    company: 'Company',
+    demo: 'Request a Demo',
+  },
+  fr: {
+    product: 'Produit',
+    capabilities: 'Capacités',
+    sectors: 'Secteurs',
+    why: 'Pourquoi Kraal Code',
+    security: 'Sécurité',
+    resources: 'Ressources',
+    company: 'Entreprise',
+    demo: 'Demander une démo',
+  },
+  sw: {
+    product: 'Bidhaa',
+    capabilities: 'Uwezo',
+    sectors: 'Sekta',
+    why: 'Kwa nini Kraal Code',
+    security: 'Usalama',
+    resources: 'Rasilimali',
+    company: 'Kampuni',
+    demo: 'Oma onyesho',
+  },
+};
+
+const t = nav[locale];
+
+const localePaths: Record<string, string> = {
+  en: '/en/',
+  fr: '/fr/',
+  sw: '/sw/',
+};
+
+const localeLabels: Record<string, string> = {
+  en: 'EN',
+  fr: 'FR',
+  sw: 'SW',
+};
+---
+
+<header class="site-header" role="banner">
+  <div class="container header-inner">
+    <a href={`/${locale}/`} class="header-logo" aria-label="Kraal Code home">
+      <img
+        src="/icons/kraalcode-logo.svg"
+        alt="Kraal Code"
+        width="160"
+        height="36"
+        loading="eager"
+      />
+    </a>
+
+    <nav class="header-nav" aria-label="Main navigation">
+      <ul class="nav-list" role="list">
+        <li><a href={`/${locale}/product/`}>{t.product}</a></li>
+        <li><a href={`/${locale}/capabilities/`}>{t.capabilities}</a></li>
+        <li><a href={`/${locale}/sectors/`}>{t.sectors}</a></li>
+        <li><a href={`/${locale}/why/`}>{t.why}</a></li>
+        <li><a href={`/${locale}/security/`}>{t.security}</a></li>
+        <li><a href={`/${locale}/resources/`}>{t.resources}</a></li>
+        <li><a href={`/${locale}/company/`}>{t.company}</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      {/* Language Switcher */}
+      <div class="lang-switcher" role="group" aria-label="Language">
+        {Object.entries(localeLabels).map(([code, label]) => (
+          <a
+            href={localePaths[code]}
+            class:list={['lang-btn', { active: code === locale }]}
+            aria-current={code === locale ? 'true' : undefined}
+            hreflang={code}
+          >
+            {label}
+          </a>
+        ))}
+      </div>
+
+      <a href={`/${locale}/contact/`} class="btn btn--primary btn--sm">
+        {t.demo}
+      </a>
+    </div>
+
+    {/* Mobile Menu Toggle */}
+    <button
+      class="mobile-menu-toggle"
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+      aria-label="Toggle navigation menu"
+    >
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+
+  {/* Mobile Navigation */}
+  <div id="mobile-nav" class="mobile-nav" hidden>
+    <nav aria-label="Mobile navigation">
+      <ul class="mobile-nav-list" role="list">
+        <li><a href={`/${locale}/product/`}>{t.product}</a></li>
+        <li><a href={`/${locale}/capabilities/`}>{t.capabilities}</a></li>
+        <li><a href={`/${locale}/sectors/`}>{t.sectors}</a></li>
+        <li><a href={`/${locale}/why/`}>{t.why}</a></li>
+        <li><a href={`/${locale}/security/`}>{t.security}</a></li>
+        <li><a href={`/${locale}/resources/`}>{t.resources}</a></li>
+        <li><a href={`/${locale}/company/`}>{t.company}</a></li>
+        <li><a href={`/${locale}/contact/`} class="btn btn--primary">{t.demo}</a></li>
+      </ul>
+      <div class="mobile-lang-switcher">
+        {Object.entries(localeLabels).map(([code, label]) => (
+          <a
+            href={localePaths[code]}
+            class:list={['lang-btn', { active: code === locale }]}
+            aria-current={code === locale ? 'true' : undefined}
+          >
+            {label}
+          </a>
+        ))}
+      </div>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: var(--kc-z-sticky);
+    background: rgba(248, 246, 243, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--kc-border-subtle);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    gap: var(--kc-space-6);
+  }
+
+  .header-logo img {
+    height: 32px;
+    width: auto;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: var(--kc-space-5);
+    align-items: center;
+  }
+
+  .nav-list a {
+    font-size: var(--kc-text-sm);
+    font-weight: var(--kc-weight-medium);
+    color: var(--kc-text-secondary);
+    transition: color var(--kc-transition-fast);
+    white-space: nowrap;
+  }
+
+  .nav-list a:hover {
+    color: var(--kc-text-primary);
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--kc-space-4);
+  }
+
+  .lang-switcher {
+    display: flex;
+    gap: var(--kc-space-1);
+    border: 1px solid var(--kc-border);
+    border-radius: var(--kc-radius-full);
+    padding: 2px;
+  }
+
+  .lang-btn {
+    font-size: var(--kc-text-xs);
+    font-weight: var(--kc-weight-medium);
+    padding: var(--kc-space-1) var(--kc-space-2);
+    border-radius: var(--kc-radius-full);
+    color: var(--kc-text-tertiary);
+    transition: all var(--kc-transition-fast);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .lang-btn:hover {
+    color: var(--kc-text-primary);
+  }
+
+  .lang-btn.active {
+    background: var(--kc-charcoal);
+    color: var(--kc-text-inverse);
+  }
+
+  /* Button styles */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--kc-weight-semibold);
+    font-size: var(--kc-text-sm);
+    padding: var(--kc-space-3) var(--kc-space-5);
+    border-radius: var(--kc-radius-lg);
+    transition: all var(--kc-transition-fast);
+    white-space: nowrap;
+  }
+
+  .btn--primary {
+    background: var(--kc-charcoal);
+    color: var(--kc-text-inverse);
+  }
+
+  .btn--primary:hover {
+    background: var(--kc-teal-deep);
+    color: var(--kc-text-inverse);
+  }
+
+  .btn--sm {
+    padding: var(--kc-space-2) var(--kc-space-4);
+    font-size: var(--kc-text-xs);
+  }
+
+  /* Mobile menu */
+  .mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: var(--kc-space-2);
+  }
+
+  .hamburger-line {
+    width: 24px;
+    height: 2px;
+    background: var(--kc-text-primary);
+    transition: all var(--kc-transition-fast);
+  }
+
+  .mobile-nav {
+    display: none;
+    padding: var(--kc-space-6) var(--kc-gutter);
+    background: var(--kc-surface-light);
+    border-top: 1px solid var(--kc-border-subtle);
+  }
+
+  .mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--kc-space-4);
+  }
+
+  .mobile-nav-list a {
+    font-size: var(--kc-text-lg);
+    font-weight: var(--kc-weight-medium);
+    color: var(--kc-text-primary);
+    display: block;
+    padding: var(--kc-space-2) 0;
+  }
+
+  .mobile-lang-switcher {
+    display: flex;
+    gap: var(--kc-space-2);
+    margin-top: var(--kc-space-6);
+    padding-top: var(--kc-space-6);
+    border-top: 1px solid var(--kc-border-subtle);
+  }
+
+  @media (max-width: 1024px) {
+    .header-nav {
+      display: none;
+    }
+
+    .header-actions .lang-switcher,
+    .header-actions .btn {
+      display: none;
+    }
+
+    .mobile-menu-toggle {
+      display: flex;
+    }
+
+    .mobile-nav[hidden] {
+      display: none;
+    }
+
+    .mobile-nav:not([hidden]) {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const nav = document.getElementById('mobile-nav');
+
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      nav.hidden = expanded;
+    });
+  }
+</script>

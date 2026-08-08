@@ -1,0 +1,130 @@
+---
+interface Props {
+  locale: 'en' | 'fr' | 'sw';
+}
+
+const { locale } = Astro.props;
+
+const content: Record<string, {
+  heading: string;
+  subtext: string;
+  primaryCTA: string;
+  primaryHref: string;
+  secondaryCTA: string;
+  secondaryHref: string;
+}> = {
+  en: {
+    heading: 'See Kraal Code running in your organisation',
+    subtext: 'Request a guided demonstration tailored to your sector, your workflows, and your operating reality.',
+    primaryCTA: 'Request a Demonstration',
+    primaryHref: '/en/contact/',
+    secondaryCTA: 'Discuss Your Requirements',
+    secondaryHref: '/en/contact/',
+  },
+  fr: {
+    heading: 'Voyez Kraal Code fonctionner dans votre organisation',
+    subtext: 'Demandez une démonstration adaptée à votre secteur, vos flux de travail et votre réalité opérationnelle.',
+    primaryCTA: 'Demander une démonstration',
+    primaryHref: '/fr/contact/',
+    secondaryCTA: 'Discuter de vos besoins',
+    secondaryHref: '/fr/contact/',
+  },
+  sw: {
+    heading: 'Ona Kraal Code ikifanya kazi katika shirika lako',
+    subtext: 'Oma onyesho lililobinafsishwa kwa sekta yako, mtiririko wako wa kazi, na hali yako ya uendeshaji.',
+    primaryCTA: 'Oma Onyesho',
+    primaryHref: '/sw/mawasiliano/',
+    secondaryCTA: 'Jadili Mahitaji Yako',
+    secondaryHref: '/sw/mawasiliano/',
+  },
+};
+
+const t = content[locale];
+---
+
+<section class="cta-section section--dark section--lg" aria-labelledby="cta-heading">
+  <div class="container cta-inner text-center">
+    <h2 id="cta-heading">{t.heading}</h2>
+    <p>{t.subtext}</p>
+    <div class="cta-actions">
+      <a href={t.primaryHref} class="btn btn--primary btn--lg">{t.primaryCTA}</a>
+      <a href={t.secondaryHref} class="btn btn--outline-inverse btn--lg">{t.secondaryCTA}</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .cta-inner h2 {
+    font-size: var(--kc-text-4xl);
+    margin-bottom: var(--kc-space-5);
+  }
+
+  .cta-inner p {
+    font-size: var(--kc-text-lg);
+    color: var(--kc-text-inverse-muted);
+    margin-bottom: var(--kc-space-8);
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: var(--kc-space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--kc-space-3) var(--kc-space-6);
+    font-weight: var(--kc-weight-semibold);
+    font-size: var(--kc-text-sm);
+    border-radius: var(--kc-radius-lg);
+    transition: all var(--kc-transition-fast);
+    text-decoration: none;
+  }
+
+  .btn--lg {
+    padding: var(--kc-space-4) var(--kc-space-8);
+    font-size: var(--kc-text-base);
+  }
+
+  .btn--primary {
+    background: var(--kc-teal);
+    color: var(--kc-text-inverse);
+  }
+
+  .btn--primary:hover {
+    background: var(--kc-teal-light);
+    color: var(--kc-text-inverse);
+  }
+
+  .btn--outline-inverse {
+    background: transparent;
+    color: var(--kc-text-inverse);
+    border: 2px solid var(--kc-text-inverse-muted);
+  }
+
+  .btn--outline-inverse:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--kc-text-inverse);
+  }
+
+  @media (max-width: 640px) {
+    .cta-inner h2 {
+      font-size: var(--kc-text-2xl);
+    }
+
+    .cta-actions {
+      flex-direction: column;
+    }
+
+    .cta-actions .btn {
+      text-align: center;
+    }
+  }
+</style>

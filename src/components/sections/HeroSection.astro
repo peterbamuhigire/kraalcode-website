@@ -1,0 +1,255 @@
+---
+interface Props {
+  locale: 'en' | 'fr' | 'sw';
+}
+
+const { locale } = Astro.props;
+
+const content: Record<string, {
+  headline: string;
+  subtext: string;
+  primaryCTA: string;
+  primaryHref: string;
+  secondaryCTA: string;
+  secondaryHref: string;
+  stats: Array<{ value: string; label: string }>;
+}> = {
+  en: {
+    headline: 'The operating system for the modern African organisation',
+    subtext: 'One secure cloud platform for running finance, people, stock, sales, procurement, production, projects, and management — from wherever work happens.',
+    primaryCTA: 'Request a Demonstration',
+    primaryHref: '/en/contact/',
+    secondaryCTA: 'Explore Capabilities',
+    secondaryHref: '/en/capabilities/',
+    stats: [
+      { value: '23', label: 'Integrated modules' },
+      { value: '4', label: 'East African countries' },
+      { value: 'UGX 250K', label: 'Per month, whole organisation' },
+    ],
+  },
+  fr: {
+    headline: 'Le système d\'exploitation pour l\'organisation africaine moderne',
+    subtext: 'Une seule plateforme cloud sécurisée pour gérer la finance, les personnes, les stocks, les ventes, les achats, la production, les projets et la gestion — où que vous soyez.',
+    primaryCTA: 'Demander une démonstration',
+    primaryHref: '/fr/contact/',
+    secondaryCTA: 'Explorer les capacités',
+    secondaryHref: '/fr/capacites/',
+    stats: [
+      { value: '23', label: 'Modules intégrés' },
+      { value: '4', label: 'Pays d\'Afrique de l\'Est' },
+      { value: '250 000 UGX', label: 'Par mois, toute l\'organisation' },
+    ],
+  },
+  sw: {
+    headline: 'Mfumo wa uendeshaji kwa shirika la kisasa la Kiafrika',
+    subtext: 'Jukwaa moja salama la wingu kwa kuuendesha fedha, watu, hisa, mauzo, manunuzi, uzalishaji, miradi, na usimamizi — kutoka popote kazi inapofanyika.',
+    primaryCTA: 'Oma Onyesho',
+    primaryHref: '/sw/mawasiliano/',
+    secondaryCTA: 'Chunguza Uwezo',
+    secondaryHref: '/sw/uwezo/',
+    stats: [
+      { value: '23', label: 'Moduli zilizounganishwa' },
+      { value: '4', label: 'Nchi za Afrika Mashariki' },
+      { value: 'UGX 250K', label: 'Kwa mwezi, shirika zima' },
+    ],
+  },
+};
+
+const t = content[locale];
+---
+
+<section class="hero" aria-labelledby="hero-heading">
+  {/* Geometric background pattern derived from the kraal mark */}
+  <div class="hero-geo" aria-hidden="true">
+    <svg class="hero-geo-svg" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      {/* Interlocking angular paths — the kraal geometry */}
+      <path d="M0 300 L150 150 L300 300 L150 450 Z" stroke="rgba(70,105,107,0.08)" stroke-width="1" fill="none"/>
+      <path d="M300 300 L450 150 L600 300 L450 450 Z" stroke="rgba(70,105,107,0.06)" stroke-width="1" fill="none"/>
+      <path d="M600 300 L750 150 L900 300 L750 450 Z" stroke="rgba(70,105,107,0.08)" stroke-width="1" fill="none"/>
+      <path d="M900 300 L1050 150 L1200 300 L1050 450 Z" stroke="rgba(70,105,107,0.06)" stroke-width="1" fill="none"/>
+      {/* Connecting lines — the interlocking system */}
+      <line x1="150" y1="150" x2="450" y2="150" stroke="rgba(70,105,107,0.05)" stroke-width="1"/>
+      <line x1="450" y1="150" x2="750" y2="150" stroke="rgba(70,105,107,0.04)" stroke-width="1"/>
+      <line x1="750" y1="150" x2="1050" y2="150" stroke="rgba(70,105,107,0.05)" stroke-width="1"/>
+      <line x1="150" y1="450" x2="450" y2="450" stroke="rgba(70,105,107,0.05)" stroke-width="1"/>
+      <line x1="450" y1="450" x2="750" y2="450" stroke="rgba(70,105,107,0.04)" stroke-width="1"/>
+      <line x1="750" y1="450" x2="1050" y2="450" stroke="rgba(70,105,107,0.05)" stroke-width="1"/>
+      {/* Central kraal enclosure */}
+      <circle cx="600" cy="300" r="120" stroke="rgba(70,105,107,0.06)" stroke-width="1" fill="none"/>
+      <circle cx="600" cy="300" r="80" stroke="rgba(70,105,107,0.04)" stroke-width="1" fill="none"/>
+      {/* Radial connections */}
+      <line x1="600" y1="180" x2="600" y2="0" stroke="rgba(70,105,107,0.03)" stroke-width="1"/>
+      <line x1="600" y1="420" x2="600" y2="600" stroke="rgba(70,105,107,0.03)" stroke-width="1"/>
+      <line x1="480" y1="300" x2="0" y2="300" stroke="rgba(70,105,107,0.03)" stroke-width="1"/>
+      <line x1="720" y1="300" x2="1200" y2="300" stroke="rgba(70,105,107,0.03)" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <h1 id="hero-heading" class="hero-headline">{t.headline}</h1>
+      <p class="hero-subtext">{t.subtext}</p>
+      <div class="hero-actions">
+        <a href={t.primaryHref} class="btn btn--primary btn--lg">{t.primaryCTA}</a>
+        <a href={t.secondaryHref} class="btn btn--outline btn--lg">{t.secondaryCTA}</a>
+      </div>
+    </div>
+
+    <div class="hero-stats" role="list" aria-label="Key facts">
+      {t.stats.map((stat) => (
+        <div class="hero-stat" role="listitem">
+          <span class="hero-stat-value">{stat.value}</span>
+          <span class="hero-stat-label">{stat.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    padding: var(--kc-space-24) 0 var(--kc-space-16);
+    overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-geo {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-geo-svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-content {
+    max-width: 720px;
+  }
+
+  .hero-headline {
+    font-size: var(--kc-text-5xl);
+    font-weight: var(--kc-weight-bold);
+    line-height: var(--kc-leading-tight);
+    color: var(--kc-charcoal);
+    margin-bottom: var(--kc-space-6);
+    text-wrap: balance;
+  }
+
+  .hero-subtext {
+    font-size: var(--kc-text-lg);
+    line-height: var(--kc-leading-relaxed);
+    color: var(--kc-text-secondary);
+    margin-bottom: var(--kc-space-8);
+    max-width: 60ch;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: var(--kc-space-4);
+    flex-wrap: wrap;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: var(--kc-space-10);
+    margin-top: var(--kc-space-16);
+    padding-top: var(--kc-space-8);
+    border-top: 1px solid var(--kc-border-subtle);
+  }
+
+  .hero-stat {
+    display: flex;
+    flex-direction: column;
+    gap: var(--kc-space-1);
+  }
+
+  .hero-stat-value {
+    font-family: var(--kc-font-display);
+    font-size: var(--kc-text-3xl);
+    font-weight: var(--kc-weight-bold);
+    color: var(--kc-teal);
+  }
+
+  .hero-stat-label {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-tertiary);
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--kc-weight-semibold);
+    font-size: var(--kc-text-sm);
+    padding: var(--kc-space-3) var(--kc-space-6);
+    border-radius: var(--kc-radius-lg);
+    transition: all var(--kc-transition-fast);
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .btn--lg {
+    padding: var(--kc-space-4) var(--kc-space-8);
+    font-size: var(--kc-text-base);
+  }
+
+  .btn--primary {
+    background: var(--kc-charcoal);
+    color: var(--kc-text-inverse);
+  }
+
+  .btn--primary:hover {
+    background: var(--kc-teal-deep);
+    color: var(--kc-text-inverse);
+  }
+
+  .btn--outline {
+    background: transparent;
+    color: var(--kc-charcoal);
+    border: 2px solid var(--kc-charcoal);
+  }
+
+  .btn--outline:hover {
+    background: var(--kc-charcoal);
+    color: var(--kc-text-inverse);
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: var(--kc-space-16) 0 var(--kc-space-12);
+      min-height: auto;
+    }
+
+    .hero-headline {
+      font-size: var(--kc-text-3xl);
+    }
+
+    .hero-subtext {
+      font-size: var(--kc-text-base);
+    }
+
+    .hero-stats {
+      flex-direction: column;
+      gap: var(--kc-space-4);
+    }
+
+    .hero-actions {
+      flex-direction: column;
+    }
+
+    .hero-actions .btn {
+      text-align: center;
+    }
+  }
+</style>

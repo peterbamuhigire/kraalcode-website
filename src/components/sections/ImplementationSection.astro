@@ -1,0 +1,116 @@
+---
+interface Props {
+  locale: 'en' | 'fr' | 'sw';
+}
+
+const { locale } = Astro.props;
+
+const content: Record<string, {
+  heading: string;
+  subtext: string;
+  steps: Array<{ number: string; title: string; description: string }>;
+}> = {
+  en: {
+    heading: 'Running in minutes, not months',
+    subtext: 'No implementation partner required. No server to procure. Sign up, configure your organisation, and start working.',
+    steps: [
+      { number: '01', title: 'Sign up', description: 'Create your organisation account. Choose the plan that fits your size.' },
+      { number: '02', title: 'Configure', description: 'Set up your branches, chart of accounts, users, roles, and permissions. Localisation happens automatically.' },
+      { number: '03', title: 'Start working', description: 'Your team logs in and begins recording transactions, managing inventory, processing payroll, and running reports.' },
+    ],
+  },
+  fr: {
+    heading: 'Opérationnel en minutes, pas en mois',
+    subtext: 'Aucun partenaire d\'implémentation requis. Aucun serveur à procurer. Inscrivez-vous, configurez et commencez.',
+    steps: [
+      { number: '01', title: 'Inscription', description: 'Créez le compte de votre organisation. Choisissez le plan adapté.' },
+      { number: '02', title: 'Configuration', description: 'Configurez vos succursales, plan comptable, utilisateurs et permissions.' },
+      { number: '03', title: 'Commencez', description: 'Votre équipe se connecte et commence à enregistrer les transactions.' },
+    ],
+  },
+  sw: {
+    heading: 'Inaendesha kwa dakika, si miezi',
+    subtext: 'Hakuna mshirika wa utekelezaji anayehitajika. Hakuna seva ya kununua. Jisajili, usanidi, na uanze kufanya kazi.',
+    steps: [
+      { number: '01', title: 'Jisajili', description: 'Unda akaunti ya shirika lako. Chagua mpango unaofaa.' },
+      { number: '02', title: 'Sanidi', description: 'Weka matawi yako, chati ya akaunti, watumiaji, na ruhusa.' },
+      { number: '03', title: 'Anza kufanya kazi', description: 'Timu yako inaingia na kuanza kurekodi miamala.' },
+    ],
+  },
+};
+
+const t = content[locale];
+---
+
+<section class="impl-section section" aria-labelledby="impl-heading">
+  <div class="container">
+    <div class="impl-header text-center">
+      <h2 id="impl-heading">{t.heading}</h2>
+      <p>{t.subtext}</p>
+    </div>
+    <div class="impl-steps">
+      {t.steps.map((step) => (
+        <div class="impl-step">
+          <span class="impl-number">{step.number}</span>
+          <div>
+            <h3>{step.title}</h3>
+            <p>{step.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .impl-header {
+    max-width: 560px;
+    margin: 0 auto var(--kc-space-12);
+  }
+
+  .impl-header h2 {
+    font-size: var(--kc-text-3xl);
+    color: var(--kc-charcoal);
+  }
+
+  .impl-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--kc-space-8);
+  }
+
+  .impl-step {
+    display: flex;
+    gap: var(--kc-space-5);
+    align-items: flex-start;
+  }
+
+  .impl-number {
+    font-family: var(--kc-font-display);
+    font-size: var(--kc-text-3xl);
+    font-weight: var(--kc-weight-bold);
+    color: var(--kc-teal);
+    flex-shrink: 0;
+    opacity: 0.4;
+  }
+
+  .impl-step h3 {
+    font-family: var(--kc-font-body);
+    font-size: var(--kc-text-xl);
+    font-weight: var(--kc-weight-semibold);
+    color: var(--kc-charcoal);
+    margin-bottom: var(--kc-space-2);
+  }
+
+  .impl-step p {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-secondary);
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .impl-steps {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

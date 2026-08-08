@@ -1,0 +1,20 @@
+{
+  "name": "kraalcode-website",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Kraal Code — The operating system for the modern African organisation",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "lint": "eslint src/",
+    "typecheck": "astro check"
+  },
+  "dependencies": {
+    "astro": "^5.12.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.0",
+    "typescript": "^5.7.0"
+  }
+}

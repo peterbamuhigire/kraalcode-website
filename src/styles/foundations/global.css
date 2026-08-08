@@ -1,0 +1,260 @@
+/* ============================================================
+   Kraal Code — Global Styles
+   Typography, layout primitives, utility classes
+   ============================================================ */
+
+/* ── Typography Defaults ── */
+
+h1 {
+  font-size: var(--kc-text-4xl);
+  font-weight: var(--kc-weight-bold);
+  margin-bottom: var(--kc-space-6);
+}
+
+h2 {
+  font-size: var(--kc-text-3xl);
+  font-weight: var(--kc-weight-semibold);
+  margin-bottom: var(--kc-space-5);
+}
+
+h3 {
+  font-size: var(--kc-text-2xl);
+  font-weight: var(--kc-weight-semibold);
+  margin-bottom: var(--kc-space-4);
+}
+
+h4 {
+  font-size: var(--kc-text-xl);
+  font-weight: var(--kc-weight-semibold);
+  font-family: var(--kc-font-body);
+  margin-bottom: var(--kc-space-3);
+}
+
+p {
+  margin-bottom: var(--kc-space-4);
+  color: var(--kc-text-secondary);
+}
+
+a {
+  color: var(--kc-link);
+  transition: color var(--kc-transition-fast);
+}
+
+a:hover {
+  color: var(--kc-link-hover);
+}
+
+strong {
+  font-weight: var(--kc-weight-semibold);
+  color: var(--kc-text-primary);
+}
+
+small {
+  font-size: var(--kc-text-sm);
+}
+
+/* ── Container ── */
+
+.container {
+  width: 100%;
+  max-width: var(--kc-container-max);
+  margin-inline: auto;
+  padding-inline: var(--kc-gutter);
+}
+
+.container--narrow {
+  max-width: var(--kc-container-narrow);
+}
+
+.container--wide {
+  max-width: var(--kc-container-wide);
+}
+
+/* ── Section Spacing ── */
+
+.section {
+  padding-block: var(--kc-space-20);
+}
+
+.section--sm {
+  padding-block: var(--kc-space-12);
+}
+
+.section--lg {
+  padding-block: var(--kc-space-32);
+}
+
+/* ── Dark Section ── */
+
+.section--dark {
+  background-color: var(--kc-surface-dark);
+  color: var(--kc-text-inverse);
+}
+
+.section--dark p {
+  color: var(--kc-text-inverse-muted);
+}
+
+.section--dark h1,
+.section--dark h2,
+.section--dark h3,
+.section--dark h4 {
+  color: var(--kc-text-inverse);
+}
+
+/* ── Warm Section ── */
+
+.section--warm {
+  background-color: var(--kc-surface-warm);
+}
+
+/* ── Grid ── */
+
+.grid {
+  display: grid;
+  gap: var(--kc-space-8);
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+  .grid--2,
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── Flex Utilities ── */
+
+.flex {
+  display: flex;
+}
+
+.flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex--col {
+  flex-direction: column;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+.gap-2 { gap: var(--kc-space-2); }
+.gap-3 { gap: var(--kc-space-3); }
+.gap-4 { gap: var(--kc-space-4); }
+.gap-6 { gap: var(--kc-space-6); }
+.gap-8 { gap: var(--kc-space-8); }
+
+/* ── Text Utilities ── */
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.text-sm { font-size: var(--kc-text-sm); }
+.text-lg { font-size: var(--kc-text-lg); }
+.text-xl { font-size: var(--kc-text-xl); }
+
+.text-muted { color: var(--kc-text-secondary); }
+.text-inverse { color: var(--kc-text-inverse); }
+
+.font-display { font-family: var(--kc-font-display); }
+.font-body { font-family: var(--kc-font-body); }
+
+/* ── Visually Hidden (accessible) ── */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Skip Link ── */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--kc-space-4);
+  z-index: var(--kc-z-toast);
+  padding: var(--kc-space-3) var(--kc-space-4);
+  background: var(--kc-charcoal);
+  color: var(--kc-text-inverse);
+  font-weight: var(--kc-weight-semibold);
+  border-radius: 0 0 var(--kc-radius-md) var(--kc-radius-md);
+  transition: top var(--kc-transition-fast);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ── Geometric Section Divider ── */
+
+.geo-divider {
+  width: 100%;
+  height: 48px;
+  background: var(--kc-surface-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.geo-divider::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background:
+    linear-gradient(135deg, var(--kc-surface-light) 33.33%, transparent 33.33%) 0 0,
+    linear-gradient(225deg, var(--kc-surface-light) 33.33%, transparent 33.33%) 0 0;
+  background-size: 48px 100%;
+  background-repeat: repeat-x;
+}
+
+.geo-divider--dark {
+  background: var(--kc-surface-dark);
+}
+
+.geo-divider--dark::before {
+  background:
+    linear-gradient(135deg, var(--kc-surface-dark) 33.33%, transparent 33.33%) 0 0,
+    linear-gradient(225deg, var(--kc-surface-dark) 33.33%, transparent 33.33%) 0 0;
+  background-size: 48px 100%;
+  background-repeat: repeat-x;
+}

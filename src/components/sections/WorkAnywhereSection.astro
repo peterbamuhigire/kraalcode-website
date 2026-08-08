@@ -1,0 +1,124 @@
+---
+interface Props {
+  locale: 'en' | 'fr' | 'sw';
+}
+
+const { locale } = Astro.props;
+
+const content: Record<string, {
+  heading: string;
+  subtext: string;
+  contexts: Array<{ image: string; title: string; description: string }>;
+}> = {
+  en: {
+    heading: 'Your organisation travels with you',
+    subtext: 'Kraal Code gives authorised people controlled access from a laptop at headquarters, a phone in the field, a tablet in a warehouse, or a home office in another city.',
+    contexts: [
+      {
+        image: '/src/assets/images/work-anywhere/remote-work-home-laptop.jpg',
+        title: 'From a laptop at headquarters',
+        description: 'Full operational access for finance, approvals, reporting, and administration from your primary office.',
+      },
+      {
+        image: '/src/assets/images/work-anywhere/remote-work-sofa.jpg',
+        title: 'From a phone in the field',
+        description: 'Record transactions, check stock, approve requests, and submit reports from wherever work takes you.',
+      },
+      {
+        image: '/src/assets/images/work-anywhere/remote-work-desk-phone.jpg',
+        title: 'From a home office or remote location',
+        description: 'Coordinate projects, manage teams, and maintain visibility across the organisation without being in the same building.',
+      },
+    ],
+  },
+  fr: {
+    heading: 'Votre organisation vous accompagne',
+    subtext: 'Kraal Code donne aux personnes autorisées un accès contrôlé depuis un ordinateur portable au siège, un téléphone sur le terrain, une tablette dans un entrepôt ou un bureau à domicile.',
+    contexts: [
+      { image: '/src/assets/images/work-anywhere/remote-work-home-laptop.jpg', title: 'Depuis un ordinateur au siège', description: 'Accès opérationnel complet pour la finance, les approbations et l\'administration.' },
+      { image: '/src/assets/images/work-anywhere/remote-work-sofa.jpg', title: 'Depuis un téléphone sur le terrain', description: 'Enregistrez les transactions, vérifiez les stocks et approuvez les demandes.' },
+      { image: '/src/assets/images/work-anywhere/remote-work-desk-phone.jpg', title: 'Depuis un bureau à domicile', description: 'Coordonnez les projets et gérez les équipes sans être dans le même bâtiment.' },
+    ],
+  },
+  sw: {
+    heading: 'Shirika lako linasafiri nawe',
+    subtext: 'Kraal Code inawapa watu walioruhusiwa upatikanaji unaodhibitiwa kutoka kompyuta katika makao makuu, simu uwanjani, kompyuta kibao ghazani, au ofisi ya nyumbani.',
+    contexts: [
+      { image: '/src/assets/images/work-anywhere/remote-work-home-laptop.jpg', title: 'Kutoka kompyuta makao makuu', description: 'Ufikiaji kamili wa uendeshaji kwa fedha, idhini, na usimamizi.' },
+      { image: '/src/assets/images/work-anywhere/remote-work-sofa.jpg', title: 'Kutoka simu uwanjani', description: 'Rekodi miamala, angalia hisa, na uidhishe maombi kutoka popote kazi inapokuchukua.' },
+      { image: '/src/assets/images/work-anywhere/remote-work-desk-phone.jpg', title: 'Kutoka ofisi ya nyumbani', description: 'Ratibu miradi, simamia timu, na udhibiti mwonekano bila kuwa katika jengo moja.' },
+    ],
+  },
+};
+
+const t = content[locale];
+---
+
+<section class="wfa-section section" aria-labelledby="wfa-heading">
+  <div class="container">
+    <div class="wfa-header text-center">
+      <h2 id="wfa-heading">{t.heading}</h2>
+      <p class="wfa-subtext">{t.subtext}</p>
+    </div>
+    <div class="wfa-grid grid grid--3">
+      {t.contexts.map((ctx) => (
+        <div class="wfa-card">
+          <div class="wfa-image-wrap">
+            <img
+              src={ctx.image}
+              alt={ctx.title}
+              width="400"
+              height="280"
+              loading="lazy"
+            />
+          </div>
+          <h3>{ctx.title}</h3>
+          <p>{ctx.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .wfa-header {
+    max-width: 640px;
+    margin: 0 auto var(--kc-space-12);
+  }
+
+  .wfa-subtext {
+    font-size: var(--kc-text-lg);
+    color: var(--kc-text-secondary);
+  }
+
+  .wfa-card {
+    text-align: left;
+  }
+
+  .wfa-image-wrap {
+    border-radius: var(--kc-radius-lg);
+    overflow: hidden;
+    margin-bottom: var(--kc-space-5);
+    aspect-ratio: 4 / 3;
+  }
+
+  .wfa-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .wfa-card h3 {
+    font-family: var(--kc-font-body);
+    font-size: var(--kc-text-lg);
+    font-weight: var(--kc-weight-semibold);
+    color: var(--kc-charcoal);
+    margin-bottom: var(--kc-space-2);
+  }
+
+  .wfa-card p {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-secondary);
+    margin: 0;
+  }
+</style>

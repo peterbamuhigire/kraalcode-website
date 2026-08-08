@@ -1,0 +1,316 @@
+---
+interface Props {
+  locale: 'en' | 'fr' | 'sw';
+}
+
+const { locale } = Astro.props;
+
+const content: Record<string, {
+  tagline: string;
+  product: { heading: string; links: Array<{ label: string; href: string }> };
+  company: { heading: string; links: Array<{ label: string; href: string }> };
+  legal: { heading: string; links: Array<{ label: string; href: string }> };
+  contact: { heading: string; email: string; demo: string };
+  copyright: string;
+}> = {
+  en: {
+    tagline: 'The operating system for the modern African organisation.',
+    product: {
+      heading: 'Product',
+      links: [
+        { label: 'Platform Overview', href: '/en/product/' },
+        { label: 'Capabilities', href: '/en/capabilities/' },
+        { label: 'Sectors', href: '/en/sectors/' },
+        { label: 'Security & Privacy', href: '/en/security/' },
+        { label: 'Work from Anywhere', href: '/en/work-from-anywhere/' },
+        { label: 'Implementation', href: '/en/implementation/' },
+      ],
+    },
+    company: {
+      heading: 'Company',
+      links: [
+        { label: 'About Kraal Code', href: '/en/company/' },
+        { label: 'Why Kraal Code', href: '/en/why/' },
+        { label: 'Resources', href: '/en/resources/' },
+        { label: 'Contact Us', href: '/en/contact/' },
+      ],
+    },
+    legal: {
+      heading: 'Legal',
+      links: [
+        { label: 'Privacy Notice', href: '/en/legal/privacy/' },
+        { label: 'Cookie Notice', href: '/en/legal/cookies/' },
+        { label: 'Website Terms', href: '/en/legal/terms/' },
+        { label: 'Accessibility', href: '/en/legal/accessibility/' },
+        { label: 'Responsible Disclosure', href: '/en/security/disclosure/' },
+      ],
+    },
+    contact: {
+      heading: 'Get in Touch',
+      email: 'info@kraalcode.com',
+      demo: 'Request a Demo',
+    },
+    copyright: `© ${new Date().getFullYear()} Kraal Code. All rights reserved. A product of Chwezi Core Systems.`,
+  },
+  fr: {
+    tagline: 'Le système d\'exploitation pour l\'organisation africaine moderne.',
+    product: {
+      heading: 'Produit',
+      links: [
+        { label: 'Vue d\'ensemble', href: '/fr/produit/' },
+        { label: 'Capacités', href: '/fr/capacites/' },
+        { label: 'Secteurs', href: '/fr/secteurs/' },
+        { label: 'Sécurité et confidentialité', href: '/fr/securite/' },
+        { label: 'Travailler de partout', href: '/fr/travailler-de-partout/' },
+        { label: 'Mise en œuvre', href: '/fr/mise-en-oeuvre/' },
+      ],
+    },
+    company: {
+      heading: 'Entreprise',
+      links: [
+        { label: 'À propos', href: '/fr/entreprise/' },
+        { label: 'Pourquoi Kraal Code', href: '/fr/pourquoi/' },
+        { label: 'Ressources', href: '/fr/ressources/' },
+        { label: 'Nous contacter', href: '/fr/contact/' },
+      ],
+    },
+    legal: {
+      heading: 'Juridique',
+      links: [
+        { label: 'Politique de confidentialité', href: '/fr/juridique/confidentialite/' },
+        { label: 'Avis sur les cookies', href: '/fr/juridique/cookies/' },
+        { label: 'Conditions d\'utilisation', href: '/fr/juridique/conditions/' },
+        { label: 'Accessibilité', href: '/fr/juridique/accessibilite/' },
+      ],
+    },
+    contact: {
+      heading: 'Contactez-nous',
+      email: 'info@kraalcode.com',
+      demo: 'Demander une démo',
+    },
+    copyright: `© ${new Date().getFullYear()} Kraal Code. Tous droits réservés. Un produit de Chwezi Core Systems.`,
+  },
+  sw: {
+    tagline: 'Mfumo wa uendeshaji kwa shirika la kisasa la Kiafrika.',
+    product: {
+      heading: 'Bidhaa',
+      links: [
+        { label: 'Muhtasari wa Jukwaa', href: '/sw/bidhaa/' },
+        { label: 'Uwezo', href: '/sw/uwezo/' },
+        { label: 'Sekta', href: '/sw/sekta/' },
+        { label: 'Usalama na Faragha', href: '/sw/usalama/' },
+        { label: 'Fanya Kazi Popote', href: '/sw/fanya-kazi-popote/' },
+        { label: 'Utekelezaji', href: '/sw/utekelezaji/' },
+      ],
+    },
+    company: {
+      heading: 'Kampuni',
+      links: [
+        { label: 'Kuhusu Kraal Code', href: '/sw/kampuni/' },
+        { label: 'Kwa nini Kraal Code', href: '/sw/kwa-nini/' },
+        { label: 'Rasilimali', href: '/sw/rasilimali/' },
+        { label: 'Wasiliana Nasi', href: '/sw/mawasiliano/' },
+      ],
+    },
+    legal: {
+      heading: 'Kisheria',
+      links: [
+        { label: 'Ilani ya Faragha', href: '/sw/kisheria/faragha/' },
+        { label: 'Ilani ya Vidakuzi', href: '/sw/kisheria/vidakuzi/' },
+        { label: 'Masharti ya Tovuti', href: '/sw/kisheria/masharti/' },
+        { label: 'Ufikiaji', href: '/sw/kisheria/ufikiaji/' },
+      ],
+    },
+    contact: {
+      heading: 'Wasiliana Nasi',
+      email: 'info@kraalcode.com',
+      demo: 'Oma Onyesho',
+    },
+    copyright: `© ${new Date().getFullYear()} Kraal Code. Haki zote zimehifadhiwa. Bidhaa ya Chwezi Core Systems.`,
+  },
+};
+
+const t = content[locale];
+---
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href={`/${locale}/`} aria-label="Kraal Code home">
+        <img
+          src="/icons/kraalcode-logo-light.svg"
+          alt="Kraal Code"
+          width="140"
+          height="32"
+          loading="lazy"
+        />
+      </a>
+      <p class="footer-tagline">{t.tagline}</p>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>{t.product.heading}</h4>
+        <ul role="list">
+          {t.product.links.map((link) => (
+            <li><a href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>{t.company.heading}</h4>
+        <ul role="list">
+          {t.company.links.map((link) => (
+            <li><a href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>{t.legal.heading}</h4>
+        <ul role="list">
+          {t.legal.links.map((link) => (
+            <li><a href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>{t.contact.heading}</h4>
+        <ul role="list">
+          <li><a href={`mailto:${t.contact.email}`}>{t.contact.email}</a></li>
+          <li><a href={`/${locale}/contact/`} class="footer-cta">{t.contact.demo} →</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p class="footer-copyright">{t.copyright}</p>
+      <div class="footer-lang">
+        <a href="/en/" class:list={[{ active: locale === 'en' }]}>EN</a>
+        <a href="/fr/" class:list={[{ active: locale === 'fr' }]}>FR</a>
+        <a href="/sw/" class:list={[{ active: locale === 'sw' }]}>SW</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--kc-surface-darker);
+    color: var(--kc-text-inverse);
+    padding-top: var(--kc-space-16);
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--kc-space-12);
+    padding-bottom: var(--kc-space-12);
+    border-bottom: 1px solid var(--kc-border-dark);
+  }
+
+  .footer-tagline {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-inverse-muted);
+    margin-top: var(--kc-space-4);
+    max-width: 30ch;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--kc-space-8);
+  }
+
+  .footer-col h4 {
+    font-family: var(--kc-font-body);
+    font-size: var(--kc-text-sm);
+    font-weight: var(--kc-weight-semibold);
+    color: var(--kc-text-inverse);
+    margin-bottom: var(--kc-space-4);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .footer-col ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--kc-space-2);
+  }
+
+  .footer-col a {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-inverse-muted);
+    transition: color var(--kc-transition-fast);
+  }
+
+  .footer-col a:hover {
+    color: var(--kc-text-inverse);
+  }
+
+  .footer-cta {
+    color: var(--kc-teal-light) !important;
+    font-weight: var(--kc-weight-medium);
+  }
+
+  .footer-bottom {
+    padding: var(--kc-space-6) 0;
+  }
+
+  .footer-bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-copyright {
+    font-size: var(--kc-text-xs);
+    color: var(--kc-text-inverse-muted);
+    margin: 0;
+  }
+
+  .footer-lang {
+    display: flex;
+    gap: var(--kc-space-3);
+  }
+
+  .footer-lang a {
+    font-size: var(--kc-text-xs);
+    color: var(--kc-text-inverse-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color var(--kc-transition-fast);
+  }
+
+  .footer-lang a:hover,
+  .footer-lang a.active {
+    color: var(--kc-text-inverse);
+  }
+
+  @media (max-width: 1024px) {
+    .footer-inner {
+      grid-template-columns: 1fr;
+      gap: var(--kc-space-8);
+    }
+
+    .footer-links {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .footer-links {
+      grid-template-columns: 1fr;
+    }
+
+    .footer-bottom-inner {
+      flex-direction: column;
+      gap: var(--kc-space-4);
+      text-align: center;
+    }
+  }
+</style>

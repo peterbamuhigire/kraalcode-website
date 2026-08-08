@@ -1,0 +1,142 @@
+/* ============================================================
+   Kraal Code Design Tokens
+   Derived from the KraalCode light/dark logos (extracted 2026-08-09)
+   ============================================================ */
+
+:root {
+  /* ── Brand Colours (from logo pixel extraction) ── */
+  --kc-charcoal:        #202833;  /* Deep charcoal — wordmark, primary text */
+  --kc-teal:            #46696b;  /* Dark teal — symbol, primary brand */
+  --kc-teal-deep:       #3a565a;  /* Deeper teal — accent, hover states */
+  --kc-teal-light:      #5a8a8e;  /* Lighter teal — links, interactive */
+  --kc-ivory:           #ccd9d2;  /* Warm ivory — dark mode text */
+  --kc-champagne:       #dbd1b8;  /* Champagne — dark mode accent */
+  --kc-teal-dark:       #39585d;  /* Dark teal-green — dark mode symbol */
+
+  /* ── Semantic Surface Colours ── */
+  --kc-surface-light:   #f8f6f3;  /* Warm off-white — page background */
+  --kc-surface-warm:    #f0ece5;  /* Warmer surface — card backgrounds */
+  --kc-surface-dark:    #1a1f28;  /* Near-black with warmth — dark sections */
+  --kc-surface-darker:  #141820;  /* Deepest dark — footer */
+
+  /* ── Text Hierarchy ── */
+  --kc-text-primary:    #202833;  /* Charcoal on light */
+  --kc-text-secondary:  #4a5568;  /* Muted slate */
+  --kc-text-tertiary:   #718096;  /* Lighter slate for captions */
+  --kc-text-inverse:    #ccd9d2;  /* Warm ivory on dark */
+  --kc-text-inverse-muted: #9ca8a0; /* Muted ivory for dark secondary text */
+
+  /* ── Border & Divider ── */
+  --kc-border:          #d4cfc7;  /* Warm grey border */
+  --kc-border-subtle:   #e8e4dc;  /* Lighter warm grey */
+  --kc-border-dark:     #2d3748;  /* Dark section borders */
+
+  /* ── Status Colours ── */
+  --kc-success:         #2d6a4f;  /* Forest green */
+  --kc-success-light:   #d4edda;
+  --kc-warning:         #b5651d;  /* Burnt amber */
+  --kc-warning-light:   #fff3cd;
+  --kc-danger:          #9b2226;  /* Deep red */
+  --kc-danger-light:    #f8d7da;
+  --kc-info:            #46696b;  /* Brand teal */
+  --kc-info-light:      #d1ecf1;
+
+  /* ── Interactive ── */
+  --kc-focus-ring:      #46696b;
+  --kc-link:            #3a565a;
+  --kc-link-hover:      #46696b;
+  --kc-link-inverse:    #ccd9d2;
+  --kc-link-inverse-hover: #dbd1b8;
+
+  /* ── Typography ── */
+  --kc-font-display:    'Source Serif 4', 'Georgia', 'Times New Roman', serif;
+  --kc-font-body:       'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --kc-font-mono:       'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+
+  /* ── Type Scale (Source Serif 4 / Source Sans 3) ── */
+  --kc-text-xs:         0.75rem;    /* 12px */
+  --kc-text-sm:         0.875rem;   /* 14px */
+  --kc-text-base:       1rem;       /* 16px */
+  --kc-text-lg:         1.125rem;   /* 18px */
+  --kc-text-xl:         1.25rem;    /* 20px */
+  --kc-text-2xl:        1.5rem;     /* 24px */
+  --kc-text-3xl:        2rem;       /* 32px */
+  --kc-text-4xl:        2.75rem;    /* 44px */
+  --kc-text-5xl:        3.5rem;     /* 56px */
+
+  /* ── Line Heights ── */
+  --kc-leading-tight:   1.1;
+  --kc-leading-snug:    1.2;
+  --kc-leading-normal:  1.5;
+  --kc-leading-relaxed: 1.6;
+  --kc-leading-loose:   1.75;
+
+  /* ── Font Weights ── */
+  --kc-weight-normal:   400;
+  --kc-weight-medium:   500;
+  --kc-weight-semibold: 600;
+  --kc-weight-bold:     700;
+
+  /* ── Spacing (4px base) ── */
+  --kc-space-1:         0.25rem;    /* 4px */
+  --kc-space-2:         0.5rem;     /* 8px */
+  --kc-space-3:         0.75rem;    /* 12px */
+  --kc-space-4:         1rem;       /* 16px */
+  --kc-space-5:         1.25rem;    /* 20px */
+  --kc-space-6:         1.5rem;     /* 24px */
+  --kc-space-8:         2rem;       /* 32px */
+  --kc-space-10:        2.5rem;     /* 40px */
+  --kc-space-12:        3rem;       /* 48px */
+  --kc-space-16:        4rem;       /* 64px */
+  --kc-space-20:        5rem;       /* 80px */
+  --kc-space-24:        6rem;       /* 96px */
+  --kc-space-32:        8rem;       /* 128px */
+
+  /* ── Border Radius ── */
+  --kc-radius-sm:       4px;
+  --kc-radius-md:       8px;
+  --kc-radius-lg:       12px;
+  --kc-radius-xl:       16px;
+  --kc-radius-full:     9999px;
+
+  /* ── Shadows ── */
+  --kc-shadow-sm:       0 1px 2px rgba(32, 40, 51, 0.06);
+  --kc-shadow-md:       0 4px 6px rgba(32, 40, 51, 0.07);
+  --kc-shadow-lg:       0 10px 15px rgba(32, 40, 51, 0.1);
+  --kc-shadow-xl:       0 20px 25px rgba(32, 40, 51, 0.12);
+
+  /* ── Breakpoints (reference, used in media queries) ── */
+  /* --kc-bp-sm: 640px */
+  /* --kc-bp-md: 768px */
+  /* --kc-bp-lg: 1024px */
+  /* --kc-bp-xl: 1280px */
+  /* --kc-bp-2xl: 1536px */
+
+  /* ── Layout ── */
+  --kc-container-max:   1280px;
+  --kc-container-narrow: 768px;
+  --kc-container-wide:  1440px;
+  --kc-gutter:          var(--kc-space-6);
+
+  /* ── Transitions ── */
+  --kc-transition-fast:   150ms ease;
+  --kc-transition-base:   250ms ease;
+  --kc-transition-slow:   400ms ease;
+
+  /* ── Z-Index Scale ── */
+  --kc-z-base:          0;
+  --kc-z-dropdown:      100;
+  --kc-z-sticky:        200;
+  --kc-z-overlay:       300;
+  --kc-z-modal:         400;
+  --kc-z-toast:         500;
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --kc-transition-fast: 0ms;
+    --kc-transition-base: 0ms;
+    --kc-transition-slow: 0ms;
+  }
+}
