@@ -1,0 +1,86 @@
+# Kraal Code
+
+> Kraal Code is a multi-tenant, modular, cloud-hosted SaaS ERP platform purpose-built for mid-sized and growing organisations in East and Central Africa. Priced per organisation (not per seat), denominated in Ugandan Shillings, and designed so any employee can use it on their first day without training.
+
+## Product
+
+Kraal Code provides 23 integrated components: 6 core modules (always active) + 13 add-on modules + 4 platform services.
+
+### Core Modules (Always Active)
+- Accounting & General Ledger — double-entry GL, AP/AR, bank reconciliation, multi-currency, VAT/WHT, budgets, financial statements
+- Inventory Management — item catalogue, stock tracking, FIFO/weighted-average costing, GRN, transfers
+- Sales — quotations, orders, invoices, delivery notes, credit notes, receipts
+- Procurement — supplier master, requisitions, RFQ, purchase orders, three-way matching
+- User Management & RBAC — unlimited roles, granular permissions, branch restrictions, 2FA, biometric login
+- Audit Log — immutable INSERT-only trail, 7-year retention, external auditor read-only role
+
+### Add-On Modules
+- Advanced Inventory — multi-location warehousing, batch/serial tracking, FEFO, expiry management
+- Manufacturing — BOM, routings, work centres, production orders, QC, genealogy, OEE
+- HR & Payroll — employee master, contracts, leave, attendance, payroll, multi-country statutory compliance (Uganda, Kenya, Tanzania, Rwanda)
+- Point of Sale — touch terminal, barcode scanning, multi-payment, mobile money, offline mode
+- Sales & CRM — accounts, contacts, leads, opportunities, cases, forecasting
+- Sales Agents & Commissions — agent register, targets, commission rules, mobile money bulk payment
+- Outgrower & Farmer Operations — farmer registration, seasonal intake, weighbridge, input loans
+- Project Management — register, budget, milestones, tasks, timesheets, project P&L
+- Strategy & Balanced Scorecard — BSC perspectives, KPIs, OKR mode, NGO logframe
+- Asset Management — register, depreciation, revaluation, maintenance, QR tagging
+- AI Intelligence — 90-day cash flow forecast, GL anomaly detection, demand forecasting, debtor risk scoring
+- Product Lifecycle Management — engineering items, revision control, EBOM/MBOM, change workflow
+- Transportation & Fleet — shipment planning, route planning, dispatch, proof of delivery
+
+## Pricing
+
+Organisation-wide flat pricing (no per-seat fees):
+- Starter: UGX 250,000/month (up to 5 users, 2 branches)
+- Small Business: UGX 500,000/month (up to 15 users, 5 branches)
+- Professional: UGX 1,000,000/month (up to 30 users, 10 branches)
+- Business: UGX 1,750,000/month (up to 60 users, 20 branches)
+- Enterprise: UGX 2,500,000/month (unlimited users and branches)
+- Annual billing: 10 months for 12 months (2 months free)
+
+## Security
+
+- Tenant isolation via row-level database separation
+- Role-based access control with unlimited roles
+- Immutable INSERT-only audit log with 7-year retention
+- TLS 1.3 in transit, AES-256 at rest for sensitive data
+- TOTP-based MFA and biometric login
+- OWASP Top 10 (2021) mapped with specific controls
+- Content-Security-Policy with per-request nonce
+- Rate limiting per tenant and per user
+
+## Target Markets
+
+- Phase 1 (launch): Uganda
+- Phase 2 (24 months): Kenya, Tanzania, Rwanda
+- Phase 3 (36 months): DRC, Cameroon, Côte d'Ivoire, Senegal, Mali, Burkina Faso, South Sudan, Burundi
+
+## Key Differentiators
+
+1. UGX-denominated pricing — no exchange rate risk
+2. Organisation-wide flat pricing — no per-seat fees
+3. Zero mandatory training — 85% unassisted task success target
+4. Africa-native integrations — EFRIS, MTN MoMo, Airtel Money, M-Pesa
+5. Fully hosted SaaS — self-provisioning in ≤10 minutes
+
+## Links
+
+- Homepage: https://kraalcode.com/en/
+- Product: https://kraalcode.com/en/product/
+- Capabilities: https://kraalcode.com/en/capabilities/
+- Security: https://kraalcode.com/en/security/
+- Sectors: https://kraalcode.com/en/sectors/
+- Contact: https://kraalcode.com/en/contact/
+- Pricing: https://kraalcode.com/en/pricing/
+
+## Languages
+
+- English: https://kraalcode.com/en/
+- French: https://kraalcode.com/fr/
+- Kiswahili: https://kraalcode.com/sw/
+
+## Company
+
+Kraal Code is built by Chwezi Core Systems.
+Contact: info@kraalcode.com

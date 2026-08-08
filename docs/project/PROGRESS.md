@@ -1,8 +1,8 @@
 # Kraal Code Website — Build Progress
 
 **Last updated:** 2026-08-09  
-**Current phase:** Design & Brainstorming (Phase 0-3 combined)  
-**Next action:** Complete design sections, then begin implementation
+**Current phase:** Phase 5-6 Complete (English core + FR/SW homepages)  
+**Next action:** Create FR/SW subpages, robots.txt, llms.txt, sitemap, then quality checks
 
 ---
 
@@ -261,14 +261,54 @@ User added 16 new photos covering all previous gaps:
 1. ✅ Complete design sections (brainstorm)
 2. ✅ Scaffold Astro project (Phase 4)
 3. ✅ Implement design tokens and base styles (Phase 4)
-4. ✅ Build Header component
-5. ⬜ Build Footer component
-6. ⬜ Build homepage sections
-7. ⬜ Create content collections for EN/FR/SW
-8. ⬜ Build remaining English pages (Product, Capabilities, Sectors, Security, Why, Work from Anywhere, Contact)
-9. ⬜ Implement French and Kiswahili (Phase 6)
-10. ⬜ Quality checks (Phase 7-8)
-11. ⬜ Handover documentation (Phase 9)
+4. ✅ Build Header component (with language switcher, mobile menu)
+5. ✅ Build Footer component (with legal links, language switcher)
+6. ✅ Build homepage sections (Hero, Outcome, WorkAnywhere, Capabilities, AfricanContext, Security, Pricing, Implementation, FinalCTA)
+7. ✅ Build English core pages (Product, Capabilities, Security, Sectors, Contact, Why, Work from Anywhere, Company, Resources)
+8. ✅ Create French and Kiswahili homepages (Phase 6 — homepages done, subpages pending)
+9. ✅ Build passes — 12 pages built in 2.71s
+10. ⬜ Create FR/SW subpages (Product, Capabilities, Security, Sectors, Contact, Why, Work from Anywhere, Company, Resources)
+11. ⬜ Create robots.txt, llms.txt, sitemap
+12. ⬜ Quality checks (Phase 7-8)
+13. ⬜ Handover documentation (Phase 9)
+
+## Current Build Status
+
+**Pages built:** 12 (3 homepages + 9 English subpages)
+**Build time:** 2.71 seconds
+**Build output:** `dist/`
+
+### Built Pages
+| Route | Page | Status |
+|---|---|---|
+| `/en/` | Homepage | ✅ Built |
+| `/en/product/` | Platform Overview | ✅ Built |
+| `/en/capabilities/` | Capabilities Index | ✅ Built |
+| `/en/security/` | Security & Privacy | ✅ Built |
+| `/en/sectors/` | Sectors/Industries | ✅ Built |
+| `/en/contact/` | Request Demo Form | ✅ Built |
+| `/en/why/` | Why Kraal Code | ✅ Built |
+| `/en/work-from-anywhere/` | Work from Anywhere | ✅ Built |
+| `/en/company/` | About/Company | ✅ Built |
+| `/en/resources/` | Resources Index | ✅ Built |
+| `/fr/` | French Homepage | ✅ Built |
+| `/sw/` | Kiswahili Homepage | ✅ Built |
+
+### Component Inventory
+| Component | File | Purpose |
+|---|---|---|
+| BaseLayout | src/layouts/BaseLayout.astro | HTML shell, meta, structured data, skip link |
+| Header | src/components/global/Header.astro | Sticky nav, language switcher, mobile menu |
+| Footer | src/components/global/Footer.astro | 4-column footer, legal links, language switcher |
+| HeroSection | src/components/sections/HeroSection.astro | Geometric pattern hero with CTAs and stats |
+| OutcomeSection | src/components/sections/OutcomeSection.astro | 4 outcome cards |
+| WorkAnywhereSection | src/components/sections/WorkAnywhereSection.astro | 3 context cards with photos |
+| CapabilityMapSection | src/components/sections/CapabilityMapSection.astro | 8 capability cards on dark background |
+| AfricanContextSection | src/components/sections/AfricanContextSection.astro | Photo + 5 points with teal borders |
+| SecuritySection | src/components/sections/SecuritySection.astro | 6 security control cards |
+| PricingSection | src/components/sections/PricingSection.astro | 3-tier pricing cards |
+| ImplementationSection | src/components/sections/ImplementationSection.astro | 3-step process |
+| FinalCTASection | src/components/sections/FinalCTASection.astro | Dark CTA with 2 buttons |
 
 ---
 
@@ -278,11 +318,21 @@ If another agent needs to continue this work:
 1. `docs/project/PROGRESS.md` — this file (current state)
 2. `docs/KRAAL-CODE-WEBSITE-MASTER-BUILD-PROMPT.md` — full master prompt (1595 lines)
 3. `docs/references/` — 54 DOCX files (SDLC suite)
-4. `photo-bank/` — 72 images including logos
-5. Engine routers:
+4. `src/assets/images/` — 54 optimised images organized by page
+5. `public/icons/` — KraalCode logos (light + dark)
+6. `photo-bank/` — 35 unused/extra photos
+7. Engine routers:
    - `C:\wamp64\www\website-skills\CLAUDE.md`
    - `C:\wamp64\www\design-system-skills\README.md`
-   - `C:\wamp64\www\design-system-skills\doctrine\design-doctrine.md`
+
+### Quick Start for Next Agent
+1. Run `npx astro dev` to start development server
+2. Run `npx astro build` to build all pages
+3. All pages are in `src/pages/en/`, `src/pages/fr/`, `src/pages/sw/`
+4. All components are in `src/components/`
+5. Design tokens are in `src/styles/tokens/tokens.css`
+6. Images are in `src/assets/images/` (imported via Astro)
+7. To add a new page: create `src/pages/en/<slug>/index.astro` with `import BaseLayout from '../../../layouts/BaseLayout.astro'`
 
 ---
 

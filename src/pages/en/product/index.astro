@@ -1,0 +1,221 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const locale = 'en';
+
+const modules = [
+  { name: 'Accounting & General Ledger', icon: '◎', description: 'Double-entry GL, AP/AR, bank reconciliation, multi-currency, VAT/WHT, budgets, financial statements, and close orchestration.', core: true },
+  { name: 'Inventory Management', icon: '◉', description: 'Item catalogue, UOM conversion, FIFO/weighted-average costing, GRN, stock adjustments, reorder levels, and transfers.', core: true },
+  { name: 'Sales', icon: '◈', description: 'Customer master, price lists, quotations, sales orders, delivery notes, invoices, credit notes, and receipts.', core: true },
+  { name: 'Procurement', icon: '◇', description: 'Supplier master, purchase requisitions, RFQ, LPO, three-way matching, supplier payments, and WHT.', core: true },
+  { name: 'User Management & RBAC', icon: '⬡', description: 'User lifecycle, unlimited roles, granular permissions, branch restrictions, approval limits, 2FA, and biometric login.', core: true },
+  { name: 'Audit Log', icon: '⬢', description: 'Immutable INSERT-only audit trail, all CRUD and approval actions, external auditor read-only role, 7-year retention.', core: true },
+  { name: 'Advanced Inventory', icon: '◎', description: 'Multi-location warehousing, batch/serial tracking, FEFO, expiry management, inter-branch stock-in-transit, and landed cost.', core: false },
+  { name: 'Manufacturing', icon: '◉', description: 'BOM with versions, routings, work centres, production orders, WIP, genealogy, in-process QC, OEE, and yield tracking.', core: false },
+  { name: 'HR & Payroll', icon: '◈', description: 'Employee master, contracts, leave, attendance, payroll processing, bank payment files, and multi-country statutory compliance.', core: false },
+  { name: 'Point of Sale', icon: '◇', description: 'Touch-optimised terminal, barcode scanning, multi-payment modes, mobile money push, thermal receipt, and offline mode.', core: false },
+  { name: 'Sales & CRM', icon: '⬡', description: 'Accounts, contacts, leads, opportunities, cases, activities, segmentation, forecasting, and quote-to-cash coordination.', core: false },
+  { name: 'Sales Agents & Commissions', icon: '⬢', description: 'Agent register, target setting, commission rules, commission runs, mobile money bulk payment, and agent self-service portal.', core: false },
+  { name: 'Outgrower & Farmer Operations', icon: '◎', description: 'Commodity configuration, farmer registration, group hierarchy, seasonal intake, weighbridge integration, and farmer payment.', core: false },
+  { name: 'Project Management', icon: '◉', description: 'Project register, budget, milestones, tasks/WBS, timesheets, resource allocation, project billing, and project P&L.', core: false },
+  { name: 'Strategy & Balanced Scorecard', icon: '◈', description: 'Strategic framework, BSC perspectives, objectives, KPIs, actuals, traffic-light scoring, OKR mode, and NGO logframe.', core: false },
+  { name: 'Asset Management', icon: '◇', description: 'Asset register, depreciation, revaluation, disposal, transfer, maintenance scheduling, insurance, and QR/barcode tagging.', core: false },
+  { name: 'AI Intelligence', icon: '⬡', description: 'Cash flow forecasting, GL anomaly detection, demand forecasting, debtor risk scoring, and narrative financial reports.', core: false },
+  { name: 'Product Lifecycle Management', icon: '⬢', description: 'Engineering item master, revision control, EBOM/MBOM governance, engineering change workflow, and document control.', core: false },
+  { name: 'Transportation & Fleet', icon: '◎', description: 'Shipment planning, route/load planning, dispatch, carrier assignment, ETA visibility, proof of delivery, and freight audit.', core: false },
+];
+---
+
+<BaseLayout
+  title="Platform Overview — One Modular Operating Environment"
+  description="Kraal Code is one modular platform that brings finance, inventory, sales, procurement, people, projects, manufacturing, and management into one governed environment."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/product/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <h1>One platform, not a collection of apps</h1>
+      <p class="page-hero-subtext">Kraal Code brings finance, inventory, sales, procurement, people, projects, manufacturing, and management insight into one governed environment with shared data, controlled workflows, and unified permissions.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="product-grid">
+        <div class="product-image">
+          <img src="/src/assets/images/product/erp-platform-overview.jpg" alt="ERP software system overview with business documents and digital technology" width="600" height="400" loading="lazy" />
+        </div>
+        <div class="product-content">
+          <h2>A system that grows with your organisation</h2>
+          <p>Six core modules run every day — they cannot be disabled because every organisation needs them. Thirteen add-on modules activate when your organisation is ready. Start with what you need today; add manufacturing, HR, projects, or AI intelligence when the time comes.</p>
+          <p>Every module shares the same data model, the same permission system, the same audit trail, and the same user experience. There is no integration layer to maintain, no middleware to break, no version conflicts to resolve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--dark section">
+    <div class="container">
+      <h2>Core Modules</h2>
+      <p class="section-subtext">Always active. Every organisation needs these.</p>
+      <div class="module-grid">
+        {modules.filter(m => m.core).map((mod) => (
+          <div class="module-card">
+            <span class="module-icon" aria-hidden="true">{mod.icon}</span>
+            <h3>{mod.name}</h3>
+            <p>{mod.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Add-On Modules</h2>
+      <p class="section-subtext">Activate when your organisation needs them. Pay only for what you use.</p>
+      <div class="module-grid">
+        {modules.filter(m => !m.core).map((mod) => (
+          <div class="module-card">
+            <span class="module-icon" aria-hidden="true">{mod.icon}</span>
+            <h3>{mod.name}</h3>
+            <p>{mod.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section--warm section">
+    <div class="container text-center">
+      <h2>See how it works for your organisation</h2>
+      <p>Request a demonstration tailored to your sector and workflows.</p>
+      <a href="/en/contact/" class="btn btn--primary">Request a Demonstration</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding: var(--kc-space-20) 0 var(--kc-space-12);
+  }
+
+  .page-hero h1 {
+    font-size: var(--kc-text-4xl);
+    max-width: 700px;
+  }
+
+  .page-hero-subtext {
+    font-size: var(--kc-text-lg);
+    color: var(--kc-text-secondary);
+    max-width: 60ch;
+    margin-top: var(--kc-space-4);
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--kc-space-12);
+    align-items: center;
+  }
+
+  .product-image {
+    border-radius: var(--kc-radius-lg);
+    overflow: hidden;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .product-content h2 {
+    font-size: var(--kc-text-2xl);
+    margin-bottom: var(--kc-space-4);
+  }
+
+  .section-subtext {
+    color: var(--kc-text-secondary);
+    margin-bottom: var(--kc-space-8);
+  }
+
+  .section--dark .section-subtext {
+    color: var(--kc-text-inverse-muted);
+  }
+
+  .module-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--kc-space-6);
+  }
+
+  .module-card {
+    padding: var(--kc-space-6);
+    border: 1px solid var(--kc-border-subtle);
+    border-radius: var(--kc-radius-lg);
+    background: var(--kc-surface-light);
+  }
+
+  .section--dark .module-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: var(--kc-border-dark);
+  }
+
+  .module-icon {
+    font-size: var(--kc-text-2xl);
+    color: var(--kc-teal);
+    display: block;
+    margin-bottom: var(--kc-space-3);
+  }
+
+  .module-card h3 {
+    font-family: var(--kc-font-body);
+    font-size: var(--kc-text-base);
+    font-weight: var(--kc-weight-semibold);
+    margin-bottom: var(--kc-space-2);
+  }
+
+  .section--dark .module-card h3 {
+    color: var(--kc-text-inverse);
+  }
+
+  .module-card p {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-secondary);
+    margin: 0;
+  }
+
+  .section--dark .module-card p {
+    color: var(--kc-text-inverse-muted);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--kc-space-4) var(--kc-space-8);
+    font-weight: var(--kc-weight-semibold);
+    font-size: var(--kc-text-base);
+    border-radius: var(--kc-radius-lg);
+    background: var(--kc-charcoal);
+    color: var(--kc-text-inverse);
+    transition: all var(--kc-transition-fast);
+    text-decoration: none;
+    margin-top: var(--kc-space-6);
+  }
+
+  .btn:hover {
+    background: var(--kc-teal-deep);
+    color: var(--kc-text-inverse);
+  }
+
+  @media (max-width: 1024px) {
+    .module-grid { grid-template-columns: repeat(2, 1fr); }
+    .product-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    .module-grid { grid-template-columns: 1fr; }
+    .page-hero h1 { font-size: var(--kc-text-3xl); }
+  }
+</style>

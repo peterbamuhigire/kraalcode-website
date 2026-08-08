@@ -1,0 +1,328 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const locale = 'en';
+---
+
+<BaseLayout
+  title="Request a Demonstration — See Kraal Code for Your Organisation"
+  description="Request a guided demonstration of Kraal Code tailored to your sector, workflows, and operating reality. No obligation, no pressure."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/contact/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <h1>See Kraal Code running in your organisation</h1>
+      <p class="page-hero-subtext">Request a guided demonstration tailored to your sector, your workflows, and your operating reality. No obligation, no pressure — just a clear view of how Kraal Code fits your needs.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-grid">
+      <div class="contact-content">
+        <h2>What to expect</h2>
+        <ul class="expect-list" role="list">
+          <li><strong>A conversation about your organisation</strong> — your size, sector, current systems, and the operational challenges you face.</li>
+          <li><strong>A tailored demonstration</strong> — we show you the modules and workflows most relevant to your situation.</li>
+          <li><strong>Honest answers</strong> — we tell you what Kraal Code does well, what is on the roadmap, and where other tools might be a better fit.</li>
+          <li><strong>No obligation</strong> — there is no commitment, no sales pressure, and no surprise follow-up campaigns.</li>
+        </ul>
+
+        <h2>After the demonstration</h2>
+        <p>If Kraal Code fits your needs, we can discuss implementation. If it does not, we will tell you honestly. Our goal is to help you make the right decision for your organisation — even if that means choosing a different solution.</p>
+
+        <div class="contact-details">
+          <h3>Get in touch directly</h3>
+          <p><strong>Email:</strong> <a href="mailto:info@kraalcode.com">info@kraalcode.com</a></p>
+          <p><strong>Company:</strong> Chwezi Core Systems</p>
+          <p><strong>Product site:</strong> kraalcode.com</p>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <form class="contact-form" action="#" method="POST" novalidate>
+          <h2>Request a demonstration</h2>
+
+          <div class="form-group">
+            <label for="name">Full name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Work email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="organisation">Organisation <span class="required">*</span></label>
+            <input type="text" id="organisation" name="organisation" required autocomplete="organization" />
+          </div>
+
+          <div class="form-group">
+            <label for="country">Country <span class="required">*</span></label>
+            <select id="country" name="country" required>
+              <option value="">Select your country</option>
+              <option value="UG">Uganda</option>
+              <option value="KE">Kenya</option>
+              <option value="TZ">Tanzania</option>
+              <option value="RW">Rwanda</option>
+              <option value="CD">Democratic Republic of Congo</option>
+              <option value="CM">Cameroon</option>
+              <option value="CI">Côte d'Ivoire</option>
+              <option value="SN">Senegal</option>
+              <option value="SS">South Sudan</option>
+              <option value="BI">Burundi</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="role">Your role</label>
+            <select id="role" name="role">
+              <option value="">Select your role</option>
+              <option value="owner">Owner / Founder / CEO</option>
+              <option value="finance">Finance Manager / Accountant</option>
+              <option value="operations">Operations Manager</option>
+              <option value="it">IT Manager / System Administrator</option>
+              <option value="hr">HR Manager</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="size">Organisation size</label>
+            <select id="size" name="size">
+              <option value="">Select size</option>
+              <option value="1-5">1–5 employees</option>
+              <option value="6-15">6–15 employees</option>
+              <option value="16-50">16–50 employees</option>
+              <option value="51-100">51–100 employees</option>
+              <option value="101-500">101–500 employees</option>
+              <option value="500+">500+ employees</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="interest">Areas of interest</label>
+            <textarea id="interest" name="interest" rows="3" placeholder="Which modules or capabilities are you most interested in?"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Anything else you'd like us to know?</label>
+            <textarea id="message" name="message" rows="3" placeholder="Tell us about your current systems, challenges, or specific requirements."></textarea>
+          </div>
+
+          <div class="form-group form-checkbox">
+            <input type="checkbox" id="privacy" name="privacy" required />
+            <label for="privacy">I understand Kraal Code will use this information to respond to my enquiry and provide relevant follow-up. <span class="required">*</span></label>
+          </div>
+
+          <div class="form-group form-checkbox">
+            <input type="checkbox" id="marketing" name="marketing" />
+            <label for="marketing">I would like to receive occasional product updates and insights. (Optional)</label>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full">Submit Request</button>
+
+          <p class="form-note">We aim to respond within 2 business days. Your information will not be shared with third parties.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding: var(--kc-space-20) 0 var(--kc-space-12);
+  }
+
+  .page-hero h1 {
+    font-size: var(--kc-text-4xl);
+    max-width: 700px;
+  }
+
+  .page-hero-subtext {
+    font-size: var(--kc-text-lg);
+    color: var(--kc-text-secondary);
+    max-width: 60ch;
+    margin-top: var(--kc-space-4);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--kc-space-12);
+    align-items: flex-start;
+  }
+
+  .contact-content h2 {
+    font-size: var(--kc-text-2xl);
+    margin-bottom: var(--kc-space-4);
+    margin-top: var(--kc-space-8);
+  }
+
+  .contact-content h2:first-child {
+    margin-top: 0;
+  }
+
+  .expect-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--kc-space-4);
+    margin-bottom: var(--kc-space-8);
+  }
+
+  .expect-list li {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-secondary);
+    padding-left: var(--kc-space-5);
+    border-left: 3px solid var(--kc-teal);
+  }
+
+  .expect-list strong {
+    display: block;
+    color: var(--kc-charcoal);
+    font-size: var(--kc-text-base);
+    margin-bottom: var(--kc-space-1);
+  }
+
+  .contact-details {
+    margin-top: var(--kc-space-8);
+    padding: var(--kc-space-6);
+    background: var(--kc-surface-warm);
+    border-radius: var(--kc-radius-lg);
+  }
+
+  .contact-details h3 {
+    font-family: var(--kc-font-body);
+    font-size: var(--kc-text-lg);
+    font-weight: var(--kc-weight-semibold);
+    margin-bottom: var(--kc-space-3);
+  }
+
+  .contact-details p {
+    font-size: var(--kc-text-sm);
+    margin-bottom: var(--kc-space-2);
+  }
+
+  .contact-form-wrap {
+    position: sticky;
+    top: 96px;
+  }
+
+  .contact-form {
+    padding: var(--kc-space-8);
+    background: var(--kc-surface-light);
+    border: 1px solid var(--kc-border-subtle);
+    border-radius: var(--kc-radius-lg);
+  }
+
+  .contact-form h2 {
+    font-size: var(--kc-text-xl);
+    font-family: var(--kc-font-body);
+    font-weight: var(--kc-weight-semibold);
+    margin-bottom: var(--kc-space-6);
+  }
+
+  .form-group {
+    margin-bottom: var(--kc-space-5);
+  }
+
+  .form-group label {
+    display: block;
+    font-size: var(--kc-text-sm);
+    font-weight: var(--kc-weight-medium);
+    color: var(--kc-charcoal);
+    margin-bottom: var(--kc-space-2);
+  }
+
+  .required {
+    color: var(--kc-danger);
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: var(--kc-space-3) var(--kc-space-4);
+    border: 1px solid var(--kc-border);
+    border-radius: var(--kc-radius-md);
+    font-size: var(--kc-text-base);
+    background: var(--kc-surface-light);
+    transition: border-color var(--kc-transition-fast);
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--kc-teal);
+    box-shadow: 0 0 0 3px rgba(70, 105, 107, 0.1);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  .form-checkbox {
+    display: flex;
+    gap: var(--kc-space-3);
+    align-items: flex-start;
+  }
+
+  .form-checkbox input[type="checkbox"] {
+    margin-top: 4px;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  .form-checkbox label {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-secondary);
+    margin-bottom: 0;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--kc-space-4) var(--kc-space-8);
+    font-weight: var(--kc-weight-semibold);
+    font-size: var(--kc-text-base);
+    border-radius: var(--kc-radius-lg);
+    background: var(--kc-charcoal);
+    color: var(--kc-text-inverse);
+    transition: all var(--kc-transition-fast);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background: var(--kc-teal-deep);
+    color: var(--kc-text-inverse);
+  }
+
+  .btn--full {
+    width: 100%;
+  }
+
+  .form-note {
+    font-size: var(--kc-text-xs);
+    color: var(--kc-text-tertiary);
+    margin-top: var(--kc-space-4);
+    text-align: center;
+  }
+
+  @media (max-width: 1024px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .contact-form-wrap { position: static; }
+  }
+
+  @media (max-width: 640px) {
+    .page-hero h1 { font-size: var(--kc-text-3xl); }
+  }
+</style>

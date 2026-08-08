@@ -1,0 +1,174 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const locale = 'en';
+
+const groups = [
+  { title: 'Finance & Accounting', image: '/src/assets/images/capabilities/finance-payroll-calculator.jpg', description: 'Double-entry GL, AP/AR, bank reconciliation, multi-currency, VAT/WHT, budgets, and financial statements.', href: '/en/capabilities/accounting/', modules: 'Accounting, Advanced Inventory' },
+  { title: 'Inventory & Warehousing', image: '/src/assets/images/capabilities/inventory-warehouse-supervisors.jpg', description: 'Item catalogue, stock tracking, FIFO/weighted-average costing, GRN, transfers, reorder levels, and multi-location warehousing.', href: '/en/capabilities/inventory/', modules: 'Inventory, Advanced Inventory' },
+  { title: 'Sales & Customer Operations', image: '/src/assets/images/capabilities/finance-team-payroll-analysis.jpg', description: 'Quotations, orders, invoices, delivery notes, credit notes, receipts, customer management, and CRM.', href: '/en/capabilities/sales/', modules: 'Sales, Sales & CRM, Sales Agents' },
+  { title: 'Procurement & Suppliers', image: '/src/assets/images/capabilities/procurement-supply-chain.jpg', description: 'Supplier master, requisitions, RFQ, purchase orders, three-way matching, supplier payments, and WHT.', href: '/en/capabilities/procurement/', modules: 'Procurement' },
+  { title: 'Manufacturing & Production', image: '/src/assets/images/capabilities/manufacturing-smart-factory.jpg', description: 'BOM, routings, work centres, production orders, QC, genealogy, OEE, yield tracking, and green production KPIs.', href: '/en/capabilities/manufacturing/', modules: 'Manufacturing' },
+  { title: 'HR & Payroll', image: '/src/assets/images/capabilities/hr-people-networking.jpg', description: 'Employee master, contracts, leave, attendance, payroll processing, bank payment files, and multi-country statutory compliance.', href: '/en/capabilities/hr-payroll/', modules: 'HR & Payroll' },
+  { title: 'Projects & Work Planning', image: '/src/assets/images/capabilities/projects-gantt-chart.jpg', description: 'Project register, budget, milestones, tasks/WBS, timesheets, resource allocation, project billing, and project P&L.', href: '/en/capabilities/projects/', modules: 'Project Management' },
+  { title: 'Reporting & Management Insight', image: '/src/assets/images/capabilities/reporting-analytics-laptop.jpg', description: 'Real-time dashboards, management reports, drill-down analytics, AI-powered financial commentary, and strategy scorecards.', href: '/en/capabilities/reporting/', modules: 'Reporting, AI Intelligence, Strategy & BSC' },
+];
+---
+
+<BaseLayout
+  title="Capabilities — Connected Modules for Every Business Function"
+  description="Explore Kraal Code's connected capabilities: finance, inventory, sales, procurement, manufacturing, HR, projects, and reporting — all in one governed platform."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/capabilities/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <h1>Connected capabilities, not disconnected tools</h1>
+      <p class="page-hero-subtext">Every Kraal Code module shares the same data model, permission system, audit trail, and user experience. No middleware. No integration layer. No version conflicts.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cap-grid">
+        {groups.map((group) => (
+          <a href={group.href} class="cap-card">
+            <div class="cap-image">
+              <img src={group.image} alt={group.title} width="400" height="240" loading="lazy" />
+            </div>
+            <div class="cap-content">
+              <h2>{group.title}</h2>
+              <p>{group.description}</p>
+              <span class="cap-modules">Modules: {group.modules}</span>
+              <span class="cap-link">Learn more →</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section--dark section">
+    <div class="container text-center">
+      <h2>See these capabilities in action</h2>
+      <p>Request a demonstration tailored to your organisation's needs.</p>
+      <a href="/en/contact/" class="btn btn--inverse">Request a Demonstration →</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding: var(--kc-space-20) 0 var(--kc-space-12);
+  }
+
+  .page-hero h1 {
+    font-size: var(--kc-text-4xl);
+    max-width: 700px;
+  }
+
+  .page-hero-subtext {
+    font-size: var(--kc-text-lg);
+    color: var(--kc-text-secondary);
+    max-width: 60ch;
+    margin-top: var(--kc-space-4);
+  }
+
+  .cap-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--kc-space-8);
+  }
+
+  .cap-card {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: var(--kc-space-8);
+    padding: var(--kc-space-6);
+    border: 1px solid var(--kc-border-subtle);
+    border-radius: var(--kc-radius-lg);
+    transition: all var(--kc-transition-fast);
+    text-decoration: none;
+    color: inherit;
+    align-items: center;
+  }
+
+  .cap-card:hover {
+    border-color: var(--kc-teal);
+    box-shadow: var(--kc-shadow-md);
+  }
+
+  .cap-image {
+    border-radius: var(--kc-radius-md);
+    overflow: hidden;
+    aspect-ratio: 5 / 3;
+  }
+
+  .cap-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cap-content h2 {
+    font-size: var(--kc-text-xl);
+    font-family: var(--kc-font-body);
+    font-weight: var(--kc-weight-semibold);
+    color: var(--kc-charcoal);
+    margin-bottom: var(--kc-space-2);
+  }
+
+  .cap-content p {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-secondary);
+    margin-bottom: var(--kc-space-3);
+  }
+
+  .cap-modules {
+    display: block;
+    font-size: var(--kc-text-xs);
+    color: var(--kc-text-tertiary);
+    margin-bottom: var(--kc-space-2);
+  }
+
+  .cap-link {
+    font-size: var(--kc-text-sm);
+    font-weight: var(--kc-weight-semibold);
+    color: var(--kc-teal);
+    transition: color var(--kc-transition-fast);
+  }
+
+  .cap-card:hover .cap-link {
+    color: var(--kc-teal-deep);
+  }
+
+  .btn--inverse {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--kc-space-4) var(--kc-space-8);
+    font-weight: var(--kc-weight-semibold);
+    font-size: var(--kc-text-base);
+    border-radius: var(--kc-radius-lg);
+    background: transparent;
+    color: var(--kc-text-inverse);
+    border: 2px solid var(--kc-teal-light);
+    transition: all var(--kc-transition-fast);
+    text-decoration: none;
+    margin-top: var(--kc-space-6);
+  }
+
+  .btn--inverse:hover {
+    background: var(--kc-teal);
+    border-color: var(--kc-teal);
+  }
+
+  @media (max-width: 768px) {
+    .cap-card {
+      grid-template-columns: 1fr;
+    }
+
+    .page-hero h1 {
+      font-size: var(--kc-text-3xl);
+    }
+  }
+</style>

@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/sections/HeroSection.astro';
+import OutcomeSection from '../../components/sections/OutcomeSection.astro';
+import WorkAnywhereSection from '../../components/sections/WorkAnywhereSection.astro';
+import CapabilityMapSection from '../../components/sections/CapabilityMapSection.astro';
+import AfricanContextSection from '../../components/sections/AfricanContextSection.astro';
+import SecuritySection from '../../components/sections/SecuritySection.astro';
+import PricingSection from '../../components/sections/PricingSection.astro';
+import ImplementationSection from '../../components/sections/ImplementationSection.astro';
+import FinalCTASection from '../../components/sections/FinalCTASection.astro';
+
+const locale = 'sw';
+---
+
+<BaseLayout
+  title="Kraal Code — Mfumo wa Uendeshaji kwa Shirika la Kisasa la Kiafrika"
+  description="Jukwaa moja salama la wingu kwa kuuendesha fedha, watu, hisa, mauzo, manunuzi, uzalishaji, miradi, na usimamizi. Kuanzia UGX 250,000/mwezi."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/sw/"
+>
+  <HeroSection locale={locale} />
+  <OutcomeSection locale={locale} />
+  <WorkAnywhereSection locale={locale} />
+  <CapabilityMapSection locale={locale} />
+  <AfricanContextSection locale={locale} />
+  <SecuritySection locale={locale} />
+  <PricingSection locale={locale} />
+  <ImplementationSection locale={locale} />
+  <FinalCTASection locale={locale} />
+</BaseLayout>

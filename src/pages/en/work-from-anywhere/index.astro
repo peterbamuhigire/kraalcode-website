@@ -1,0 +1,234 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const locale = 'en';
+---
+
+<BaseLayout
+  title="Work from Anywhere — Your Organisation Travels With You"
+  description="Kraal Code gives authorised people controlled access from a laptop at headquarters, a phone in the field, a tablet in a warehouse, or a home office in another city."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/work-from-anywhere/"
+>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Your organisation travels with you</h1>
+      <p class="page-hero-subtext">Kraal Code gives authorised people controlled access from a laptop at headquarters, a phone in the field, a tablet in a warehouse, or a home office in another city. Identity, permissions, and auditability travel with every action.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="wfa-grid">
+        <div class="wfa-card">
+          <div class="wfa-image">
+            <img src="/src/assets/images/work-anywhere/remote-work-home-laptop.jpg" alt="Woman working remotely from home with laptop and documents" width="400" height="280" loading="lazy" />
+          </div>
+          <h2>From a laptop at headquarters</h2>
+          <p>Full operational access for finance, approvals, reporting, and administration. Run month-end close, manage inventory, process payroll, and generate reports from your primary office.</p>
+          <ul class="wfa-features" role="list">
+            <li>Complete module access</li>
+            <li>Multi-tab workflows</li>
+            <li>Full reporting and analytics</li>
+            <li>Administration and configuration</li>
+          </ul>
+        </div>
+
+        <div class="wfa-card">
+          <div class="wfa-image">
+            <img src="/src/assets/images/work-anywhere/remote-work-sofa.jpg" alt="Woman on sofa doing remote freelance work with laptop" width="400" height="280" loading="lazy" />
+          </div>
+          <h2>From a phone in the field</h2>
+          <p>Record transactions, check stock, approve requests, submit reports, and capture attendance from wherever work takes you. Responsive web access works on any modern mobile browser.</p>
+          <ul class="wfa-features" role="list">
+            <li>Transaction recording</li>
+            <li>Stock level checks</li>
+            <li>Approval workflows</li>
+            <li>Attendance capture</li>
+          </ul>
+        </div>
+
+        <div class="wfa-card">
+          <div class="wfa-image">
+            <img src="/src/assets/images/work-anywhere/remote-work-desk-phone.jpg" alt="Woman at home desk with laptop and phone for remote work" width="400" height="280" loading="lazy" />
+          </div>
+          <h2>From a home office or remote location</h2>
+          <p>Coordinate projects, manage teams, and maintain visibility across the organisation without being in the same building. Cross-border collaboration with the same controls as headquarters.</p>
+          <ul class="wfa-features" role="list">
+            <li>Project coordination</li>
+            <li>Team management</li>
+            <li>Cross-branch visibility</li>
+            <li>Secure remote access</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--warm section">
+    <div class="container">
+      <h2>How controlled access works</h2>
+      <div class="controls-grid">
+        <div class="control-item">
+          <h3>Identity</h3>
+          <p>Every user has a verified identity. Two-factor authentication and biometric login protect account access. Sessions are bound to the authenticated user.</p>
+        </div>
+        <div class="control-item">
+          <h3>Permissions</h3>
+          <p>Role-based access controls what each user can see and do. Branch restrictions limit visibility to authorised locations. Approval limits control financial authority.</p>
+        </div>
+        <div class="control-item">
+          <h3>Auditability</h3>
+          <p>Every action is recorded — who did what, from where, when. The immutable audit trail works identically whether the user is at headquarters or on a phone in the field.</p>
+        </div>
+        <div class="control-item">
+          <h3>Session Security</h3>
+          <p>HttpOnly, Secure, SameSite=Strict cookies for web sessions. JWT tokens with 15-minute expiry for mobile. Account lockout after 5 failed attempts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--dark section">
+    <div class="container text-center">
+      <h2>See remote work in action</h2>
+      <p>Request a demonstration showing how Kraal Code works across devices and locations.</p>
+      <a href="/en/contact/" class="btn btn--inverse">Request a Demonstration →</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding: var(--kc-space-20) 0 var(--kc-space-12);
+    background: var(--kc-surface-dark);
+    color: var(--kc-text-inverse);
+  }
+
+  .page-hero h1 {
+    font-size: var(--kc-text-4xl);
+    max-width: 700px;
+  }
+
+  .page-hero-subtext {
+    font-size: var(--kc-text-lg);
+    color: var(--kc-text-inverse-muted);
+    max-width: 60ch;
+    margin-top: var(--kc-space-4);
+  }
+
+  .wfa-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--kc-space-8);
+  }
+
+  .wfa-card {
+    text-align: left;
+  }
+
+  .wfa-image {
+    border-radius: var(--kc-radius-lg);
+    overflow: hidden;
+    margin-bottom: var(--kc-space-5);
+    aspect-ratio: 4 / 3;
+  }
+
+  .wfa-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .wfa-card h2 {
+    font-size: var(--kc-text-xl);
+    font-family: var(--kc-font-body);
+    font-weight: var(--kc-weight-semibold);
+    color: var(--kc-charcoal);
+    margin-bottom: var(--kc-space-3);
+  }
+
+  .wfa-card p {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-secondary);
+    margin-bottom: var(--kc-space-4);
+  }
+
+  .wfa-features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--kc-space-2);
+  }
+
+  .wfa-features li {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-secondary);
+    padding-left: var(--kc-space-5);
+    position: relative;
+  }
+
+  .wfa-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--kc-teal);
+    font-weight: var(--kc-weight-bold);
+  }
+
+  .controls-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--kc-space-6);
+  }
+
+  .control-item {
+    padding: var(--kc-space-6);
+    background: var(--kc-surface-light);
+    border: 1px solid var(--kc-border-subtle);
+    border-radius: var(--kc-radius-lg);
+  }
+
+  .control-item h3 {
+    font-family: var(--kc-font-body);
+    font-size: var(--kc-text-lg);
+    font-weight: var(--kc-weight-semibold);
+    color: var(--kc-charcoal);
+    margin-bottom: var(--kc-space-3);
+  }
+
+  .control-item p {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-secondary);
+    margin: 0;
+  }
+
+  .btn--inverse {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--kc-space-4) var(--kc-space-8);
+    font-weight: var(--kc-weight-semibold);
+    font-size: var(--kc-text-base);
+    border-radius: var(--kc-radius-lg);
+    background: transparent;
+    color: var(--kc-text-inverse);
+    border: 2px solid var(--kc-teal-light);
+    transition: all var(--kc-transition-fast);
+    text-decoration: none;
+    margin-top: var(--kc-space-6);
+  }
+
+  .btn--inverse:hover {
+    background: var(--kc-teal);
+    border-color: var(--kc-teal);
+  }
+
+  @media (max-width: 1024px) {
+    .wfa-grid { grid-template-columns: 1fr; }
+    .controls-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 640px) {
+    .controls-grid { grid-template-columns: 1fr; }
+    .page-hero h1 { font-size: var(--kc-text-3xl); }
+  }
+</style>

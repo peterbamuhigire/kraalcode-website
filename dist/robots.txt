@@ -1,0 +1,7 @@
+# robots.txt — Kraal Code
+User-agent: *
+Allow: /
+
+Sitemap: https://kraalcode.com/sitemap-en.xml
+Sitemap: https://kraalcode.com/sitemap-fr.xml
+Sitemap: https://kraalcode.com/sitemap-sw.xml

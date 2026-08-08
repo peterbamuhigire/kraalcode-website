@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const locale = 'en';
+
+const sectors = [
+  { title: 'Manufacturing', image: '/src/assets/images/industries/manufacturing-solar-technician.jpg', description: 'BOM, routings, work centres, production orders, QC, genealogy, OEE, and yield tracking. From raw materials to finished goods.', modules: 'Accounting, Inventory, Manufacturing, Procurement, HR & Payroll', href: '/en/sectors/manufacturing/' },
+  { title: 'Trading & Distribution', image: '/src/assets/images/capabilities/inventory-warehouse-supervisors.jpg', description: 'Multi-warehouse inventory, batch tracking, FEFO, inter-branch transfers, landed cost, and distribution management.', modules: 'Accounting, Inventory, Advanced Inventory, Sales, Procurement', href: '/en/sectors/trading/' },
+  { title: 'Non-Profits & NGOs', image: '/src/assets/images/industries/nonprofits-volunteers.jpg', description: 'Donor-restricted fund accounting, project-based budget tracking, multi-currency grant reporting, and logframe reporting.', modules: 'Accounting, Projects, Strategy & BSC, HR & Payroll, Procurement', href: '/en/sectors/nonprofits/' },
+  { title: 'Consultancy & Professional Services', image: '/src/assets/images/industries/consultancy-analysts-meeting.jpg', description: 'Project billing (T&M and milestone), timesheets, resource allocation, project P&L, and client management.', modules: 'Accounting, Sales & CRM, Projects, HR & Payroll', href: '/en/sectors/consultancy/' },
+  { title: 'Agriculture & Cooperatives', image: '/src/assets/images/industries/agriculture-sorghum-field.jpg', description: 'Outgrower registration, seasonal intake, weighbridge integration, input loan deductions, and mobile money farmer payment.', modules: 'Accounting, Inventory, Outgrower Operations, Procurement', href: '/en/sectors/agriculture/' },
+  { title: 'Retail & POS', image: '/src/assets/images/industries/retail-pos-terminal.jpg', description: 'Touch-optimised terminal, barcode scanning, multi-payment modes, mobile money push, thermal receipt, and offline mode.', modules: 'Accounting, Inventory, POS, Sales', href: '/en/sectors/retail/' },
+  { title: 'Hospitality', image: '/src/assets/images/industries/hospitality-hotel-pool.jpg', description: 'POS with table mode, inventory management, HR & Payroll, and financial reporting for hotels, restaurants, and lodges.', modules: 'Accounting, Inventory, POS, HR & Payroll', href: '/en/sectors/hospitality/' },
+  { title: 'Schools & Education', image: '/src/assets/images/industries/schools-science-lesson.jpg', description: 'Integration with Academia Pro for school management. Finance, HR, procurement, and reporting for educational institutions.', modules: 'Accounting, HR & Payroll, Procurement, Projects', href: '/en/sectors/education/' },
+];
+---
+
+<BaseLayout
+  title="Sectors — Kraal Code Configured for Your Industry"
+  description="See how Kraal Code configures for manufacturing, trading, non-profits, consultancy, agriculture, retail, hospitality, and education sectors."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/sectors/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <h1>One platform, configured for your sector</h1>
+      <p class="page-hero-subtext">Kraal Code is not a one-size-fits-all system. The same platform configures differently for a manufacturer, a consultancy, an NGO, and a retailer. See how it works for your world.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="sectors-grid">
+        {sectors.map((sector) => (
+          <a href={sector.href} class="sector-card">
+            <div class="sector-image">
+              <img src={sector.image} alt={sector.title} width="400" height="240" loading="lazy" />
+            </div>
+            <div class="sector-content">
+              <h2>{sector.title}</h2>
+              <p>{sector.description}</p>
+              <span class="sector-modules">Key modules: {sector.modules}</span>
+              <span class="sector-link">Learn more →</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section--dark section">
+    <div class="container text-center">
+      <h2>Don't see your sector?</h2>
+      <p>Kraal Code's modular architecture means it can be configured for many types of organisations. Talk to us about your specific needs.</p>
+      <a href="/en/contact/" class="btn btn--inverse">Discuss Your Requirements →</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding: var(--kc-space-20) 0 var(--kc-space-12);
+  }
+
+  .page-hero h1 {
+    font-size: var(--kc-text-4xl);
+    max-width: 700px;
+  }
+
+  .page-hero-subtext {
+    font-size: var(--kc-text-lg);
+    color: var(--kc-text-secondary);
+    max-width: 60ch;
+    margin-top: var(--kc-space-4);
+  }
+
+  .sectors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--kc-space-8);
+  }
+
+  .sector-card {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: var(--kc-space-6);
+    padding: var(--kc-space-6);
+    border: 1px solid var(--kc-border-subtle);
+    border-radius: var(--kc-radius-lg);
+    transition: all var(--kc-transition-fast);
+    text-decoration: none;
+    color: inherit;
+    align-items: center;
+  }
+
+  .sector-card:hover {
+    border-color: var(--kc-teal);
+    box-shadow: var(--kc-shadow-md);
+  }
+
+  .sector-image {
+    border-radius: var(--kc-radius-md);
+    overflow: hidden;
+    aspect-ratio: 5 / 3;
+  }
+
+  .sector-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sector-content h2 {
+    font-size: var(--kc-text-xl);
+    font-family: var(--kc-font-body);
+    font-weight: var(--kc-weight-semibold);
+    color: var(--kc-charcoal);
+    margin-bottom: var(--kc-space-2);
+  }
+
+  .sector-content p {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-secondary);
+    margin-bottom: var(--kc-space-3);
+  }
+
+  .sector-modules {
+    display: block;
+    font-size: var(--kc-text-xs);
+    color: var(--kc-text-tertiary);
+    margin-bottom: var(--kc-space-2);
+  }
+
+  .sector-link {
+    font-size: var(--kc-text-sm);
+    font-weight: var(--kc-weight-semibold);
+    color: var(--kc-teal);
+  }
+
+  .sector-card:hover .sector-link {
+    color: var(--kc-teal-deep);
+  }
+
+  .btn--inverse {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--kc-space-4) var(--kc-space-8);
+    font-weight: var(--kc-weight-semibold);
+    font-size: var(--kc-text-base);
+    border-radius: var(--kc-radius-lg);
+    background: transparent;
+    color: var(--kc-text-inverse);
+    border: 2px solid var(--kc-teal-light);
+    transition: all var(--kc-transition-fast);
+    text-decoration: none;
+    margin-top: var(--kc-space-6);
+  }
+
+  .btn--inverse:hover {
+    background: var(--kc-teal);
+    border-color: var(--kc-teal);
+  }
+
+  @media (max-width: 1024px) {
+    .sectors-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    .sector-card { grid-template-columns: 1fr; }
+    .page-hero h1 { font-size: var(--kc-text-3xl); }
+  }
+</style>
