@@ -1,8 +1,8 @@
 # Kraal Code Website — Build Progress
 
 **Last updated:** 2026-08-09  
-**Current phase:** Phase 5-6 Complete (English core + FR/SW homepages)  
-**Next action:** Create FR/SW subpages, robots.txt, llms.txt, sitemap, then quality checks
+**Current phase:** Phase 6 deployment hardening complete
+**Next action:** Replace interim fallback detail pages with fully authored FR/SW and deep English pages
 
 ---
 
@@ -218,6 +218,29 @@ Annual billing: 10 months for 12 months (2 months free).
 
 ### Asset Move Complete (2026-08-09)
 - **38 photos** moved to `src/assets/images/` (organized by page)
+
+---
+
+## Production Deployment Hardening (2026-08-09)
+
+### Issues Fixed
+- Root `/` no longer depends on a hand-written `dist/index.html`; `src/pages/index.astro` generates a redirect to `/en/`.
+- Missing logo, favicon, social, work-anywhere, capability, sector, product, about, and security image URLs are now backed by files in `public/`.
+- Header and footer logo usage now matches surface contrast: the light site header uses the dark readable wordmark, while the dark footer uses the lighter mark.
+- Header and footer logos were enlarged for stronger brand presence.
+- The repeated work-anywhere imagery was corrected; "From a phone in the field" now uses a distinct field/mobile work image.
+- Global section, page hero, and card-like spacing was tightened up so text, images, and buttons have breathing room from visual edges.
+- Missing font preload references were removed from `BaseLayout.astro`.
+- Linked-but-not-yet-authored routes are generated through an interim fallback page so internal navigation does not produce 404s.
+
+### Verification
+- `npm run build` completed successfully.
+- Astro generated 97 static pages.
+- A generated-output reference check covered 127 root-relative `href`, `src`, and `content` references with no missing generated targets.
+- The previously failing image URL `/src/assets/images/work-anywhere/remote-work-sofa.jpg` returns `200`.
+
+### Detailed Change Note
+See `docs/project/DEPLOYMENT-FIXES-2026-08-09.md`.
 - **2 logos** moved to `public/icons/` (kraalcode-light.png, kraalcode-dark.png)
 - **35 photos** remain in `photo-bank/` (unused, duplicates, extras)
 - **4 unsuitable** still in photo-bank (law enforcement/legal — delete when convenient)

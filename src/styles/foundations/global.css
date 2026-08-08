@@ -74,14 +74,21 @@ small {
 
 .section {
   padding-block: var(--kc-space-20);
+  padding-inline: var(--kc-space-4);
 }
 
 .section--sm {
   padding-block: var(--kc-space-12);
+  padding-inline: var(--kc-space-4);
 }
 
 .section--lg {
   padding-block: var(--kc-space-32);
+  padding-inline: var(--kc-space-4);
+}
+
+.page-hero {
+  padding-inline: var(--kc-space-4);
 }
 
 /* ── Dark Section ── */
@@ -106,6 +113,10 @@ small {
 
 .section--warm {
   background-color: var(--kc-surface-warm);
+}
+
+:where([class$="-card"], [class*="-card "]) {
+  padding: max(var(--kc-space-4), var(--card-padding, 0px));
 }
 
 /* ── Grid ── */
