@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/sections/HeroSection.astro';
+import OutcomeSection from '../../components/sections/OutcomeSection.astro';
+import WorkAnywhereSection from '../../components/sections/WorkAnywhereSection.astro';
+import CapabilityMapSection from '../../components/sections/CapabilityMapSection.astro';
+import AfricanContextSection from '../../components/sections/AfricanContextSection.astro';
+import SecuritySection from '../../components/sections/SecuritySection.astro';
+import PricingSection from '../../components/sections/PricingSection.astro';
+import ImplementationSection from '../../components/sections/ImplementationSection.astro';
+import FinalCTASection from '../../components/sections/FinalCTASection.astro';
+
+const locale = 'fr';
+---
+
+<BaseLayout
+  title="Kraal Code — Le système d'exploitation pour l'organisation africaine moderne"
+  description="Une seule plateforme cloud sécurisée pour gérer la finance, les personnes, les stocks, les ventes, les achats, la production, les projets et la gestion. À partir de 250 000 UGX/mois."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/fr/"
+>
+  <HeroSection locale={locale} />
+  <OutcomeSection locale={locale} />
+  <WorkAnywhereSection locale={locale} />
+  <CapabilityMapSection locale={locale} />
+  <AfricanContextSection locale={locale} />
+  <SecuritySection locale={locale} />
+  <PricingSection locale={locale} />
+  <ImplementationSection locale={locale} />
+  <FinalCTASection locale={locale} />
+</BaseLayout>
