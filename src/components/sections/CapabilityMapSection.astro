@@ -63,6 +63,31 @@ const content: Record<string, {
 };
 
 const t = content[locale];
+
+function getCapabilityImage(href: string): string {
+  if (href.includes('accounting') || href.includes('comptabilite') || href.includes('hasibu')) {
+    return '/src/assets/images/capabilities/finance-payroll-calculator.jpg';
+  }
+  if (href.includes('inventory') || href.includes('inventaire') || href.includes('hifadhi') || href.includes('hisa')) {
+    return '/src/assets/images/capabilities/inventory-warehouse-inspection.jpg';
+  }
+  if (href.includes('sales') || href.includes('ventes') || href.includes('mauzo')) {
+    return '/src/assets/images/capabilities/finance-hands-calculator.jpg';
+  }
+  if (href.includes('procurement') || href.includes('achats') || href.includes('manunuzi')) {
+    return '/src/assets/images/detail-heroes/procurement-management.jpg';
+  }
+  if (href.includes('manufacturing') || href.includes('fabrication') || href.includes('uzalishaji')) {
+    return '/src/assets/images/capabilities/manufacturing-smart-factory.jpg';
+  }
+  if (href.includes('hr-payroll') || href.includes('rh-paie') || href.includes('ajira-mishahara') || href.includes('hr-mishahara')) {
+    return '/src/assets/images/capabilities/hr-people-networking.jpg';
+  }
+  if (href.includes('projects') || href.includes('projets') || href.includes('miradi')) {
+    return '/src/assets/images/capabilities/projects-gantt-chart.jpg';
+  }
+  return '/src/assets/images/capabilities/reporting-analytics-laptop.jpg';
+}
 ---
 
 <section class="cap-section section section--dark" aria-labelledby="cap-heading">
@@ -73,7 +98,7 @@ const t = content[locale];
     </div>
     <div class="cap-grid">
       {t.capabilities.map((cap) => (
-        <a href={cap.href} class="cap-card">
+        <a href={cap.href} class="cap-card" style={`--cap-bg: url("${getCapabilityImage(cap.href)}")`}>
           <h3>{cap.title}</h3>
           <p>{cap.description}</p>
           <span class="cap-arrow" aria-hidden="true">→</span>
@@ -107,18 +132,53 @@ const t = content[locale];
     display: flex;
     flex-direction: column;
     padding: var(--kc-space-6);
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--kc-border-dark);
+    background: rgba(16, 29, 34, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: var(--kc-radius-lg);
     transition: all var(--kc-transition-fast);
     text-decoration: none;
     color: inherit;
     position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .cap-card::before,
+  .cap-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .cap-card::before {
+    z-index: -2;
+    background-image: var(--cap-bg);
+    background-position: center;
+    background-size: cover;
+    filter: saturate(0.86) contrast(0.96);
+    transform: scale(1.02);
+    transition: transform var(--kc-transition-slow), filter var(--kc-transition-slow);
+  }
+
+  .cap-card::after {
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(11, 23, 28, 0.52) 0%, rgba(11, 23, 28, 0.68) 54%, rgba(11, 23, 28, 0.88) 100%);
+    transition: background var(--kc-transition-base);
   }
 
   .cap-card:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: var(--kc-teal);
+    background: rgba(16, 29, 34, 0.72);
+    border-color: rgba(144, 197, 197, 0.78);
+  }
+
+  .cap-card:hover::before {
+    filter: saturate(0.98) contrast(1);
+    transform: scale(1.06);
+  }
+
+  .cap-card:hover::after {
+    background: linear-gradient(180deg, rgba(11, 23, 28, 0.42) 0%, rgba(11, 23, 28, 0.62) 54%, rgba(11, 23, 28, 0.84) 100%);
   }
 
   .cap-card h3 {
@@ -127,13 +187,15 @@ const t = content[locale];
     font-weight: var(--kc-weight-semibold);
     color: var(--kc-text-inverse);
     margin-bottom: var(--kc-space-2);
+    text-shadow: 0 1px 2px rgba(5, 12, 16, 0.48);
   }
 
   .cap-card p {
     font-size: var(--kc-text-sm);
-    color: var(--kc-text-inverse-muted);
+    color: rgba(236, 244, 239, 0.82);
     margin: 0;
     flex: 1;
+    text-shadow: 0 1px 2px rgba(5, 12, 16, 0.48);
   }
 
   .cap-arrow {
@@ -145,6 +207,12 @@ const t = content[locale];
 
   .cap-card:hover .cap-arrow {
     transform: translateX(4px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cap-card::before {
+      transition: none;
+    }
   }
 
   .cap-cta {
