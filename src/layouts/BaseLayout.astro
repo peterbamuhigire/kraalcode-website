@@ -4,6 +4,7 @@ import '../styles/foundations/reset.css';
 import '../styles/foundations/global.css';
 import Header from '../components/global/Header.astro';
 import Footer from '../components/global/Footer.astro';
+import { getLocalizedAlternates } from '../utils/localizedRoutes';
 
 interface Props {
   title: string;
@@ -26,21 +27,16 @@ const {
 const siteName = 'Kraal Code';
 const fullTitle = `${title} | ${siteName}`;
 
-const localeLabels: Record<string, string> = {
-  en: 'English',
-  fr: 'Français',
-  sw: 'Kiswahili',
-};
-
-const alternateLocales = ['en', 'fr', 'sw'].filter(l => l !== locale);
+const alternates = getLocalizedAlternates(Astro.url.pathname);
 ---
 
 <!DOCTYPE html>
-<html lang={locale} dir="ltr">
+<html lang={locale} dir="ltr" translate="no" class="notranslate">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="generator" content={Astro.generator} />
+  <meta name="google" content="notranslate" />
 
   {/* Primary Meta */}
   <title>{fullTitle}</title>
@@ -50,14 +46,14 @@ const alternateLocales = ['en', 'fr', 'sw'].filter(l => l !== locale);
   {noindex && <meta name="robots" content="noindex, nofollow" />}
 
   {/* hreflang */}
-  {['en', 'fr', 'sw'].map((loc) => (
+  {Object.entries(alternates).map(([loc, path]) => (
     <link
       rel="alternate"
       hreflang={loc}
-      href={`https://kraalcode.com/${loc}/`}
+      href={`https://kraalcode.com${path}`}
     />
   ))}
-  <link rel="alternate" hreflang="x-default" href="https://kraalcode.com/en/" />
+  <link rel="alternate" hreflang="x-default" href={`https://kraalcode.com${alternates.en}`} />
 
   {/* Open Graph */}
   <meta property="og:type" content="website" />

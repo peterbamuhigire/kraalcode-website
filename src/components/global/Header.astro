@@ -1,6 +1,8 @@
 ---
+import { getLocalizedPath, getNavPath, type Locale } from '../../utils/localizedRoutes';
+
 interface Props {
-  locale: 'en' | 'fr' | 'sw';
+  locale: Locale;
   currentPath: string;
 }
 
@@ -38,10 +40,10 @@ const nav: Record<string, Record<string, string>> = {
 
 const t = nav[locale];
 
-const localePaths: Record<string, string> = {
-  en: '/en/',
-  fr: '/fr/',
-  sw: '/sw/',
+const localePaths: Record<Locale, string> = {
+  en: getLocalizedPath(currentPath, 'en'),
+  fr: getLocalizedPath(currentPath, 'fr'),
+  sw: getLocalizedPath(currentPath, 'sw'),
 };
 
 const localeLabels: Record<string, string> = {
@@ -51,10 +53,13 @@ const localeLabels: Record<string, string> = {
 };
 
 // Active link detection
-const navKeys = ['product', 'capabilities', 'sectors', 'why', 'security', 'resources'];
-function isActive(key: string): boolean {
+const navKeys = ['product', 'capabilities', 'sectors', 'why', 'security', 'resources'] as const;
+const navPaths = Object.fromEntries(navKeys.map((key) => [key, getNavPath(locale, key)])) as Record<typeof navKeys[number], string>;
+const contactPath = getNavPath(locale, 'contact');
+
+function isActive(key: typeof navKeys[number]): boolean {
   const path = currentPath.replace(/\/$/, '');
-  return path.startsWith(`/${locale}/${key}`);
+  return path.startsWith(navPaths[key].replace(/\/$/, ''));
 }
 ---
 
@@ -72,12 +77,12 @@ function isActive(key: string): boolean {
 
     <nav class="header-nav" aria-label="Main navigation">
       <ul class="nav-list" role="list">
-        <li><a href={`/${locale}/product/`} class={isActive('product') ? 'active' : ''}>{t.product}</a></li>
-        <li><a href={`/${locale}/capabilities/`} class={isActive('capabilities') ? 'active' : ''}>{t.capabilities}</a></li>
-        <li><a href={`/${locale}/sectors/`} class={isActive('sectors') ? 'active' : ''}>{t.sectors}</a></li>
-        <li><a href={`/${locale}/why/`} class={isActive('why') ? 'active' : ''}>{t.why}</a></li>
-        <li><a href={`/${locale}/security/`} class={isActive('security') ? 'active' : ''}>{t.security}</a></li>
-        <li><a href={`/${locale}/resources/`} class={isActive('resources') ? 'active' : ''}>{t.resources}</a></li>
+        <li><a href={navPaths.product} class={isActive('product') ? 'active' : ''}>{t.product}</a></li>
+        <li><a href={navPaths.capabilities} class={isActive('capabilities') ? 'active' : ''}>{t.capabilities}</a></li>
+        <li><a href={navPaths.sectors} class={isActive('sectors') ? 'active' : ''}>{t.sectors}</a></li>
+        <li><a href={navPaths.why} class={isActive('why') ? 'active' : ''}>{t.why}</a></li>
+        <li><a href={navPaths.security} class={isActive('security') ? 'active' : ''}>{t.security}</a></li>
+        <li><a href={navPaths.resources} class={isActive('resources') ? 'active' : ''}>{t.resources}</a></li>
       </ul>
     </nav>
 
@@ -96,7 +101,7 @@ function isActive(key: string): boolean {
         ))}
       </div>
 
-      <a href={`/${locale}/contact/`} class="btn btn--primary btn--sm">
+      <a href={contactPath} class="btn btn--primary btn--sm">
         {t.demo}
       </a>
     </div>
@@ -118,13 +123,13 @@ function isActive(key: string): boolean {
   <div id="mobile-nav" class="mobile-nav" hidden>
     <nav aria-label="Mobile navigation">
       <ul class="mobile-nav-list" role="list">
-        <li><a href={`/${locale}/product/`}>{t.product}</a></li>
-        <li><a href={`/${locale}/capabilities/`}>{t.capabilities}</a></li>
-        <li><a href={`/${locale}/sectors/`}>{t.sectors}</a></li>
-        <li><a href={`/${locale}/why/`}>{t.why}</a></li>
-        <li><a href={`/${locale}/security/`}>{t.security}</a></li>
-        <li><a href={`/${locale}/resources/`}>{t.resources}</a></li>
-        <li><a href={`/${locale}/contact/`} class="btn btn--primary">{t.demo}</a></li>
+        <li><a href={navPaths.product}>{t.product}</a></li>
+        <li><a href={navPaths.capabilities}>{t.capabilities}</a></li>
+        <li><a href={navPaths.sectors}>{t.sectors}</a></li>
+        <li><a href={navPaths.why}>{t.why}</a></li>
+        <li><a href={navPaths.security}>{t.security}</a></li>
+        <li><a href={navPaths.resources}>{t.resources}</a></li>
+        <li><a href={contactPath} class="btn btn--primary">{t.demo}</a></li>
       </ul>
       <div class="mobile-lang-switcher">
         {Object.entries(localeLabels).map(([code, label]) => (
