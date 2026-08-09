@@ -18,6 +18,7 @@ The first production deployment exposed three site issues:
 - Removed missing font preload references from `BaseLayout.astro`.
 - Added `src/pages/[locale]/[...slug].astro` to generate interim pages for linked-but-not-yet-authored detail routes across English, French, and Kiswahili.
 - Added a conservative global inset for sections, page heroes, and card-like elements so text, images, and buttons do not sit hard against their visual boundaries.
+- Normalized the home warm/dark section wrappers to use the shared `.section` spacing class and added bottom padding to CTA/control rows so buttons no longer sit on section edges.
 
 ## Verification
 

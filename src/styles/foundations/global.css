@@ -96,6 +96,7 @@ small {
 .section--dark {
   background-color: var(--kc-surface-dark);
   color: var(--kc-text-inverse);
+  padding-inline: var(--kc-space-4);
 }
 
 .section--dark p {
@@ -113,6 +114,7 @@ small {
 
 .section--warm {
   background-color: var(--kc-surface-warm);
+  padding-inline: var(--kc-space-4);
 }
 
 :where([class$="-card"], [class*="-card "]) {
