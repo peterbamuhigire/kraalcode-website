@@ -1,0 +1,62 @@
+---
+interface Props {
+  target: string;
+}
+
+export function getStaticPaths() {
+  const redirects: Record<string, string> = {
+    'en/pricing': '/en/contact/',
+    'fr/capabilities': '/fr/capacites/',
+    'fr/juridique/cookies': '/fr/juridique/temoins/',
+    'fr/product': '/fr/produit/',
+    'fr/resources': '/fr/ressources/',
+    'fr/sectors': '/fr/secteurs/',
+    'fr/security': '/fr/securite/',
+    'fr/tarifs': '/fr/contact/',
+    'fr/travailler-de-partout': '/fr/travailler-partout/',
+    'fr/why': '/fr/pourquoi/',
+    'sw/bei': '/sw/mawasiliano/',
+    'sw/capabilities': '/sw/uwezo/',
+    'sw/contact': '/sw/mawasiliano/',
+    'sw/fanya-kazi-popote': '/sw/kazi-popote/',
+    'sw/kisheria/faragha': '/en/legal/privacy/',
+    'sw/kisheria/masharti': '/en/legal/terms/',
+    'sw/kisheria/ufikiaji': '/en/legal/accessibility/',
+    'sw/kisheria/vidakuzi': '/en/legal/cookies/',
+    'sw/product': '/sw/bidhaa/',
+    'sw/rasilimali': '/sw/',
+    'sw/resources': '/sw/',
+    'sw/sectors': '/sw/sekta/',
+    'sw/security': '/sw/usalama/',
+    'sw/uwezo/hisa': '/sw/uwezo/hifadhi/',
+    'sw/uwezo/hr-mishahara': '/sw/uwezo/ajira-mishahara/',
+    'sw/uwezo/manunuzi': '/sw/uwezo/ununuzi/',
+    'sw/why': '/sw/kwa-nini/',
+  };
+
+  return Object.entries(redirects).map(([source, target]) => ({
+    params: { redirect: source },
+    props: { target },
+  }));
+}
+
+const { target } = Astro.props;
+const absoluteTarget = new URL(target, Astro.site ?? 'https://kraalcode.com').toString();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex, follow" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href={absoluteTarget} />
+    <title>Redirecting to Kraal Code</title>
+  </head>
+  <body>
+    <p>Redirecting to <a href={target}>Kraal Code</a>.</p>
+    <script is:inline define:vars={{ target }}>
+      window.location.replace(target);
+    </script>
+  </body>
+</html>
