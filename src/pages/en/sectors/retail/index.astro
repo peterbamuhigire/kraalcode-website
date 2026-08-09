@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'en';
+---
+
+<BaseLayout
+  title="Retail & POS — ERP for Shops, Supermarkets, and Retail Chains"
+  description="Kraal Code for retail: POS terminal, barcode scanning, cash and mobile money payments, stock management, multi-branch operations, and end-of-day reconciliation."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/sectors/retail/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><a href="/en/sectors/">Sectors</a></li><li aria-current="page">Retail & POS</li></ol></nav>
+      <h1>Retail & POS</h1>
+      <p class="page-hero-subtext">Fast checkout, accurate stock, and real-time sales visibility. One POS system connected to inventory, accounting, and management dashboards.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Your challenges</h2>
+    <div class="challenge-grid">
+      <div class="challenge-item"><h3>Checkout speed</h3><p>Customers wait in queues. Your current system is slow, does not scan barcodes reliably, or requires too many steps to complete a sale.</p></div>
+      <div class="challenge-item"><h3>Stock visibility</h3><p>You sell across the counter but do not know current stock levels until someone counts. Reordering is reactive — you discover stock-outs when a customer asks for something.</p></div>
+      <div class="challenge-item"><h3>Payment modes</h3><p>Customers pay by cash, mobile money (MTN MoMo, Airtel Money), and card. Reconciling multiple payment modes at end of day is manual and error-prone.</p></div>
+      <div class="challenge-item"><h3>Multi-branch management</h3><p>You have multiple outlets. Seeing consolidated sales, stock, and cash position across all branches requires calls to each branch manager.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>How Kraal Code helps</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>POS Terminal</h3><p>Touch-optimised interface for fast checkout. Barcode scanning. Quick product search. Discount and tax calculation. Receipt printing. Multi-terminal per branch.</p></div>
+      <div class="feature-card"><h3>Multiple Payment Modes</h3><p>Accept cash, mobile money (MTN MoMo, Airtel Money, M-Pesa), and card payments. Track each payment mode separately. End-of-day cash reconciliation per terminal.</p></div>
+      <div class="feature-card"><h3>Real-Time Stock</h3><p>Stock deducted on sale. Current levels visible at POS and in back office. Reorder alerts when stock falls below threshold. No more selling what you do not have.</p></div>
+      <div class="feature-card"><h3>Multi-Branch Operations</h3><p>Manage multiple outlets from one system. Branch-level sales reports. Consolidated dashboards. Inter-branch stock transfers with approval workflows.</p></div>
+      <div class="feature-card"><h3>Sales Reports</h3><p>Sales by product, category, time period, payment mode, and cashier. Top-selling items. Slow movers. Hourly sales patterns for staffing decisions.</p></div>
+      <div class="feature-card"><h3>Z-Reports</h3><p>End-of-day Z-reports per terminal showing total sales, payments by mode, tax collected, and cash expected. Supervisor approval for session close.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container">
+    <h2>See it in action</h2>
+    <p class="screenshot-intro">Screenshots from the live Kraal Code system — coming soon.</p>
+    <div class="screenshot-grid">
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">POS Terminal</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Sales Reports</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>See Kraal Code for retail</h2><p>Request a demonstration tailored to your retail or hospitality operations.</p>
+    <a href="/en/contact/" class="btn btn--inverse">Request a Demonstration →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.challenge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-6)}.challenge-item{padding:var(--kc-space-5);border-left:3px solid var(--kc-warning)}.challenge-item h3{font-size:var(--kc-text-base);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-1)}.challenge-item p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.screenshot-intro{color:var(--kc-text-secondary);margin-bottom:var(--kc-space-6)}.screenshot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6)}.screenshot-placeholder{aspect-ratio:16/10;background:var(--kc-surface-warm);border:2px dashed var(--kc-border);border-radius:var(--kc-radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--kc-space-2)}.screenshot-label{font-weight:var(--kc-weight-semibold);color:var(--kc-text-primary)}.screenshot-note{font-size:var(--kc-text-sm);color:var(--kc-text-tertiary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.challenge-grid,.feature-grid,.screenshot-grid{grid-template-columns:1fr}}
+</style>

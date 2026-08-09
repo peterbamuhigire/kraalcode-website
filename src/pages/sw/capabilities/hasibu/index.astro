@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'sw';
+---
+
+<BaseLayout
+  title="Fedha na Uhasibu — Kitabu Kikuu, Madeni, Ripoti za Fedha"
+  description="Uhasibu wa kuingia mara mbili na mpango wa hesabu unaoweza kubadilishwa, sarafu nyingi, upatanisho wa benki, bajeti na ripoti za fedha zinazofuata viwango vya IFRS. Kraal Code ERP."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/sw/uwezo/hasibu/"
+>
+  <section class="page-hero section--warm"><div class="container">
+    <nav class="breadcrumb" aria-label="Njia ya mkate"><ol><li><a href="/sw/">Nyumbani</a></li><li><a href="/sw/uwezo/">Uwezo</a></li><li aria-current="page">Fedha na Uhasibu</li></ol></nav>
+    <h1>Fedha na Uhasibu</h1>
+    <p class="page-hero-subtext">Uhasibu kamili wa kuingia mara mbili, kutoka kwa maandishi hadi taarifa za fedha. Kitabu kimoja kikuu, ukweli mmoja, kila muamala ukiweza kufuatwa.</p>
+  </div></section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Kwa nani moduli hii</h2>
+    <p>Wakurugenzi wa fedha, wahasibu, wakaguzi na wamiliki wanaohitaji hesabu safi, mwonekano wa wakati halisi na ripoti tayari kwa ukaguzi — bila kuhifadhi karatasi za hesabu au kupatanisha mifumo iliyotenganishwa.</p>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>Unachoweza kufanya</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Mpango wa Hesabu</h3><p>Mpango wa hesabu unaweza kubadilishwa na kina kisicho na kikundi. Unda vikundi vya hesabu, hesabu za udhibiti na hesabu ndogo. Panga kwa idara, miradi au vituo vya gharama kwa ripoti za usimamizi.</p></div>
+      <div class="feature-card"><h3>Maandishi ya Hesabu</h3><p>Maandishi ya mkono na ya otomatiki na mzunguko wa uidhinishaji. Kila andishi halibadiliki mara moja marekebisho yanafanywa kupitia maandishi ya kubatilisha ambayo yanahifadhi njia kamili ya ukaguzi.</p></div>
+      <div class="feature-card"><h3>Deni za Wateja</h3><p>Ankara za wateja, mikopo, malipo na ugawaji wa malipo. Umri wa deni kwa kipindi. Toa taarifa za wateja. Fuatilia salio kwa mteja, tawi au eneo.</p></div>
+      <div class="feature-card"><h3>Deni za Wauzaji</h3><p>Ankara za wauzaji, malipo na mikopo. Pata ankara na risiti za bidhaa. Umri wa deni. Vifurushi vya malipo. Fuatilia kodi ya kuzuia.</p></div>
+      <div class="feature-card"><h3>Upatanisho wa Benki</h3><p>Patanisha taarifa za benki na maandishi ya kitabu kikuu. Pata mechi za otomatiki au za mkono. Tambua vitu visivyopatanishwa. Simamia akaunti nyingi za benki katika sarafu nyingi.</p></div>
+      <div class="feature-card"><h3>Sarafu Nyingi</h3><p>Fanya kazi katika UGX, KES, TZS, RWF na sarafu nyingi kwa wakati mmoja. Jedwali la viwango vya ubadilishaji. Faida na hasara zilizopatikana na zisizopatikana. Ripoti katika sarafu ya kazi au ya uwasilishaji.</p></div>
+      <div class="feature-card"><h3>Usimamizi wa Bajeti</h3><p>Weka bajeti kwa hesabu, idara au mradi. Fuatilia kilichopatikana dhidi ya bajeti na uchambuzi wa tofauti. Funga bajeti baada ya uidhinishaji. Toleo nyingi za bajeti kwa mwaka wa fedha.</p></div>
+      <div class="feature-card"><h3>Taarifa za Fedha</h3><p>Taarifa ya mapato, sahili, mtiririko wa fedha (kiwango cha IAS 7) na jaribio la usawa. Toa PDF au Excel. Vipindi vya ripoti vinavyoweza kubadilishwa. Maoni ya idara na yaliyopanuliwa.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Jinsi moduli zinavyoungana</h2>
+    <ul class="connection-list">
+      <li><strong>Mauzo</strong> → uhasibu wa mapato na deni za wateja unapotoa ankara</li>
+      <li><strong>Hifadhi</strong> → marekebisho ya thamani ya hisa na maandishi ya gharama za bidhaa zilizouzwa</li>
+      <li><strong>Manunuzi</strong> → maandishi ya wauzaji yanapopata mechi ya ankara/risiti</li>
+      <li><strong>HR na Mishahara</strong> → uhasibu wa mshahara, NSSF, PAYE na net kulipwa</li>
+    </ul>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Ona uhasibu kwa vitendo</h2><p>Oma onyesho lililobinafsishwa kwa mahitaji ya uhasibu ya shirika lako.</p>
+    <a href="/sw/mawasiliano/" class="btn btn--inverse">Oma Onyesho →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.connection-list{margin-top:var(--kc-space-4)}.connection-list li{margin-bottom:var(--kc-space-3);font-size:var(--kc-text-base);color:var(--kc-text-secondary)}.connection-list strong{color:var(--kc-text-primary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.feature-grid{grid-template-columns:1fr}}
+</style>

@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'sw';
+---
+
+<BaseLayout
+  title="Kilimo na Vyama vya Ushirika — ERP kwa Miradi ya Wakulima na Vyama"
+  description="Kraal Code kwa kilimo: usajili wa wakulima, upokeaji wa mazao, ratiba za mikopo, malipo kwa wakulima na usimamizi wa ushirika."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/sw/sekta/kilimo/"
+>
+  <section class="page-hero section--warm"><div class="container">
+    <nav class="breadcrumb" aria-label="Njia ya mkate"><ol><li><a href="/sw/">Nyumbani</a></li><li><a href="/sw/sekta/">Sekta</a></li><li aria-current="page">Kilimo na Vyama vya Ushirika</li></ol></nav>
+    <h1>Kilimo na Vyama vya Ushirika</h1>
+    <p class="page-hero-subtext">Sajili wakulima, rekodi mazao, shughulikia mikopo na ulipe wakulima — na ufuatiliaji kamili kutoka shambani hadi kiwandani.</p>
+  </div></section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Changamoto zako</h2>
+    <div class="challenge-grid">
+      <div class="challenge-item"><h3>Usajili wa wakulima</h3><p>Unafanya kazi na mamia au maelfu ya wakulima wadogo. Kuhifadhi rekodi zao kwenye karatasi za hesabu ni dhaifu.</p></div>
+      <div class="challenge-item"><h3>Upokeaji wa mazao</h3><p>Katika vituo vya kukusanya, wakulima wanapeleka mazao. Kurekodi uzito, ubora, bei na mikopo kwa kila mkulima ni kazi nzito.</p></div>
+      <div class="challenge-item"><h3>Usimamizi wa mikopo</h3><p>Wakulima wana mikopo ya pembejeo, ada na avansi za kurejesha. Kuhesabu na kufuatilia mikopo kwa kila utoaji unahitaji uhasibu makini.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>Jinsi Kraal Code inavyosaidia</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Usajili wa Wakulima</h3><p>Sajili wakulima na maelezo binafsi, eneo la GPS, uanachama wa kikundi na aina ya mazao. Inaweza kubadilishwa kwa kila tenant — chai, kahawa, pamba, miwa.</p></div>
+      <div class="feature-card"><h3>Upokeaji wa Mazao</h3><p>Rekodi utoaji katika vituo vya kukusanya. Uzito, ubora, unyevu na bei. Risiti za upokeaji. Ushirikiano na mizani.</p></div>
+      <div class="feature-card"><h3>Ratiba za Mikopo</h3><p>Sheria za mikopo (pembejeo, ada, avansi). Maombi ya otomatiki kwa kila utoaji. Fuatilia maendeleo ya urejeshaji.</p></div>
+      <div class="feature-card"><h3>Malipo kwa Wakulima</h3><p>Vifurushi vya malipo kutoka rekodi za upokeaji minus mikopo. Mobile money, benki, pesa taslimu. Fuatilia hali ya malipo.</p></div>
+      <div class="feature-card"><h3>Usimamizi wa Vikundi</h3><p>Panga wakulima katika vikundi na vyama. Fuatilia kwa kikundi upokeaji, malipo na mikopo. Viongozi vikundi na ufikiaji mdogo.</p></div>
+      <div class="feature-card"><h3>Ramani ya Wakulima</h3><p>Onyesha eneo la wakulima kwenye ramani. Tambua mapengo ya ufunikaji. Panga njia za kukusanya.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Ona Kraal Code kwa kilimo</h2><p>Oma onyesho lililobinafsishwa kwa shughuli zako za wakulima au ushirika.</p>
+    <a href="/sw/mawasiliano/" class="btn btn--inverse">Oma Onyesho →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.challenge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-6)}.challenge-item{padding:var(--kc-space-5);border-left:3px solid var(--kc-warning)}.challenge-item h3{font-size:var(--kc-text-base);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-1)}.challenge-item p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.challenge-grid,.feature-grid{grid-template-columns:1fr}}
+</style>

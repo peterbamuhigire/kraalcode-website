@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+
+const locale = 'en';
+---
+
+<BaseLayout
+  title="Inventory & Warehousing — Stock Tracking, Valuation, Multi-Location"
+  description="Item catalogue, stock tracking, FIFO and weighted-average costing, GRN, transfers, reorder levels, and multi-location warehousing. Part of Kraal Code ERP."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/capabilities/inventory/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/en/">Home</a></li>
+          <li><a href="/en/capabilities/">Capabilities</a></li>
+          <li aria-current="page">Inventory & Warehousing</li>
+        </ol>
+      </nav>
+      <h1>Inventory & Warehousing</h1>
+      <p class="page-hero-subtext">Know what you have, where it is, what it cost, and when to reorder. One stock ledger, updated in real time across every location.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Who this is for</h2>
+      <p>Warehouse managers, store supervisors, procurement officers, and operations leaders who need accurate stock visibility across locations — without reconciling spreadsheets at month end.</p>
+      <p>If your organisation buys, stores, manufactures, or sells physical goods, this module keeps your stock levels, valuations, and movements under control.</p>
+    </div>
+  </section>
+
+  <section class="section section--warm">
+    <div class="container">
+      <h2>What you can do</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Item Catalogue</h3>
+          <p>Maintain a structured catalogue with categories, unit of measure, reorder levels, preferred suppliers, and GL account mappings. Support raw materials, finished goods, packaging, and consumables.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Stock Valuation</h3>
+          <p>Value stock using FIFO or weighted average cost. Automatically recalculate on receipt. Generate valuation reports by item, category, or location. Post valuation adjustments to the GL.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Goods Received Notes</h3>
+          <p>Record goods received against purchase orders. Match quantities and prices. Flag discrepancies for review. GRN triggers automatic stock increase and GL posting.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Multi-Location Warehousing</h3>
+          <p>Manage stock across warehouses, shops, factory floors, and transit locations. View stock by location or consolidated. Transfer stock between locations with approval workflows.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Batch & Expiry Tracking</h3>
+          <p>Track items by batch number and expiry date. Apply FEFO (first-expiry-first-out) picking rules. Generate expiry alerts. Essential for food, pharmaceutical, and perishable goods.</p>
+        </div>
+        <div class="feature-card">
+          <h3>UOM Conversion</h3>
+          <p>Purchase in cases, sell in pieces, store in kilograms. The conversion engine automatically translates between units. All ledger entries are recorded in the base UOM for consistency.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Reorder Alerts</h3>
+          <p>Set minimum and reorder levels per item per location. Generate purchase requests automatically when stock falls below threshold. Never run out of critical items.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Stock Reports</h3>
+          <p>Stock summary, stock aging, movement history, valuation reports, and reorder level reports. All reports exportable to PDF and Excel. Drill down from summary to transaction detail.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>How it connects</h2>
+      <ul class="connection-list">
+        <li><strong>Sales</strong> → stock is deducted automatically on delivery confirmation</li>
+        <li><strong>Procurement</strong> → stock increases on goods receipt, matched to purchase orders</li>
+        <li><strong>Manufacturing</strong> → raw materials consumed, finished goods received on production completion</li>
+        <li><strong>Accounting</strong> → every stock movement posts to the general ledger automatically (inventory asset, COGS, GRNI)</li>
+        <li><strong>Sales Agents</strong> → separate agent stock tracking with consignment and commission management</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--warm">
+    <div class="container container--narrow">
+      <h2>Controls and permissions</h2>
+      <div class="controls-grid">
+        <div class="control-item">
+          <h3>Store-Level Access</h3>
+          <p>Restrict users to specific stores or locations. A warehouse supervisor in Kampala cannot access Mombasa stock without explicit permission.</p>
+        </div>
+        <div class="control-item">
+          <h3>Approval Workflows</h3>
+          <p>Stock adjustments, transfers, and write-offs require approval. Configure thresholds and approval chains per location.</p>
+        </div>
+        <div class="control-item">
+          <h3>Immutable Ledger</h3>
+          <p>Every stock transaction is recorded in the stock ledger. No deletion, only reversal. Full traceability from receipt to dispatch.</p>
+        </div>
+        <div class="control-item">
+          <h3>GL Integration</h3>
+          <p>Every inventory movement posts to the general ledger. Stock valuation, adjustments, and transfers are always reflected in the financial records.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>See it in action</h2>
+      <p class="screenshot-intro">Screenshots from the live Kraal Code system — coming soon.</p>
+      <div class="screenshot-grid">
+        <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Store Dashboard</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+        <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Stock Summary</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+        <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Stock Valuation</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+        <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Batch Expiry Tracking</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--dark section">
+    <div class="container text-center">
+      <h2>See inventory in action</h2>
+      <p>Request a demonstration tailored to your warehousing and stock management needs.</p>
+      <a href="/en/contact/" class="btn btn--inverse">Request a Demonstration →</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero { padding: var(--kc-space-20) 0 var(--kc-space-12); }
+  .page-hero h1 { font-size: var(--kc-text-4xl); max-width: 700px; }
+  .page-hero-subtext { font-size: var(--kc-text-lg); color: var(--kc-text-secondary); max-width: 60ch; margin-top: var(--kc-space-4); }
+  .breadcrumb ol { list-style: none; padding: 0; display: flex; gap: var(--kc-space-2); font-size: var(--kc-text-sm); color: var(--kc-text-tertiary); margin-bottom: var(--kc-space-6); }
+  .breadcrumb a { color: var(--kc-teal); text-decoration: none; }
+  .breadcrumb li:not(:last-child)::after { content: '/'; margin-left: var(--kc-space-2); color: var(--kc-text-tertiary); }
+  .container--narrow { max-width: var(--kc-container-narrow); }
+  .feature-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--kc-space-6); margin-top: var(--kc-space-8); }
+  .feature-card { padding: var(--kc-space-6); background: var(--kc-surface-light); border: 1px solid var(--kc-border-subtle); border-radius: var(--kc-radius-lg); }
+  .feature-card h3 { font-size: var(--kc-text-lg); font-family: var(--kc-font-body); font-weight: var(--kc-weight-semibold); margin-bottom: var(--kc-space-2); }
+  .feature-card p { font-size: var(--kc-text-sm); color: var(--kc-text-secondary); }
+  .connection-list { margin-top: var(--kc-space-4); }
+  .connection-list li { margin-bottom: var(--kc-space-3); font-size: var(--kc-text-base); color: var(--kc-text-secondary); }
+  .connection-list strong { color: var(--kc-text-primary); }
+  .controls-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--kc-space-6); margin-top: var(--kc-space-6); }
+  .control-item { padding: var(--kc-space-5); border-left: 3px solid var(--kc-teal); }
+  .control-item h3 { font-size: var(--kc-text-base); font-family: var(--kc-font-body); font-weight: var(--kc-weight-semibold); margin-bottom: var(--kc-space-1); }
+  .control-item p { font-size: var(--kc-text-sm); color: var(--kc-text-secondary); }
+  .screenshot-intro { color: var(--kc-text-secondary); margin-bottom: var(--kc-space-6); }
+  .screenshot-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--kc-space-6); }
+  .screenshot-placeholder { aspect-ratio: 16/10; background: var(--kc-surface-warm); border: 2px dashed var(--kc-border); border-radius: var(--kc-radius-lg); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--kc-space-2); }
+  .screenshot-label { font-weight: var(--kc-weight-semibold); color: var(--kc-text-primary); }
+  .screenshot-note { font-size: var(--kc-text-sm); color: var(--kc-text-tertiary); }
+  .btn--inverse { display: inline-flex; align-items: center; padding: var(--kc-space-4) var(--kc-space-8); font-weight: var(--kc-weight-semibold); font-size: var(--kc-text-base); border-radius: var(--kc-radius-lg); background: transparent; color: var(--kc-text-inverse); border: 2px solid var(--kc-teal-light); transition: all var(--kc-transition-fast); text-decoration: none; margin-top: var(--kc-space-6); }
+  .btn--inverse:hover { background: var(--kc-teal); border-color: var(--kc-teal); }
+  @media (max-width: 768px) { .page-hero h1 { font-size: var(--kc-text-3xl); } .feature-grid, .controls-grid, .screenshot-grid { grid-template-columns: 1fr; } }
+</style>

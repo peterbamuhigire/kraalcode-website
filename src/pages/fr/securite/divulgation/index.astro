@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'fr';
+---
+
+<BaseLayout
+  title="Divulgation Responsable — Kraal Code"
+  description="Comment signaler des vulnérabilités de sécurité dans Kraal Code."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/fr/securite/divulgation/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/fr/">Accueil</a></li><li><a href="/fr/securite/">Sécurité</a></li><li aria-current="page">Divulgation Responsable</li></ol></nav>
+      <h1>Divulgation Responsable</h1>
+      <p class="page-hero-subtext">Nous prenons la sécurité au sérieux. Si vous découvrez une vulnérabilité dans Kraal Code, nous voulons en entendre parler.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container container--narrow legal-content">
+    <h2>Comment signaler</h2>
+    <p>Si vous pensez avoir trouvé une vulnérabilité de sécurité, veuillez la signaler à :</p>
+    <p><strong>Email :</strong> <a href="mailto:security@kraalcode.com">security@kraalcode.com</a></p>
+    <p>Veuillez inclure :</p>
+    <ul>
+      <li>Une description de la vulnérabilité</li>
+      <li>Les étapes de reproduction</li>
+      <li>L'impact potentiel</li>
+      <li>Toute preuve (captures d'écran, journaux)</li>
+    </ul>
+
+    <h2>À quoi s'attendre</h2>
+    <ul>
+      <li><strong>Accusé de réception :</strong> sous 3 jours ouvrables</li>
+      <li><strong>Évaluation initiale :</strong> sous 10 jours ouvrables</li>
+      <li><strong>Calendrier de résolution :</strong> communiqué après évaluation</li>
+    </ul>
+
+    <h2>Port sûr</h2>
+    <p>Nous soutenons la divulgation responsable. Si vous :</p>
+    <ul>
+      <li>Faites des efforts de bonne foi pour éviter les violations de vie privée, la destruction de données et les perturbations de service</li>
+      <li>N'interagissez qu'avec vos propres comptes ou comptes de test</li>
+      <li>N'exploitez pas une vulnérabilité au-delà de ce qui est nécessaire pour la démontrer</li>
+      <li>Nous donnez un délai raisonnable pour résoudre le problème avant la divulgation publique</li>
+    </ul>
+    <p>Alors nous ne poursuivrons pas d'action légale contre vous pour votre recherche.</p>
+
+    <h2>Contact</h2>
+    <p><a href="mailto:security@kraalcode.com">security@kraalcode.com</a></p>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.legal-content h2{font-size:var(--kc-text-xl);margin-top:var(--kc-space-10);margin-bottom:var(--kc-space-4)}.legal-content p,.legal-content li{font-size:var(--kc-text-base);color:var(--kc-text-secondary);line-height:var(--kc-leading-relaxed)}.legal-content ul{margin:var(--kc-space-3) 0 var(--kc-space-4) var(--kc-space-6)}.legal-content li{margin-bottom:var(--kc-space-2)}.legal-content a{color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}}
+</style>

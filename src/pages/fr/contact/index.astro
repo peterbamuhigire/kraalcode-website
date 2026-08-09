@@ -1,0 +1,174 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const locale = 'fr';
+---
+
+<BaseLayout
+  title="Demander une Démonstration — Voyez Kraal Code pour Votre Organisation"
+  description="Demandez une démonstration de Kraal Code adaptée à votre organisation. Finance, inventaire, ventes, RH, fabrication — tout dans un seul système."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/fr/contact/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/fr/">Accueil</a></li><li aria-current="page">Contact</li></ol></nav>
+      <h1>Voyez Kraal Code dans votre organisation</h1>
+      <p class="page-hero-subtext">Nous vous montrons comment Kraal Code s'adapte à votre secteur, vos flux de travail et vos défis opérationnels.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>À quoi s'attendre</h2>
+          <ul class="expect-list">
+            <li>Une conversation sur vos besoins opérationnels actuels</li>
+            <li>Une démonstration adaptée à votre secteur et votre taille</li>
+            <li>Des réponses honnêtes — nous ne promettons pas ce que nous n'avons pas</li>
+            <li>Aucun engagement — la démonstration est gratuite et sans obligation</li>
+          </ul>
+
+          <h3>Après la démonstration</h3>
+          <p>Nous vous envoyons un résumé de ce qui a été présenté, les modules pertinents pour votre organisation, et les prochaines étapes si vous souhaitez avancer.</p>
+
+          <div class="contact-details">
+            <p><strong>Email :</strong> <a href="mailto:info@kraalcode.com">info@kraalcode.com</a></p>
+            <p><strong>Chwezi Core Systems</strong></p>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <form class="contact-form" action="#" method="POST" novalidate>
+            <h2>Demander une démonstration</h2>
+
+            <div class="hp-field" aria-hidden="true">
+              <label for="website">Site web</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="form-group">
+              <label for="name">Nom complet <span class="required">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email professionnel <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="organisation">Organisation <span class="required">*</span></label>
+              <input type="text" id="organisation" name="organisation" required autocomplete="organization" />
+            </div>
+            <div class="form-group">
+              <label for="country">Pays <span class="required">*</span></label>
+              <select id="country" name="country" required>
+                <option value="">Sélectionnez votre pays</option>
+                <option value="CD">République Démocratique du Congo</option>
+                <option value="CG">Congo-Brazzaville</option>
+                <option value="CM">Cameroun</option>
+                <option value="CI">Côte d'Ivoire</option>
+                <option value="SN">Sénégal</option>
+                <option value="ML">Mali</option>
+                <option value="BF">Burkina Faso</option>
+                <option value="TG">Togo</option>
+                <option value="BJ">Bénin</option>
+                <option value="GA">Gabon</option>
+                <option value="MG">Madagascar</option>
+                <option value="BI">Burundi</option>
+                <option value="RW">Rwanda</option>
+                <option value="other">Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="role">Votre rôle</label>
+              <select id="role" name="role">
+                <option value="">Sélectionnez votre rôle</option>
+                <option value="owner">Propriétaire / Fondateur / DG</option>
+                <option value="finance">Directeur Financier / Comptable</option>
+                <option value="operations">Directeur des Opérations</option>
+                <option value="it">Directeur IT / Administrateur Système</option>
+                <option value="rh">Directeur RH</option>
+                <option value="other">Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="size">Taille de l'organisation</label>
+              <select id="size" name="size">
+                <option value="">Sélectionnez la taille</option>
+                <option value="1-5">1–5 employés</option>
+                <option value="6-15">6–15 employés</option>
+                <option value="16-50">16–50 employés</option>
+                <option value="51-100">51–100 employés</option>
+                <option value="101-500">101–500 employés</option>
+                <option value="500+">500+ employés</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="interests">Domaines d'intérêt</label>
+              <textarea id="interests" name="interests" rows="3" placeholder="Ex. : comptabilité, inventaire, paie, CRM..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="message">Autre chose</label>
+              <textarea id="message" name="message" rows="3"></textarea>
+            </div>
+            <div class="form-group form-checkbox">
+              <input type="checkbox" id="privacy" name="privacy" required />
+              <label for="privacy">Je comprends que Kraal Code utilisera ces informations pour répondre à ma demande et assurer le suivi pertinent. <span class="required">*</span></label>
+            </div>
+            <div class="form-group form-checkbox">
+              <input type="checkbox" id="marketing" name="marketing" />
+              <label for="marketing">Je souhaite recevoir occasionnellement des informations sur les produits.</label>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Envoyer la Demande</button>
+            <p class="form-note">Nous nous efforçons de répondre sous 2 jours ouvrables. Vos informations ne seront pas partagées avec des tiers.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--kc-space-12);align-items:start}.contact-info h2{margin-bottom:var(--kc-space-4)}.contact-info h3{margin-top:var(--kc-space-8);margin-bottom:var(--kc-space-3)}.expect-list{list-style:none;padding:0;margin:0 0 var(--kc-space-6)}.expect-list li{padding:var(--kc-space-2) 0;padding-left:var(--kc-space-6);position:relative;font-size:var(--kc-text-base);color:var(--kc-text-secondary)}.expect-list li::before{content:'→';position:absolute;left:0;color:var(--kc-teal);font-weight:var(--kc-weight-semibold)}.contact-details{margin-top:var(--kc-space-6);padding:var(--kc-space-4);background:var(--kc-surface-warm);border-radius:var(--kc-radius-md)}.contact-details p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary);margin-bottom:var(--kc-space-1)}.contact-details a{color:var(--kc-teal)}.contact-form-wrap{position:sticky;top:96px}.contact-form{padding:var(--kc-space-8);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.contact-form h2{font-size:var(--kc-text-xl);margin-bottom:var(--kc-space-6)}.form-group{margin-bottom:var(--kc-space-5)}.form-group label{display:block;font-size:var(--kc-text-sm);font-weight:var(--kc-weight-medium);color:var(--kc-text-primary);margin-bottom:var(--kc-space-1)}.required{color:var(--kc-danger)}.form-group input[type="text"],.form-group input[type="email"],.form-group select,.form-group textarea{width:100%;padding:var(--kc-space-3) var(--kc-space-4);font-size:var(--kc-text-base);border:1px solid var(--kc-border);border-radius:var(--kc-radius-md);background:var(--kc-surface-light);color:var(--kc-text-primary);font-family:var(--kc-font-body);transition:border-color var(--kc-transition-fast)}.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--kc-teal);box-shadow:0 0 0 3px rgba(70,105,107,0.1)}.form-group textarea{resize:vertical;min-height:80px}.form-checkbox{display:flex;align-items:flex-start;gap:var(--kc-space-3)}.form-checkbox input[type="checkbox"]{margin-top:var(--kc-space-1);width:18px;height:18px;flex-shrink:0}.form-checkbox label{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.btn--primary{display:inline-flex;align-items:center;justify-content:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:var(--kc-charcoal);color:var(--kc-text-inverse);border:none;transition:all var(--kc-transition-fast);text-decoration:none;cursor:pointer;width:100%}.btn--primary:hover{background:var(--kc-teal-deep)}.btn--full{width:100%}.form-note{font-size:var(--kc-text-xs);color:var(--kc-text-tertiary);text-align:center;margin-top:var(--kc-space-4)}.hp-field{position:absolute;left:-9999px;opacity:0;height:0;width:0;overflow:hidden}.form-error-msg{display:none;padding:var(--kc-space-4);background:var(--kc-danger-light);border:1px solid var(--kc-danger);border-radius:var(--kc-radius-md);margin-bottom:var(--kc-space-4);font-size:var(--kc-text-sm);color:var(--kc-danger)}.form-error-msg.show{display:block}.form-group.error input,.form-group.error select,.form-group.error textarea{border-color:var(--kc-danger)}.form-group .field-error{font-size:var(--kc-text-xs);color:var(--kc-danger);margin-top:var(--kc-space-1);display:none}.form-group.error .field-error{display:block}.form-success{display:none;text-align:center;padding:var(--kc-space-10)}.form-success.show{display:block}.form-success h3{font-size:var(--kc-text-2xl);margin-bottom:var(--kc-space-4);color:var(--kc-success)}.form-success p{color:var(--kc-text-secondary)}.btn--loading{opacity:0.7;pointer-events:none}.btn--loading::after{content:'';display:inline-block;width:16px;height:16px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:spin 0.6s linear infinite;margin-left:var(--kc-space-2);vertical-align:middle}@keyframes spin{to{transform:rotate(360deg)}}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.contact-grid{grid-template-columns:1fr}.contact-form-wrap{position:static}}
+</style>
+
+<script>
+  const form = document.querySelector('.contact-form') as HTMLFormElement;
+  const submitBtn = form?.querySelector('button[type="submit"]') as HTMLButtonElement;
+  const successMsg = document.createElement('div');
+  successMsg.className = 'form-success';
+  successMsg.innerHTML = '<h3>Merci</h3><p>Nous avons reçu votre demande et nous nous efforçons de répondre sous 2 jours ouvrables.</p>';
+  const errorMsg = document.createElement('div');
+  errorMsg.className = 'form-error-msg';
+  errorMsg.textContent = 'Une erreur s\'est produite. Veuillez réessayer ou nous envoyer un email directement à info@kraalcode.com.';
+  if (form) {
+    form.insertBefore(errorMsg, form.firstChild);
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      form.querySelectorAll('.form-group').forEach(g => g.classList.remove('error'));
+      errorMsg.classList.remove('show');
+      const hp = form.querySelector('#website') as HTMLInputElement;
+      if (hp && hp.value) return;
+      let valid = true;
+      const required = form.querySelectorAll('[required]');
+      required.forEach((field) => {
+        const input = field as HTMLInputElement | HTMLSelectElement;
+        const group = input.closest('.form-group');
+        if (!input.value.trim()) { group?.classList.add('error'); valid = false; }
+        if (input.type === 'email' && input.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) { group?.classList.add('error'); valid = false; }
+      });
+      if (!valid) return;
+      submitBtn.classList.add('btn--loading');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Envoi en cours...';
+      setTimeout(() => {
+        submitBtn.classList.remove('btn--loading');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Envoyer la Demande';
+        form.innerHTML = '';
+        form.appendChild(successMsg);
+        successMsg.classList.add('show');
+      }, 1500);
+    });
+  }
+</script>

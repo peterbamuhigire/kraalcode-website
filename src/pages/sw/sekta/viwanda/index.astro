@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'sw';
+---
+
+<BaseLayout
+  title="Viwanda — ERP kwa Viwanda vya Chakula, Ufungashaji na Utengenezaji"
+  description="Kraal Code kwa viwanda: orodha za malighafi na mapishi, amri za uzalishaji, udhibiti wa ubora, ufuatiliaji wa malighafi na uchambuzi wa mavuno."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/sw/sekta/viwanda/"
+>
+  <section class="page-hero section--warm"><div class="container">
+    <nav class="breadcrumb" aria-label="Njia ya mkate"><ol><li><a href="/sw/">Nyumbani</a></li><li><a href="/sw/sekta/">Sekta</a></li><li aria-current="page">Viwanda</li></ol></nav>
+    <h1>Viwanda</h1>
+    <p class="page-hero-subtext">Kutoka malighafi hadi bidhaa za mwisho. Fuatilia uzalishaji, udhibiti ubora na ujue gharama yako halisi — bila mfumo wa utengenezaji tofauti.</p>
+  </div></section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Changamoto zako</h2>
+    <div class="challenge-grid">
+      <div class="challenge-item"><h3>Mwonekano wa uzalishaji</h3><p>Hujui kilicho kwenye laini ya uzalishaji sasa — hatua gani amri iko, malighafi gani imetumika au mavuno ni yapi.</p></div>
+      <div class="challenge-item"><h3>Uthabiti wa ubora</h3><p>Ukaguzi wa ubora unafanywa lakini unarekodiwa kwenye karatasi. Kufuatilia mzigo wenye matatizo hadi kwa malighafi kunachukua siku.</p></div>
+      <div class="challenge-item"><h3>Gharama halisi haijulikani</h3><p>Unajua ulicholipa kwa malighafi, lakini gharama halisi kwa kitengo — kazi, gharama za jumla, taka — haihesabiwi.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>Jinsi Kraal Code inavyosaidia</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Mapishi / Orodha za Malighafi</h3><p>Orodha za malighafi na viambato, idadi, mavuno yatarajiwa na hatua za utengenezaji. Toleo la mapishi linafuatiliwa.</p></div>
+      <div class="feature-card"><h3>Amri za Uzalishaji</h3><p>Amri dhidi ya mapishi. Fuatilia kutoka imepangwa hadi imekamilika. Malighafi inatumika na bidhaa za mwisho zinapokelewa kwa otomatiki.</p></div>
+      <div class="feature-card"><h3>Udhibiti wa Ubora</h3><p>Mifano ya ukaguzi na vigezo. Rekodi matokeo kwa kila mizigo. Kubali au kataa kulingana na matokeo.</p></div>
+      <div class="feature-card"><h3>Uchambuzi wa Mavuno</h3><p>Linganisha mavuno yaliyopangwa dhidi ya yaliyopatikana. Fuatilia taka na bidhaa za pembe. Tambua mapungufu.</p></div>
+      <div class="feature-card"><h3>Ufuatiliaji wa Malighafi</h3><p>Malighafi inahifadhiwa kwa amri ya uzalishaji, inatumika kwa kumaliza. Tahadhari za kuagiza tena kabla ya kukosa.</p></div>
+      <div class="feature-card"><h3>Gharama ya Uzalishaji</h3><p>Kazi, malighafi na gharama za jumla zimekusanywa kwa amri. COGS zimehesabiwa kwa otomatiki kwenye kitabu kikuu.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Ona Kraal Code kwa viwanda</h2><p>Oma onyesho lililobinafsishwa kwa mazingira yako ya uzalishaji.</p>
+    <a href="/sw/mawasiliano/" class="btn btn--inverse">Oma Onyesho →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.challenge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-6)}.challenge-item{padding:var(--kc-space-5);border-left:3px solid var(--kc-warning)}.challenge-item h3{font-size:var(--kc-text-base);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-1)}.challenge-item p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.challenge-grid,.feature-grid{grid-template-columns:1fr}}
+</style>

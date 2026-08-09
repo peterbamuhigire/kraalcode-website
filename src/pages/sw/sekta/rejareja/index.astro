@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'sw';
+---
+
+<BaseLayout
+  title="Rejareja na POS — ERP kwa Maduka, Supermarketi na Minyororo ya Rejareja"
+  description="Kraal Code kwa rejareja: terminal POS, msimbo wa mwambaa, malipo ya pesa na mobile money, usimamizi wa hisa na shughuli za matawi mengi."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/sw/sekta/rejareja/"
+>
+  <section class="page-hero section--warm"><div class="container">
+    <nav class="breadcrumb" aria-label="Njia ya mkate"><ol><li><a href="/sw/">Nyumbani</a></li><li><a href="/sw/sekta/">Sekta</a></li><li aria-current="page">Rejareja na POS</li></ol></nav>
+    <h1>Rejareja na POS</h1>
+    <p class="page-hero-subtext">Malipo ya haraka, hisa sahihi na mwonekano wa mauzo kwa wakati halisi. Mfumo mmoja POS uunganishwa na hifadhi, uhasibu na dashibodi za usimamizi.</p>
+  </div></section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Changamoto zako</h2>
+    <div class="challenge-grid">
+      <div class="challenge-item"><h3>Kasi ya malipo</h3><p>Wateja wanangoja foleni. Mfumo wako wa sasa ni polepole, hauchanganui msimbo wa mwambaa kwa uaminifu au unahitaji hatua nyingi kumaliza mauzo.</p></div>
+      <div class="challenge-item"><h3>Mwonekano wa hisa</h3><p>Unauza kwenye kaunta lakini hujui viwango vya hisa vya sasa hadi mtu ahesabu. Kuagiza tena ni kwa majibu — unagundua ukosefu wakati mteja anauliza.</p></div>
+      <div class="challenge-item"><h3>Njia za malipo</h3><p>Wateja walipia kwa pesa taslimu, mobile money na kadi. Kupatanisha njia nyingi za malipo mwishoni mwa siku ni kwa mkono na kosa la kibinadamu.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>Jinsi Kraal Code inavyosaidia</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Terminal POS</h3><p>Kiolesura cha mguso kilichoboreshwa kwa malipo ya haraka. Msimbo wa mwambaa. Utafutaji wa haraka. Hesabu ya punguzo na kodi. Chapisha risiti.</p></div>
+      <div class="feature-card"><h3>Njia Nyingi za Malipo</h3><p>Pokea pesa taslimu, mobile money (MTN MoMo, Airtel Money, M-Pesa) na kadi. Fuatilia kwa njia ya malipo. Upatanisho wa mwisho wa siku.</p></div>
+      <div class="feature-card"><h3>Hisa kwa Wakati Halisi</h3><p>Hisa inapunguzwa kwa mauzo. Viwango vya sasa vinaonekana POS na ofisini. Tahadhari za kuagiza tena. Zaidi ya kuuza usicho nacho.</p></div>
+      <div class="feature-card"><h3>Matawi Mengi</h3><p>Simamia maduka mengi kutoka mfumo mmoja. Ripoti kwa tawi. Dashibodi zilizopanuliwa. Uhamisho wa matawi na uidhinishaji.</p></div>
+      <div class="feature-card"><h3>Ripoti za Mauzo</h3><p>Mauzo kwa bidhaa, kategoria, kipindi, njia ya malipo na mhudumu. Bidhaa zinazouzwa zaidi. Mifumo ya saa kwa maamuzi ya wafanyakazi.</p></div>
+      <div class="feature-card"><h3>Ripoti za Z</h3><p>Ripoti za Z za mwisho wa siku kwa kila terminal: mauzo ya jumla, malipo kwa njia, kodi iliyokusanywa, pesa taslimu zinazotarajiwa.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Ona Kraal Code kwa rejareja</h2><p>Oma onyesho lililobinafsishwa kwa shughuli zako za rejareja au ukumbi wa chakula.</p>
+    <a href="/sw/mawasiliano/" class="btn btn--inverse">Oma Onyesho →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.challenge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-6)}.challenge-item{padding:var(--kc-space-5);border-left:3px solid var(--kc-warning)}.challenge-item h3{font-size:var(--kc-text-base);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-1)}.challenge-item p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.challenge-grid,.feature-grid{grid-template-columns:1fr}}
+</style>

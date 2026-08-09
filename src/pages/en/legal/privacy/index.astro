@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'en';
+---
+
+<BaseLayout
+  title="Privacy Notice — Kraal Code"
+  description="How Kraal Code collects, uses, and protects your personal information."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/legal/privacy/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><a href="/en/legal/privacy/">Legal</a></li><li aria-current="page">Privacy Notice</li></ol></nav>
+      <h1>Privacy Notice</h1>
+      <p class="draft-notice">DRAFT — pending legal review. Last updated: 9 August 2026.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container container--narrow legal-content">
+    <h2>Who we are</h2>
+    <p>Kraal Code is operated by Chwezi Core Systems. We provide cloud-based enterprise resource planning software to organisations across East and Central Africa.</p>
+
+    <h2>Information we collect</h2>
+    <p>When you use our website or contact us, we collect:</p>
+    <ul>
+      <li><strong>Contact information:</strong> name, email address, organisation, country, and role — provided through our contact form</li>
+      <li><strong>Usage data:</strong> pages visited, time spent, and referral source — collected through privacy-respecting analytics (when implemented)</li>
+      <li><strong>Technical data:</strong> browser type, device type, and IP address — collected automatically for security and performance</li>
+    </ul>
+    <p>We do not collect sensitive personal data (financial, health, biometric) through our public website.</p>
+
+    <h2>How we use your information</h2>
+    <ul>
+      <li>Respond to your enquiry and provide information about Kraal Code</li>
+      <li>Schedule and deliver product demonstrations</li>
+      <li>Improve our website and services</li>
+      <li>Send product updates (only if you opt in)</li>
+    </ul>
+
+    <h2>Legal basis for processing</h2>
+    <p>We process your data based on:</p>
+    <ul>
+      <li><strong>Consent:</strong> when you submit the contact form or opt in to marketing</li>
+      <li><strong>Legitimate interest:</strong> to respond to your enquiry and improve our services</li>
+    </ul>
+
+    <h2>Data retention</h2>
+    <p>Contact form submissions are retained for 24 months from the last interaction. You may request deletion at any time.</p>
+
+    <h2>Your rights</h2>
+    <p>Under applicable data protection law, you have the right to:</p>
+    <ul>
+      <li>Access the personal data we hold about you</li>
+      <li>Request correction of inaccurate data</li>
+      <li>Request deletion of your data</li>
+      <li>Withdraw consent at any time</li>
+      <li>Lodge a complaint with your local data protection authority</li>
+    </ul>
+
+    <h2>Data security</h2>
+    <p>We implement appropriate technical and organisational measures to protect your data, including encryption in transit (TLS) and access controls. For details on our platform security, see our <a href="/en/security/">Security & Privacy</a> page.</p>
+
+    <h2>Contact</h2>
+    <p>For privacy enquiries, contact us at <a href="mailto:info@kraalcode.com">info@kraalcode.com</a>.</p>
+
+    <p class="legal-disclaimer">This notice applies to the kraalcode.com website. For information about how Kraal Code processes data on behalf of subscribing organisations (as a data processor), please refer to your organisation's data processing agreement.</p>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl)}
+  .draft-notice{display:inline-block;padding:var(--kc-space-2) var(--kc-space-4);background:var(--kc-warning-light);border:1px solid var(--kc-warning);border-radius:var(--kc-radius-md);font-size:var(--kc-text-sm);color:var(--kc-warning);margin-top:var(--kc-space-4)}
+  .breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}
+  .container--narrow{max-width:var(--kc-container-narrow)}
+  .legal-content h2{font-size:var(--kc-text-xl);margin-top:var(--kc-space-10);margin-bottom:var(--kc-space-4)}
+  .legal-content p,.legal-content li{font-size:var(--kc-text-base);color:var(--kc-text-secondary);line-height:var(--kc-leading-relaxed)}
+  .legal-content ul{margin:var(--kc-space-3) 0 var(--kc-space-4) var(--kc-space-6)}
+  .legal-content li{margin-bottom:var(--kc-space-2)}
+  .legal-content a{color:var(--kc-teal)}
+  .legal-disclaimer{margin-top:var(--kc-space-8);padding:var(--kc-space-4);background:var(--kc-surface-warm);border-radius:var(--kc-radius-md);font-size:var(--kc-text-sm);font-style:italic}
+  @media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}}
+</style>

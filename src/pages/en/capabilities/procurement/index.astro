@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'en';
+---
+
+<BaseLayout
+  title="Procurement & Suppliers — Purchase Orders, GRN, Three-Way Matching"
+  description="Vendor management, purchase requests, purchase orders, goods receipt, three-way matching, supplier payments, and cooperative procurement. Part of Kraal Code ERP."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/capabilities/procurement/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><a href="/en/capabilities/">Capabilities</a></li><li aria-current="page">Procurement & Suppliers</li></ol></nav>
+      <h1>Procurement & Suppliers</h1>
+      <p class="page-hero-subtext">From purchase request to supplier payment. Controlled, traceable, and matched — every step of the way.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Who this is for</h2>
+    <p>Procurement officers, store managers, finance teams, and business owners who need to control purchasing spend, verify goods received, and ensure supplier payments match what was ordered and delivered.</p>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>What you can do</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Vendor Management</h3><p>Maintain a supplier master with contacts, payment terms, bank details, tax registration, and performance history. Track supplier lead times and reliability.</p></div>
+      <div class="feature-card"><h3>Purchase Requests</h3><p>Raise purchase requests from any department. Route through approval workflows based on amount and category. Convert approved requests to purchase orders.</p></div>
+      <div class="feature-card"><h3>Purchase Orders</h3><p>Create POs with line items, quantities, agreed prices, and delivery dates. Track PO status from draft to fully received. Support partial deliveries and amendments.</p></div>
+      <div class="feature-card"><h3>Goods Received Notes</h3><p>Record goods received against POs. Inspect quantities and quality. Flag discrepancies. GRN triggers automatic stock increase and accrual posting.</p></div>
+      <div class="feature-card"><h3>Three-Way Matching</h3><p>Match purchase orders, goods receipts, and supplier invoices before payment. Discrepancies are flagged for review. Only matched invoices proceed to payment.</p></div>
+      <div class="feature-card"><h3>Supplier Payments</h3><p>Generate payment batches. Support cheque, bank transfer, and mobile money. Track payment status. Post to accounts payable and bank accounts automatically.</p></div>
+      <div class="feature-card"><h3>Cooperative Procurement</h3><p>Manage outgrower schemes and farmer cooperatives. Register farmers, record commodity intake, process deductions (input loans, levies), and generate farmer statements and payments.</p></div>
+      <div class="feature-card"><h3>Procurement Reports</h3><p>Purchase analysis by vendor, category, period. AP aging. Outstanding POs. Supplier performance. Spend analysis by department or project.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>How it connects</h2>
+    <ul class="connection-list">
+      <li><strong>Inventory</strong> → stock increases on goods receipt, reorder alerts trigger purchase requests</li>
+      <li><strong>Accounting</strong> → creditor entries posted on invoice matching, payments posted to AP and bank</li>
+      <li><strong>Manufacturing</strong> → raw material requirements generate purchase requests</li>
+      <li><strong>Projects</strong> → project-specific purchases tracked against project budgets</li>
+    </ul>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>See it in action</h2>
+    <p class="screenshot-intro">Screenshots from the live Kraal Code system — coming soon.</p>
+    <div class="screenshot-grid">
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Procurement Dashboard</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Purchase Order</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Three-Way Matching</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">GRN-PO Matching</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>See procurement in action</h2><p>Request a demonstration tailored to your procurement and supply chain needs.</p>
+    <a href="/en/contact/" class="btn btn--inverse">Request a Demonstration →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.connection-list{margin-top:var(--kc-space-4)}.connection-list li{margin-bottom:var(--kc-space-3);font-size:var(--kc-text-base);color:var(--kc-text-secondary)}.connection-list strong{color:var(--kc-text-primary)}.screenshot-intro{color:var(--kc-text-secondary);margin-bottom:var(--kc-space-6)}.screenshot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6)}.screenshot-placeholder{aspect-ratio:16/10;background:var(--kc-surface-warm);border:2px dashed var(--kc-border);border-radius:var(--kc-radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--kc-space-2)}.screenshot-label{font-weight:var(--kc-weight-semibold);color:var(--kc-text-primary)}.screenshot-note{font-size:var(--kc-text-sm);color:var(--kc-text-tertiary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.feature-grid,.screenshot-grid{grid-template-columns:1fr}}
+</style>

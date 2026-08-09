@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'fr';
+---
+
+<BaseLayout
+  title="Politique de Témoins — Kraal Code"
+  description="Comment Kraal Code utilise les témoins et technologies similaires sur notre site web."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/fr/juridique/temoins/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/fr/">Accueil</a></li><li>Juridique</li><li aria-current="page">Témoins</li></ol></nav>
+      <h1>Politique de Témoins</h1>
+      <p class="draft-notice">BROUILLON — en attente de révision juridique. Dernière mise à jour : 9 août 2026.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container container--narrow legal-content">
+    <h2>Qu'est-ce qu'un témoin ?</h2>
+    <p>Les témoins (cookies) sont de petits fichiers texte stockés sur votre appareil lorsque vous visitez un site web. Ils aident le site à mémoriser vos préférences et à comprendre comment vous l'utilisez.</p>
+
+    <h2>Témoins que nous utilisons</h2>
+    <h3>Témoins essentiels</h3>
+    <p>Ces témoins sont nécessaires au fonctionnement du site. Ils ne peuvent pas être désactivés.</p>
+    <ul>
+      <li><strong>Témoin de session :</strong> maintient votre préférence de langue pendant votre visite</li>
+      <li><strong>Témoin de sécurité :</strong> protège contre les attaques de falsification de requêtes</li>
+    </ul>
+
+    <h3>Témoins analytiques (futur)</h3>
+    <p>Lorsqu'implémentés, les témoins analytiques nous aideront à comprendre comment les visiteurs utilisent notre site. Ils ne seront définis qu'avec votre consentement explicite.</p>
+
+    <h2>Contact</h2>
+    <p>Pour des questions sur notre utilisation des témoins, contactez-nous à <a href="mailto:info@kraalcode.com">info@kraalcode.com</a>.</p>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl)}.draft-notice{display:inline-block;padding:var(--kc-space-2) var(--kc-space-4);background:var(--kc-warning-light);border:1px solid var(--kc-warning);border-radius:var(--kc-radius-md);font-size:var(--kc-text-sm);color:var(--kc-warning);margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.legal-content h2{font-size:var(--kc-text-xl);margin-top:var(--kc-space-10);margin-bottom:var(--kc-space-4)}.legal-content h3{font-size:var(--kc-text-lg);margin-top:var(--kc-space-6);margin-bottom:var(--kc-space-3)}.legal-content p,.legal-content li{font-size:var(--kc-text-base);color:var(--kc-text-secondary);line-height:var(--kc-leading-relaxed)}.legal-content ul{margin:var(--kc-space-3) 0 var(--kc-space-4) var(--kc-space-6)}.legal-content li{margin-bottom:var(--kc-space-2)}.legal-content a{color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}}
+</style>

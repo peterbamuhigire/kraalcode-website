@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'en';
+---
+
+<BaseLayout
+  title="Consultancy & Professional Services — ERP for Project-Based Firms"
+  description="Kraal Code for consultancies: project billing, timesheets, expense tracking, resource allocation, client invoicing, and project profitability reporting."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/sectors/consultancy/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><a href="/en/sectors/">Sectors</a></li><li aria-current="page">Consultancy & Professional Services</li></ol></nav>
+      <h1>Consultancy & Professional Services</h1>
+      <p class="page-hero-subtext">Bill for your time, track your costs, and know which projects are profitable — without a separate project management tool.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Your challenges</h2>
+    <div class="challenge-grid">
+      <div class="challenge-item"><h3>Time tracking</h3><p>Your product is time. Without accurate timesheets, you cannot bill clients correctly, measure utilisation, or know which projects are profitable.</p></div>
+      <div class="challenge-item"><h3>Project profitability</h3><p>You invoice clients, but you do not know the actual margin per project — especially when staff work across multiple projects and expenses are allocated manually.</p></div>
+      <div class="challenge-item"><h3>Resource allocation</h3><p>Your consultants are spread across projects. Who is over-allocated? Who has capacity? Without visibility, you overcommit some and underutilise others.</p></div>
+      <div class="challenge-item"><h3>Expense management</h3><p>Travel, printing, and other project expenses are captured on paper or in personal spreadsheets. Reimbursing staff and billing clients requires manual consolidation.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>How Kraal Code helps</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Project Register</h3><p>Create projects with clients, budgets, timelines, and responsible managers. Track status from initiation through execution and closure.</p></div>
+      <div class="feature-card"><h3>Timesheets</h3><p>Staff record time against projects and tasks. Approve timesheets through workflow. Use approved time for billing and project costing.</p></div>
+      <div class="feature-card"><h3>Project Billing</h3><p>Generate invoices from timesheets and milestones. Support fixed-price and time-and-materials models. Track billed vs unbilled amounts.</p></div>
+      <div class="feature-card"><h3>Resource Allocation</h3><p>Assign team members to projects with allocation percentages. Track utilisation rates. Identify capacity and over-allocation.</p></div>
+      <div class="feature-card"><h3>Expense Tracking</h3><p>Record project expenses. Route through approval workflows. Allocate to projects for costing. Include in client invoices where applicable.</p></div>
+      <div class="feature-card"><h3>Project Profitability</h3><p>Revenue minus costs (time + expenses) per project. Margin analysis by client, project type, and period. Know which engagements are profitable.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container">
+    <h2>See it in action</h2>
+    <p class="screenshot-intro">Screenshots from the live Kraal Code system — coming soon.</p>
+    <div class="screenshot-grid">
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Project Register</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Timesheet Entry</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>See Kraal Code for consultancies</h2><p>Request a demonstration tailored to your professional services firm.</p>
+    <a href="/en/contact/" class="btn btn--inverse">Request a Demonstration →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.challenge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-6)}.challenge-item{padding:var(--kc-space-5);border-left:3px solid var(--kc-warning)}.challenge-item h3{font-size:var(--kc-text-base);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-1)}.challenge-item p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.screenshot-intro{color:var(--kc-text-secondary);margin-bottom:var(--kc-space-6)}.screenshot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6)}.screenshot-placeholder{aspect-ratio:16/10;background:var(--kc-surface-warm);border:2px dashed var(--kc-border);border-radius:var(--kc-radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--kc-space-2)}.screenshot-label{font-weight:var(--kc-weight-semibold);color:var(--kc-text-primary)}.screenshot-note{font-size:var(--kc-text-sm);color:var(--kc-text-tertiary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.challenge-grid,.feature-grid,.screenshot-grid{grid-template-columns:1fr}}
+</style>

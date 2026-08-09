@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'en';
+---
+
+<BaseLayout
+  title="Accessibility Statement — Kraal Code"
+  description="Kraal Code's commitment to web accessibility and WCAG 2.2 AA compliance."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/legal/accessibility/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li>Legal</li><li aria-current="page">Accessibility</li></ol></nav>
+      <h1>Accessibility Statement</h1>
+      <p class="draft-notice">DRAFT — pending review. Last updated: 9 August 2026.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container container--narrow legal-content">
+    <h2>Our commitment</h2>
+    <p>Kraal Code is committed to ensuring digital accessibility for people with disabilities. We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.2 Level AA.</p>
+
+    <h2>Current status</h2>
+    <p>This website was designed with accessibility as a core requirement. We have implemented:</p>
+    <ul>
+      <li>Semantic HTML structure with proper heading hierarchy</li>
+      <li>Skip-to-content link for keyboard users</li>
+      <li>Keyboard-operable navigation and menus</li>
+      <li>Visible focus indicators on all interactive elements</li>
+      <li>Sufficient colour contrast (minimum 4.5:1 for text)</li>
+      <li>Text alternatives for meaningful images</li>
+      <li>Responsive design that supports text zoom to 200%</li>
+      <li>Reduced motion support via prefers-reduced-motion</li>
+    </ul>
+
+    <h2>Known limitations</h2>
+    <p>We are aware of the following accessibility limitations:</p>
+    <ul>
+      <li>Product screenshots (when added) will require alt text review</li>
+      <li>Form validation error messages may need improved screen reader association</li>
+      <li>Some interactive elements may not have been tested with all screen readers</li>
+    </ul>
+    <p>We are working to address these in future updates.</p>
+
+    <h2>Feedback</h2>
+    <p>If you encounter accessibility barriers on this website, please contact us at <a href="mailto:info@kraalcode.com">info@kraalcode.com</a>. We take all feedback seriously and will respond within 5 business days.</p>
+
+    <h2>Assessment methodology</h2>
+    <p>Accessibility is assessed through automated testing (axe-core), keyboard navigation testing, and manual review against WCAG 2.2 AA criteria.</p>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl)}
+  .draft-notice{display:inline-block;padding:var(--kc-space-2) var(--kc-space-4);background:var(--kc-warning-light);border:1px solid var(--kc-warning);border-radius:var(--kc-radius-md);font-size:var(--kc-text-sm);color:var(--kc-warning);margin-top:var(--kc-space-4)}
+  .breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}
+  .container--narrow{max-width:var(--kc-container-narrow)}
+  .legal-content h2{font-size:var(--kc-text-xl);margin-top:var(--kc-space-10);margin-bottom:var(--kc-space-4)}
+  .legal-content p,.legal-content li{font-size:var(--kc-text-base);color:var(--kc-text-secondary);line-height:var(--kc-leading-relaxed)}
+  .legal-content ul{margin:var(--kc-space-3) 0 var(--kc-space-4) var(--kc-space-6)}
+  .legal-content li{margin-bottom:var(--kc-space-2)}
+  .legal-content a{color:var(--kc-teal)}
+  @media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}}
+</style>

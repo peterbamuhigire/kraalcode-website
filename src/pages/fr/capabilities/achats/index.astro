@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'fr';
+---
+
+<BaseLayout
+  title="Approvisionnement et Fournisseurs — Bons de Commande, Réception, Rapprochement Tripartite"
+  description="Gestion fournisseurs, demandes d'achat, bons de commande, réception de marchandises, rapprochement tripartite, paiements et approvisionnement coopératif. Kraal Code ERP."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/fr/capacites/achats/"
+>
+  <section class="page-hero section--warm"><div class="container">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/fr/">Accueil</a></li><li><a href="/fr/capacites/">Capacités</a></li><li aria-current="page">Approvisionnement et Fournisseurs</li></ol></nav>
+    <h1>Approvisionnement et Fournisseurs</h1>
+    <p class="page-hero-subtext">De la demande d'achat au paiement fournisseur. Contrôlé, traçable et rapproché — à chaque étape.</p>
+  </div></section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>À qui s'adresse ce module</h2>
+    <p>Responsables approvisionnement, chefs de magasin, équipes financières et dirigeants qui doivent contrôler les dépenses d'achat, vérifier les marchandises reçues et s'assurer que les paiements correspondent aux commandes et livraisons.</p>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>Ce que vous pouvez faire</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Gestion Fournisseurs</h3><p>Fichier fournisseur avec contacts, conditions de paiement, coordonnées bancaires, numéro fiscal et historique de performance.</p></div>
+      <div class="feature-card"><h3>Demandes d'Achat</h3><p>Demandes de tout département. Circuits de validation par montant et catégorie. Conversion des demandes approuvées en bons de commande.</p></div>
+      <div class="feature-card"><h3>Bons de Commande</h3><p>Commandes avec lignes, quantités, prix convenus et dates de livraison. Suivi du statut du brouillon à la réception complète. Livraisons partielles et modifications supportées.</p></div>
+      <div class="feature-card"><h3>Bons de Réception</h3><p>Enregistrement des marchandises reçues contre les bons de commande. Contrôle des quantités et de la qualité. Signalement des écarts.</p></div>
+      <div class="feature-card"><h3>Rapprochement Tripartite</h3><p>Rapprochement bons de commande, bons de réception et factures fournisseurs avant paiement. Les écarts sont signalés pour examen.</p></div>
+      <div class="feature-card"><h3>Paiements Fournisseurs</h3><p>Génération de lots de paiement. Chèque, virement bancaire et mobile money. Suivi de l'état des paiements. Comptabilisation automatique.</p></div>
+      <div class="feature-card"><h3>Approvisionnement Coopératif</h3><p>Gestion des filières et coopératives agricoles. Enregistrement des producteurs, enregistrement des livraisons, traitement des déductions et paiements.</p></div>
+      <div class="feature-card"><h3>Rapports d'Approvisionnement</h3><p>Analyse des achats par fournisseur, catégorie et période. Balance âgée fournisseurs. Bons de commande ouverts. Performance fournisseurs.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Voir l'approvisionnement en action</h2><p>Demandez une démonstration adaptée à votre chaîne d'approvisionnement.</p>
+    <a href="/fr/contact/" class="btn btn--inverse">Demander une démonstration →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.feature-grid{grid-template-columns:1fr}}
+</style>

@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'fr';
+---
+
+<BaseLayout
+  title="Commerce et Distribution — ERP pour Grossistes, Distributeurs et Importateurs"
+  description="Kraal Code pour le commerce : inventaire multi-entrepôts, suivi par lot, prélèvement FEFO, agents commerciaux et gestion des livraisons."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/fr/secteurs/commerce/"
+>
+  <section class="page-hero section--warm"><div class="container">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/fr/">Accueil</a></li><li><a href="/fr/secteurs/">Secteurs</a></li><li aria-current="page">Commerce et Distribution</li></ol></nav>
+    <h1>Commerce et Distribution</h1>
+    <p class="page-hero-subtext">Déplacez des marchandises entre sites avec une visibilité complète. Stock multi-entrepôts, suivi par lot, agents commerciaux et gestion des livraisons — un seul grand livre.</p>
+  </div></section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Vos défis</h2>
+    <div class="challenge-grid">
+      <div class="challenge-item"><h3>Stock multi-sites</h3><p>Vous avez des entrepôts, des magasins et des agents sur plusieurs sites. Savoir ce qui est où nécessite des appels téléphoniques et des tableurs.</p></div>
+      <div class="challenge-item"><h3>Gestion des péremptions</h3><p>Les produits périment. Sans suivi par lot et prélèvement FEFO, les articles périment en rayon pendant que le stock plus récent est vendu en premier.</p></div>
+      <div class="challenge-item"><h3>Force de terrain</h3><p>Les agents commerciaux opèrent sur le terrain avec leur propre stock. Vous ne voyez pas leurs ventes quotidiennes ni leurs obligations de commission.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>Comment Kraal Code aide</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Inventaire Multi-Entrepôts</h3><p>Gestion du stock sur entrepôts, magasins, transit et consignment agents. Vue par site ou consolidée. Transferts avec circuits de validation.</p></div>
+      <div class="feature-card"><h3>Suivi par Lot et FEFO</h3><p>Suivi par lot et date de péremption. Prélèvement FEFO. Alertes de péremption. Essentiel pour l'agroalimentaire et la pharmacie.</p></div>
+      <div class="feature-card"><h3>Réseau d'Agents</h3><p>Enregistrement des agents, attribution de territoires et stock. Suivi des ventes quotidiennes. Calcul des commissions. Accès self-service.</p></div>
+      <div class="feature-card"><h3>Achats et Réception</h3><p>Bons de commande, bons de réception et rapprochement tripartite. Suivi de la performance fournisseur. Réapprovisionnement automatique.</p></div>
+      <div class="feature-card"><h3>Préparation des Commandes</h3><p>Commandes clients, listes de prélèvement, bons de livraison et suivi d'expédition. Livraisons partielles et reliquats supportés.</p></div>
+      <div class="feature-card"><h3>Rapports de Distribution</h3><p>Ventes par territoire, agent, produit et période. Mouvements de stock entre sites. Performance et commissions des agents.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Voir Kraal Code pour la distribution</h2><p>Demandez une démonstration adaptée à vos opérations commerciales.</p>
+    <a href="/fr/contact/" class="btn btn--inverse">Demander une démonstration →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.challenge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-6)}.challenge-item{padding:var(--kc-space-5);border-left:3px solid var(--kc-warning)}.challenge-item h3{font-size:var(--kc-text-base);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-1)}.challenge-item p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.challenge-grid,.feature-grid{grid-template-columns:1fr}}
+</style>

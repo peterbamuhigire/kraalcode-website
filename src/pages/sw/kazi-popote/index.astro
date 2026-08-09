@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const locale = 'sw';
+---
+
+<BaseLayout
+  title="Kazi Popote — Shirika Lako Linakwenda Nawe"
+  description="Kraal Code: fikia ERP yako kutoka kompyuta, simu, kompyuta kibao au ofisi ya mbali — na usalama na udhibiti."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/sw/kazi-popote/"
+>
+  <section class="page-hero section--dark">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Njia ya mkate"><ol><li><a href="/sw/">Nyumbani</a></li><li aria-current="page">Kazi Popote</li></ol></nav>
+      <h1>Shirika lako linakwenda nawe</h1>
+      <p class="page-hero-subtext">Kudhibitiwa, salama na inayopatikana — kutoka kompyuta kwenye makao makuu, simu uwanjani, au ofisi nyingine ya nchi.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container">
+    <div class="contexts-grid">
+      <div class="context-card">
+        <div class="context-image" style="background-image: url('/src/assets/images/work-anywhere/remote-work-home-laptop.jpg')"></div>
+        <h3>Kutoka kompyuta kwenye makao makuu</h3>
+        <p>Ufikiaji kamili wa shughuli zote. Kazi za vidirisha vingi. Ripoti za kina. Utawala kamili. Uzoefu wa ofisi unaoatarajiwa.</p>
+      </div>
+      <div class="context-card">
+        <div class="context-image" style="background-image: url('/src/assets/images/work-anywhere/remote-work-desk-phone.jpg')"></div>
+        <h3>Kutoka simu uwanjani</h3>
+        <p>Kurekodi miamala. Kagua hisa. Mzunguko wa uidhinishaji. Kufuatilia mahudhurio. Mawakala wa mauzo na wasimamizi wa uwanja wanafanya kazi kutoka mfukoni mwao.</p>
+      </div>
+      <div class="context-card">
+        <div class="context-image" style="background-image: url('/src/assets/images/work-anywhere/remote-work-sofa.jpg')"></div>
+        <h3>Kutoka ofisi ya nyumbani</h3>
+        <p>Uratibu wa miradi. Usimamizi wa timu. Mwonekano wa matawi mengi. Wakurugenzi na wasimamizi wanadhibiti kutoka popote.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="section section--warm"><div class="container container--narrow">
+    <h2>Jinsi ufikiaji unavyodhibitiwa</h2>
+    <div class="controls-grid">
+      <div class="control-item"><h3 Utambulisho</h3><p>Uthibitishaji wa sababu mbili, kuingia kwa kibiolojia, tokeni za JWT zinazoisha haraka.</p></div>
+      <div class="control-item"><h3>Ruhusa</h3><p>RBAC ya kina, vikomo vya tawi, vikomo vya uidhinishaji. Kila mtumiaji anaona tu kinachomhusu.</p></div>
+      <div class="control-item"><h3>Uwezo wa kufuatilia</h3><p>Kitabu cha ukaguzi kisichobadilika. Kila kitendo kinafuatiliwa — nani, nini, lini, kutoka wapi.</p></div>
+      <div class="control-item"><h3>Usalama wa kikao</h3><p>Vidakuzi HttpOnly/Secure/SameSite=Strict. JWT dakika 15. Kufungwa baada ya majaribio 5.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Ona kazi ya mbali kwa vitendo</h2><p>Oma onyesho lililobinafsishwa kwa mahitaji yako ya uhamaji.</p>
+    <a href="/sw/mawasiliano/" class="btn btn--inverse">Oma Onyesho →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:800px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-inverse-muted);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-inverse-muted);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal-light);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-inverse-muted)}.contexts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.context-card{border-radius:var(--kc-radius-lg);overflow:hidden;background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle)}.context-image{height:240px;background-size:cover;background-position:center}.context-card h3{padding:var(--kc-space-4) var(--kc-space-5) 0;font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold)}.context-card p{padding:0 var(--kc-space-5) var(--kc-space-5);font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.container--narrow{max-width:var(--kc-container-narrow)}.controls-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-6)}.control-item{padding:var(--kc-space-5);border-left:3px solid var(--kc-teal)}.control-item h3{font-size:var(--kc-text-base);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-1)}.control-item p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:1024px){.contexts-grid,.controls-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.contexts-grid,.controls-grid{grid-template-columns:1fr}}
+</style>

@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'en';
+---
+
+<BaseLayout
+  title="Hospitality — ERP for Hotels, Restaurants, and Lodges"
+  description="Kraal Code for hospitality: POS table mode, recipe management, inventory tracking, shift management, and end-of-day reconciliation for hotels and restaurants."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/sectors/hospitality/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><a href="/en/sectors/">Sectors</a></li><li aria-current="page">Hospitality</li></ol></nav>
+      <h1>Hospitality</h1>
+      <p class="page-hero-subtext">Manage tables, rooms, kitchens, and bars from one system. POS, inventory, recipes, and accounting — connected from order to ledger.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Your challenges</h2>
+    <div class="challenge-grid">
+      <div class="challenge-item"><h3>Table and room management</h3><p>Tracking which tables are occupied, which rooms are available, and what has been ordered requires constant coordination between front-of-house and back-of-house.</p></div>
+      <div class="challenge-item"><h3>Perishable inventory</h3><p>Food and beverage inventory is perishable. Without batch tracking and expiry management, waste is high and true cost is unknown.</p></div>
+      <div class="challenge-item"><h3>Recipe costing</h3><p>You serve dishes but do not know the actual cost per plate — ingredients, portion sizes, and waste are not tracked systematically.</p></div>
+      <div class="challenge-item"><h3>End-of-day reconciliation</h3><p>Cash, mobile money, and card payments across multiple outlets (restaurant, bar, rooms) must be reconciled daily. Manual reconciliation is slow and error-prone.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>How Kraal Code helps</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>POS with Table Mode</h3><p>Table-based ordering for restaurants and bars. Open tables, add items, transfer between tables, split bills, and close bills. Kitchen order printing.</p></div>
+      <div class="feature-card"><h3>Recipe Management</h3><p>Define recipes with ingredients, portions, and expected cost per serving. Track actual vs planned consumption. Identify dishes with poor margins.</p></div>
+      <div class="feature-card"><h3>Perishable Inventory</h3><p>Track food and beverage stock with batch numbers and expiry dates. FEFO picking ensures older stock is used first. Waste tracking and reporting.</p></div>
+      <div class="feature-card"><h3>Multi-Outlet Management</h3><p>Manage restaurant, bar, room service, and shop from one system. Consolidated reporting. Separate cash sessions per outlet.</p></div>
+      <div class="feature-card"><h3>Shift Management</h3><p>Track staff shifts and attendance. Link staff to POS transactions for accountability. Generate shift reports.</p></div>
+      <div class="feature-card"><h3>Financial Integration</h3><p>Every sale posts to inventory and accounting automatically. End-of-day Z-reports. Monthly P&L by outlet. No manual journal entries for daily sales.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container">
+    <h2>See it in action</h2>
+    <p class="screenshot-intro">Screenshots from the live Kraal Code system — coming soon.</p>
+    <div class="screenshot-grid">
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">POS Terminal (Table Mode)</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Recipe Management</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>See Kraal Code for hospitality</h2><p>Request a demonstration tailored to your hotel, restaurant, or lodge operations.</p>
+    <a href="/en/contact/" class="btn btn--inverse">Request a Demonstration →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.challenge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-6)}.challenge-item{padding:var(--kc-space-5);border-left:3px solid var(--kc-warning)}.challenge-item h3{font-size:var(--kc-text-base);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-1)}.challenge-item p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.screenshot-intro{color:var(--kc-text-secondary);margin-bottom:var(--kc-space-6)}.screenshot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6)}.screenshot-placeholder{aspect-ratio:16/10;background:var(--kc-surface-warm);border:2px dashed var(--kc-border);border-radius:var(--kc-radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--kc-space-2)}.screenshot-label{font-weight:var(--kc-weight-semibold);color:var(--kc-text-primary)}.screenshot-note{font-size:var(--kc-text-sm);color:var(--kc-text-tertiary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.challenge-grid,.feature-grid,.screenshot-grid{grid-template-columns:1fr}}
+</style>

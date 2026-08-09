@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const locale = 'fr';
+---
+
+<BaseLayout
+  title="Blogue — Kraal Code"
+  description="Articles, analyses et guides sur la gestion d'entreprise en Afrique. ERP, comptabilité, inventaire, RH et plus."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/fr/blogue/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/fr/">Accueil</a></li><li aria-current="page">Blogue</li></ol></nav>
+      <h1>Blogue</h1>
+      <p class="page-hero-subtext">Articles, analyses et guides sur la gestion d'entreprise en Afrique — bientôt disponibles.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container text-center">
+    <div class="coming-soon">
+      <h2>Articles à venir</h2>
+      <p>Nous préparons du contenu de qualité sur les défis opérationnels des organisations africaines, les meilleures pratiques en gestion d'entreprise et les tendances du marché ERP.</p>
+      <p>Les premiers articles seront publiés prochainement.</p>
+    </div>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl)}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.coming-soon{max-width:500px;margin:var(--kc-space-16) auto}.coming-soon h2{font-size:var(--kc-text-2xl);margin-bottom:var(--kc-space-4)}.coming-soon p{color:var(--kc-text-secondary);margin-bottom:var(--kc-space-3)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}}
+</style>

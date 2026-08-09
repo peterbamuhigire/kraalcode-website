@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'en';
+---
+
+<BaseLayout
+  title="Manufacturing — ERP for Food Processors, Packaging, and Light Manufacturing"
+  description="Kraal Code for manufacturing: BOM and recipe management, production orders, quality control, batch certification, raw material tracking, and yield analysis."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/sectors/manufacturing/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><a href="/en/sectors/">Sectors</a></li><li aria-current="page">Manufacturing</li></ol></nav>
+      <h1>Manufacturing</h1>
+      <p class="page-hero-subtext">From raw materials to finished goods. Track production, control quality, and know your true cost — without a separate manufacturing system.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Your challenges</h2>
+    <div class="challenge-grid">
+      <div class="challenge-item"><h3>Production visibility</h3><p>You cannot see what is on the production line right now — what stage each order is at, which materials have been consumed, or what the yield looks like until the batch is complete.</p></div>
+      <div class="challenge-item"><h3>Quality consistency</h3><p>Quality checks happen, but they are recorded on paper or in someone's notebook. When a batch has a problem, tracing back to the raw materials and production conditions takes days.</p></div>
+      <div class="challenge-item"><h3>True cost unknown</h3><p>You know what you paid for raw materials, but the actual cost per unit — including labour, overhead, and waste — is calculated after the fact in a spreadsheet, if at all.</p></div>
+      <div class="challenge-item"><h3>Material planning</h3><p>Production stops because a raw material ran out. Nobody saw it coming because stock levels were checked manually and reorder points were in someone's head.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>How Kraal Code helps</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Recipe / BOM Management</h3><p>Define bills of materials with ingredients, quantities, expected yields, and processing steps. Version control tracks recipe changes over time.</p></div>
+      <div class="feature-card"><h3>Production Orders</h3><p>Create production orders against recipes. Track from planned to started to completed. Materials are consumed and finished goods received automatically.</p></div>
+      <div class="feature-card"><h3>Quality Control</h3><p>Define inspection templates with checkpoints and acceptance criteria. Record results per batch. Approve or reject based on findings. Only certified batches move to finished goods.</p></div>
+      <div class="feature-card"><h3>Yield Analysis</h3><p>Compare planned vs actual yields. Track waste, scrap, and by-products. Identify inefficiencies by recipe, work centre, or time period.</p></div>
+      <div class="feature-card"><h3>Raw Material Tracking</h3><p>Materials are reserved on production order creation and consumed on completion. Reorder alerts trigger before stock runs out. No more production stops from missing inputs.</p></div>
+      <div class="feature-card"><h3>Cost of Production</h3><p>Labour, materials, and overhead costs accumulated per production order. COGS posted to the general ledger automatically. Know your true cost per unit.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container">
+    <h2>See it in action</h2>
+    <p class="screenshot-intro">Screenshots from the live Kraal Code system — coming soon.</p>
+    <div class="screenshot-grid">
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Recipe Builder</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Production Orders</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>See Kraal Code for manufacturing</h2><p>Request a demonstration tailored to your production environment.</p>
+    <a href="/en/contact/" class="btn btn--inverse">Request a Demonstration →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.challenge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-6)}.challenge-item{padding:var(--kc-space-5);border-left:3px solid var(--kc-warning)}.challenge-item h3{font-size:var(--kc-text-base);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-1)}.challenge-item p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.screenshot-intro{color:var(--kc-text-secondary);margin-bottom:var(--kc-space-6)}.screenshot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6)}.screenshot-placeholder{aspect-ratio:16/10;background:var(--kc-surface-warm);border:2px dashed var(--kc-border);border-radius:var(--kc-radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--kc-space-2)}.screenshot-label{font-weight:var(--kc-weight-semibold);color:var(--kc-text-primary)}.screenshot-note{font-size:var(--kc-text-sm);color:var(--kc-text-tertiary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.challenge-grid,.feature-grid,.screenshot-grid{grid-template-columns:1fr}}
+</style>

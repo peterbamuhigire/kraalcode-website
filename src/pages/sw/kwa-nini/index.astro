@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const locale = 'sw';
+---
+
+<BaseLayout
+  title="Kwa Nini Kraal Code — Imejengwa kwa Mashirika ya Kiafrika"
+  description="Kraal Code: bei nafuu kuanzia UGX 250,000/mwezi, inayotumika siku ya kwanza, ujumuishaji wa asili ya Afrika, usalama wa kwamba na ukuaji wa moduli."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/sw/kwa-nini/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Njia ya mkate"><ol><li><a href="/sw/">Nyumbani</a></li><li aria-current="page">Kwa Nini Kraal Code</li></ol></nav>
+      <h1>Kwa nini mashirika yanachagua Kraal Code</h1>
+    </div>
+  </section>
+
+  <section class="section"><div class="container">
+    <div class="reasons-grid">
+      <div class="reason-card">
+        <h2>Nafuu bila kuwa na kikomo</h2>
+        <p>UGX 250,000 kwa mwezi kwa shirika zima — si kwa mtumiaji. Ikilinganishwa na Odoo Enterprise inayogharimu UGX 4.3M kwa watumiaji 30, Kraal Code inagharimu UGX 1M kwa uwezo sawa. Akiba inafadhili ukuaji wako.</p>
+      </div>
+      <div class="reason-card">
+        <h2>Inayotumika siku ya kwanza</h2>
+        <p>Sheria ya Dhahabu: kama mtumiaji angehitaji mwongozo au mshauri kukamilisha kazi, kiolesura kinarekebishwa hadi asiwe na haja. Lengo: kiwango cha mafanikio yasiyosaidiwa ≥ 85%.</p>
+      </div>
+      <div class="reason-card">
+        <h2>Ujumuishaji wa asili ya Afrika</h2>
+        <p>MTN MoMo, Airtel Money, M-Pesa vimejumuishwa tangu siku ya kwanza. EFRIS tayari. Sarafu za ndani (UGX, KES, TZS, RWF). Inaweza kubadilishwa kwa kila nchi kwa wasifu wa ujanibishaji — si maendeleo maalum.</p>
+      </div>
+      <div class="reason-card">
+        <h2>Ni ya kwamba kuhusu usalama</h2>
+        <p>Kutenganisha kwa wateja kiwango cha data. RBAC ya kina. Usimbaji AES-256. MFA. OWASP Top 10 imepangwa. Kitabu cha ukaguzi kisichobadilika cha miaka 7. Hizi si ahadi — ni udhibiti unaothibitishwa.</p>
+      </div>
+      <div class="reason-card">
+        <h2>Ukuaji wa moduli</h2>
+        <p>Moduli 6 za msingi zikiwa na nguvu kila wakati. Moduli za nyongeza zinazowashwa ukiwa tayari. Kila moduli inakuja na jaribio la bure la siku 14. Unalipa tu unachotumia.</p>
+      </div>
+      <div class="reason-card">
+        <h2>Uelewa wa kikanda</h2>
+        <p>Imejengwa kwa hali halisi za uendeshaji wa Afrika Mashariki: matawi mengi, kazi ya uwanja, muunganisho wa mara kwa mara, lugha za ndani, sarafu za ndani, uzingatiaji wa ndani (Uganda, Kenya, Tanzania, Rwanda).</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Ona mwenyewe</h2><p>Oma onyesho lililobinafsishwa kwa shirika lako.</p>
+    <a href="/sw/mawasiliano/" class="btn btn--inverse">Oma Onyesho →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:800px}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.reasons-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6)}.reason-card{padding:var(--kc-space-8);background:var(--kc-surface-warm);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.reason-card h2{font-size:var(--kc-text-xl);font-family:var(--kc-font-body);margin-bottom:var(--kc-space-3)}.reason-card p{font-size:var(--kc-text-base);color:var(--kc-text-secondary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.reasons-grid{grid-template-columns:1fr}}
+</style>

@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'fr';
+---
+
+<BaseLayout
+  title="RH et Paie — Gestion du Personnel, Congés, Traitement de la Paie"
+  description="Dossiers employés, gestion des congés, suivi de présence, traitement de la paie avec conformité CNSS et impôt sur le revenu, évaluations et recrutement. Kraal Code ERP."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/fr/capacites/rh-paie/"
+>
+  <section class="page-hero section--warm"><div class="container">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/fr/">Accueil</a></li><li><a href="/fr/capacites/">Capacités</a></li><li aria-current="page">RH et Paie</li></ol></nav>
+    <h1>RH et Paie</h1>
+    <p class="page-hero-subtext">Du recrutement au départ. Dossiers employés, congés, présence, paie, évaluations et conformité légale — dans un seul système.</p>
+  </div></section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>À qui s'adresse ce module</h2>
+    <p>Responsables RH, gestionnaires de paie, chefs de service et dirigeants qui doivent gérer les opérations du personnel proprement — contrats, congés, présence, paie et conformité légale — sans maintenir des tableurs parallèles.</p>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>Ce que vous pouvez faire</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Dossiers Employés</h3><p>Fichier employé complet : informations personnelles, conditions contractuelles, département, grade, ligne hiérarchique, coordonnées bancaires et contacts d'urgence. Historique des contrats et dates de renouvellement.</p></div>
+      <div class="feature-card"><h3>Gestion des Congés</h3><p>Types de congés (annuel, maladie, maternité, études, sans solde). Demandes en ligne. Validation par les supérieurs. Soldes mis à jour automatiquement. Rapports par département ou période.</p></div>
+      <div class="feature-card"><h3>Suivi de Présence</h3><p>Import des données de présence depuis les systèmes biométriques. Suivi quotidien, heures supplémentaires et absences. Rapports de présence pour le traitement de la paie.</p></div>
+      <div class="feature-card"><h3>Traitement de la Paie</h3><p>Configuration des gains (base, indemnités, heures supplémentaires) et déductions (CNSS, impôt sur le revenu, avances). Traitement mensuel brut-vers-net. Bulletins de paie, fichiers bancaires et rapports.</p></div>
+      <div class="feature-card"><h3>Conformité Légale</h3><p>Calculs CNSS et impôt sur le revenu intégrés. Configurable pour les autorités fiscales d'Afrique centrale et de l'Ouest. Génération des déclarations CNSS et impôt dans les formats requis.</p></div>
+      <div class="feature-card"><h3>Évaluations de Performance</h3><p>Modèles d'évaluation avec indicateurs et compétences. Auto-évaluation des employés. Notation et commentaires des superviseurs. Suivi des cycles d'évaluation par département.</p></div>
+      <div class="feature-card"><h3>Organigramme</h3><p>Visualisation de la structure organisationnelle. Départements, lignes hiérarchiques et effectifs. Navigation de l'organigramme vers les fiches individuelles.</p></div>
+      <div class="feature-card"><h3>Recrutement</h3><p>Publication de postes, réception des candidatures, suivi des candidats à travers les étapes de présélection et d'entretien. Conversion des candidats retenus en employés.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Voir les RH et la paie en action</h2><p>Demandez une démonstration adaptée à vos opérations du personnel.</p>
+    <a href="/fr/contact/" class="btn btn--inverse">Demander une démonstration →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.feature-grid{grid-template-columns:1fr}}
+</style>

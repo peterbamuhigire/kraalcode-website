@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'sw';
+---
+
+<BaseLayout
+  title="Ripoti na Ufahamu wa Usimamizi — Dashibodi, Uchambuzi, BSC"
+  description="Dashibodi za wakati halisi, ripoti za usimamizi, uchambuzi wa kina, maoni ya fedha yanayoendeshwa na AI na ufuatiliaji wa viashiria vya mkakati. Kraal Code ERP."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/sw/uwezo/ripoti/"
+>
+  <section class="page-hero section--warm"><div class="container">
+    <nav class="breadcrumb" aria-label="Njia ya mkate"><ol><li><a href="/sw/">Nyumbani</a></li><li><a href="/sw/uwezo/">Uwezo</a></li><li aria-current="page">Ripoti na Ufahamu wa Usimamizi</li></ol></nav>
+    <h1>Ripoti na Ufahamu wa Usimamizi</h1>
+    <p class="page-hero-subtext">Kila moduli inachangia tabaka moja la ripoti. Dashibodi za wakati halisi, taarifa za fedha, ripoti za uendeshaji na viashiria vya mkakati — vyote kutoka data ile ile.</p>
+  </div></section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Kwa nani moduli hii</h2>
+    <p>Wakurugenzi wakuu, wakurugenzi, wakuu wa idara na mtu yeyote anayehitaji kuona kinachotokea katika shirika — bila kusubiri ripoti za mwisho wa mwezi au kumuomba mtu aendeshe hoji.</p>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>Unachoweza kufanya</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Dashibodi ya Mkurugenzi</h3><p>Mauzo ya leo, utendaji wa mwezi na baa za malengo, tahadhari za hisa chini, faida ya jumla, wateja wenye nguvu na chati za mwenendo wa miezi 12. Skrini ya kwanza mkurugenzi mkuu anaiona.</p></div>
+      <div class="feature-card"><h3>Dashibodi ya Uhasibu</h3><p>Jumla ya mali, deni, mtaji wa mmiliki na faida ya mtandao kwa mtazamo mmoja. Kiwiano cha ukwasi, uwiano wa deni na faida na viashiria vya Afya/Wasiwasi/Dhaifu.</p></div>
+      <div class="feature-card"><h3>Dashibodi ya Mauzo</h3><p>Utendaji wa mauzo kwa mwakilishi, eneo na bidhaa. Mwonekano wa mfumo wa mauzo. Matokeo dhidi ya malengo. Wateja wakuu na akaunti zilichelewa.</p></div>
+      <div class="feature-card"><h3>Dashibodi ya Ghala</h3><p>Ghala zilizo na nguvu, jumla ya thamani ya hisa, vitu vya hisa chini, hesabu kwa eneo na baa za matumizi, uhamisho unasubiri na mizigo karibu na kumalizika.</p></div>
+      <div class="feature-card"><h3>Dashibodi ya Mkakati</h3><p>Viashiria muhimu na malengo na matokeo. Fuatilia utendaji wa kifedha, mteja, mchakato wa ndani na kujifunza. Kwenye ubao wa mkakati.</p></div>
+      <div class="feature-card"><h3>Taarifa za Fedha</h3><p>Taarifa ya mapato, sahili, mtiririko wa fedha na jaribio la usawa. Maoni ya idara na yaliyopanuliwa. Toa PDF au Excel.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Ona ripoti kwa vitendo</h2><p>Oma onyesho lililobinafsishwa kwa mahitaji yako ya usimamizi na ripoti.</p>
+    <a href="/sw/mawasiliano/" class="btn btn--inverse">Oma Onyesho →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.feature-grid{grid-template-columns:1fr}}
+</style>

@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const locale = 'fr';
+---
+
+<BaseLayout
+  title="Travailler Partout — Votre Organisation Vous Accompagne"
+  description="Kraal Code : accédez à votre ERP depuis un ordinateur, un téléphone, une tablette ou un bureau à distance — avec sécurité et contrôle."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/fr/travailler-partout/"
+>
+  <section class="page-hero section--dark">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/fr/">Accueil</a></li><li aria-current="page">Travailler Partout</li></ol></nav>
+      <h1>Votre organisation vous accompagne</h1>
+      <p class="page-hero-subtext">Contrôlé, sécurisé et accessible — depuis un ordinateur au siège, un téléphone sur le terrain, ou un bureau à l'autre bout du pays.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container">
+    <div class="contexts-grid">
+      <div class="context-card">
+        <div class="context-image" style="background-image: url('/src/assets/images/work-anywhere/remote-work-home-laptop.jpg')"></div>
+        <h3>Depuis un ordinateur au siège</h3>
+        <p>Accès complet à toutes les opérations. Gestion multi-onglets. Rapports détaillés. Administration complète. L'expérience bureau que vous attendez.</p>
+      </div>
+      <div class="context-card">
+        <div class="context-image" style="background-image: url('/src/assets/images/work-anywhere/remote-work-desk-phone.jpg')"></div>
+        <h3>Depuis un téléphone sur le terrain</h3>
+        <p>Enregistrement des transactions. Vérification du stock. Circuits d'approbation. Suivi de présence. Les agents commerciaux et les superviseurs de terrain travaillent depuis leur poche.</p>
+      </div>
+      <div class="context-card">
+        <div class="context-image" style="background-image: url('/src/assets/images/work-anywhere/remote-work-sofa.jpg')"></div>
+        <h3>Depuis un bureau à domicile</h3>
+        <p>Coordination de projets. Gestion d'équipes. Visibilité multi-sites. Les directeurs et managers gardent le contrôle depuis n'importe où.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="section section--warm"><div class="container container--narrow">
+    <h2>Comment l'accès contrôlé fonctionne</h2>
+    <div class="controls-grid">
+      <div class="control-item"><h3>Identité</h3><p>Authentification à deux facteurs, connexion biométrique, jetons JWT à expiration courte.</p></div>
+      <div class="control-item"><h3>Permissions</h3><p>RBAC granulaire, restrictions par branche, limites d'approbation. Chaque utilisateur voit seulement ce qui le concerne.</p></div>
+      <div class="control-item"><h3>Auditabilité</h3><p>Journal d'audit immutable. Chaque action est tracée — qui, quoi, quand, depuis où.</p></div>
+      <div class="control-item"><h3>Sécurité de session</h3><p>Cookies HttpOnly/Secure/SameSite=Strict. JWT 15 minutes. Verrouillage après 5 tentatives.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Voyez le travail à distance en action</h2><p>Demandez une démonstration adaptée à vos besoins de mobilité.</p>
+    <a href="/fr/contact/" class="btn btn--inverse">Demander une démonstration →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:800px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-inverse-muted);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-inverse-muted);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal-light);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-inverse-muted)}.contexts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.context-card{border-radius:var(--kc-radius-lg);overflow:hidden;background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle)}.context-image{height:240px;background-size:cover;background-position:center}.context-card h3{padding:var(--kc-space-4) var(--kc-space-5) 0;font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold)}.context-card p{padding:0 var(--kc-space-5) var(--kc-space-5);font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.container--narrow{max-width:var(--kc-container-narrow)}.controls-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-6)}.control-item{padding:var(--kc-space-5);border-left:3px solid var(--kc-teal)}.control-item h3{font-size:var(--kc-text-base);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-1)}.control-item p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:1024px){.contexts-grid,.controls-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.contexts-grid,.controls-grid{grid-template-columns:1fr}}
+</style>

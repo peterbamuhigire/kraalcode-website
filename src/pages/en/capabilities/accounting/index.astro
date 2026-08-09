@@ -1,0 +1,202 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+
+const locale = 'en';
+---
+
+<BaseLayout
+  title="Finance & Accounting — General Ledger, AP/AR, Financial Reporting"
+  description="Full double-entry accounting with configurable chart of accounts, multi-currency support, bank reconciliation, budgets, and IFRS-compliant financial statements. Part of Kraal Code ERP."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/capabilities/accounting/"
+>
+  {/* Hero */}
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/en/">Home</a></li>
+          <li><a href="/en/capabilities/">Capabilities</a></li>
+          <li aria-current="page">Finance & Accounting</li>
+        </ol>
+      </nav>
+      <h1>Finance & Accounting</h1>
+      <p class="page-hero-subtext">Full double-entry accounting from journal entry to financial statements. One ledger, one truth, every transaction traceable.</p>
+    </div>
+  </section>
+
+  {/* Who this is for */}
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Who this is for</h2>
+      <p>Finance managers, accountants, auditors, and business owners who need clean books, real-time visibility, and audit-ready records — without maintaining separate spreadsheets or reconciling disconnected systems.</p>
+      <p>If your organisation invoices customers, pays suppliers, manages a bank account, or reports to a board, regulator, or funder, this module is your operational backbone.</p>
+    </div>
+  </section>
+
+  {/* What you can do */}
+  <section class="section section--warm">
+    <div class="container">
+      <h2>What you can do</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Chart of Accounts</h3>
+          <p>Configurable chart of accounts with unlimited depth. Create account groups, control accounts, and sub-accounts. Map accounts to departments, projects, or cost centres for management reporting.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Journal Entries</h3>
+          <p>Manual and automatic journal entries with approval workflows. Every entry is immutable once posted — corrections are made through reversal journals that preserve the full audit trail.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Accounts Receivable</h3>
+          <p>Customer invoices, credit notes, receipts, and payment allocation. Age receivables by period. Generate customer statements. Track outstanding balances by customer, branch, or territory.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Accounts Payable</h3>
+          <p>Supplier invoices, payments, and credit notes. Match invoices to goods receipts. Age payables. Generate payment batches. Track withholding tax obligations.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Bank Reconciliation</h3>
+          <p>Reconcile bank statements against ledger entries. Match transactions automatically or manually. Identify unreconciled items. Maintain multiple bank accounts across currencies.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Multi-Currency</h3>
+          <p>Operate in UGX, KES, TZS, RWF, and other currencies simultaneously. Maintain exchange rate tables. Record realised and unrealised gains/losses. Report in functional or presentation currency.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Budget Management</h3>
+          <p>Set budgets by account, department, or project. Track budget vs actual with variance analysis. Lock budgets after approval. Support multiple budget versions per fiscal year.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Financial Statements</h3>
+          <p>Generate profit and loss, balance sheet, cash flow statement (IAS 7 format), and trial balance. Export to PDF or Excel. Configurable reporting periods. Departmental and consolidated views.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* How it connects */}
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>How it connects</h2>
+      <p>The accounting module is the centre of gravity. Every other module posts to the general ledger automatically:</p>
+      <ul class="connection-list">
+        <li><strong>Sales</strong> → revenue recognition and debtor entries when invoices are issued</li>
+        <li><strong>Inventory</strong> → stock valuation adjustments and cost-of-goods-sold postings</li>
+        <li><strong>Procurement</strong> → creditor entries when supplier invoices are matched</li>
+        <li><strong>HR & Payroll</strong> → salary, NSSF, PAYE, and net pay postings on payroll approval</li>
+        <li><strong>Manufacturing</strong> → work-in-progress and finished goods postings</li>
+        <li><strong>Projects</strong> → project cost accumulation and revenue recognition</li>
+      </ul>
+      <p>No manual consolidation. No integration middleware. One ledger, updated in real time.</p>
+    </div>
+  </section>
+
+  {/* Controls and permissions */}
+  <section class="section section--warm">
+    <div class="container container--narrow">
+      <h2>Controls and permissions</h2>
+      <div class="controls-grid">
+        <div class="control-item">
+          <h3>Maker-Checker</h3>
+          <p>Journal entries require approval before posting. Configure approval thresholds by amount or account.</p>
+        </div>
+        <div class="control-item">
+          <h3>Period Locking</h3>
+          <p>Close accounting periods to prevent backdated entries. Reopen with audited approval only.</p>
+        </div>
+        <div class="control-item">
+          <h3>Audit Trail</h3>
+          <p>Every transaction is immutable. The INSERT-only audit log records who did what, from which IP, at what time.</p>
+        </div>
+        <div class="control-item">
+          <h3>Segregation of Duties</h3>
+          <p>Separate permissions for entry, approval, posting, and reporting. No single user can complete an entire transaction cycle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Screenshot placeholders */}
+  <section class="section">
+    <div class="container">
+      <h2>See it in action</h2>
+      <p class="screenshot-intro">Screenshots from the live Kraal Code system — coming soon.</p>
+      <div class="screenshot-grid">
+        <div class="screenshot-slot">
+          <div class="screenshot-placeholder">
+            <span class="screenshot-label">Chart of Accounts</span>
+            <span class="screenshot-note">Live product screenshot — coming soon</span>
+          </div>
+        </div>
+        <div class="screenshot-slot">
+          <div class="screenshot-placeholder">
+            <span class="screenshot-label">Profit & Loss Statement</span>
+            <span class="screenshot-note">Live product screenshot — coming soon</span>
+          </div>
+        </div>
+        <div class="screenshot-slot">
+          <div class="screenshot-placeholder">
+            <span class="screenshot-label">Balance Sheet</span>
+            <span class="screenshot-note">Live product screenshot — coming soon</span>
+          </div>
+        </div>
+        <div class="screenshot-slot">
+          <div class="screenshot-placeholder">
+            <span class="screenshot-label">Budget Performance</span>
+            <span class="screenshot-note">Live product screenshot — coming soon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* CTA */}
+  <section class="section--dark section">
+    <div class="container text-center">
+      <h2>See finance in action</h2>
+      <p>Request a demonstration tailored to your organisation's accounting needs.</p>
+      <a href="/en/contact/" class="btn btn--inverse">Request a Demonstration →</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero { padding: var(--kc-space-20) 0 var(--kc-space-12); }
+  .page-hero h1 { font-size: var(--kc-text-4xl); max-width: 700px; }
+  .page-hero-subtext { font-size: var(--kc-text-lg); color: var(--kc-text-secondary); max-width: 60ch; margin-top: var(--kc-space-4); }
+
+  .breadcrumb ol { list-style: none; padding: 0; display: flex; gap: var(--kc-space-2); font-size: var(--kc-text-sm); color: var(--kc-text-tertiary); margin-bottom: var(--kc-space-6); }
+  .breadcrumb a { color: var(--kc-teal); text-decoration: none; }
+  .breadcrumb li:not(:last-child)::after { content: '/'; margin-left: var(--kc-space-2); color: var(--kc-text-tertiary); }
+
+  .container--narrow { max-width: var(--kc-container-narrow); }
+
+  .feature-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--kc-space-6); margin-top: var(--kc-space-8); }
+  .feature-card { padding: var(--kc-space-6); background: var(--kc-surface-light); border: 1px solid var(--kc-border-subtle); border-radius: var(--kc-radius-lg); }
+  .feature-card h3 { font-size: var(--kc-text-lg); font-family: var(--kc-font-body); font-weight: var(--kc-weight-semibold); margin-bottom: var(--kc-space-2); }
+  .feature-card p { font-size: var(--kc-text-sm); color: var(--kc-text-secondary); }
+
+  .connection-list { margin-top: var(--kc-space-4); }
+  .connection-list li { margin-bottom: var(--kc-space-3); font-size: var(--kc-text-base); color: var(--kc-text-secondary); }
+  .connection-list strong { color: var(--kc-text-primary); }
+
+  .controls-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--kc-space-6); margin-top: var(--kc-space-6); }
+  .control-item { padding: var(--kc-space-5); border-left: 3px solid var(--kc-teal); }
+  .control-item h3 { font-size: var(--kc-text-base); font-family: var(--kc-font-body); font-weight: var(--kc-weight-semibold); margin-bottom: var(--kc-space-1); }
+  .control-item p { font-size: var(--kc-text-sm); color: var(--kc-text-secondary); }
+
+  .screenshot-intro { color: var(--kc-text-secondary); margin-bottom: var(--kc-space-6); }
+  .screenshot-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--kc-space-6); }
+  .screenshot-placeholder { aspect-ratio: 16/10; background: var(--kc-surface-warm); border: 2px dashed var(--kc-border); border-radius: var(--kc-radius-lg); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--kc-space-2); }
+  .screenshot-label { font-weight: var(--kc-weight-semibold); color: var(--kc-text-primary); }
+  .screenshot-note { font-size: var(--kc-text-sm); color: var(--kc-text-tertiary); }
+
+  .btn--inverse { display: inline-flex; align-items: center; padding: var(--kc-space-4) var(--kc-space-8); font-weight: var(--kc-weight-semibold); font-size: var(--kc-text-base); border-radius: var(--kc-radius-lg); background: transparent; color: var(--kc-text-inverse); border: 2px solid var(--kc-teal-light); transition: all var(--kc-transition-fast); text-decoration: none; margin-top: var(--kc-space-6); }
+  .btn--inverse:hover { background: var(--kc-teal); border-color: var(--kc-teal); }
+
+  @media (max-width: 768px) {
+    .page-hero h1 { font-size: var(--kc-text-3xl); }
+    .feature-grid, .controls-grid, .screenshot-grid { grid-template-columns: 1fr; }
+  }
+</style>

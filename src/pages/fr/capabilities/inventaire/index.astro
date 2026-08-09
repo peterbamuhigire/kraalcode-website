@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'fr';
+---
+
+<BaseLayout
+  title="Inventaire et Entreposage — Suivi des Stocks, Valorisation, Multi-Sites"
+  description="Catalogue d'articles, suivi des stocks, valorisation FIFO et coût moyen pondéré, bons de réception, transferts, niveaux de réapprovisionnement et entreposage multi-sites. Kraal Code ERP."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/fr/capacites/inventaire/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/fr/">Accueil</a></li><li><a href="/fr/capacites/">Capacités</a></li><li aria-current="page">Inventaire et Entreposage</li></ol></nav>
+      <h1>Inventaire et Entreposage</h1>
+      <p class="page-hero-subtext">Sachez ce que vous avez, où cela se trouve, ce que cela coûte et quand réapprovisionner. Un seul livre de stock, mis à jour en temps réel sur tous les sites.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>À qui s'adresse ce module</h2>
+    <p>Responsables d'entrepôt, chefs de magasin, agents d'approvisionnement et dirigeants qui ont besoin d'une visibilité précise des stocks sur tous les sites — sans réconcilier des tableurs en fin de mois.</p>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>Ce que vous pouvez faire</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Catalogue d'Articles</h3><p>Catalogue structuré avec catégories, unités de mesure, niveaux de réapprovisionnement, fournisseurs préférés et comptes comptables. Matières premières, produits finis, emballages et consommables.</p></div>
+      <div class="feature-card"><h3>Valorisation des Stocks</h3><p>Valorisation par FIFO ou coût moyen pondéré. Recalcul automatique à chaque réception. Rapports de valorisation par article, catégorie ou site. Ajustements comptabilisés automatiquement au grand livre.</p></div>
+      <div class="feature-card"><h3>Bons de Réception</h3><p>Enregistrement des marchandises reçues contre les bons de commande. Vérification des quantités et prix. Signalement des écarts. Le bon de réception déclenche l'augmentation automatique du stock et l'écriture comptable.</p></div>
+      <div class="feature-card"><h3>Entreposage Multi-Sites</h3><p>Gestion des stocks sur entrepôts, magasins, usines et sites de transit. Vue par site ou consolidée. Transferts avec circuits de validation.</p></div>
+      <div class="feature-card"><h3>Suivi par Lot et Péremption</h3><p>Suivi par numéro de lot et date de péremption. Application de la règle FEFO (premier périmé, premier sorti). Alertes de péremption. Essentiel pour l'agroalimentaire et la pharmacie.</p></div>
+      <div class="feature-card"><h3>Conversion d'Unités</h3><p>Achat en cartons, vente en pièces, stockage en kilogrammes. Le moteur de conversion traduit automatiquement entre unités. Toutes les écritures sont enregistrées dans l'unité de base.</p></div>
+      <div class="feature-card"><h3>Alertes de Réapprovisionnement</h3><p>Niveaux minimum et de réapprovisionnement par article et par site. Génération automatique de demandes d'achat lorsque le stock tombe sous le seuil. Ne manquez plus jamais d'articles critiques.</p></div>
+      <div class="feature-card"><h3>Rapports de Stock</h3><p>Résumé du stock, ancienneté, historique des mouvements, rapports de valorisation et niveaux de réapprovisionnement. Export PDF et Excel. Du résumé au détail des transactions.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Comment les modules se connectent</h2>
+    <ul class="connection-list">
+      <li><strong>Ventes</strong> → déduction automatique du stock à la confirmation de livraison</li>
+      <li><strong>Achats</strong> → augmentation du stock à la réception, rapprochement avec les bons de commande</li>
+      <li><strong>Fabrication</strong> → consommation de matières premières, réception de produits finis</li>
+      <li><strong>Comptabilité</strong> → chaque mouvement de stock est comptabilisé automatiquement au grand livre</li>
+    </ul>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Voir l'inventaire en action</h2><p>Demandez une démonstration adaptée à vos besoins en entreposage et gestion des stocks.</p>
+    <a href="/fr/contact/" class="btn btn--inverse">Demander une démonstration →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.connection-list{margin-top:var(--kc-space-4)}.connection-list li{margin-bottom:var(--kc-space-3);font-size:var(--kc-text-base);color:var(--kc-text-secondary)}.connection-list strong{color:var(--kc-text-primary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.feature-grid{grid-template-columns:1fr}}
+</style>

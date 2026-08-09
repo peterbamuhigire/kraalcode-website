@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const locale = 'sw';
+---
+
+<BaseLayout
+  title="Oma Onyesho — Ona Kraal Code kwa Shirika Lako"
+  description="Oma onyesho la Kraal Code lililobinafsishwa kwa shirika lako. Fedha, hisa, mauzo, HR, uzalishaji — vyote katika mfumo mmoja."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/sw/mawasiliano/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Njia ya mkate"><ol><li><a href="/sw/">Nyumbani</a></li><li aria-current="page">Mawasiliano</li></ol></nav>
+      <h1>Ona Kraal Code katika shirika lako</h1>
+      <p class="page-hero-subtext">Tunakuonyesha jinsi Kraal Code inavyobadilika kwa sekta yako, mtiririko wa kazi na changamoto zako za uendeshaji.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Unachoweza kutarajia</h2>
+          <ul class="expect-list">
+            <li>Mazungumzo kuhusu mahitaji yako ya uendeshaji wa sasa</li>
+            <li>Onyesho lililobinafsishwa kwa sekta yako na ukubwa wako</li>
+            <li>Majibu ya kwamba — hatuahisi tulichojenga</li>
+            <li>Hakuna kujitolea — onyesho ni bure na bila wajibu</li>
+          </ul>
+
+          <h3>Baada ya onyesho</h3>
+          <p>Tunakutumia muhtasari wa kilichoonyeshwa, moduli zinazofaa kwa shirika lako, na hatua za mbele ikiwa unataka kuendelea.</p>
+
+          <div class="contact-details">
+            <p><strong>Barua pepe:</strong> <a href="mailto:info@kraalcode.com">info@kraalcode.com</a></p>
+            <p><strong>Chwezi Core Systems</strong></p>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <form class="contact-form" action="#" method="POST" novalidate>
+            <h2>Oma Onyesho</h2>
+
+            <div class="hp-field" aria-hidden="true">
+              <label for="website">Tovuti</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="form-group">
+              <label for="name">Jina kamili <span class="required">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Barua pepe ya kazi <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="organisation">Shirika <span class="required">*</span></label>
+              <input type="text" id="organisation" name="organisation" required autocomplete="organization" />
+            </div>
+            <div class="form-group">
+              <label for="country">Nchi <span class="required">*</span></label>
+              <select id="country" name="country" required>
+                <option value="">Chagua nchi yako</option>
+                <option value="UG">Uganda</option>
+                <option value="KE">Kenya</option>
+                <option value="TZ">Tanzania</option>
+                <option value="CD">Jamhuri ya Kidemokrasia ya Congo</option>
+                <option value="RW">Rwanda</option>
+                <option value="BI">Burundi</option>
+                <option value="SS">Kusini mwa Sudan</option>
+                <option value="other">Nyingine</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="role">Wajibu wako</label>
+              <select id="role" name="role">
+                <option value="">Chagua wajibu wako</option>
+                <option value="owner">Mmiliki / Mwanzilishi / Mkurugenzi</option>
+                <option value="finance">Meneja wa Fedha / Mhasibu</option>
+                <option value="operations">Meneja wa Uendeshaji</option>
+                <option value="it">Meneja wa IT / Msimamizi wa Mfumo</option>
+                <option value="hr">Meneja wa HR</option>
+                <option value="other">Nyingine</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="size">Ukubwa wa shirika</label>
+              <select id="size" name="size">
+                <option value="">Chagua ukubwa</option>
+                <option value="1-5">1–5 wafanyakazi</option>
+                <option value="6-15">6–15 wafanyakazi</option>
+                <option value="16-50">16–50 wafanyakazi</option>
+                <option value="51-100">51–100 wafanyakazi</option>
+                <option value="101-500">101–500 wafanyakazi</option>
+                <option value="500+">500+ wafanyakazi</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="interests">Maeneo ya nia</label>
+              <textarea id="interests" name="interests" rows="3" placeholder="Mf. fedha, hisa, mishahara, CRM..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="message">Mengineyo</label>
+              <textarea id="message" name="message" rows="3"></textarea>
+            </div>
+            <div class="form-group form-checkbox">
+              <input type="checkbox" id="privacy" name="privacy" required />
+              <label for="privacy">Ninaelewa kwamba Kraal Code itatumia taarifa hizi kujibu ombi langu na kutoa ufafanuzi unaofaa. <span class="required">*</span></label>
+            </div>
+            <div class="form-group form-checkbox">
+              <input type="checkbox" id="marketing" name="marketing" />
+              <label for="marketing">Ningependa kupokea taarifa za bidhaa mara kwa mara.</label>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Tuma Ombi</button>
+            <p class="form-note">Tunajitahidi kujibu ndani ya siku 2 za kazi. Taarifa zako hazitashirikishwa na vyama vya tatu.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--kc-space-12);align-items:start}.contact-info h2{margin-bottom:var(--kc-space-4)}.contact-info h3{margin-top:var(--kc-space-8);margin-bottom:var(--kc-space-3)}.expect-list{list-style:none;padding:0;margin:0 0 var(--kc-space-6)}.expect-list li{padding:var(--kc-space-2) 0;padding-left:var(--kc-space-6);position:relative;font-size:var(--kc-text-base);color:var(--kc-text-secondary)}.expect-list li::before{content:'→';position:absolute;left:0;color:var(--kc-teal);font-weight:var(--kc-weight-semibold)}.contact-details{margin-top:var(--kc-space-6);padding:var(--kc-space-4);background:var(--kc-surface-warm);border-radius:var(--kc-radius-md)}.contact-details p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary);margin-bottom:var(--kc-space-1)}.contact-details a{color:var(--kc-teal)}.contact-form-wrap{position:sticky;top:96px}.contact-form{padding:var(--kc-space-8);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.contact-form h2{font-size:var(--kc-text-xl);margin-bottom:var(--kc-space-6)}.form-group{margin-bottom:var(--kc-space-5)}.form-group label{display:block;font-size:var(--kc-text-sm);font-weight:var(--kc-weight-medium);color:var(--kc-text-primary);margin-bottom:var(--kc-space-1)}.required{color:var(--kc-danger)}.form-group input[type="text"],.form-group input[type="email"],.form-group select,.form-group textarea{width:100%;padding:var(--kc-space-3) var(--kc-space-4);font-size:var(--kc-text-base);border:1px solid var(--kc-border);border-radius:var(--kc-radius-md);background:var(--kc-surface-light);color:var(--kc-text-primary);font-family:var(--kc-font-body);transition:border-color var(--kc-transition-fast)}.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--kc-teal);box-shadow:0 0 0 3px rgba(70,105,107,0.1)}.form-group textarea{resize:vertical;min-height:80px}.form-checkbox{display:flex;align-items:flex-start;gap:var(--kc-space-3)}.form-checkbox input[type="checkbox"]{margin-top:var(--kc-space-1);width:18px;height:18px;flex-shrink:0}.form-checkbox label{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.btn--primary{display:inline-flex;align-items:center;justify-content:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:var(--kc-charcoal);color:var(--kc-text-inverse);border:none;transition:all var(--kc-transition-fast);text-decoration:none;cursor:pointer;width:100%}.btn--primary:hover{background:var(--kc-teal-deep)}.btn--full{width:100%}.form-note{font-size:var(--kc-text-xs);color:var(--kc-text-tertiary);text-align:center;margin-top:var(--kc-space-4)}.hp-field{position:absolute;left:-9999px;opacity:0;height:0;width:0;overflow:hidden}.form-error-msg{display:none;padding:var(--kc-space-4);background:var(--kc-danger-light);border:1px solid var(--kc-danger);border-radius:var(--kc-radius-md);margin-bottom:var(--kc-space-4);font-size:var(--kc-text-sm);color:var(--kc-danger)}.form-error-msg.show{display:block}.form-group.error input,.form-group.error select,.form-group.error textarea{border-color:var(--kc-danger)}.form-success{display:none;text-align:center;padding:var(--kc-space-10)}.form-success.show{display:block}.form-success h3{font-size:var(--kc-text-2xl);margin-bottom:var(--kc-space-4);color:var(--kc-success)}.form-success p{color:var(--kc-text-secondary)}.btn--loading{opacity:0.7;pointer-events:none}.btn--loading::after{content:'';display:inline-block;width:16px;height:16px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:spin 0.6s linear infinite;margin-left:var(--kc-space-2);vertical-align:middle}@keyframes spin{to{transform:rotate(360deg)}}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.contact-grid{grid-template-columns:1fr}.contact-form-wrap{position:static}}
+</style>
+
+<script>
+  const form = document.querySelector('.contact-form') as HTMLFormElement;
+  const submitBtn = form?.querySelector('button[type="submit"]') as HTMLButtonElement;
+  const successMsg = document.createElement('div');
+  successMsg.className = 'form-success';
+  successMsg.innerHTML = '<h3>Asante</h3><p>Tumepokea ombi lako na tunajitahidi kujibu ndani ya siku 2 za kazi.</p>';
+  const errorMsg = document.createElement('div');
+  errorMsg.className = 'form-error-msg';
+  errorMsg.textContent = 'Kuna kosa limetokea. Tafadhali jaribu tena au tutumie barua pepe moja kwa moja info@kraalcode.com.';
+  if (form) {
+    form.insertBefore(errorMsg, form.firstChild);
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      form.querySelectorAll('.form-group').forEach(g => g.classList.remove('error'));
+      errorMsg.classList.remove('show');
+      const hp = form.querySelector('#website') as HTMLInputElement;
+      if (hp && hp.value) return;
+      let valid = true;
+      const required = form.querySelectorAll('[required]');
+      required.forEach((field) => {
+        const input = field as HTMLInputElement | HTMLSelectElement;
+        const group = input.closest('.form-group');
+        if (!input.value.trim()) { group?.classList.add('error'); valid = false; }
+        if (input.type === 'email' && input.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) { group?.classList.add('error'); valid = false; }
+      });
+      if (!valid) return;
+      submitBtn.classList.add('btn--loading');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Inatuma...';
+      setTimeout(() => {
+        submitBtn.classList.remove('btn--loading');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Tuma Ombi';
+        form.innerHTML = '';
+        form.appendChild(successMsg);
+        successMsg.classList.add('show');
+      }, 1500);
+    });
+  }
+</script>

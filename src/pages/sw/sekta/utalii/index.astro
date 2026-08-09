@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'sw';
+---
+
+<BaseLayout
+  title="Utalii — ERP kwa Hoteli, Migahawa na Malazi"
+  description="Kraal Code kwa utalii: POS ya meza, usimamizi wa mapishi, hifadhi ya vyakula vinavyoharibika, usimamizi wa zamu na upatanisho wa mwisho wa siku."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/sw/sekta/utalii/"
+>
+  <section class="page-hero section--warm"><div class="container">
+    <nav class="breadcrumb" aria-label="Njia ya mkate"><ol><li><a href="/sw/">Nyumbani</a></li><li><a href="/sw/sekta/">Sekta</a></li><li aria-current="page">Utalii</li></ol></nav>
+    <h1>Utalii</h1>
+    <p class="page-hero-subtext">Simamia meza, vyumba, jikoni na baa kutoka mfumo mmoja. POS, hifadhi, mapishi na uhasibu — zimeunganishwa kutoka agizo hadi kitabu kikuu.</p>
+  </div></section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Changamoto zako</h2>
+    <div class="challenge-grid">
+      <div class="challenge-item"><h3>Usimamizi wa meza na vyumba</h3><p>Kufuatilia meza zipi zimejaa, vyumba vipi vinapatikana na kilichoagizwa unahitaji uratibu wa kati kati ya chumba cha mbele na jikoni.</p></div>
+      <div class="challenge-item"><h3>Hifadhi ya vyakula vinavyoharibika</h3><p>Hifadhi ya chakula na vinywaji ni vinavyoharibika. Bila ufuatiliaji wa mizigo na usimamizi wa muda wa matumizi, taka ni nyingi na gharama halisi haijulikani.</p></div>
+      <div class="challenge-item"><h3>Gharama za mapishi</h3><p>Unatoa vyakula lakini hujui gharama halisi kwa sahani — viambato, saizi za sehemu na taka hazifuatiliwi kwa utaratibu.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>Jinsi Kraal Code inavyosaidia</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>POS ya Meza</h3><p>Amri za meza kwa migahawa na baa. Fungua meza, ongeza vitu, hamisha kati ya meza, gawanya bili. Chapisha jikoni.</p></div>
+      <div class="feature-card"><h3>Usimamizi wa Mapishi</h3><p>Mapishi na viambato, sehemu na gharama iliyotarajiwa kwa sehemu. Fuatilia matumizi halisi dhidi ya yaliyopangwa. Tambua vyakula vya margin ndogo.</p></div>
+      <div class="feature-card"><h3>Hifadhi ya Vyakula</h3><p>Fuatilia hisa za chakula na vinywaji kwa nambari ya mizigo na tarehe ya kumalizika. FEFO. Ufuatiliaji wa taka na ripoti.</p></div>
+      <div class="feature-card"><h3>Uendeshaji wa Njia Nyingi</h3><p>Simamia mgahawa, baa, hudumba ya chumba na duka kutoka mfumo mmoja. Ripoti zilizopanuliwa. Vikao vya pesa tofauti kwa kila njia.</p></div>
+      <div class="feature-card"><h3>Usimamizi wa Zamu</h3><p>Fuatilia zamu za wafanyakazi na mahudhurio. Unganisha wafanyakazi na miamala ya POS kwa uwajibikaji. Ripoti za zamu.</p></div>
+      <div class="feature-card"><h3>Ushirikiano wa Fedha</h3><p>Kila mauzo yanahesabu hifadhi na uhasibu kwa otomatiki. Ripoti za Z za mwisho wa siku. P&L ya kila mwezi kwa njia ya mauzo.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Ona Kraal Code kwa utalii</h2><p>Oma onyesho lililobinafsishwa kwa hoteli yako, mgahawa au malazi.</p>
+    <a href="/sw/mawasiliano/" class="btn btn--inverse">Oma Onyesho →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.challenge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-6)}.challenge-item{padding:var(--kc-space-5);border-left:3px solid var(--kc-warning)}.challenge-item h3{font-size:var(--kc-text-base);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-1)}.challenge-item p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.challenge-grid,.feature-grid{grid-template-columns:1fr}}
+</style>

@@ -52,6 +52,13 @@ const localeLabels: Record<string, string> = {
   fr: 'FR',
   sw: 'SW',
 };
+
+// Active link detection
+const navKeys = ['product', 'capabilities', 'sectors', 'why', 'security', 'resources', 'company'];
+function isActive(key: string): boolean {
+  const path = currentPath.replace(/\/$/, '');
+  return path.startsWith(`/${locale}/${key}`);
+}
 ---
 
 <header class="site-header" role="banner">
@@ -68,13 +75,13 @@ const localeLabels: Record<string, string> = {
 
     <nav class="header-nav" aria-label="Main navigation">
       <ul class="nav-list" role="list">
-        <li><a href={`/${locale}/product/`}>{t.product}</a></li>
-        <li><a href={`/${locale}/capabilities/`}>{t.capabilities}</a></li>
-        <li><a href={`/${locale}/sectors/`}>{t.sectors}</a></li>
-        <li><a href={`/${locale}/why/`}>{t.why}</a></li>
-        <li><a href={`/${locale}/security/`}>{t.security}</a></li>
-        <li><a href={`/${locale}/resources/`}>{t.resources}</a></li>
-        <li><a href={`/${locale}/company/`}>{t.company}</a></li>
+        <li><a href={`/${locale}/product/`} class={isActive('product') ? 'active' : ''}>{t.product}</a></li>
+        <li><a href={`/${locale}/capabilities/`} class={isActive('capabilities') ? 'active' : ''}>{t.capabilities}</a></li>
+        <li><a href={`/${locale}/sectors/`} class={isActive('sectors') ? 'active' : ''}>{t.sectors}</a></li>
+        <li><a href={`/${locale}/why/`} class={isActive('why') ? 'active' : ''}>{t.why}</a></li>
+        <li><a href={`/${locale}/security/`} class={isActive('security') ? 'active' : ''}>{t.security}</a></li>
+        <li><a href={`/${locale}/resources/`} class={isActive('resources') ? 'active' : ''}>{t.resources}</a></li>
+        <li><a href={`/${locale}/company/`} class={isActive('company') ? 'active' : ''}>{t.company}</a></li>
       </ul>
     </nav>
 
@@ -178,6 +185,11 @@ const localeLabels: Record<string, string> = {
 
   .nav-list a:hover {
     color: var(--kc-text-primary);
+  }
+
+  .nav-list a.active {
+    color: var(--kc-teal);
+    font-weight: var(--kc-weight-semibold);
   }
 
   .header-actions {

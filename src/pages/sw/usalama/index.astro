@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const locale = 'sw';
+---
+
+<BaseLayout
+  title="Usalama na Faragha — Udhibiti Uliothibitishwa kwa Data Yako"
+  description="Kraal Code usalama: kutenganisha kwa wateja, RBAC, kitabu cha ukaguzi kisichobadilika, usimbaji AES-256, uthibitishaji wa sababu nyingi na uzingatiaji wa OWASP."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/sw/usalama/"
+>
+  <section class="page-hero section--dark">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Njia ya mkate"><ol><li><a href="/sw/">Nyumbani</a></li><li aria-current="page">Usalama na Faragha</li></ol></nav>
+      <h1>Usalama unaowezesha shughuli zako</h1>
+      <p class="page-hero-subtext">Usalama si matangazo ya soko. Ni udhibiti unaowezesha kazi ya mbali, uwakilishaji, shughuli za matawi mengi na ushirikiano wa kimataifa — bila kuacha uwajibikaji.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container">
+    <h2>Udhibiti wa usalama uliothibitishwa</h2>
+    <div class="security-grid">
+      <div class="security-card">
+        <div class="security-icon">◈</div>
+        <h3>Kutenganisha kwa Wateja</h3>
+        <p>Kila shirika linafanya kazi katika mazingira ya data yaliyotenganishwa kabisa. Kila hoji ya hifadhi ya data inachuja na tenant_id kutoka kwa kikao cha upande wa seva. Kuvuja kwa data kati ya wateja ni kimuundo haiwezekani.</p>
+      </div>
+      <div class="security-card">
+        <div class="security-icon">◉</div>
+        <h3>Udhibiti wa Ufikiaji Kulingana na Majukumu</h3>
+        <p>Majukumu yasiyo na kikomo na ruhusa za kina (kuona, kuunda, kurekebisha, kuidhinisha, kufuta) kwa kazi. Watumiaji hawawezi kuzunguka ruhusa hata kwa kudhibiti URL.</p>
+      </div>
+      <div class="security-card">
+        <div class="security-icon">◎</div>
+        <h3>Kitabu cha Ukaguzi Kisichobadilika</h3>
+        <p>Kitabu cha INSERT-pekecho — hakijabadilishwa, hakijafutwa. Kinarekodi nani alifanya nini, kutoka IP gani, wakati gani, na nini kilibadilika. Uhifadhi wa miaka 7. Mkaguzi wa nje anaweza kusoma pekee.</p>
+      </div>
+      <div class="security-card">
+        <div class="security-icon">◇</div>
+        <h3>Usimbaji</h3>
+        <p>TLS 1.3 wakati wa kusafirisha. AES-256 wakati wa kuhifadhi data nyeti. Bcrypt gharama ≥ 2 kwa nywila. Funguo za usimbaji hazitoke upande wa mteja.</p>
+      </div>
+      <div class="security-card">
+        <div class="security-icon">⬡</div>
+        <h3>Uthibitishaji wa Sababu Nyingi</h3>
+        <p>TOTP inayofuata NIST SP 800-63B AAL2. Uthibitishaji wa kibiolojia unapatikana. Kufungwa baada ya majaribio 5 yaliyoshindwa. Vikao salama na tokeni za JWT zinazoisha haraka.</p>
+      </div>
+      <div class="security-card">
+        <div class="security-icon">⬢</div>
+        <h3>OWASP Top 10 (2021) Imepangwa</h3>
+        <p>Vikundi 10 vya udhaifu wa OWASP vimewekwa ramani na udhibiti maalum. Hoji zilizotayarishwa, kutoroka kwa matokeo, tokeni za CSRF, uthibitishaji katika tabaka zote.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Una maswali ya usalama?</h2><p>Timu yetu inajibu maswali yako kuhusu muundo, udhibiti na uzingatiaji.</p>
+    <a href="/sw/mawasiliano/" class="btn btn--inverse">Wasiliana Nasi →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:800px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-inverse-muted);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-inverse-muted);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal-light);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-inverse-muted)}.security-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.security-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.security-icon{font-size:var(--kc-text-2xl);color:var(--kc-teal);margin-bottom:var(--kc-space-3)}.security-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.security-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:1024px){.security-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.security-grid{grid-template-columns:1fr}}
+</style>

@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'sw';
+---
+
+<BaseLayout
+  title="Ushauri na Huduma za Kitaalamu — ERP kwa Ofisi za Ushauri"
+  description="Kraal Code kwa ushauri: bili za miradi, karatasi za saa, ufuatiliaji wa gharama, ugawaji wa rasilimali na ripoti za faida za miradi."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/sw/sekta/ushauri/"
+>
+  <section class="page-hero section--warm"><div class="container">
+    <nav class="breadcrumb" aria-label="Njia ya mkate"><ol><li><a href="/sw/">Nyumbani</a></li><li><a href="/sw/sekta/">Sekta</a></li><li aria-current="page">Ushauri na Huduma za Kitaalamu</li></ol></nav>
+    <h1>Ushauri na Huduma za Kitaalamu</h1>
+    <p class="page-hero-subtext">Toza muda wako, fuatilia gharama zako na ujue faida ya kila mradi — bila chombo tofauti cha usimamizi wa miradi.</p>
+  </div></section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Changamoto zako</h2>
+    <div class="challenge-grid">
+      <div class="challenge-item"><h3>Ufuatiliaji wa muda</h3><p>Bidhaa yako ni muda. Bila karatasi sahihi za saa, huwezi kutoza wateja kwa usahihi, kupima matumizi au kujua miradi gani ni yenye faida.</p></div>
+      <div class="challenge-item"><h3>Faida za miradi</h3><p>Unatoza wateja lakini hujui margin halisi kwa mradi — hasa wakati wafanyakazi wanafanya kazi kwenye miradi mingi.</p></div>
+      <div class="challenge-item"><h3>Ugawaji wa rasilimali</h3><p>Washauri wako wameenea kwenye miradi. Nani amepita kiasi? Nani ana uwezo? Bila mwonekano, unaongeza wengine na kutumia chini wengine.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>Jinsi Kraal Code inavyosaidia</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Rejista ya Miradi</h3><p>Miradi na wateja, bajeti, ratiba na wasimamizi. Fuatilia hali kutoka mwanzo hadi mwisho.</p></div>
+      <div class="feature-card"><h3>Karatasi za Saa</h3><p>Wafanyakazi wanarekodi saa dhidi ya miradi na kazi. Idhinisha kupitia mzunguko. Tumia kwa bili na gharama.</p></div>
+      <div class="feature-card"><h3>Bili za Miradi</h3><p>Ankara kutoka karatasi za saa na hatua. Mifano ya bei ya gorofa na saa zilizotumika. Fuatilia kilichotozwa dhidi ya kisichotozwa.</p></div>
+      <div class="feature-card"><h3>Ugawaji wa Rasilimali</h3><p>Panga wanatimu kwa miradi na asilimia za ugawaji. Fuatilia viwango vya matumizi. Tambua uwezo na kupita kiasi.</p></div>
+      <div class="feature-card"><h3>Ufuatiliaji wa Gharama</h3><p>Gharama za mradi zimerekodiwa na kuidhinishwa. Panga kwa miradi kwa gharama. Jumuisha kwenye ankara za wateja.</p></div>
+      <div class="feature-card"><h3>Faida</h3><p>Mapato minus gharama (muda + gharama) kwa mradi. Uchambuzi wa margin kwa mteja, aina ya mradi na kipindi.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Ona Kraal Code kwa ushauri</h2><p>Oma onyesho lililobinafsishwa kwa ofisi yako ya huduma za kitaalamu.</p>
+    <a href="/sw/mawasiliano/" class="btn btn--inverse">Oma Onyesho →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.challenge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-6)}.challenge-item{padding:var(--kc-space-5);border-left:3px solid var(--kc-warning)}.challenge-item h3{font-size:var(--kc-text-base);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-1)}.challenge-item p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.challenge-grid,.feature-grid{grid-template-columns:1fr}}
+</style>

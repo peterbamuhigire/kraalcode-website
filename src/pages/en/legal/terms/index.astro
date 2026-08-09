@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'en';
+---
+
+<BaseLayout
+  title="Website Terms of Use — Kraal Code"
+  description="Terms governing your use of the kraalcode.com website."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/legal/terms/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li>Legal</li><li aria-current="page">Website Terms</li></ol></nav>
+      <h1>Website Terms of Use</h1>
+      <p class="draft-notice">DRAFT — pending legal review. Last updated: 9 August 2026.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container container--narrow legal-content">
+    <h2>Acceptance of terms</h2>
+    <p>By accessing kraalcode.com, you agree to these terms. If you do not agree, please do not use the website.</p>
+
+    <h2>Intellectual property</h2>
+    <p>The Kraal Code name, logo, and website content are the property of Chwezi Core Systems. You may not reproduce, distribute, or create derivative works without written permission.</p>
+
+    <h2>Permitted use</h2>
+    <p>You may use this website for lawful purposes: learning about Kraal Code, contacting us, and requesting demonstrations. You may not use it to transmit malicious content, attempt unauthorised access, or scrape content for commercial purposes.</p>
+
+    <h2>Accuracy of information</h2>
+    <p>We strive to keep website content accurate and current. However, product descriptions, pricing, and availability may change without notice. The website does not constitute a binding offer.</p>
+
+    <h2>Limitation of liability</h2>
+    <p>To the extent permitted by law, Chwezi Core Systems is not liable for any loss arising from your use of this website, including loss arising from reliance on website content.</p>
+
+    <h2>External links</h2>
+    <p>This website may contain links to third-party websites. We are not responsible for their content or privacy practices.</p>
+
+    <h2>Governing law</h2>
+    <p>These terms are governed by the laws of Uganda. Any disputes shall be resolved in the courts of Uganda.</p>
+
+    <h2>Changes to terms</h2>
+    <p>We may update these terms at any time. Continued use of the website after changes constitutes acceptance of the revised terms.</p>
+
+    <h2>Contact</h2>
+    <p>For questions about these terms, contact us at <a href="mailto:info@kraalcode.com">info@kraalcode.com</a>.</p>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl)}
+  .draft-notice{display:inline-block;padding:var(--kc-space-2) var(--kc-space-4);background:var(--kc-warning-light);border:1px solid var(--kc-warning);border-radius:var(--kc-radius-md);font-size:var(--kc-text-sm);color:var(--kc-warning);margin-top:var(--kc-space-4)}
+  .breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}
+  .container--narrow{max-width:var(--kc-container-narrow)}
+  .legal-content h2{font-size:var(--kc-text-xl);margin-top:var(--kc-space-10);margin-bottom:var(--kc-space-4)}
+  .legal-content p,.legal-content li{font-size:var(--kc-text-base);color:var(--kc-text-secondary);line-height:var(--kc-leading-relaxed)}
+  .legal-content ul{margin:var(--kc-space-3) 0 var(--kc-space-4) var(--kc-space-6)}
+  .legal-content li{margin-bottom:var(--kc-space-2)}
+  .legal-content a{color:var(--kc-teal)}
+  @media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}}
+</style>

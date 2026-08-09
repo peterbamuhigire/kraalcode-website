@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'en';
+---
+
+<BaseLayout
+  title="Sales & Customer Operations — Quotations, Invoices, CRM, POS"
+  description="Quotations, sales orders, invoices, delivery notes, credit notes, customer management, POS, CRM pipeline, agent commissions, and territory management. Part of Kraal Code ERP."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/capabilities/sales/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><a href="/en/capabilities/">Capabilities</a></li><li aria-current="page">Sales & Customer Operations</li></ol></nav>
+      <h1>Sales & Customer Operations</h1>
+      <p class="page-hero-subtext">From first quotation to final receipt. One customer record, one order pipeline, one invoice register — connected to inventory and accounting in real time.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Who this is for</h2>
+    <p>Sales managers, account executives, cashiers, and business owners who need visibility of the entire sales cycle — from quotation to collection. Whether you sell from a counter, through field agents, or via online orders, this module handles the transaction and keeps the ledger current.</p>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>What you can do</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Quotations & Sales Orders</h3><p>Create quotations, convert to sales orders, and generate invoices. Track quotation-to-order conversion rates. Support partial deliveries and backorders.</p></div>
+      <div class="feature-card"><h3>Customer Invoices</h3><p>Generate invoices with tax calculations, discounts, and multi-currency support. Print or email to customers. Track outstanding balances and payment status.</p></div>
+      <div class="feature-card"><h3>Delivery Notes</h3><p>Confirm deliveries against sales orders. Stock is deducted automatically on delivery confirmation. Generate delivery note printouts for dispatch.</p></div>
+      <div class="feature-card"><h3>Customer Management</h3><p>Maintain a customer master with contacts, credit limits, payment terms, price lists, and statement preferences. View customer history, outstanding balances, and transaction ledger.</p></div>
+      <div class="feature-card"><h3>Point of Sale</h3><p>Touch-optimised POS terminal for retail and hospitality. Supports cash, mobile money, and card payments. Barcode scanning. Multi-terminal per branch. End-of-day cash reconciliation.</p></div>
+      <div class="feature-card"><h3>Sales CRM</h3><p>Leads and opportunities pipeline. Interaction logging. Contact management. Sales forecasting. Quotation conversion tracking. Performance analytics by rep, territory, and product.</p></div>
+      <div class="feature-card"><h3>Agent Management</h3><p>Register field sales agents. Assign territories and targets. Track daily sales per agent. Calculate commissions (flat rate, tiered, product-specific). Agents view their own performance through the self-service portal.</p></div>
+      <div class="feature-card"><h3>Territory Management</h3><p>Define sales territories. Assign agents and customers to territories. Track sales performance by territory. Generate territory-level reports.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>How it connects</h2>
+    <ul class="connection-list">
+      <li><strong>Inventory</strong> → stock deducted on delivery confirmation, stock checked on order entry</li>
+      <li><strong>Accounting</strong> → revenue and debtor entries posted on invoice approval</li>
+      <li><strong>Procurement</strong> → backorders trigger purchase requests</li>
+      <li><strong>Sales Agents</strong> → agent stock, commissions, and remittances managed separately</li>
+    </ul>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>See it in action</h2>
+    <p class="screenshot-intro">Screenshots from the live Kraal Code system — coming soon.</p>
+    <div class="screenshot-grid">
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Point of Sale Terminal</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Invoice Register</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Customer Map</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Agent Commissions</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>See sales in action</h2><p>Request a demonstration tailored to your sales and customer operations.</p>
+    <a href="/en/contact/" class="btn btn--inverse">Request a Demonstration →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.connection-list{margin-top:var(--kc-space-4)}.connection-list li{margin-bottom:var(--kc-space-3);font-size:var(--kc-text-base);color:var(--kc-text-secondary)}.connection-list strong{color:var(--kc-text-primary)}.screenshot-intro{color:var(--kc-text-secondary);margin-bottom:var(--kc-space-6)}.screenshot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6)}.screenshot-placeholder{aspect-ratio:16/10;background:var(--kc-surface-warm);border:2px dashed var(--kc-border);border-radius:var(--kc-radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--kc-space-2)}.screenshot-label{font-weight:var(--kc-weight-semibold);color:var(--kc-text-primary)}.screenshot-note{font-size:var(--kc-text-sm);color:var(--kc-text-tertiary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.feature-grid,.screenshot-grid{grid-template-columns:1fr}}
+</style>

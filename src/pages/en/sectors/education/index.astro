@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'en';
+---
+
+<BaseLayout
+  title="Schools & Education — ERP for Schools, Colleges, and Training Institutions"
+  description="Kraal Code for education: student fee invoicing, payment tracking, staff payroll, departmental budgets, and management reporting for schools and colleges."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/sectors/education/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><a href="/en/sectors/">Sectors</a></li><li aria-current="page">Schools & Education</li></ol></nav>
+      <h1>Schools & Education</h1>
+      <p class="page-hero-subtext">Invoice fees, track payments, manage staff payroll, and report to boards and regulators — from one financial system.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Your challenges</h2>
+    <div class="challenge-grid">
+      <div class="challenge-item"><h3>Fee collection</h3><p>Parents pay fees in instalments, by different methods, at different times. Tracking who has paid, who owes, and how much — across hundreds of students — is a manual exercise.</p></div>
+      <div class="challenge-item"><h3>Financial reporting</h3><p>Boards, regulators, and parents expect clean financial statements. Generating a balance sheet and income statement from spreadsheet records is slow and error-prone.</p></div>
+      <div class="challenge-item"><h3>Staff payroll</h3><p>Teachers and support staff need to be paid accurately with correct statutory deductions. Managing payroll in a spreadsheet risks errors and compliance issues.</p></div>
+      <div class="challenge-item"><h3>Budget management</h3><p>Departments have budgets for supplies, trips, and activities. Tracking actual spending against budgets requires manual consolidation from receipts and requisitions.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>How Kraal Code helps</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Student Fee Invoicing</h3><p>Generate fee invoices by term or semester. Support partial payments and instalment plans. Track outstanding balances per student. Send payment reminders.</p></div>
+      <div class="feature-card"><h3>Payment Tracking</h3><p>Record payments by cash, bank transfer, mobile money, and cheque. Allocate payments to specific fee items. Generate receipts. Age receivables by student and class.</p></div>
+      <div class="feature-card"><h3>Staff Payroll</h3><p>Manage teacher and support staff payroll with statutory compliance. Generate payslips, NSSF schedules, and PAYE returns. Bank transfer files for salary payments.</p></div>
+      <div class="feature-card"><h3>Financial Statements</h3><p>Balance sheet, income statement, cash flow statement, and trial balance. Departmental views. Export to PDF for board meetings and regulatory submissions.</p></div>
+      <div class="feature-card"><h3>Departmental Budgets</h3><p>Set budgets by department (academics, sports, administration, boarding). Track actual vs budget with variance reports. Lock budgets after approval.</p></div>
+      <div class="feature-card"><h3>Audit Trail</h3><p>Every financial transaction is recorded immutably. Board members and external auditors can verify the complete financial history of the institution.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container">
+    <h2>See it in action</h2>
+    <p class="screenshot-intro">Screenshots from the live Kraal Code system — coming soon.</p>
+    <div class="screenshot-grid">
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Invoice Register</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Payroll Run</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>See Kraal Code for education</h2><p>Request a demonstration tailored to your school, college, or training institution.</p>
+    <a href="/en/contact/" class="btn btn--inverse">Request a Demonstration →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.challenge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-6)}.challenge-item{padding:var(--kc-space-5);border-left:3px solid var(--kc-warning)}.challenge-item h3{font-size:var(--kc-text-base);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-1)}.challenge-item p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.screenshot-intro{color:var(--kc-text-secondary);margin-bottom:var(--kc-space-6)}.screenshot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6)}.screenshot-placeholder{aspect-ratio:16/10;background:var(--kc-surface-warm);border:2px dashed var(--kc-border);border-radius:var(--kc-radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--kc-space-2)}.screenshot-label{font-weight:var(--kc-weight-semibold);color:var(--kc-text-primary)}.screenshot-note{font-size:var(--kc-text-sm);color:var(--kc-text-tertiary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.challenge-grid,.feature-grid,.screenshot-grid{grid-template-columns:1fr}}
+</style>

@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'fr';
+---
+
+<BaseLayout
+  title="Projets et Planification — Suivi des Tâches, Feuilles de Temps, Coûts de Projet"
+  description="Registre de projets, gestion des tâches, allocation des ressources, feuilles de temps, budgétisation et facturation de projets. Kraal Code ERP."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/fr/capacites/projets/"
+>
+  <section class="page-hero section--warm"><div class="container">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/fr/">Accueil</a></li><li><a href="/fr/capacites/">Capacités</a></li><li aria-current="page">Projets et Planification</li></ol></nav>
+    <h1>Projets et Planification</h1>
+    <p class="page-hero-subtext">Suivez les projets de l'initiation à la clôture. Allouez les ressources, enregistrez le temps, gérez les budgets et générez des rapports de rentabilité par projet.</p>
+  </div></section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>À qui s'adresse ce module</h2>
+    <p>Chefs de projet, responsables d'équipe, consultants et dirigeants qui livrent des travaux sur une base projet. Que vous gériez des projets de construction, des missions de conseil, des programmes financés par des bailleurs ou des initiatives internes, ce module garde les projets dans les délais et le budget.</p>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>Ce que vous pouvez faire</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Registre de Projets</h3><p>Création de projets avec dates, budgets, responsables et références clients. Suivi du statut de l'initiation à la clôture.</p></div>
+      <div class="feature-card"><h3>Gestion des Tâches</h3><p>Décomposition en tâches et sous-tâches. Attribution des responsabilités. Dates d'échéance et dépendances. Suivi de l'avancement. Rapports de progression.</p></div>
+      <div class="feature-card"><h3>Allocation des Ressources</h3><p>Affectation des membres d'équipe aux projets et tâches. Suivi des pourcentages d'allocation. Identification des sur-allocation. Équilibrage de la charge de travail.</p></div>
+      <div class="feature-card"><h3>Feuilles de Temps</h3><p>Enregistrement du temps passé par projet et tâche. Validation par circuit d'approbation. Utilisation pour la facturation et le coût des projets.</p></div>
+      <div class="feature-card"><h3>Budgétisation</h3><p>Budgets par catégorie (main-d'œuvre, matières, frais). Suivi réalisé vs budget avec analyse des écarts. Alertes à l'approche des limites budgétaires.</p></div>
+      <div class="feature-card"><h3>Facturation Projets</h3><p>Facturation à partir des feuilles de temps et jalons. Modèles forfaitaires et au temps passé. Suivi du montant facturé vs non facturé.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Voir les projets en action</h2><p>Demandez une démonstration adaptée à vos besoins en gestion de projets.</p>
+    <a href="/fr/contact/" class="btn btn--inverse">Demander une démonstration →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.feature-grid{grid-template-columns:1fr}}
+</style>

@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'sw';
+---
+
+<BaseLayout
+  title="Shule na Elimu — ERP kwa Shule, Vyuo na Taasisi za Mafunzo"
+  description="Kraal Code kwa elimu: ankara za ada, ufuatiliaji wa malipo, mishahara ya wafanyakazi, bajeti za idara na ripoti za usimamizi."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/sw/sekta/elimu/"
+>
+  <section class="page-hero section--warm"><div class="container">
+    <nav class="breadcrumb" aria-label="Njia ya mkate"><ol><li><a href="/sw/">Nyumbani</a></li><li><a href="/sw/sekta/">Sekta</a></li><li aria-current="page">Shule na Elimu</li></ol></nav>
+    <h1>Shule na Elimu</h1>
+    <p class="page-hero-subtext">Toza ada, fuatilia malipo, simamia mishahara ya wafanyakazi na ripoti kwa mabodi na wasimamizi — kutoka mfumo mmoja wa fedha.</p>
+  </div></section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Changamoto zako</h2>
+    <div class="challenge-grid">
+      <div class="challenge-item"><h3>Ukusanyaji wa ada</h3><p>Wazazi wanalipa ada kwa awamu, kwa njia tofauti, wakati tofauti. Kufuatilia nani amelipa na nani anadaiwa — juu ya mamia ya wanafunzi — ni kazi ya mkono.</p></div>
+      <div class="challenge-item"><h3>Ripoti za fedha</h3><p>Mabodi, wasimamizi na wazazi wanatarajia taarifa safi za fedha. Kutengeneza sahili na taarifa ya mapato kutoka karatasi za hesabu ni polepole na kosa la kibinadamu.</p></div>
+      <div class="challenge-item"><h3>Mishahara ya wafanyakazi</h3><p>Walimu na wafanyakazi wa msaada wanahitaji kulipwa kwa usahihi na mikato ya kisheria. Kusimamia mishahara kwenye karatasi za hesabu kunabeba hatari za makosa.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>Jinsi Kraal Code inavyosaidia</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Ankara za Ada</h3><p>Ankara kwa muhula au semesta. Malipo ya sehemu na ratiba. Fuatilia salio kwa mfununzi. Vikumbusho vya malipo.</p></div>
+      <div class="feature-card"><h3>Ufuatiliaji wa Malipo</h3><p>Rekodi malipo kwa pesa taslimu, uhamisho wa benki, mobile money na hundi. Panga kwa vitu vya ada. Risiti. Umri wa deni.</p></div>
+      <div class="feature-card"><h3>Mishahara ya Wafanyakazi</h3><p>Mishahara ya walimu na wafanyakazi wa msaada na uzingatiaji wa sheria. Risiti za mishahara, ratiba za NSSF na kurudi za kodi. Faili za benki.</p></div>
+      <div class="feature-card"><h3>Taarifa za Fedha</h3><p>Sahili, taarifa ya mapato, mtiririko wa fedha na jaribio la usawa. Maoni ya idara. Toa PDF kwa mikutano ya bodi.</p></div>
+      <div class="feature-card"><h3>Bajeti za Idara</h3><p>Bajeti kwa idara (elimu, michezo, utawala, bweni). Fuatilia kilichopatikana dhidi ya bajeti na ripoti za tofauti. Funga baada ya uidhinishaji.</p></div>
+      <div class="feature-card"><h3>Njia ya Ukaguzi</h3><p>Kila muamala wa fedha unarekodiwa kwa njia isiyobadilika. Wanabodi na wakaguzi wanaweza kuthibitisha historia kamili ya fedha.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Ona Kraal Code kwa elimu</h2><p>Oma onyesho lililobinafsishwa kwa shule yako, chuo au taasisi ya mafunzo.</p>
+    <a href="/sw/mawasiliano/" class="btn btn--inverse">Oma Onyesho →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.challenge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-6)}.challenge-item{padding:var(--kc-space-5);border-left:3px solid var(--kc-warning)}.challenge-item h3{font-size:var(--kc-text-base);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-1)}.challenge-item p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.challenge-grid,.feature-grid{grid-template-columns:1fr}}
+</style>

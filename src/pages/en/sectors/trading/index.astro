@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'en';
+---
+
+<BaseLayout
+  title="Trading & Distribution — ERP for Wholesalers, Distributors, and Importers"
+  description="Kraal Code for trading and distribution: multi-warehouse inventory, batch tracking, FEFO picking, purchase orders, delivery management, and sales agent networks."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/sectors/trading/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><a href="/en/sectors/">Sectors</a></li><li aria-current="page">Trading & Distribution</li></ol></nav>
+      <h1>Trading & Distribution</h1>
+      <p class="page-hero-subtext">Move goods across locations with full visibility. Multi-warehouse stock, batch tracking, field agents, and delivery management — connected to one ledger.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Your challenges</h2>
+    <div class="challenge-grid">
+      <div class="challenge-item"><h3>Multi-location stock</h3><p>You have warehouses, shops, and agents across multiple locations. Knowing what is where — and transferring between locations — requires phone calls and spreadsheets.</p></div>
+      <div class="challenge-item"><h3>Expiry management</h3><p>Products expire. Without batch tracking and FEFO picking, items expire on the shelf while newer stock gets sold first.</p></div>
+      <div class="challenge-item"><h3>Field force visibility</h3><p>Sales agents operate in the field with their own stock. You do not see their daily sales, stock levels, or commission obligations until the end of the month.</p></div>
+      <div class="challenge-item"><h3>Order fulfilment</h3><p>Orders come in from multiple channels. Fulfilling them — picking, packing, dispatching, and tracking — is a manual process that breaks down at scale.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>How Kraal Code helps</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Multi-Warehouse Inventory</h3><p>Manage stock across warehouses, shops, transit locations, and agent consignment. View by location or consolidated. Transfer with approval workflows.</p></div>
+      <div class="feature-card"><h3>Batch & FEFO Tracking</h3><p>Track items by batch and expiry date. Apply first-expiry-first-out picking rules. Expiry alerts prevent waste. Essential for perishable and pharmaceutical goods.</p></div>
+      <div class="feature-card"><h3>Sales Agent Network</h3><p>Register agents, assign territories and stock. Track daily sales and stock levels. Calculate commissions. Agents access their own data through a self-service portal.</p></div>
+      <div class="feature-card"><h3>Purchase & Receiving</h3><p>Purchase orders, goods receipt notes, and three-way matching. Track supplier performance. Automate reorder points based on consumption patterns.</p></div>
+      <div class="feature-card"><h3>Order Fulfilment</h3><p>Sales orders, pick lists, delivery notes, and dispatch tracking. Partial deliveries and backorders supported. Customer receives proof of delivery.</p></div>
+      <div class="feature-card"><h3>Distribution Reports</h3><p>Sales by territory, agent, product, and period. Stock movement across locations. Agent performance and commission reports. Customer aging and debtors.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container">
+    <h2>See it in action</h2>
+    <p class="screenshot-intro">Screenshots from the live Kraal Code system — coming soon.</p>
+    <div class="screenshot-grid">
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Store Dashboard</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Customer Map</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Agent POS</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Stock Valuation</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>See Kraal Code for distribution</h2><p>Request a demonstration tailored to your trading and distribution operations.</p>
+    <a href="/en/contact/" class="btn btn--inverse">Request a Demonstration →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.challenge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-6)}.challenge-item{padding:var(--kc-space-5);border-left:3px solid var(--kc-warning)}.challenge-item h3{font-size:var(--kc-text-base);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-1)}.challenge-item p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.screenshot-intro{color:var(--kc-text-secondary);margin-bottom:var(--kc-space-6)}.screenshot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6)}.screenshot-placeholder{aspect-ratio:16/10;background:var(--kc-surface-warm);border:2px dashed var(--kc-border);border-radius:var(--kc-radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--kc-space-2)}.screenshot-label{font-weight:var(--kc-weight-semibold);color:var(--kc-text-primary)}.screenshot-note{font-size:var(--kc-text-sm);color:var(--kc-text-tertiary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.challenge-grid,.feature-grid,.screenshot-grid{grid-template-columns:1fr}}
+</style>

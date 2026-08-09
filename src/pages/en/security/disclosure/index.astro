@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'en';
+---
+
+<BaseLayout
+  title="Responsible Disclosure — Kraal Code"
+  description="How to report security vulnerabilities in Kraal Code."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/security/disclosure/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><a href="/en/security/">Security</a></li><li aria-current="page">Responsible Disclosure</li></ol></nav>
+      <h1>Responsible Disclosure</h1>
+      <p class="page-hero-subtext">We take security seriously. If you discover a vulnerability in Kraal Code, we want to hear from you.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container container--narrow legal-content">
+    <h2>How to report</h2>
+    <p>If you believe you have found a security vulnerability in Kraal Code or our website, please report it to:</p>
+    <p><strong>Email:</strong> <a href="mailto:security@kraalcode.com">security@kraalcode.com</a></p>
+    <p>Please include:</p>
+    <ul>
+      <li>A description of the vulnerability</li>
+      <li>Steps to reproduce</li>
+      <li>Potential impact</li>
+      <li>Any supporting evidence (screenshots, logs)</li>
+    </ul>
+
+    <h2>What to expect</h2>
+    <ul>
+      <li><strong>Acknowledgement:</strong> within 3 business days</li>
+      <li><strong>Initial assessment:</strong> within 10 business days</li>
+      <li><strong>Resolution timeline:</strong> communicated after assessment</li>
+    </ul>
+
+    <h2>Safe harbour</h2>
+    <p>We support responsible disclosure. If you:</p>
+    <ul>
+      <li>Make a good-faith effort to avoid privacy violations, data destruction, and service disruption</li>
+      <li>Only interact with your own accounts or test accounts</li>
+      <li>Do not exploit a vulnerability beyond what is necessary to demonstrate it</li>
+      <li>Provide us reasonable time to resolve the issue before public disclosure</li>
+    </ul>
+    <p>Then we will not pursue legal action against you for your research.</p>
+
+    <h2>Scope</h2>
+    <p>In scope:</p>
+    <ul>
+      <li>kraalcode.com and its subdomains</li>
+      <li>The Kraal Code ERP application</li>
+      <li>API endpoints</li>
+    </ul>
+    <p>Out of scope:</p>
+    <ul>
+      <li>Social engineering attacks</li>
+      <li>Denial of service attacks</li>
+      <li>Third-party services we use</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p><a href="mailto:security@kraalcode.com">security@kraalcode.com</a></p>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}
+  .breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}
+  .container--narrow{max-width:var(--kc-container-narrow)}
+  .legal-content h2{font-size:var(--kc-text-xl);margin-top:var(--kc-space-10);margin-bottom:var(--kc-space-4)}
+  .legal-content p,.legal-content li{font-size:var(--kc-text-base);color:var(--kc-text-secondary);line-height:var(--kc-leading-relaxed)}
+  .legal-content ul{margin:var(--kc-space-3) 0 var(--kc-space-4) var(--kc-space-6)}
+  .legal-content li{margin-bottom:var(--kc-space-2)}
+  .legal-content a{color:var(--kc-teal)}
+  @media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}}
+</style>

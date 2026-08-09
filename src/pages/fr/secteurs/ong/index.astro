@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'fr';
+---
+
+<BaseLayout
+  title="ONG et Organisations à But Non Lucratif — ERP pour Organisations Bailleuses"
+  description="Kraal Code pour les ONG : comptabilité par fonds restreints, suivi de projets, budgets départementaux, tableaux de bord M&E et rapports prêts pour l'audit."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/fr/secteurs/ong/"
+>
+  <section class="page-hero section--warm"><div class="container">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/fr/">Accueil</a></li><li><a href="/fr/secteurs/">Secteurs</a></li><li aria-current="page">ONG et Organisations à But Non Lucratif</li></ol></nav>
+    <h1>ONG et Organisations à But Non Lucratif</h1>
+    <p class="page-hero-subtext">Suivez les fonds bailleurs, gérez les projets, rapportez aux bailleurs et maintenez une comptabilité prête pour l'audit — sans système comptable séparé par subvention.</p>
+  </div></section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Vos défis</h2>
+    <div class="challenge-grid">
+      <div class="challenge-item"><h3>Restrictions bailleurs</h3><p>Les bailleurs restreignent l'usage de leurs fonds. Suivre quels fonds sont restreints, pour quel objectif et si les dépenses sont conformes nécessite des tableurs parallèles.</p></div>
+      <div class="challenge-item"><h3>Budgétisation par projet</h3><p>Chaque projet a son propre budget, calendrier et exigences de reporting. Suivre le réalisé vs prévu par projet — sur plusieurs bailleurs — est chronophage.</p></div>
+      <div class="challenge-item"><h3>Rapports aux bailleurs</h3><p>Différents bailleurs exigent des formats différents. Générer ces rapports depuis un grand livre non conçu pour la comptabilité par fonds prend des jours chaque trimestre.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>Comment Kraal Code aide</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Comptabilité par Fonds</h3><p>Suivi des fonds restreints et non restreints séparément. Affectation des dépenses aux bailleurs, projets et lignes budgétaires. États financiers par fonds.</p></div>
+      <div class="feature-card"><h3>Coûts de Projet</h3><p>Budgets par catégorie. Suivi réalisé vs budget avec analyse des écarts. Affectation des coûts partagés entre projets. Rapports de rentabilité par projet.</p></div>
+      <div class="feature-card"><h3>Budgets Départementaux</h3><p>Budgets par département, projet ou programme. Verrouillage après approbation. Suivi en temps réel. Alertes à l'approche des limites.</p></div>
+      <div class="feature-card"><h3>États Financiers</h3><p>Bilan, compte de résultat, tableau des flux de trésorerie et balance générale. Vues départementales et consolidées. Export PDF ou Excel.</p></div>
+      <div class="feature-card"><h3>Piste d'Audit</h3><p>Chaque transaction est immuable. Le journal d'audit INSERT-seul enregistre qui a fait quoi, depuis quelle IP, à quel moment. Rôle d'auditeur externe en lecture seule.</p></div>
+      <div class="feature-card"><h3>Suivi et Évaluation</h3><p>Suivi des exercices M&E, questions, réponses et actions. Tableaux de bord M&E et rapports au conseil d'administration.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Voir Kraal Code pour les ONG</h2><p>Demandez une démonstration adaptée à vos opérations financées par des bailleurs.</p>
+    <a href="/fr/contact/" class="btn btn--inverse">Demander une démonstration →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.challenge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-6)}.challenge-item{padding:var(--kc-space-5);border-left:3px solid var(--kc-warning)}.challenge-item h3{font-size:var(--kc-text-base);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-1)}.challenge-item p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.challenge-grid,.feature-grid{grid-template-columns:1fr}}
+</style>

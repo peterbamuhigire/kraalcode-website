@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'en';
+---
+
+<BaseLayout
+  title="Agriculture & Cooperatives — ERP for Outgrower Schemes and Farmer Networks"
+  description="Kraal Code for agriculture: outgrower registration, commodity intake, weighbridge integration, deduction schedules, farmer payments, and cooperative management."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/en/sectors/agriculture/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><a href="/en/sectors/">Sectors</a></li><li aria-current="page">Agriculture & Cooperatives</li></ol></nav>
+      <h1>Agriculture & Cooperatives</h1>
+      <p class="page-hero-subtext">Register outgrowers, record commodity intake, process deductions, and pay farmers — with full traceability from field to factory.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Your challenges</h2>
+    <div class="challenge-grid">
+      <div class="challenge-item"><h3>Farmer registration</h3><p>You work with hundreds or thousands of smallholder farmers. Keeping their records — contact details, farm location, group membership, input loans — in spreadsheets is fragile.</p></div>
+      <div class="challenge-item"><h3>Commodity intake</h3><p>At collection points, farmers deliver produce. Recording weight, quality grade, price, and deductions per farmer — and generating accurate payment summaries — is labour-intensive.</p></div>
+      <div class="challenge-item"><h3>Deduction management</h3><p>Farmers have input loans, levies, and advances to recover. Calculating and tracking deductions per delivery — and ensuring they are recovered before payment — requires careful bookkeeping.</p></div>
+      <div class="challenge-item"><h3>Payment processing</h3><p>Paying hundreds of farmers accurately and on time — via mobile money, bank transfer, or cash — requires consolidated payment batches with clear audit trails.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>How Kraal Code helps</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Outgrower Registration</h3><p>Register farmers with personal details, farm location (GPS coordinates for map view), group/society membership, and crop type. Configurable per tenant — tea, coffee, matooke, cotton, or any commodity.</p></div>
+      <div class="feature-card"><h3>Commodity Intake</h3><p>Record deliveries at collection points. Capture weight, grade, moisture, and price. Generate intake receipts. Support weighbridge integration for high-volume operations.</p></div>
+      <div class="feature-card"><h3>Deduction Schedules</h3><p>Define deduction rules (input loans, levies, advances). Apply automatically per delivery. Track recovery progress. Generate deduction reports by farmer, group, or period.</p></div>
+      <div class="feature-card"><h3>Farmer Payments</h3><p>Generate payment batches from intake records minus deductions. Support mobile money, bank transfer, and cash. Track payment status. Generate farmer payment statements.</p></div>
+      <div class="feature-card"><h3>Group & Society Management</h3><p>Organise farmers into groups and societies. Track group-level intake, payments, and deductions. Assign group leaders with limited system access.</p></div>
+      <div class="feature-card"><h3>Farmer Map View</h3><p>Visualise farmer locations on a map. Identify coverage gaps. Plan collection routes. View intake and payment data by geographic area.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container">
+    <h2>See it in action</h2>
+    <p class="screenshot-intro">Screenshots from the live Kraal Code system — coming soon.</p>
+    <div class="screenshot-grid">
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Farmer Map</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Commodity Intake</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>See Kraal Code for agriculture</h2><p>Request a demonstration tailored to your outgrower or cooperative operations.</p>
+    <a href="/en/contact/" class="btn btn--inverse">Request a Demonstration →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.challenge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-6)}.challenge-item{padding:var(--kc-space-5);border-left:3px solid var(--kc-warning)}.challenge-item h3{font-size:var(--kc-text-base);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-1)}.challenge-item p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.screenshot-intro{color:var(--kc-text-secondary);margin-bottom:var(--kc-space-6)}.screenshot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6)}.screenshot-placeholder{aspect-ratio:16/10;background:var(--kc-surface-warm);border:2px dashed var(--kc-border);border-radius:var(--kc-radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--kc-space-2)}.screenshot-label{font-weight:var(--kc-weight-semibold);color:var(--kc-text-primary)}.screenshot-note{font-size:var(--kc-text-sm);color:var(--kc-text-tertiary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.challenge-grid,.feature-grid,.screenshot-grid{grid-template-columns:1fr}}
+</style>

@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'fr';
+---
+
+<BaseLayout
+  title="Conditions d'Utilisation — Kraal Code"
+  description="Conditions régissant votre utilisation du site web kraalcode.com."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/fr/juridique/conditions/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/fr/">Accueil</a></li><li>Juridique</li><li aria-current="page">Conditions d'Utilisation</li></ol></nav>
+      <h1>Conditions d'Utilisation</h1>
+      <p class="draft-notice">BROUILLON — en attente de révision juridique. Dernière mise à jour : 9 août 2026.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container container--narrow legal-content">
+    <h2>Acceptation des conditions</h2>
+    <p>En accédant à kraalcode.com, vous acceptez ces conditions. Si vous n'êtes pas d'accord, veuillez ne pas utiliser le site web.</p>
+
+    <h2>Propriété intellectuelle</h2>
+    <p>Le nom Kraal Code, le logo et le contenu du site web sont la propriété de Chwezi Core Systems. Vous ne pouvez pas reproduire, distribuer ou créer des œuvres dérivées sans autorisation écrite.</p>
+
+    <h2>Utilisation autorisée</h2>
+    <p>Vous pouvez utiliser ce site web pour des fins légitimes : découvrir Kraal Code, nous contacter et demander des démonstrations. Vous ne pouvez pas l'utiliser pour transmettre du contenu malveillant, tenter un accès non autorisé ou extraire du contenu à des fins commerciales.</p>
+
+    <h2>Limitation de responsabilité</h2>
+    <p>Dans la mesure permise par la loi, Chwezi Core Systems n'est pas responsable de toute perte résultant de votre utilisation de ce site web.</p>
+
+    <h2>Droit applicable</h2>
+    <p>Ces conditions sont régies par les lois de l'Ouganda. Tout litige sera résolu devant les tribunaux de l'Ouganda.</p>
+
+    <h2>Contact</h2>
+    <p>Pour des questions sur ces conditions, contactez-nous à <a href="mailto:info@kraalcode.com">info@kraalcode.com</a>.</p>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl)}.draft-notice{display:inline-block;padding:var(--kc-space-2) var(--kc-space-4);background:var(--kc-warning-light);border:1px solid var(--kc-warning);border-radius:var(--kc-radius-md);font-size:var(--kc-text-sm);color:var(--kc-warning);margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.legal-content h2{font-size:var(--kc-text-xl);margin-top:var(--kc-space-10);margin-bottom:var(--kc-space-4)}.legal-content p,.legal-content li{font-size:var(--kc-text-base);color:var(--kc-text-secondary);line-height:var(--kc-leading-relaxed)}.legal-content ul{margin:var(--kc-space-3) 0 var(--kc-space-4) var(--kc-space-6)}.legal-content li{margin-bottom:var(--kc-space-2)}.legal-content a{color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}}
+</style>

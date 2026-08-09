@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+const locale = 'sw';
+---
+
+<BaseLayout
+  title="Hifadhi na Ghala — Kufuatilia Hisa, Thamani, Maeneo Mengi"
+  description="Orodha ya bidhaa, kufuatilia hisa, thamani ya FIFO na uzito wa wastani, risiti za bidhaa, uhamisho, viwango vya kuagiza tena na uhifadhi wa maeneo mengi. Kraal Code ERP."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/sw/uwezo/hifadhi/"
+>
+  <section class="page-hero section--warm"><div class="container">
+    <nav class="breadcrumb" aria-label="Njia ya mkate"><ol><li><a href="/sw/">Nyumbani</a></li><li><a href="/sw/uwezo/">Uwezo</a></li><li aria-current="page">Hifadhi na Ghala</li></ol></nav>
+    <h1>Hifadhi na Ghala</h1>
+    <p class="page-hero-subtext">Jua ulicho nacho, wapi ilipo, gharama yake na wakati wa kuagiza tena. Kitabu kimoja cha hisa, kilichosasishwa kwa wakati halisi katika kila eneo.</p>
+  </div></section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Kwa nani moduli hii</h2>
+    <p>Wasimamizi wa ghala, wasimamizi wa duka, maafisa wa ununuzi na viongozi wanaohitaji mwonekano sahihi wa hisa katika maeneo — bila kupatanisha karatasi za hesabu mwishoni mwa mwezi.</p>
+  </div></section>
+
+  <section class="section section--warm"><div class="container">
+    <h2>Unachoweza kufanya</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Orodha ya Bidhaa</h3><p>Orodha iliyo na vikundi, vipimo, viwango vya kuagiza tena, wauzaji wanaopendelewa na hesabu za GL. Malighafi, bidhaa za mwisho, vifungashio na vya matumizi.</p></div>
+      <div class="feature-card"><h3>Thamani ya Hisa</h3><p>Thamani ya hisa kwa FIFO au gharama ya wastani wa uzito. Hesabu upya kwa otomatiki kwa kila upokeaji. Ripoti za thamani kwa bidhaa, kikundi au eneo.</p></div>
+      <div class="feature-card"><h3>Risiti za Bidhaa</h3><p>Rekodi za bidhaa zilizopokelewa dhidi ya amri za ununuzi. Kagua idadi na bei. Tofauti zilizopewa alama kwa ukaguzi.</p></div>
+      <div class="feature-card"><h3>Ghala za Maeneo Mengi</h3><p>Simamia hisa katika ghala, maduka, viwandani na maeneo ya kusafirisha. Mtazamo kwa eneo au uliopanuliwa. Uhamisho na mzunguko wa uidhinishaji.</p></div>
+      <div class="feature-card"><h3>Kufuatilia Kwa Kundi na Muda</h3><p>Fuatilia bidhaa kwa nambari ya kundi na tarehe ya kumalizika. Tumia sheria za FEFO (kwanza kumalizika, kwanza kutoka). Tahadhari za muda wa matumizi.</p></div>
+      <div class="feature-card"><h3>Ubadilishaji wa Vipimo</h3><p>Nunua katika masanduku, uza katika vipande, hifadhi katika kilogramu. injini ya ubadilishaji inabadilisha kati ya vipimo kwa otomatiki.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Ona hifadhi kwa vitendo</h2><p>Oma onyesho lililobinafsishwa kwa mahitaji ya usimamizi wa hisa na ghala.</p>
+    <a href="/sw/mawasiliano/" class="btn btn--inverse">Oma Onyesho →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.feature-grid{grid-template-columns:1fr}}
+</style>
