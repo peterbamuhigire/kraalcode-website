@@ -42,7 +42,7 @@ const content: Record<string, {
 const t = content[locale];
 ---
 
-<section class="cta-section section--dark section--lg" aria-labelledby="cta-heading">
+<section class="cta-section section section--dark section--lg" aria-labelledby="cta-heading">
   <div class="container cta-inner text-center">
     <h2 id="cta-heading">{t.heading}</h2>
     <p>{t.subtext}</p>
@@ -75,6 +75,7 @@ const t = content[locale];
     gap: var(--kc-space-4);
     justify-content: center;
     flex-wrap: wrap;
+    padding: var(--kc-space-2) var(--kc-space-4) var(--kc-space-4);
   }
 
   .btn {

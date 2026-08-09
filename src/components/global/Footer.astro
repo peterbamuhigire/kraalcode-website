@@ -138,10 +138,10 @@ const t = content[locale];
     <div class="footer-brand">
       <a href={`/${locale}/`} aria-label="Kraal Code home">
         <img
-          src="/icons/kraalcode-logo-light.svg"
+          src="/icons/kraalcode-dark.png"
           alt="Kraal Code"
-          width="140"
-          height="32"
+          width="200"
+          height="102"
           loading="lazy"
         />
       </a>
@@ -218,6 +218,11 @@ const t = content[locale];
     color: var(--kc-text-inverse-muted);
     margin-top: var(--kc-space-4);
     max-width: 30ch;
+  }
+
+  .footer-brand img {
+    height: 42px;
+    width: auto;
   }
 
   .footer-links {

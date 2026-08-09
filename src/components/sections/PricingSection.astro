@@ -54,7 +54,7 @@ const content: Record<string, {
 const t = content[locale];
 ---
 
-<section class="pricing-section section--warm" aria-labelledby="pricing-heading">
+<section class="pricing-section section section--warm" aria-labelledby="pricing-heading">
   <div class="container">
     <div class="pricing-header text-center">
       <h2 id="pricing-heading">{t.heading}</h2>
@@ -172,6 +172,10 @@ const t = content[locale];
     color: var(--kc-text-tertiary);
     margin-top: var(--kc-space-6);
     margin-bottom: var(--kc-space-6);
+  }
+
+  .pricing-cta {
+    padding: var(--kc-space-2) var(--kc-space-4) var(--kc-space-4);
   }
 
   .btn {
