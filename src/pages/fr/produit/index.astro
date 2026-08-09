@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const locale = 'fr';
+
+const modules = [
+  { name: 'Comptabilité et Grand Livre', icon: '◎', description: 'GL en partie double, clients/fournisseurs, rapprochement bancaire, multi-devises, TVA/retenue, budgets, états financiers et orchestration de clôture.', core: true },
+  { name: 'Gestion des Stocks', icon: '◉', description: 'Catalogue d\'articles, conversion d\'unités, valorisation FIFO/coût moyen pondéré, bons de réception, ajustements, niveaux de réapprovisionnement et transferts.', core: true },
+  { name: 'Ventes', icon: '◈', description: 'Fichier client, listes de prix, devis, bons de commande, bons de livraison, factures, avoirs et encaissements.', core: true },
+  { name: 'Approvisionnement', icon: '◇', description: 'Fichier fournisseur, demandes d\'achat, consultation, bons de commande, rapprochement tripartite, paiements fournisseurs et retenues.', core: true },
+  { name: 'Gestion des Utilisateurs et RBAC', icon: '⬡', description: 'Cycle de vie des utilisateurs, rôles illimités, permissions granulaires, restrictions par branche, limites d\'approbation, 2FA et connexion biométrique.', core: true },
+  { name: 'Journal d\'Audit', icon: '⬢', description: 'Piste d\'audit immutable INSERT-seul, toutes les actions CRUD et d\'approbation, rôle d\'auditeur externe en lecture seule, rétention de 7 ans.', core: true },
+  { name: 'Inventaire Avancé', icon: '◎', description: 'Entreposage multi-sites, suivi par lot/série, FEFO, gestion des péremptions, stock en transit inter-sites et coût de revient intégral.', core: false },
+  { name: 'Fabrication', icon: '◉', description: 'Nomenclatures avec versions, gammes, postes de travail, ordres de production, encours, généalogie, contrôle qualité en cours, OEE et suivi des rendements.', core: false },
+  { name: 'RH et Paie', icon: '◈', description: 'Fichier employé, contrats, congés, présence, traitement de la paie, fichiers bancaires et conformité légale multi-pays.', core: false },
+  { name: 'Point de Vente', icon: '◇', description: 'Terminal tactile optimisé, lecture de codes-barres, modes de paiement multiples, mobile money, reçu thermique et mode hors ligne.', core: false },
+  { name: 'Ventes et CRM', icon: '⬡', description: 'Comptes, contacts, prospects, opportunités, cas, activités, segmentation, prévisions et coordination devis-encaissement.', core: false },
+  { name: 'Agents Commerciaux et Commissions', icon: '⬢', description: 'Registre des agents, fixation d\'objectifs, règles de commission, calcul des commissions, paiement groupé mobile et portail self-service.', core: false },
+  { name: 'Opérations Producteurs', icon: '◎', description: 'Configuration des marchandises, enregistrement des producteurs, hiérarchie des groupes, intake saisonnière, intégration balance et paiement aux agriculteurs.', core: false },
+  { name: 'Gestion de Projets', icon: '◉', description: 'Registre de projets, budget, jalons, tâches/WBS, feuilles de temps, allocation de ressources, facturation de projets et P&L projet.', core: false },
+  { name: 'Stratégie et Tableau de Bord Prospectif', icon: '◈', description: 'Cadre stratégique, perspectives BSC, objectifs, KPI, réalisations, notation feux tricolores, mode OKR et logframe ONG.', core: false },
+  { name: 'Gestion des Actifs', icon: '◇', description: 'Registre d\'actifs, amortissement, réévaluation, cession, transfert, planification de maintenance, assurance et étiquetage QR/code-barres.', core: false },
+  { name: 'Intelligence Artificielle', icon: '⬡', description: 'Prévision de trésorerie, détection d\'anomalies GL, prévision de la demande, scoring du risque débiteur et rapports financiers narratifs.', core: false },
+  { name: 'Gestion du Cycle de Vie Produit', icon: '⬢', description: 'Fichier article ingénierie, contrôle de révision, gouvernance EBOM/MBOM, workflow de modification et contrôle documentaire.', core: false },
+  { name: 'Transport et Flotte', icon: '◎', description: 'Planification des expéditions, planification des itinéraires/chargements, dispatch, attribution transporteurs, visibilité ETA, preuve de livraison et audit fret.', core: false },
+];
+---
+
+<BaseLayout
+  title="Vue d'Ensemble de la Plateforme — Un Environnement Opérationnel Modulaire"
+  description="Kraal Code est une plateforme modulaire qui rassemble finance, inventaire, ventes, approvisionnement, personnes, projets, fabrication et pilotage dans un environnement gouverné."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/fr/produit/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/fr/">Accueil</a></li><li aria-current="page">Produit</li></nav>
+      <h1>Une plateforme, pas un ensemble d'applications</h1>
+      <p class="page-hero-subtext">Kraal Code rassemble finance, inventaire, ventes, approvisionnement, personnes, projets, fabrication et pilotage dans un environnement gouverné avec des données partagées, des flux contrôlés et des permissions unifiées.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container">
+    <div class="product-grid">
+      <div class="product-image">
+        <img src="/src/assets/images/product/erp-platform-overview.jpg" alt="Vue d'ensemble du système ERP" width="600" height="400" loading="lazy" />
+      </div>
+      <div class="product-content">
+        <h2>Un système qui grandit avec votre organisation</h2>
+        <p>Six modules cœur fonctionnent au quotidien — ils ne peuvent pas être désactivés car chaque organisation en a besoin. Treize modules complémentaires s'activent quand votre organisation est prête. Commencez avec ce dont vous avez besoin aujourd'hui ; ajoutez fabrication, RH, projets ou intelligence artificielle quand le moment viendra.</p>
+        <p>Chaque module partage le même modèle de données, le même système de permissions, la même piste d'audit et la même expérience utilisateur. Pas de couche d'intégration à maintenir, pas de middleware qui casse, pas de conflits de versions à résoudre.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Conçu par des personnes qui comprennent le problème</h2>
+    <p>Kraal Code est un produit de Chwezi Core Systems. Nous croyons que les organisations africaines méritent un logiciel d'entreprise de qualité mondiale qui comprend leur réalité — pas des systèmes conçus pour un autre marché et forcés de s'adapter.</p>
+    <p>Kraal Code existe parce que nous avons vu des organisations dépasser les tableurs et outils comptables mais incapables de justifier le coût, la complexité et l'inadéquation culturelle des systèmes ERP importés. Notre philosophie de conception est simple : construire pour la personne qui utilisera le système chaque jour.</p>
+  </div></section>
+
+  <section class="section--dark section"><div class="container">
+    <h2>Modules Cœur</h2>
+    <p class="section-subtext">Toujours actifs. Chaque organisation en a besoin.</p>
+    <div class="module-grid">
+      {modules.filter(m => m.core).map((mod) => (
+        <div class="module-card">
+          <span class="module-icon" aria-hidden="true">{mod.icon}</span>
+          <h3>{mod.name}</h3>
+          <p>{mod.description}</p>
+        </div>
+      ))}
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container">
+    <h2>Modules Complémentaires</h2>
+    <p class="section-subtext">Activez quand votre organisation en a besoin. Ne payez que ce que vous utilisez.</p>
+    <div class="module-grid">
+      {modules.filter(m => !m.core).map((mod) => (
+        <div class="module-card">
+          <span class="module-icon" aria-hidden="true">{mod.icon}</span>
+          <h3>{mod.name}</h3>
+          <p>{mod.description}</p>
+        </div>
+      ))}
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container">
+    <h2>Principes de conception</h2>
+    <div class="principles-grid">
+      <div class="principle-card">
+        <h3>L'utilisabilité n'est pas optionnelle</h3>
+        <p>Si un utilisateur a besoin d'un manuel pour accomplir une tâche, l'interface est redessinée. Objectif : taux de réussite non assisté ≥ 85%.</p>
+      </div>
+      <div class="principle-card">
+        <h3>La sécurité enable, pas restreint</h3>
+        <p>La bonne sécurité rend le travail à distance, la délégation et l'accès cloud possibles. Les contrôles doivent être invisibles jusqu'à ce qu'ils soient nécessaires.</p>
+      </div>
+      <div class="principle-card">
+        <h3>Le contexte local compte</h3>
+        <p>L'Ouganda n'est pas le Kenya. Le Sénégal n'est pas la RDC. Les règles fiscales, les exigences légales et les pratiques commerciales diffèrent.</p>
+      </div>
+      <div class="principle-card">
+        <h3>Honnête sur ce qui existe</h3>
+        <p>Nous ne promettons pas des fonctionnalités non construites. Nous ne revendiquons pas des certifications que nous n'avons pas.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="section--warm section"><div class="container text-center">
+    <h2>Voyez comment ça fonctionne pour votre organisation</h2><p>Demandez une démonstration adaptée à votre secteur et vos flux de travail.</p>
+    <a href="/fr/contact/" class="btn btn--primary">Demander une Démonstration</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.container--narrow p{font-size:var(--kc-text-base);color:var(--kc-text-secondary);line-height:var(--kc-leading-relaxed);margin-bottom:var(--kc-space-4)}.product-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--kc-space-12);align-items:center}.product-image{border-radius:var(--kc-radius-lg);overflow:hidden}.product-image img{width:100%;height:auto;object-fit:cover}.product-content h2{font-size:var(--kc-text-2xl);margin-bottom:var(--kc-space-4)}.section-subtext{color:var(--kc-text-secondary);margin-bottom:var(--kc-space-8)}.section--dark .section-subtext{color:var(--kc-text-inverse-muted)}.module-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--kc-space-6)}.module-card{padding:var(--kc-space-6);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg);background:var(--kc-surface-light)}.section--dark .module-card{background:rgba(255,255,255,0.03);border-color:var(--kc-border-dark)}.module-icon{font-size:var(--kc-text-2xl);color:var(--kc-teal);display:block;margin-bottom:var(--kc-space-3)}.module-card h3{font-family:var(--kc-font-body);font-size:var(--kc-text-base);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.section--dark .module-card h3{color:var(--kc-text-inverse)}.module-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary);margin:0}.section--dark .module-card p{color:var(--kc-text-inverse-muted)}.principles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6)}.principle-card{padding:var(--kc-space-6);border:1px solid var(--kc-border-dark);border-radius:var(--kc-radius-lg);background:rgba(255,255,255,0.03)}.principle-card h3{font-family:var(--kc-font-body);font-size:var(--kc-text-lg);font-weight:var(--kc-weight-semibold);color:var(--kc-text-inverse);margin-bottom:var(--kc-space-3)}.principle-card p{font-size:var(--kc-text-sm);color:var(--kc-text-inverse-muted);margin:0}.btn{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:var(--kc-charcoal);color:var(--kc-text-inverse);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn:hover{background:var(--kc-teal-deep);color:var(--kc-text-inverse)}@media(max-width:1024px){.module-grid{grid-template-columns:repeat(2,1fr)}.product-grid{grid-template-columns:1fr}}@media(max-width:640px){.module-grid,.principles-grid{grid-template-columns:1fr}.page-hero h1{font-size:var(--kc-text-3xl)}}
+</style>

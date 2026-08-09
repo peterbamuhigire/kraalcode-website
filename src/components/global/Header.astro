@@ -14,7 +14,6 @@ const nav: Record<string, Record<string, string>> = {
     why: 'Why Kraal Code',
     security: 'Security',
     resources: 'Resources',
-    company: 'Company',
     demo: 'Request a Demo',
   },
   fr: {
@@ -24,7 +23,6 @@ const nav: Record<string, Record<string, string>> = {
     why: 'Pourquoi Kraal Code',
     security: 'Sécurité',
     resources: 'Ressources',
-    company: 'Entreprise',
     demo: 'Demander une démo',
   },
   sw: {
@@ -34,7 +32,6 @@ const nav: Record<string, Record<string, string>> = {
     why: 'Kwa nini Kraal Code',
     security: 'Usalama',
     resources: 'Rasilimali',
-    company: 'Kampuni',
     demo: 'Oma onyesho',
   },
 };
@@ -54,7 +51,7 @@ const localeLabels: Record<string, string> = {
 };
 
 // Active link detection
-const navKeys = ['product', 'capabilities', 'sectors', 'why', 'security', 'resources', 'company'];
+const navKeys = ['product', 'capabilities', 'sectors', 'why', 'security', 'resources'];
 function isActive(key: string): boolean {
   const path = currentPath.replace(/\/$/, '');
   return path.startsWith(`/${locale}/${key}`);
@@ -81,7 +78,6 @@ function isActive(key: string): boolean {
         <li><a href={`/${locale}/why/`} class={isActive('why') ? 'active' : ''}>{t.why}</a></li>
         <li><a href={`/${locale}/security/`} class={isActive('security') ? 'active' : ''}>{t.security}</a></li>
         <li><a href={`/${locale}/resources/`} class={isActive('resources') ? 'active' : ''}>{t.resources}</a></li>
-        <li><a href={`/${locale}/company/`} class={isActive('company') ? 'active' : ''}>{t.company}</a></li>
       </ul>
     </nav>
 
@@ -128,7 +124,6 @@ function isActive(key: string): boolean {
         <li><a href={`/${locale}/why/`}>{t.why}</a></li>
         <li><a href={`/${locale}/security/`}>{t.security}</a></li>
         <li><a href={`/${locale}/resources/`}>{t.resources}</a></li>
-        <li><a href={`/${locale}/company/`}>{t.company}</a></li>
         <li><a href={`/${locale}/contact/`} class="btn btn--primary">{t.demo}</a></li>
       </ul>
       <div class="mobile-lang-switcher">

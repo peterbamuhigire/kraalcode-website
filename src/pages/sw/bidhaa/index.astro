@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const locale = 'sw';
+
+const modules = [
+  { name: 'Uhasibu na Kitabu Kikuu', icon: '◎', description: 'GL ya kuingia mara mbili, wateja/wauzaji, upatanisho wa benki, sarafu nyingi, VAT/kodi ya kuzuia, bajeti, taarifa za fedha na usimamizi wa kufunga.', core: true },
+  { name: 'Usimamizi wa Hifadhi', icon: '◉', description: 'Orodha ya bidhaa, ubadilishaji wa vipimo, thamani ya FIFO/uzito wa wastani, risiti za bidhaa, marekebisho, viwango vya kuagiza tena na uhamisho.', core: true },
+  { name: 'Mauzo', icon: '◈', description: 'Faili la mteja, orodha za bei, nukuu, amri za mauzo, risiti za utoaji, ankara, mikopo na malipo.', core: true },
+  { name: 'Manunuzi', icon: '◇', description: 'Faili la muuzaji, maombi ya ununuzi, mazungumzo, amri za ununuzi, upatanisho wa tatu, malipo ya wauzaji na kodi ya kuzuia.', core: true },
+  { name: 'Usimamizi wa Watumiaji na RBAC', icon: '⬡', description: 'Mzunguko wa maisha ya watumiaji, majukumu yasiyo na kikomo, ruhusa za kina, vikomo vya tawi, vikomo vya uidhinishaji, 2FA na kuingia kwa kibiolojia.', core: true },
+  { name: 'Kitabu cha Ukaguzi', icon: '⬢', description: 'Njia ya ukaguzi isiyobadilika INSERT-pekecho, vitendo vyote CRUD na uidhinishaji, jukumu la mkaguzi wa nje kusoma pekee, uhifadhi wa miaka 7.', core: true },
+  { name: 'Hifadhi ya Juu', icon: '◎', description: 'Uhifadhi wa maeneo mengi, ufuatiliaji wa mizigo/kipindi, FEFO, usimamizi wa muda wa matumizi, hisa ya usafirishaji kati ya matawi na gharama kamili.', core: false },
+  { name: 'Uzalishaji', icon: '◉', description: 'Orodha za malighafi na toleo, njia za uzalishaji, vituo vya kazi, amri za uzalishaji, kazi katika maendeleo, nasaba, ukaguzi wa ubora wa ndani, OEE na ufuatiliaji wa mavuno.', core: false },
+  { name: 'HR na Mishahara', icon: '◈', description: 'Faili la mfanyakazi, mikataba, likizo, mahudhurio, usindikaji wa mishahara, faili za benki na uzingatiaji wa sheria ya nchi nyingi.', core: false },
+  { name: 'Njia ya Mauzo', icon: '◇', description: 'Kiolesura kilichoboreshwa cha mguso, msimbo wa mwambaa, njia nyingi za malipo, mobile money, risiti ya joto na hali ya nje ya mtandao.', core: false },
+  { name: 'Mauzo na CRM', icon: '⬡', description: 'Akaunti, mawasiliano, wateja wanaoweza, fursa, kesi, shughuli, mgawanyo, utabiri na uratibu wa nukuu-malipo.', core: false },
+  { name: 'Mawakala wa Mauzo na Kamisheni', icon: '⬢', description: 'Rejista ya mawakala, kuweka malengo, sheria za kamisheni, hesabu za kamisheni, malipo ya kikundi cha mobile money na tovuti ya self-service.', core: false },
+  { name: 'Shughuli za Wakulima', icon: '◎', description: 'Usanidi wa mazao, usajili wa wakulima, muundo wa kikundi, upokeaji wa msimu, ujumuishaji wa mizani na malipo kwa wakulima.', core: false },
+  { name: 'Usimamizi wa Miradi', icon: '◉', description: 'Rejista ya miradi, bajeti, hatua, kazi/WBS, karatasi za saa, ugawaji wa rasilimali, bili za miradi na P&L ya mradi.', core: false },
+  { name: 'Mkakati na Ubao wa BSC', icon: '◈', description: 'Mfumo wa mkakati, mtazamo wa BSC, malengo, KPI, matokeo, alama za taa za trafiki, hali ya OKR na logframe ya NGO.', core: false },
+  { name: 'Usimamizi wa Mali', icon: '◇', description: 'Rejista ya mali, kushuka kwa thamani, kupima upya, kuuza, kuhamisha, kupanga matunzio, bima na uwekaji lebo za QR/msimbo wa mwambaa.', core: false },
+  { name: 'Akili Bandia', icon: '⬡', description: 'Utabiri wa mtiririko wa fedha, ugunduzi wa kasoro GL, utabiri wa mahitaji, alama ya hatari ya deni na ripoti za fedha za hadithi.', core: false },
+  { name: 'Usimamizi wa Maisha ya Bidhaa', icon: '⬢', description: 'Faili la bidhaa za uhandisi, udhibiti wa marekebisho, usimamizi wa EBOM/MBOM, mtiririko wa mabadiliko ya uhandisi na udhibiti wa nyaraka.', core: false },
+  { name: 'Usafirishaji na Fleeti', icon: '◎', description: 'Kupanga usafirishaji, kupanga njia/mizigo, kutuma, kugawa wabebaji, mwonekano wa ETA, uthibitisho wa utoaji na ukaguzi wa usafirishaji.', core: false },
+];
+---
+
+<BaseLayout
+  title="Muhtasari wa Jukwaa — Mazingira Moja ya Uendeshaji wa Moduli"
+  description="Kraal Code ni jukwaa la moduli linalounganisha fedha, hisa, mauzo, manunuzi, watu, miradi, uzalishaji na usimamizi katika mazingira moja yaliyodhibitiwa."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/sw/bidhaa/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Njia ya mkate"><ol><li><a href="/sw/">Nyumbani</a></li><li aria-current="page">Bidhaa</li></ol></nav>
+      <h1>Jukwaa moja, si mkusanyiko wa programu</h1>
+      <p class="page-hero-subtext">Kraal Code linaunganisha fedha, hisa, mauzo, manunuzi, watu, miradi, uzalishaji na ufahamu wa usimamizi katika mazingira moja yaliyodhibitiwa na data inayoshirikiwa, mtiririko wa kazi uliodhibitiwa na ruhusa zilizounganishwa.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container">
+    <div class="product-grid">
+      <div class="product-image">
+        <img src="/src/assets/images/product/erp-platform-overview.jpg" alt="Muhtasari wa mfumo wa ERP" width="600" height="400" loading="lazy" />
+      </div>
+      <div class="product-content">
+        <h2>Mfumo unaoongezeka na shirika lako</h2>
+        <p>Moduli 6 za msingi zinafanya kazi kila siku — haziwezi kuzimwa kwa sababu kila shirika linahitaji. Moduli 13 za nyongeza zinawashwa shirika lako likiwa tayari. Anza na unachohitaji leo; ongeza uzalishaji, HR, miradi au akili bandia wakati ukifika.</p>
+        <p>Kila moduli inashiriki mfumo mmoja wa data, mfumo mmoja wa ruhusa, njia moja ya ukaguzi na uzoefu mmoja wa mtumiaji. Hakuna tabaka la ujumuishaji la kudumisha, hakuna middleware ya kuvunja, hakuna migongano ya toleo la kutatua.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container container--narrow">
+    <h2>Ilijengwa na watu wanaoelewa tatizo</h2>
+    <p>Kraal Code ni bidhaa ya Chwezi Core Systems. Tunaamini kwamba mashirika ya Kiafrika yanastahili programu za biashara za kiwango cha dunia zinazoelewa hali zao halisi — si mifumo iliyobuniwa kwa soko lingine na kulazimishwa kubadilika.</p>
+    <p>Kraal Code ipo kwa sababu tuliona mashirika yakizidi karatasi za hesabu na zana za uhasibu lakini yasiweze kuthibitisha gharama, ugumu na kutokubaliana kiutamaduni wa mifumo ya ERP iliyoagizwa. Falsafa yetu ya muundo ni rahisi: jenga kwa mtu atakayetumia mfumo kila siku.</p>
+  </div></section>
+
+  <section class="section--dark section"><div class="container">
+    <h2>Moduli za Msingi</h2>
+    <p class="section-subtext">Zikiwa na nguvu kila wakati. Kila shirika linahitaji.</p>
+    <div class="module-grid">
+      {modules.filter(m => m.core).map((mod) => (
+        <div class="module-card">
+          <span class="module-icon" aria-hidden="true">{mod.icon}</span>
+          <h3>{mod.name}</h3>
+          <p>{mod.description}</p>
+        </div>
+      ))}
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container">
+    <h2>Moduli za Nyongeza</h2>
+    <p class="section-subtext">Washa shirika lako linapohitaji. Lipa tu unachotumia.</p>
+    <div class="module-grid">
+      {modules.filter(m => !m.core).map((mod) => (
+        <div class="module-card">
+          <span class="module-icon" aria-hidden="true">{mod.icon}</span>
+          <h3>{mod.name}</h3>
+          <p>{mod.description}</p>
+        </div>
+      ))}
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container">
+    <h2>Misingi ya muundo</h2>
+    <div class="principles-grid">
+      <div class="principle-card">
+        <h3>Matumizi si hiari</h3>
+        <p>Kama mtumiaji angehitaji mwongozo kukamilisha kazi, kiolesura kinarekebishwa. Lengo: kiwango cha mafanikio yasiyosaidiwa ≥ 85%.</p>
+      </div>
+      <div class="principle-card">
+        <h3>Usalama unawezesha, si kuzuia</h3>
+        <p>Usalama mzuri unawezesha kazi ya mbali, uwakilishaji na ufikiaji wa wingu. Udhibiti usionekane hadi uhitajiwe.</p>
+      </div>
+      <div class="principle-card">
+        <h3>Hali halisi ya ndani inahesabika</h3>
+        <p>Uganda si Kenya. Senegal si DRC. Sheria za kodi, mahitaji ya mishahara na mazoea ya biashara yanatofautiana.</p>
+      </div>
+      <div class="principle-card">
+        <h3>Ya kwamba kuhusu kilichopo</h3>
+        <p>Hatuahisi vipengele ambavyo havijajengwa. Hatudai cheti ambacho hatuna.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="section--warm section"><div class="container text-center">
+    <h2>Ona jinsi inavyofanya kazi kwa shirika lako</h2><p>Oma onyesho lililobinafsishwa kwa sekta yako na mtiririko wa kazi.</p>
+    <a href="/sw/mawasiliano/" class="btn btn--primary">Oma Onyesho</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.container--narrow p{font-size:var(--kc-text-base);color:var(--kc-text-secondary);line-height:var(--kc-leading-relaxed);margin-bottom:var(--kc-space-4)}.product-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--kc-space-12);align-items:center}.product-image{border-radius:var(--kc-radius-lg);overflow:hidden}.product-image img{width:100%;height:auto;object-fit:cover}.product-content h2{font-size:var(--kc-text-2xl);margin-bottom:var(--kc-space-4)}.section-subtext{color:var(--kc-text-secondary);margin-bottom:var(--kc-space-8)}.section--dark .section-subtext{color:var(--kc-text-inverse-muted)}.module-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--kc-space-6)}.module-card{padding:var(--kc-space-6);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg);background:var(--kc-surface-light)}.section--dark .module-card{background:rgba(255,255,255,0.03);border-color:var(--kc-border-dark)}.module-icon{font-size:var(--kc-text-2xl);color:var(--kc-teal);display:block;margin-bottom:var(--kc-space-3)}.module-card h3{font-family:var(--kc-font-body);font-size:var(--kc-text-base);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.section--dark .module-card h3{color:var(--kc-text-inverse)}.module-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary);margin:0}.section--dark .module-card p{color:var(--kc-text-inverse-muted)}.principles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6)}.principle-card{padding:var(--kc-space-6);border:1px solid var(--kc-border-dark);border-radius:var(--kc-radius-lg);background:rgba(255,255,255,0.03)}.principle-card h3{font-family:var(--kc-font-body);font-size:var(--kc-text-lg);font-weight:var(--kc-weight-semibold);color:var(--kc-text-inverse);margin-bottom:var(--kc-space-3)}.principle-card p{font-size:var(--kc-text-sm);color:var(--kc-text-inverse-muted);margin:0}.btn{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:var(--kc-charcoal);color:var(--kc-text-inverse);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn:hover{background:var(--kc-teal-deep);color:var(--kc-text-inverse)}@media(max-width:1024px){.module-grid{grid-template-columns:repeat(2,1fr)}.product-grid{grid-template-columns:1fr}}@media(max-width:640px){.module-grid,.principles-grid{grid-template-columns:1fr}.page-hero h1{font-size:var(--kc-text-3xl)}}
+</style>

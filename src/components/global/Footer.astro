@@ -8,9 +8,8 @@ const { locale } = Astro.props;
 const content: Record<string, {
   tagline: string;
   product: { heading: string; links: Array<{ label: string; href: string }> };
-  company: { heading: string; links: Array<{ label: string; href: string }> };
   legal: { heading: string; links: Array<{ label: string; href: string }> };
-  contact: { heading: string; email: string; demo: string };
+  contact: { heading: string; email: string; address: string; demo: string };
   copyright: string;
 }> = {
   en: {
@@ -21,18 +20,10 @@ const content: Record<string, {
         { label: 'Platform Overview', href: '/en/product/' },
         { label: 'Capabilities', href: '/en/capabilities/' },
         { label: 'Sectors', href: '/en/sectors/' },
+        { label: 'Why Kraal Code', href: '/en/why/' },
         { label: 'Security & Privacy', href: '/en/security/' },
         { label: 'Work from Anywhere', href: '/en/work-from-anywhere/' },
-        { label: 'Implementation', href: '/en/implementation/' },
-      ],
-    },
-    company: {
-      heading: 'Company',
-      links: [
-        { label: 'About Kraal Code', href: '/en/company/' },
-        { label: 'Why Kraal Code', href: '/en/why/' },
         { label: 'Resources', href: '/en/resources/' },
-        { label: 'Contact Us', href: '/en/contact/' },
       ],
     },
     legal: {
@@ -47,7 +38,8 @@ const content: Record<string, {
     },
     contact: {
       heading: 'Get in Touch',
-      email: 'info@kraalcode.com',
+      email: 'info@chwezicore.com',
+      address: 'Chwezi Core Systems, P.O Box 117385, Kampala, Uganda',
       demo: 'Request a Demo',
     },
     copyright: `© ${new Date().getFullYear()} Kraal Code. All rights reserved. A product of Chwezi Core Systems.`,
@@ -60,18 +52,10 @@ const content: Record<string, {
         { label: 'Vue d\'ensemble', href: '/fr/produit/' },
         { label: 'Capacités', href: '/fr/capacites/' },
         { label: 'Secteurs', href: '/fr/secteurs/' },
+        { label: 'Pourquoi Kraal Code', href: '/fr/pourquoi/' },
         { label: 'Sécurité et confidentialité', href: '/fr/securite/' },
         { label: 'Travailler de partout', href: '/fr/travailler-de-partout/' },
-        { label: 'Mise en œuvre', href: '/fr/mise-en-oeuvre/' },
-      ],
-    },
-    company: {
-      heading: 'Entreprise',
-      links: [
-        { label: 'À propos', href: '/fr/entreprise/' },
-        { label: 'Pourquoi Kraal Code', href: '/fr/pourquoi/' },
         { label: 'Ressources', href: '/fr/ressources/' },
-        { label: 'Nous contacter', href: '/fr/contact/' },
       ],
     },
     legal: {
@@ -85,7 +69,8 @@ const content: Record<string, {
     },
     contact: {
       heading: 'Contactez-nous',
-      email: 'info@kraalcode.com',
+      email: 'info@chwezicore.com',
+      address: 'Chwezi Core Systems, B.P 117385, Kampala, Ouganda',
       demo: 'Demander une démo',
     },
     copyright: `© ${new Date().getFullYear()} Kraal Code. Tous droits réservés. Un produit de Chwezi Core Systems.`,
@@ -98,18 +83,10 @@ const content: Record<string, {
         { label: 'Muhtasari wa Jukwaa', href: '/sw/bidhaa/' },
         { label: 'Uwezo', href: '/sw/uwezo/' },
         { label: 'Sekta', href: '/sw/sekta/' },
+        { label: 'Kwa nini Kraal Code', href: '/sw/kwa-nini/' },
         { label: 'Usalama na Faragha', href: '/sw/usalama/' },
         { label: 'Fanya Kazi Popote', href: '/sw/fanya-kazi-popote/' },
-        { label: 'Utekelezaji', href: '/sw/utekelezaji/' },
-      ],
-    },
-    company: {
-      heading: 'Kampuni',
-      links: [
-        { label: 'Kuhusu Kraal Code', href: '/sw/kampuni/' },
-        { label: 'Kwa nini Kraal Code', href: '/sw/kwa-nini/' },
         { label: 'Rasilimali', href: '/sw/rasilimali/' },
-        { label: 'Wasiliana Nasi', href: '/sw/mawasiliano/' },
       ],
     },
     legal: {
@@ -123,7 +100,8 @@ const content: Record<string, {
     },
     contact: {
       heading: 'Wasiliana Nasi',
-      email: 'info@kraalcode.com',
+      email: 'info@chwezicore.com',
+      address: 'Chwezi Core Systems, S.L.P 117385, Kampala, Uganda',
       demo: 'Oma Onyesho',
     },
     copyright: `© ${new Date().getFullYear()} Kraal Code. Haki zote zimehifadhiwa. Bidhaa ya Chwezi Core Systems.`,
@@ -159,15 +137,6 @@ const t = content[locale];
       </div>
 
       <div class="footer-col">
-        <h4>{t.company.heading}</h4>
-        <ul role="list">
-          {t.company.links.map((link) => (
-            <li><a href={link.href}>{link.label}</a></li>
-          ))}
-        </ul>
-      </div>
-
-      <div class="footer-col">
         <h4>{t.legal.heading}</h4>
         <ul role="list">
           {t.legal.links.map((link) => (
@@ -179,6 +148,7 @@ const t = content[locale];
       <div class="footer-col">
         <h4>{t.contact.heading}</h4>
         <ul role="list">
+          <li class="footer-address">{t.contact.address}</li>
           <li><a href={`mailto:${t.contact.email}`}>{t.contact.email}</a></li>
           <li><a href={`/${locale}/contact/`} class="footer-cta">{t.contact.demo} →</a></li>
         </ul>
@@ -221,13 +191,13 @@ const t = content[locale];
   }
 
   .footer-brand img {
-    height: 42px;
+    height: 72px;
     width: auto;
   }
 
   .footer-links {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--kc-space-8);
   }
 
@@ -260,6 +230,12 @@ const t = content[locale];
   .footer-cta {
     color: var(--kc-teal-light) !important;
     font-weight: var(--kc-weight-medium);
+  }
+
+  .footer-address {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-inverse-muted);
+    line-height: var(--kc-leading-relaxed);
   }
 
   .footer-bottom {
