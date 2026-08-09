@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const locale = 'fr';
+
+const groups = [
+  { title: 'Finance et Comptabilité', image: '/src/assets/images/capabilities/finance-payroll-calculator.jpg', description: 'Grand livre en partie double, clients/fournisseurs, rapprochement bancaire, multi-devises, TVA/retenue, budgets et états financiers.', href: '/fr/capacites/comptabilite/', modules: 'Comptabilité, Inventaire Avancé' },
+  { title: 'Inventaire et Entreposage', image: '/src/assets/images/capabilities/inventory-warehouse-inspection.jpg', description: 'Catalogue d\'articles, suivi des stocks, valorisation FIFO/coût moyen pondéré, bons de réception, transferts, niveaux de réapprovisionnement.', href: '/fr/capacites/inventaire/', modules: 'Inventaire, Inventaire Avancé' },
+  { title: 'Ventes et Opérations Clients', image: '/src/assets/images/capabilities/finance-team-payroll-analysis.jpg', description: 'Devis, commandes, factures, bons de livraison, avoirs, encaissements, gestion clients et CRM.', href: '/fr/capacites/ventes/', modules: 'Ventes, Ventes & CRM, Agents Commerciaux' },
+  { title: 'Approvisionnement et Fournisseurs', image: '/src/assets/images/capabilities/procurement-supply-chain.jpg', description: 'Fichier fournisseur, demandes d\'achat, consultation, bons de commande, rapprochement tripartite, paiements et retenues.', href: '/fr/capacites/achats/', modules: 'Approvisionnement' },
+  { title: 'Fabrication et Production', image: '/src/assets/images/capabilities/manufacturing-smart-factory.jpg', description: 'Nomenclatures, gammes, postes de travail, ordres de production, contrôle qualité, généalogie, OEE et suivi des rendements.', href: '/fr/capacites/fabrication/', modules: 'Fabrication' },
+  { title: 'RH et Paie', image: '/src/assets/images/capabilities/hr-people-networking.jpg', description: 'Fichier employé, contrats, congés, présence, traitement de la paie, fichiers bancaires et conformité légale multi-pays.', href: '/fr/capacites/rh-paie/', modules: 'RH & Paie' },
+  { title: 'Projets et Planification', image: '/src/assets/images/capabilities/projects-gantt-chart.jpg', description: 'Registre de projets, budget, jalons, tâches/WBS, feuilles de temps, allocation de ressources, facturation et P&L projet.', href: '/fr/capacites/projets/', modules: 'Gestion de Projets' },
+  { title: 'Rapports et Pilotage', image: '/src/assets/images/capabilities/reporting-analytics-laptop.jpg', description: 'Tableaux de bord en temps réel, rapports de gestion, analytique, commentaires financiers pilotés par IA et tableaux de bord stratégiques.', href: '/fr/capacites/rapports/', modules: 'Rapports, IA, Stratégie & BSC' },
+];
+---
+
+<BaseLayout
+  title="Capacités — Modules Connectés pour Chaque Fonction Métier"
+  description="Explorez les capacités connectées de Kraal Code : finance, inventaire, ventes, approvisionnement, fabrication, RH, projets et rapports — dans une seule plateforme gouvernée."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/fr/capacites/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/fr/">Accueil</a></li><li aria-current="page">Capacités</li></ol></nav>
+      <h1>Capacités connectées, pas des outils déconnectés</h1>
+      <p class="page-hero-subtext">Chaque module Kraal Code partage le même modèle de données, le même système de permissions, la même piste d'audit et la même expérience utilisateur.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container">
+    <div class="cap-grid">
+      {groups.map((group) => (
+        <a href={group.href} class="cap-card">
+          <div class="cap-image">
+            <img src={group.image} alt={group.title} width="400" height="240" loading="lazy" />
+          </div>
+          <div class="cap-content">
+            <h2>{group.title}</h2>
+            <p>{group.description}</p>
+            <span class="cap-modules">Modules : {group.modules}</span>
+            <span class="cap-link">En savoir plus →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Voyez ces capacités en action</h2><p>Demandez une démonstration adaptée aux besoins de votre organisation.</p>
+    <a href="/fr/contact/" class="btn btn--inverse">Demander une Démonstration →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.cap-grid{display:flex;flex-direction:column;gap:var(--kc-space-8)}.cap-card{display:grid;grid-template-columns:300px 1fr;gap:var(--kc-space-8);padding:var(--kc-space-6);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg);transition:all var(--kc-transition-fast);text-decoration:none;color:inherit;align-items:center}.cap-card:hover{border-color:var(--kc-teal);box-shadow:var(--kc-shadow-md)}.cap-image{border-radius:var(--kc-radius-md);overflow:hidden;aspect-ratio:5/3}.cap-image img{width:100%;height:100%;object-fit:cover}.cap-content h2{font-size:var(--kc-text-xl);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);color:var(--kc-charcoal);margin-bottom:var(--kc-space-2)}.cap-content p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary);margin-bottom:var(--kc-space-3)}.cap-modules{display:block;font-size:var(--kc-text-xs);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-2)}.cap-link{font-size:var(--kc-text-sm);font-weight:var(--kc-weight-semibold);color:var(--kc-teal);transition:color var(--kc-transition-fast)}.cap-card:hover .cap-link{color:var(--kc-teal-deep)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.cap-card{grid-template-columns:1fr}.page-hero h1{font-size:var(--kc-text-3xl)}}
+</style>

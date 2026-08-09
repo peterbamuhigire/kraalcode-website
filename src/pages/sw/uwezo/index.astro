@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const locale = 'sw';
+
+const groups = [
+  { title: 'Fedha na Uhasibu', image: '/src/assets/images/capabilities/finance-payroll-calculator.jpg', description: 'GL ya kuingia mara mbili, wateja/wauzaji, upatanisho wa benki, sarafu nyingi, VAT/kodi, bajeti na taarifa za fedha.', href: '/sw/uwezo/hasibu/', modules: 'Uhasibu, Hifadhi ya Juu' },
+  { title: 'Hifadhi na Ghala', image: '/src/assets/images/capabilities/inventory-warehouse-inspection.jpg', description: 'Orodha ya bidhaa, ufuatiliaji wa hisa, thamani ya FIFO/uzito wa wastani, risiti za bidhaa, uhamisho, viwango vya kuagiza tena.', href: '/sw/uwezo/hifadhi/', modules: 'Hifadhi, Hifadhi ya Juu' },
+  { title: 'Mauzo na Uendeshaji wa Wateja', image: '/src/assets/images/capabilities/finance-team-payroll-analysis.jpg', description: 'Nukuu, amri, ankara, risiti za utoaji, mikopo, malipo, usimamizi wa wateja na CRM.', href: '/sw/uwezo/mauzo/', modules: 'Mauzo, Mauzo & CRM, Mawakala wa Mauzo' },
+  { title: 'Manunuzi na Wauzaji', image: '/src/assets/images/capabilities/procurement-supply-chain.jpg', description: 'Faili la muuzaji, maombi ya ununuzi, mazungumzo, amri za ununuzi, upatanisho wa tatu, malipo na kodi ya kuzuia.', href: '/sw/uwezo/ununuzi/', modules: 'Manunuzi' },
+  { title: 'Uzalishaji na Viwandani', image: '/src/assets/images/capabilities/manufacturing-smart-factory.jpg', description: 'Orodha za malighafi, njia za uzalishaji, vituo vya kazi, amri za uzalishaji, ukaguzi wa ubora, OEE na ufuatiliaji wa mavuno.', href: '/sw/uwezo/uzalishaji/', modules: 'Uzalishaji' },
+  { title: 'HR na Mishahara', image: '/src/assets/images/capabilities/hr-people-networking.jpg', description: 'Faili la mfanyakazi, mikataba, likizo, mahudhurio, usindikaji wa mishahara, faili za benki na uzingatiaji wa sheria.', href: '/sw/uwezo/ajira-mishahara/', modules: 'HR & Mishahara' },
+  { title: 'Miradi na Kupanga Kazi', image: '/src/assets/images/capabilities/projects-gantt-chart.jpg', description: 'Rejista ya miradi, bajeti, hatua, kazi/WBS, karatasi za saa, ugawaji wa rasilimali, bili na P&L ya mradi.', href: '/sw/uwezo/miradi/', modules: 'Usimamizi wa Miradi' },
+  { title: 'Ripoti na Ufahamu wa Usimamizi', image: '/src/assets/images/capabilities/reporting-analytics-laptop.jpg', description: 'Dashibodi za wakati halisi, ripoti za usimamizi, uchambuzi, maoni ya fedha yanayoendeshwa na AI na dashibodi za mkakati.', href: '/sw/uwezo/ripoti/', modules: 'Ripoti, AI, Mkakati & BSC' },
+];
+---
+
+<BaseLayout
+  title="Uwezo — Moduli Zilizounganishwa kwa Kila Utendaji wa Biashara"
+  description="Chunguza uwezo wa Kraal Code uliounganishwa: fedha, hisa, mauzo, manunuzi, uzalishaji, HR, miradi na ripoti — katika jukwaa moja lililodhibitiwa."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/sw/uwezo/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Njia ya mkate"><ol><li><a href="/sw/">Nyumbani</a></li><li aria-current="page">Uwezo</li></ol></nav>
+      <h1>Uwezo uliounganishwa, si zana zilizotenganishwa</h1>
+      <p class="page-hero-subtext">Kila moduli ya Kraal Code inashiriki mfumo mmoja wa data, mfumo mmoja wa ruhusa, njia moja ya ukaguzi na uzoefu mmoja wa mtumiaji.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container">
+    <div class="cap-grid">
+      {groups.map((group) => (
+        <a href={group.href} class="cap-card">
+          <div class="cap-image">
+            <img src={group.image} alt={group.title} width="400" height="240" loading="lazy" />
+          </div>
+          <div class="cap-content">
+            <h2>{group.title}</h2>
+            <p>{group.description}</p>
+            <span class="cap-modules">Moduli: {group.modules}</span>
+            <span class="cap-link">Jua zaidi →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Ona uwezo huu kwa vitendo</h2><p>Oma onyesho lililobinafsishwa kwa mahitaji ya shirika lako.</p>
+    <a href="/sw/mawasiliano/" class="btn btn--inverse">Oma Onyesho →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.cap-grid{display:flex;flex-direction:column;gap:var(--kc-space-8)}.cap-card{display:grid;grid-template-columns:300px 1fr;gap:var(--kc-space-8);padding:var(--kc-space-6);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg);transition:all var(--kc-transition-fast);text-decoration:none;color:inherit;align-items:center}.cap-card:hover{border-color:var(--kc-teal);box-shadow:var(--kc-shadow-md)}.cap-image{border-radius:var(--kc-radius-md);overflow:hidden;aspect-ratio:5/3}.cap-image img{width:100%;height:100%;object-fit:cover}.cap-content h2{font-size:var(--kc-text-xl);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);color:var(--kc-charcoal);margin-bottom:var(--kc-space-2)}.cap-content p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary);margin-bottom:var(--kc-space-3)}.cap-modules{display:block;font-size:var(--kc-text-xs);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-2)}.cap-link{font-size:var(--kc-text-sm);font-weight:var(--kc-weight-semibold);color:var(--kc-teal);transition:color var(--kc-transition-fast)}.cap-card:hover .cap-link{color:var(--kc-teal-deep)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.cap-card{grid-template-columns:1fr}.page-hero h1{font-size:var(--kc-text-3xl)}}
+</style>

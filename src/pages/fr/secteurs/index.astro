@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const locale = 'fr';
+
+const sectors = [
+  { title: 'Industrie', image: '/src/assets/images/industries/manufacturing-solar-technician.jpg', description: 'Nomenclatures, gammes, ordres de production, contrôle qualité, généalogie, OEE et suivi des rendements.', modules: 'Comptabilité, Inventaire, Fabrication, Approvisionnement, RH & Paie', href: '/fr/secteurs/industrie/' },
+  { title: 'Commerce et Distribution', image: '/src/assets/images/industries/trading-distribution-new.jpg', description: 'Inventaire multi-entrepôts, suivi par lot, FEFO, transferts inter-sites, coût de revient et gestion de la distribution.', modules: 'Comptabilité, Inventaire, Inventaire Avancé, Ventes, Approvisionnement', href: '/fr/secteurs/commerce/' },
+  { title: 'ONG et Organisations à But Non Lucratif', image: '/src/assets/images/industries/nonprofits-volunteers.jpg', description: 'Comptabilité par fonds restreints, suivi budgétaire par projet, rapports multi-devises aux bailleurs et logframe.', modules: 'Comptabilité, Projets, Stratégie & BSC, RH & Paie, Approvisionnement', href: '/fr/secteurs/ong/' },
+  { title: 'Conseil et Services Professionnels', image: '/src/assets/images/industries/consultancy-analysts-meeting.jpg', description: 'Facturation de projets (T&M et jalons), feuilles de temps, allocation de ressources, P&L projet et gestion client.', modules: 'Comptabilité, Ventes & CRM, Projets, RH & Paie', href: '/fr/secteurs/conseil/' },
+  { title: 'Agriculture et Coopératives', image: '/src/assets/images/industries/agriculture-sorghum-field.jpg', description: 'Enregistrement des producteurs, intake saisonnière, intégration balance, déductions de prêts intrants et paiement mobile money.', modules: 'Comptabilité, Inventaire, Opérations Producteurs, Approvisionnement', href: '/fr/secteurs/agriculture/' },
+  { title: 'Détail et POS', image: '/src/assets/images/industries/retail-pos-new.jpg', description: 'Terminal tactile optimisé, lecture de codes-barres, modes de paiement multiples, mobile money, reçu thermique et mode hors ligne.', modules: 'Comptabilité, Inventaire, POS, Ventes', href: '/fr/secteurs/detail/' },
+  { title: 'Hôtellerie', image: '/src/assets/images/industries/hospitality-hotel-new.jpg', description: 'POS avec mode table, gestion des stocks, RH & Paie et rapports financiers pour hôtels, restaurants et lodges.', modules: 'Comptabilité, Inventaire, POS, RH & Paie', href: '/fr/secteurs/hotellerie/' },
+  { title: 'Écoles et Éducation', image: '/src/assets/images/industries/education-new.jpg', description: 'Intégration avec Academia Pro pour la gestion scolaire. Finance, RH, approvisionnement et rapports pour les établissements éducatifs.', modules: 'Comptabilité, RH & Paie, Approvisionnement, Projets', href: '/fr/secteurs/education/' },
+];
+---
+
+<BaseLayout
+  title="Secteurs — Kraal Code Configuré pour Votre Industrie"
+  description="Découvrez comment Kraal Code se configure pour l'industrie, le commerce, les ONG, le conseil, l'agriculture, le détail, l'hôtellerie et l'éducation."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/fr/secteurs/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/fr/">Accueil</a></li><li aria-current="page">Secteurs</li></ol></nav>
+      <h1>Une plateforme, configurée pour votre secteur</h1>
+      <p class="page-hero-subtext">Kraal Code s'adapte à votre secteur avec les bons modules, les bons workflows et les bonnes intégrations.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container">
+    <div class="cap-grid">
+      {sectors.map((sector) => (
+        <a href={sector.href} class="cap-card">
+          <div class="cap-image">
+            <img src={sector.image} alt={sector.title} width="400" height="240" loading="lazy" />
+          </div>
+          <div class="cap-content">
+            <h2>{sector.title}</h2>
+            <p>{sector.description}</p>
+            <span class="cap-modules">Modules : {sector.modules}</span>
+            <span class="cap-link">En savoir plus →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Vous ne voyez pas votre secteur ?</h2><p>Kraal Code est configurable pour toute organisation. Discutons de vos besoins.</p>
+    <a href="/fr/contact/" class="btn btn--inverse">Demander une Démonstration →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.cap-grid{display:flex;flex-direction:column;gap:var(--kc-space-8)}.cap-card{display:grid;grid-template-columns:300px 1fr;gap:var(--kc-space-8);padding:var(--kc-space-6);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg);transition:all var(--kc-transition-fast);text-decoration:none;color:inherit;align-items:center}.cap-card:hover{border-color:var(--kc-teal);box-shadow:var(--kc-shadow-md)}.cap-image{border-radius:var(--kc-radius-md);overflow:hidden;aspect-ratio:5/3}.cap-image img{width:100%;height:100%;object-fit:cover}.cap-content h2{font-size:var(--kc-text-xl);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);color:var(--kc-charcoal);margin-bottom:var(--kc-space-2)}.cap-content p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary);margin-bottom:var(--kc-space-3)}.cap-modules{display:block;font-size:var(--kc-text-xs);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-2)}.cap-link{font-size:var(--kc-text-sm);font-weight:var(--kc-weight-semibold);color:var(--kc-teal);transition:color var(--kc-transition-fast)}.cap-card:hover .cap-link{color:var(--kc-teal-deep)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.cap-card{grid-template-columns:1fr}.page-hero h1{font-size:var(--kc-text-3xl)}}
+</style>

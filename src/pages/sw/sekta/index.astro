@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const locale = 'sw';
+
+const sectors = [
+  { title: 'Viwanda', image: '/src/assets/images/industries/manufacturing-solar-technician.jpg', description: 'Orodha za malighafi, njia za uzalishaji, amri za uzalishaji, udhibiti wa ubora, nasaba, OEE na ufuatiliaji wa mavuno.', modules: 'Uhasibu, Hifadhi, Uzalishaji, Manunuzi, HR & Mishahara', href: '/sw/sekta/viwanda/' },
+  { title: 'Biashara na Usambazaji', image: '/src/assets/images/industries/trading-distribution-new.jpg', description: 'Hifadhi za ghala nyingi, ufuatiliaji wa mizigo, FEFO, uhamisho kati ya matawi, gharama kamili na usimamizi wa usambazaji.', modules: 'Uhasibu, Hifadhi, Hifadhi ya Juu, Mauzo, Manunuzi', href: '/sw/sekta/biashara/' },
+  { title: 'NGO na Mashirika Yasiyo ya Faida', image: '/src/assets/images/industries/nonprofits-volunteers.jpg', description: 'Uhasibu wa fedha zilizozuiliwa, ufuatiliaji wa bajeti kwa mradi, ripoti za sarafu nyingi kwa wafadhili na logframe.', modules: 'Uhasibu, Miradi, Mkakati & BSC, HR & Mishahara, Manunuzi', href: '/sw/sekta/zisizo-faida/' },
+  { title: 'Ushauri na Huduma za Kitaalamu', image: '/src/assets/images/industries/consultancy-analysts-meeting.jpg', description: 'Bili za miradi (T&M na hatua), karatasi za saa, ugawaji wa rasilimali, P&L ya mradi na usimamizi wa wateja.', modules: 'Uhasibu, Mauzo & CRM, Miradi, HR & Mishahara', href: '/sw/sekta/ushauri/' },
+  { title: 'Kilimo na Vyama vya Ushirika', image: '/src/assets/images/industries/agriculture-sorghum-field.jpg', description: 'Usajili wa wakulima, upokeaji wa msimu, ujumuishaji wa mizani, mikopo ya pembejeo na malipo ya mobile money.', modules: 'Uhasibu, Hifadhi, Shughuli za Wakulima, Manunuzi', href: '/sw/sekta/kilimo/' },
+  { title: 'Rejareja na POS', image: '/src/assets/images/industries/retail-pos-new.jpg', description: 'Kiolesura kilichoboreshwa cha mguso, msimbo wa mwambaa, njia nyingi za malipo, mobile money, risiti ya joto na hali ya nje ya mtandao.', modules: 'Uhasibu, Hifadhi, POS, Mauzo', href: '/sw/sekta/rejareja/' },
+  { title: 'Utalii', image: '/src/assets/images/industries/hospitality-hotel-new.jpg', description: 'POS na hali ya meza, usimamizi wa hisa, HR & Mishahara na ripoti za fedha kwa hoteli, migahawa na malazi.', modules: 'Uhasibu, Hifadhi, POS, HR & Mishahara', href: '/sw/sekta/utalii/' },
+  { title: 'Shule na Elimu', image: '/src/assets/images/industries/education-new.jpg', description: 'Ujumuishaji na Academia Pro kwa usimamizi wa shule. Fedha, HR, manunuzi na ripoti kwa taasisi za elimu.', modules: 'Uhasibu, HR & Mishahara, Manunuzi, Miradi', href: '/sw/sekta/elimu/' },
+];
+---
+
+<BaseLayout
+  title="Sekta — Kraal Code Iliyosanidiwa kwa Sekta Yako"
+  description="Ona jinsi Kraal Code inavyosanidiwa kwa viwanda, biashara, NGO, ushauri, kilimo, rejareja, utalii na elimu."
+  locale={locale}
+  canonicalUrl="https://kraalcode.com/sw/sekta/"
+>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Njia ya mkate"><ol><li><a href="/sw/">Nyumbani</a></li><li aria-current="page">Sekta</li></ol></nav>
+      <h1>Jukwaa moja, lililosanidiwa kwa sekta yako</h1>
+      <p class="page-hero-subtext">Kraal Code inabadilika kwa sekta yako na moduli sahihi, mtiririko wa kazi sahihi na ujumuishaji sahihi.</p>
+    </div>
+  </section>
+
+  <section class="section"><div class="container">
+    <div class="cap-grid">
+      {sectors.map((sector) => (
+        <a href={sector.href} class="cap-card">
+          <div class="cap-image">
+            <img src={sector.image} alt={sector.title} width="400" height="240" loading="lazy" />
+          </div>
+          <div class="cap-content">
+            <h2>{sector.title}</h2>
+            <p>{sector.description}</p>
+            <span class="cap-modules">Moduli: {sector.modules}</span>
+            <span class="cap-link">Jua zaidi →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div></section>
+
+  <section class="section--dark section"><div class="container text-center">
+    <h2>Huoni sekta yako?</h2><p>Kraal Code inaweza kusanidiwa kwa shirika lolote. Tujadili mahitaji yako.</p>
+    <a href="/sw/mawasiliano/" class="btn btn--inverse">Oma Onyesho →</a>
+  </div></section>
+</BaseLayout>
+
+<style>
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.cap-grid{display:flex;flex-direction:column;gap:var(--kc-space-8)}.cap-card{display:grid;grid-template-columns:300px 1fr;gap:var(--kc-space-8);padding:var(--kc-space-6);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg);transition:all var(--kc-transition-fast);text-decoration:none;color:inherit;align-items:center}.cap-card:hover{border-color:var(--kc-teal);box-shadow:var(--kc-shadow-md)}.cap-image{border-radius:var(--kc-radius-md);overflow:hidden;aspect-ratio:5/3}.cap-image img{width:100%;height:100%;object-fit:cover}.cap-content h2{font-size:var(--kc-text-xl);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);color:var(--kc-charcoal);margin-bottom:var(--kc-space-2)}.cap-content p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary);margin-bottom:var(--kc-space-3)}.cap-modules{display:block;font-size:var(--kc-text-xs);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-2)}.cap-link{font-size:var(--kc-text-sm);font-weight:var(--kc-weight-semibold);color:var(--kc-teal);transition:color var(--kc-transition-fast)}.cap-card:hover .cap-link{color:var(--kc-teal-deep)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.cap-card{grid-template-columns:1fr}.page-hero h1{font-size:var(--kc-text-3xl)}}
+</style>
