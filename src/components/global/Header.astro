@@ -59,7 +59,9 @@ const contactPath = getNavPath(locale, 'contact');
 
 function isActive(key: typeof navKeys[number]): boolean {
   const path = currentPath.replace(/\/$/, '');
-  return path.startsWith(navPaths[key].replace(/\/$/, ''));
+  const navPath = navPaths[key].replace(/\/$/, '');
+  if (navPath === `/${locale}`) return path === navPath;
+  return path.startsWith(navPath);
 }
 ---
 

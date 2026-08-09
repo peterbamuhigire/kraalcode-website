@@ -1,9 +1,12 @@
 ---
+import { getLocalizedPath, type Locale } from '../../utils/localizedRoutes';
+
 interface Props {
-  locale: 'en' | 'fr' | 'sw';
+  locale: Locale;
+  currentPath: string;
 }
 
-const { locale } = Astro.props;
+const { locale, currentPath } = Astro.props;
 
 const content: Record<string, {
   tagline: string;
@@ -109,6 +112,12 @@ const content: Record<string, {
 };
 
 const t = content[locale];
+
+const localePaths: Record<Locale, string> = {
+  en: getLocalizedPath(currentPath, 'en'),
+  fr: getLocalizedPath(currentPath, 'fr'),
+  sw: getLocalizedPath(currentPath, 'sw'),
+};
 ---
 
 <footer class="site-footer" role="contentinfo">
@@ -160,9 +169,9 @@ const t = content[locale];
     <div class="container footer-bottom-inner">
       <p class="footer-copyright">{t.copyright}</p>
       <div class="footer-lang">
-        <a href="/en/" class:list={[{ active: locale === 'en' }]}>EN</a>
-        <a href="/fr/" class:list={[{ active: locale === 'fr' }]}>FR</a>
-        <a href="/sw/" class:list={[{ active: locale === 'sw' }]}>SW</a>
+        <a href={localePaths.en} class:list={[{ active: locale === 'en' }]}>EN</a>
+        <a href={localePaths.fr} class:list={[{ active: locale === 'fr' }]}>FR</a>
+        <a href={localePaths.sw} class:list={[{ active: locale === 'sw' }]}>SW</a>
       </div>
     </div>
   </div>
