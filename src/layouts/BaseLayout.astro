@@ -4,7 +4,8 @@ import '../styles/foundations/reset.css';
 import '../styles/foundations/global.css';
 import Header from '../components/global/Header.astro';
 import Footer from '../components/global/Footer.astro';
-import { getLocalizedAlternates } from '../utils/localizedRoutes';
+import { getLocalizedAlternates, getRouteKey } from '../utils/localizedRoutes';
+import { getDetailHero } from '../utils/detailHeroes';
 
 interface Props {
   title: string;
@@ -28,6 +29,11 @@ const siteName = 'Kraal Code';
 const fullTitle = `${title} | ${siteName}`;
 
 const alternates = getLocalizedAlternates(Astro.url.pathname);
+const routeKey = getRouteKey(Astro.url.pathname);
+const detailHero = getDetailHero(Astro.url.pathname);
+const detailHeroStyle = detailHero
+  ? `--hero-image: url("${detailHero.image}"); --hero-position: ${detailHero.position}; --hero-eyebrow: "${detailHero.eyebrow[locale]}";`
+  : undefined;
 ---
 
 <!DOCTYPE html>
@@ -64,6 +70,8 @@ const alternates = getLocalizedAlternates(Astro.url.pathname);
   <meta property="og:site_name" content={siteName} />
   <meta property="og:locale" content={locale === 'en' ? 'en_UG' : locale === 'fr' ? 'fr_FR' : 'sw_KE'} />
 
+  {detailHero && <link rel="preload" as="image" href={detailHero.image} />}
+
   {/* Twitter */}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={fullTitle} />
@@ -92,7 +100,7 @@ const alternates = getLocalizedAlternates(Astro.url.pathname);
     }
   })} />
 </head>
-<body>
+<body class:list={{ 'detail-route': Boolean(detailHero) }} data-route={routeKey} style={detailHeroStyle}>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <Header locale={locale} currentPath={Astro.url.pathname} />
   <main id="main-content">

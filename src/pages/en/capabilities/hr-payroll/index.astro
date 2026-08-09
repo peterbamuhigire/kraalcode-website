@@ -20,6 +20,7 @@ const locale = 'en';
   <section class="section"><div class="container container--narrow">
     <h2>Who this is for</h2>
     <p>HR managers, payroll officers, department heads, and business owners who need to manage people operations cleanly — contracts, leave, attendance, payroll, and statutory compliance — without maintaining parallel spreadsheets.</p>
+    <p>If your organisation pays staff, tracks leave, runs appraisals, or reports to NSSF and URA — and you need those records to flow into the general ledger without manual re-entry — this module handles the full employee lifecycle.</p>
   </div></section>
 
   <section class="section section--warm"><div class="container">
@@ -32,37 +33,197 @@ const locale = 'en';
       <div class="feature-card"><h3>Statutory Compliance</h3><p>Uganda NSSF and PAYE calculations built in. Configurable for other East African tax authorities. Generate NSSF schedules and PAYE returns in the formats required by authorities.</p></div>
       <div class="feature-card"><h3>Performance Appraisals</h3><p>Define appraisal templates with KPIs and competencies. Employees self-assess. Supervisors score and comment. Track appraisal cycles by department and fiscal year.</p></div>
       <div class="feature-card"><h3>Organisation Chart</h3><p>Visualise the organisation structure. Show departments, reporting lines, and headcounts. Navigate from the org chart to individual staff profiles.</p></div>
-      <div class="feature-card"><h3>Recruitment</h3><p>Post positions, receive applications, track candidates through screening and interview stages. Convert successful candidates to employees. Maintain a recruitment pipeline.</p></div>
+      <div class="feature-card"><h3>Recruitment</h3><p>Post positions, receive applications, track candidates through screening and interview stages. Convert successful candidates to employees. Maintain a recruitment pipeline with stage analytics.</p></div>
     </div>
   </div></section>
 
   <section class="section"><div class="container container--narrow">
     <h2>How it connects</h2>
+    <p>Payroll is one of the largest cost items in any organisation. This module posts to accounting automatically on approval:</p>
     <ul class="connection-list">
       <li><strong>Accounting</strong> → payroll entries (salary, NSSF, PAYE, net pay) posted to GL on approval</li>
       <li><strong>Manufacturing</strong> → worker assignments and labour cost allocation to production orders</li>
-      <li><strong>Projects</strong> → resource allocation and timesheet tracking</li>
+      <li><strong>Projects</strong> → resource allocation and timesheet tracking for project costing</li>
       <li><strong>Self-Service Portal</strong> → employees view payslips, submit leave requests, update profile</li>
     </ul>
   </div></section>
 
-  <section class="section section--warm"><div class="container">
+  <section class="section section--warm"><div class="container container--narrow">
+    <h2>Controls and permissions</h2>
+    <div class="controls-grid">
+      <div class="control-item"><h3>Payroll Approval</h3><p>Payroll runs require HR manager approval before posting. Finance reviews and approves the payroll journal. Dual sign-off before funds are released.</p></div>
+      <div class="control-item"><h3>Salary Confidentiality</h3><p>Salary details visible only to HR and finance roles. Managers see their team's attendance and leave but not compensation. Self-service shows own payslip only.</p></div>
+      <div class="control-item"><h3>Leave Override Control</h3><p>Leave balances cannot be manually adjusted without documented approval. Negative leave balances require director-level authorisation. All adjustments are audited.</p></div>
+      <div class="control-item"><h3>Audit Trail</h3><p>Every payroll run, leave approval, appraisal submission, and employee record change is logged with user, timestamp, and IP. INSERT-only log. No HR record can be silently altered.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container">
     <h2>See it in action</h2>
     <p class="screenshot-intro">Screenshots from the live Kraal Code system — coming soon.</p>
     <div class="screenshot-grid">
       <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Payroll Run</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
       <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Staff Profile</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
-      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Leave Management</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Leave Calendar</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
       <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Performance Appraisal</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
     </div>
   </div></section>
 
   <section class="section--dark section"><div class="container text-center">
-    <h2>See HR & Payroll in action</h2><p>Request a demonstration tailored to your people operations needs.</p>
+    <h2>See HR & Payroll in action</h2>
+    <p>Request a demonstration tailored to your people operations needs.</p>
     <a href="/en/contact/" class="btn btn--inverse">Request a Demonstration →</a>
   </div></section>
 </BaseLayout>
 
 <style>
-  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.connection-list{margin-top:var(--kc-space-4)}.connection-list li{margin-bottom:var(--kc-space-3);font-size:var(--kc-text-base);color:var(--kc-text-secondary)}.connection-list strong{color:var(--kc-text-primary)}.screenshot-intro{color:var(--kc-text-secondary);margin-bottom:var(--kc-space-6)}.screenshot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6)}.screenshot-placeholder{aspect-ratio:16/10;background:var(--kc-surface-warm);border:2px dashed var(--kc-border);border-radius:var(--kc-radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--kc-space-2)}.screenshot-label{font-weight:var(--kc-weight-semibold);color:var(--kc-text-primary)}.screenshot-note{font-size:var(--kc-text-sm);color:var(--kc-text-tertiary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.feature-grid,.screenshot-grid{grid-template-columns:1fr}}
+  .page-hero {
+    padding: var(--kc-space-20) 0 var(--kc-space-12);
+  }
+  .page-hero h1 {
+    font-size: var(--kc-text-4xl);
+    max-width: 700px;
+  }
+  .page-hero-subtext {
+    font-size: var(--kc-text-lg);
+    color: var(--kc-text-secondary);
+    max-width: 60ch;
+    margin-top: var(--kc-space-4);
+  }
+  .breadcrumb ol {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: var(--kc-space-2);
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-tertiary);
+    margin-bottom: var(--kc-space-6);
+  }
+  .breadcrumb a {
+    color: var(--kc-teal);
+    text-decoration: none;
+  }
+  .breadcrumb li:not(:last-child)::after {
+    content: '/';
+    margin-left: var(--kc-space-2);
+    color: var(--kc-text-tertiary);
+  }
+  .container--narrow {
+    max-width: var(--kc-container-narrow);
+  }
+  .container--narrow p {
+    font-size: var(--kc-text-base);
+    color: var(--kc-text-secondary);
+    line-height: var(--kc-leading-relaxed);
+    margin-bottom: var(--kc-space-4);
+  }
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--kc-space-6);
+    margin-top: var(--kc-space-8);
+  }
+  .feature-card {
+    padding: var(--kc-space-6);
+    background: var(--kc-surface-light);
+    border: 1px solid var(--kc-border-subtle);
+    border-radius: var(--kc-radius-lg);
+  }
+  .feature-card h3 {
+    font-size: var(--kc-text-lg);
+    font-family: var(--kc-font-body);
+    font-weight: var(--kc-weight-semibold);
+    margin-bottom: var(--kc-space-2);
+  }
+  .feature-card p {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-secondary);
+  }
+  .connection-list {
+    margin-top: var(--kc-space-4);
+  }
+  .connection-list li {
+    margin-bottom: var(--kc-space-3);
+    font-size: var(--kc-text-base);
+    color: var(--kc-text-secondary);
+  }
+  .connection-list strong {
+    color: var(--kc-text-primary);
+  }
+  .controls-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--kc-space-6);
+    margin-top: var(--kc-space-6);
+  }
+  .control-item {
+    padding: var(--kc-space-5);
+    border-left: 3px solid var(--kc-teal);
+  }
+  .control-item h3 {
+    font-size: var(--kc-text-base);
+    font-family: var(--kc-font-body);
+    font-weight: var(--kc-weight-semibold);
+    margin-bottom: var(--kc-space-1);
+  }
+  .control-item p {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-secondary);
+  }
+  .screenshot-intro {
+    color: var(--kc-text-secondary);
+    margin-bottom: var(--kc-space-6);
+  }
+  .screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--kc-space-6);
+  }
+  .screenshot-placeholder {
+    aspect-ratio: 16 / 10;
+    background: var(--kc-surface-warm);
+    border: 2px dashed var(--kc-border);
+    border-radius: var(--kc-radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--kc-space-2);
+  }
+  .screenshot-label {
+    font-weight: var(--kc-weight-semibold);
+    color: var(--kc-text-primary);
+  }
+  .screenshot-note {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-tertiary);
+  }
+  .btn--inverse {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--kc-space-4) var(--kc-space-8);
+    font-weight: var(--kc-weight-semibold);
+    font-size: var(--kc-text-base);
+    border-radius: var(--kc-radius-lg);
+    background: transparent;
+    color: var(--kc-text-inverse);
+    border: 2px solid var(--kc-teal-light);
+    transition: all var(--kc-transition-fast);
+    text-decoration: none;
+    margin-top: var(--kc-space-6);
+  }
+  .btn--inverse:hover {
+    background: var(--kc-teal);
+    border-color: var(--kc-teal);
+  }
+  @media (max-width: 768px) {
+    .page-hero h1 {
+      font-size: var(--kc-text-3xl);
+    }
+    .feature-grid,
+    .controls-grid,
+    .screenshot-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>

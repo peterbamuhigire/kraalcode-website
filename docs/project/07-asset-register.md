@@ -9,7 +9,7 @@
 
 | Category | Count | Status |
 |----------|-------|--------|
-| Images in `src/assets/images/` | 53 | Usable |
+| Images in `src/assets/images/` and `public/src/assets/images/` | 60 | Usable |
 | Images in `photo-bank/` | 35 | Unused/extra |
 | Logo PNGs in `public/icons/` | 2 | Usable |
 | Favicon PNGs in `public/icons/` | 3 | Oversized (201KB each) |
@@ -89,6 +89,18 @@
 | schools-classroom.jpg | 360 | Classroom | /en/sectors/education/ |
 | schools-science-lesson.jpg | 367 | Science lesson | /en/sectors/education/ |
 | schools-student-tablet.jpg | 359 | Student with tablet | /en/sectors/education/ |
+
+### `detail-heroes/` (7 files)
+
+| File | KB | Subject | Placement |
+|------|----|---------|-----------|
+| procurement-management.jpg | 274 | Procurement workflow and supply chain interface | Capability detail hero: procurement |
+| inventory-warehouse-inspection.jpg | 298 | Warehouse operator inspecting inventory | Capability detail hero: inventory |
+| manufacturing-factory-worker.jpg | 482 | Factory operator at production control panel | Capability and sector detail heroes: manufacturing |
+| retail-pos.jpg | 377 | Retail operator using POS terminal | Capability and sector detail heroes: sales and retail |
+| hospitality-hotel.jpg | 316 | Hotel reception and guest service | Sector detail hero: hospitality |
+| trading-distribution.jpg | 367 | Distribution worker loading a delivery | Sector detail hero: trading and distribution |
+| education.jpg | 462 | Students learning with computers | Sector detail hero: education |
 
 ### `product/` (2 files)
 
@@ -179,5 +191,6 @@ Subset: latin-ext (covers English, French diacritics, Kiswahili)
 | Logo PNGs | Owned by Chwezi Core Systems |
 | Stock photos (53) | **Unknown** — no model release or licence documentation found |
 | Photo-bank photos (35) | **Unknown** — same source as above |
+| User-supplied Downloads photos (7) | **Unknown** — placement approved by project owner; licence/release evidence still required |
 
 **Risk:** Stock photos may require licence verification before production use. Mark as `unknown` until confirmed.

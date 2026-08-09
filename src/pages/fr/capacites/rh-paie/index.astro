@@ -9,15 +9,18 @@ const locale = 'fr';
   locale={locale}
   canonicalUrl="https://kraalcode.com/fr/capacites/rh-paie/"
 >
-  <section class="page-hero section--warm"><div class="container">
-    <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/fr/">Accueil</a></li><li><a href="/fr/capacites/">Capacités</a></li><li aria-current="page">RH et Paie</li></ol></nav>
-    <h1>RH et Paie</h1>
-    <p class="page-hero-subtext">Du recrutement au départ. Dossiers employés, congés, présence, paie, évaluations et conformité légale — dans un seul système.</p>
-  </div></section>
+  <section class="page-hero section--warm">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane"><ol><li><a href="/fr/">Accueil</a></li><li><a href="/fr/capacites/">Capacités</a></li><li aria-current="page">RH et Paie</li></ol></nav>
+      <h1>RH et Paie</h1>
+      <p class="page-hero-subtext">Du recrutement au départ. Dossiers employés, congés, présence, paie, évaluations et conformité légale — dans un seul système.</p>
+    </div>
+  </section>
 
   <section class="section"><div class="container container--narrow">
     <h2>À qui s'adresse ce module</h2>
     <p>Responsables RH, gestionnaires de paie, chefs de service et dirigeants qui doivent gérer les opérations du personnel proprement — contrats, congés, présence, paie et conformité légale — sans maintenir des tableurs parallèles.</p>
+    <p>Que vous employiez dix personnes ou mille, ce module automatise les tâches répétitives de la gestion du personnel et garantit que chaque employé est payé correctement et en conformité avec la législation locale.</p>
   </div></section>
 
   <section class="section section--warm"><div class="container">
@@ -34,6 +37,37 @@ const locale = 'fr';
     </div>
   </div></section>
 
+  <section class="section"><div class="container container--narrow">
+    <h2>Comment les modules se connectent</h2>
+    <ul class="connection-list">
+      <li><strong>Comptabilité</strong> → comptabilisation automatique des salaires, cotisations CNSS, impôt sur le revenu et net à payer</li>
+      <li><strong>Projets</strong> → imputation du temps de travail sur les projets pour le coût de la main-d'œuvre</li>
+      <li><strong>Feuilles de temps</strong> → les données de présence alimentent directement le calcul des heures supplémentaires et des retenues</li>
+      <li><strong>Direction</strong> → tableaux de bord des effectifs, coûts salariaux et indicateurs RH pour la prise de décision</li>
+    </ul>
+  </div></section>
+
+  <section class="section section--warm"><div class="container container--narrow">
+    <h2>Contrôles et permissions</h2>
+    <div class="controls-grid">
+      <div class="control-item"><h3>Validation Hiérarchique</h3><p>Les demandes de congés et les modifications de données employés nécessitent l'approbation du supérieur direct. Circuits de validation configurables par département.</p></div>
+      <div class="control-item"><h3>Confidentialité des Données</h3><p>Les données salariales et les informations personnelles sensibles sont accessibles uniquement aux utilisateurs autorisés. Masquage automatique des données selon le profil.</p></div>
+      <div class="control-item"><h3>Verrouillage de la Paie</h3><p>Une fois le bulletin de paie validé, aucune modification n'est possible sans procédure de déverrouillage auditée. Historique complet des traitements de paie.</p></div>
+      <div class="control-item"><h3>Piste d'Audit RH</h3><p>Chaque modification de dossier employé, approbation de congé et traitement de paie est horodatée et traçable. Conformité aux exigences d'audit du personnel.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container">
+    <h2>Voir en action</h2>
+    <p class="screenshot-intro">Captures d'écran du système Kraal Code — bientôt disponibles.</p>
+    <div class="screenshot-grid">
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Dossier Employé</span><span class="screenshot-note">Capture d'écran — bientôt disponible</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Bulletin de Paie</span><span class="screenshot-note">Capture d'écran — bientôt disponible</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Organigramme</span><span class="screenshot-note">Capture d'écran — bientôt disponible</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Tableau de Bord RH</span><span class="screenshot-note">Capture d'écran — bientôt disponible</span></div></div>
+    </div>
+  </div></section>
+
   <section class="section--dark section"><div class="container text-center">
     <h2>Voir les RH et la paie en action</h2><p>Demandez une démonstration adaptée à vos opérations du personnel.</p>
     <a href="/fr/contact/" class="btn btn--inverse">Demander une démonstration →</a>
@@ -41,5 +75,5 @@ const locale = 'fr';
 </BaseLayout>
 
 <style>
-  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.feature-grid{grid-template-columns:1fr}}
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.container--narrow p{font-size:var(--kc-text-base);color:var(--kc-text-secondary);line-height:var(--kc-leading-relaxed);margin-bottom:var(--kc-space-4)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.connection-list{margin-top:var(--kc-space-4)}.connection-list li{margin-bottom:var(--kc-space-3);font-size:var(--kc-text-base);color:var(--kc-text-secondary)}.connection-list strong{color:var(--kc-text-primary)}.controls-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-6)}.control-item{padding:var(--kc-space-5);border-left:3px solid var(--kc-teal)}.control-item h3{font-size:var(--kc-text-base);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-1)}.control-item p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.screenshot-intro{color:var(--kc-text-secondary);margin-bottom:var(--kc-space-6)}.screenshot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6)}.screenshot-placeholder{aspect-ratio:16/10;background:var(--kc-surface-warm);border:2px dashed var(--kc-border);border-radius:var(--kc-radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--kc-space-2)}.screenshot-label{font-weight:var(--kc-weight-semibold);color:var(--kc-text-primary)}.screenshot-note{font-size:var(--kc-text-sm);color:var(--kc-text-tertiary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.feature-grid,.controls-grid,.screenshot-grid{grid-template-columns:1fr}}
 </style>

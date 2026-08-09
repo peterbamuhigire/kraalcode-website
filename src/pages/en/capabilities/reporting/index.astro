@@ -20,6 +20,7 @@ const locale = 'en';
   <section class="section"><div class="container container--narrow">
     <h2>Who this is for</h2>
     <p>CEOs, directors, department heads, and anyone who needs to see what is happening across the organisation — without waiting for month-end reports or asking someone to run a query.</p>
+    <p>If you sit on a board, manage a department, report to donors, or need to make decisions based on current data rather than last month's spreadsheets, this module replaces manual report preparation with live, role-based dashboards.</p>
   </div></section>
 
   <section class="section section--warm"><div class="container">
@@ -40,33 +41,192 @@ const locale = 'en';
     <h2>How it connects</h2>
     <p>Reporting is not a separate module — it is the lens through which every other module is visible. Every dashboard pulls from the same live data:</p>
     <ul class="connection-list">
-      <li><strong>Accounting</strong> → financial statements, budgets, trial balance</li>
-      <li><strong>Sales</strong> → sales trends, customer analytics, agent performance</li>
-      <li><strong>Inventory</strong> → stock levels, valuation, movement history</li>
+      <li><strong>Accounting</strong> → financial statements, budgets, trial balance, cash flow</li>
+      <li><strong>Sales</strong> → sales trends, customer analytics, agent performance, pipeline</li>
+      <li><strong>Inventory</strong> → stock levels, valuation, movement history, reorder alerts</li>
       <li><strong>Procurement</strong> → spend analysis, vendor performance, AP aging</li>
-      <li><strong>HR</strong> → headcount, payroll costs, leave balances</li>
-      <li><strong>Manufacturing</strong> → production efficiency, yield, QC statistics</li>
+      <li><strong>HR</strong> → headcount, payroll costs, leave balances, appraisal scores</li>
+      <li><strong>Manufacturing</strong> → production efficiency, yield, QC statistics, WIP value</li>
       <li><strong>Strategy & BSC</strong> → strategic objectives, KPIs, departmental workplans</li>
     </ul>
   </div></section>
 
-  <section class="section section--warm"><div class="container">
+  <section class="section section--warm"><div class="container container--narrow">
+    <h2>Controls and permissions</h2>
+    <div class="controls-grid">
+      <div class="control-item"><h3>Role-Based Dashboards</h3><p>Each user sees only the dashboards relevant to their role. Finance sees accounting dashboards; sales managers see sales dashboards. No cross-department data leakage.</p></div>
+      <div class="control-item"><h3>Data Access Scoping</h3><p>Reports respect the same permission boundaries as transactions. A branch manager sees only their branch data. A department head sees only their department's costs.</p></div>
+      <div class="control-item"><h3>Export Controls</h3><p>Data exports (PDF, Excel) are logged with user and timestamp. Sensitive reports (financial statements, payroll summaries) require additional approval before export.</p></div>
+      <div class="control-item"><h3>Audit Trail</h3><p>Every report generation, export, and dashboard configuration change is logged. INSERT-only records. Report access history available for compliance reviews.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container">
     <h2>See it in action</h2>
     <p class="screenshot-intro">Screenshots from the live Kraal Code system — coming soon.</p>
     <div class="screenshot-grid">
       <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Executive Dashboard</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
       <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">KPI Dashboard</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
       <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Compliance Dashboard</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
-      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Strategic Plan</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Financial Statements</span><span class="screenshot-note">Live product screenshot — coming soon</span></div></div>
     </div>
   </div></section>
 
   <section class="section--dark section"><div class="container text-center">
-    <h2>See reporting in action</h2><p>Request a demonstration tailored to your management reporting needs.</p>
+    <h2>See reporting in action</h2>
+    <p>Request a demonstration tailored to your management reporting needs.</p>
     <a href="/en/contact/" class="btn btn--inverse">Request a Demonstration →</a>
   </div></section>
 </BaseLayout>
 
 <style>
-  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.connection-list{margin-top:var(--kc-space-4)}.connection-list li{margin-bottom:var(--kc-space-3);font-size:var(--kc-text-base);color:var(--kc-text-secondary)}.connection-list strong{color:var(--kc-text-primary)}.screenshot-intro{color:var(--kc-text-secondary);margin-bottom:var(--kc-space-6)}.screenshot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6)}.screenshot-placeholder{aspect-ratio:16/10;background:var(--kc-surface-warm);border:2px dashed var(--kc-border);border-radius:var(--kc-radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--kc-space-2)}.screenshot-label{font-weight:var(--kc-weight-semibold);color:var(--kc-text-primary)}.screenshot-note{font-size:var(--kc-text-sm);color:var(--kc-text-tertiary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.feature-grid,.screenshot-grid{grid-template-columns:1fr}}
+  .page-hero {
+    padding: var(--kc-space-20) 0 var(--kc-space-12);
+  }
+  .page-hero h1 {
+    font-size: var(--kc-text-4xl);
+    max-width: 700px;
+  }
+  .page-hero-subtext {
+    font-size: var(--kc-text-lg);
+    color: var(--kc-text-secondary);
+    max-width: 60ch;
+    margin-top: var(--kc-space-4);
+  }
+  .breadcrumb ol {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: var(--kc-space-2);
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-tertiary);
+    margin-bottom: var(--kc-space-6);
+  }
+  .breadcrumb a {
+    color: var(--kc-teal);
+    text-decoration: none;
+  }
+  .breadcrumb li:not(:last-child)::after {
+    content: '/';
+    margin-left: var(--kc-space-2);
+    color: var(--kc-text-tertiary);
+  }
+  .container--narrow {
+    max-width: var(--kc-container-narrow);
+  }
+  .container--narrow p {
+    font-size: var(--kc-text-base);
+    color: var(--kc-text-secondary);
+    line-height: var(--kc-leading-relaxed);
+    margin-bottom: var(--kc-space-4);
+  }
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--kc-space-6);
+    margin-top: var(--kc-space-8);
+  }
+  .feature-card {
+    padding: var(--kc-space-6);
+    background: var(--kc-surface-light);
+    border: 1px solid var(--kc-border-subtle);
+    border-radius: var(--kc-radius-lg);
+  }
+  .feature-card h3 {
+    font-size: var(--kc-text-lg);
+    font-family: var(--kc-font-body);
+    font-weight: var(--kc-weight-semibold);
+    margin-bottom: var(--kc-space-2);
+  }
+  .feature-card p {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-secondary);
+  }
+  .connection-list {
+    margin-top: var(--kc-space-4);
+  }
+  .connection-list li {
+    margin-bottom: var(--kc-space-3);
+    font-size: var(--kc-text-base);
+    color: var(--kc-text-secondary);
+  }
+  .connection-list strong {
+    color: var(--kc-text-primary);
+  }
+  .controls-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--kc-space-6);
+    margin-top: var(--kc-space-6);
+  }
+  .control-item {
+    padding: var(--kc-space-5);
+    border-left: 3px solid var(--kc-teal);
+  }
+  .control-item h3 {
+    font-size: var(--kc-text-base);
+    font-family: var(--kc-font-body);
+    font-weight: var(--kc-weight-semibold);
+    margin-bottom: var(--kc-space-1);
+  }
+  .control-item p {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-secondary);
+  }
+  .screenshot-intro {
+    color: var(--kc-text-secondary);
+    margin-bottom: var(--kc-space-6);
+  }
+  .screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--kc-space-6);
+  }
+  .screenshot-placeholder {
+    aspect-ratio: 16 / 10;
+    background: var(--kc-surface-warm);
+    border: 2px dashed var(--kc-border);
+    border-radius: var(--kc-radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--kc-space-2);
+  }
+  .screenshot-label {
+    font-weight: var(--kc-weight-semibold);
+    color: var(--kc-text-primary);
+  }
+  .screenshot-note {
+    font-size: var(--kc-text-sm);
+    color: var(--kc-text-tertiary);
+  }
+  .btn--inverse {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--kc-space-4) var(--kc-space-8);
+    font-weight: var(--kc-weight-semibold);
+    font-size: var(--kc-text-base);
+    border-radius: var(--kc-radius-lg);
+    background: transparent;
+    color: var(--kc-text-inverse);
+    border: 2px solid var(--kc-teal-light);
+    transition: all var(--kc-transition-fast);
+    text-decoration: none;
+    margin-top: var(--kc-space-6);
+  }
+  .btn--inverse:hover {
+    background: var(--kc-teal);
+    border-color: var(--kc-teal);
+  }
+  @media (max-width: 768px) {
+    .page-hero h1 {
+      font-size: var(--kc-text-3xl);
+    }
+    .feature-grid,
+    .controls-grid,
+    .screenshot-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>

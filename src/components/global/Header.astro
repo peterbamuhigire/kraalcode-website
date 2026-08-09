@@ -91,7 +91,7 @@ function isActive(key: typeof navKeys[number]): boolean {
     <div class="header-actions">
       {/* Language Switcher */}
       <div class="lang-switcher" role="group" aria-label="Language">
-        {Object.entries(localeLabels).map(([code, label]) => (
+        {(Object.entries(localeLabels) as Array<[Locale, string]>).map(([code, label]) => (
           <a
             href={localePaths[code]}
             class:list={['lang-btn', { active: code === locale }]}
@@ -134,7 +134,7 @@ function isActive(key: typeof navKeys[number]): boolean {
         <li><a href={contactPath} class="btn btn--primary">{t.demo}</a></li>
       </ul>
       <div class="mobile-lang-switcher">
-        {Object.entries(localeLabels).map(([code, label]) => (
+        {(Object.entries(localeLabels) as Array<[Locale, string]>).map(([code, label]) => (
           <a
             href={localePaths[code]}
             class:list={['lang-btn', { active: code === locale }]}

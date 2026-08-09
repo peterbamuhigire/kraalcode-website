@@ -20,6 +20,7 @@ const locale = 'fr';
   <section class="section"><div class="container container--narrow">
     <h2>À qui s'adresse ce module</h2>
     <p>Responsables d'entrepôt, chefs de magasin, agents d'approvisionnement et dirigeants qui ont besoin d'une visibilité précise des stocks sur tous les sites — sans réconcilier des tableurs en fin de mois.</p>
+    <p>Que vous gériez un entrepôt unique ou un réseau de magasins répartis sur plusieurs villes, ce module vous donne le contrôle total des mouvements de stock, de la réception à la livraison.</p>
   </div></section>
 
   <section class="section section--warm"><div class="container">
@@ -43,7 +44,29 @@ const locale = 'fr';
       <li><strong>Achats</strong> → augmentation du stock à la réception, rapprochement avec les bons de commande</li>
       <li><strong>Fabrication</strong> → consommation de matières premières, réception de produits finis</li>
       <li><strong>Comptabilité</strong> → chaque mouvement de stock est comptabilisé automatiquement au grand livre</li>
+      <li><strong>Agents commerciaux</strong> → suivi des stocks en dépôt chez les agents avec gestion des commissions</li>
     </ul>
+  </div></section>
+
+  <section class="section section--warm"><div class="container container--narrow">
+    <h2>Contrôles et permissions</h2>
+    <div class="controls-grid">
+      <div class="control-item"><h3>Accès par Site</h3><p>Restreignez les utilisateurs à des entrepôts ou sites spécifiques. Un responsable d'entrepôt à Kampala ne peut pas accéder au stock de Mombasa sans autorisation explicite.</p></div>
+      <div class="control-item"><h3>Circuits de Validation</h3><p>Les ajustements de stock, transferts et mises au rebut nécessitent une approbation. Configurez les seuils et les chaînes de validation par site.</p></div>
+      <div class="control-item"><h3>Livre de Stock Immuable</h3><p>Chaque transaction de stock est enregistrée dans le livre de stock. Pas de suppression, uniquement des contrepassations. Traçabilité complète de la réception à l'expédition.</p></div>
+      <div class="control-item"><h3>Intégration Comptable</h3><p>Chaque mouvement d'inventaire se comptabilise au grand livre. Valorisation, ajustements et transferts se reflètent toujours dans les écritures comptables.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container">
+    <h2>Voir en action</h2>
+    <p class="screenshot-intro">Captures d'écran du système Kraal Code — bientôt disponibles.</p>
+    <div class="screenshot-grid">
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Tableau de Bord Entrepôt</span><span class="screenshot-note">Capture d'écran — bientôt disponible</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Résumé du Stock</span><span class="screenshot-note">Capture d'écran — bientôt disponible</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Valorisation des Stocks</span><span class="screenshot-note">Capture d'écran — bientôt disponible</span></div></div>
+      <div class="screenshot-slot"><div class="screenshot-placeholder"><span class="screenshot-label">Suivi des Lots</span><span class="screenshot-note">Capture d'écran — bientôt disponible</span></div></div>
+    </div>
   </div></section>
 
   <section class="section--dark section"><div class="container text-center">
@@ -53,5 +76,5 @@ const locale = 'fr';
 </BaseLayout>
 
 <style>
-  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.connection-list{margin-top:var(--kc-space-4)}.connection-list li{margin-bottom:var(--kc-space-3);font-size:var(--kc-text-base);color:var(--kc-text-secondary)}.connection-list strong{color:var(--kc-text-primary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.feature-grid{grid-template-columns:1fr}}
+  .page-hero{padding:var(--kc-space-20) 0 var(--kc-space-12)}.page-hero h1{font-size:var(--kc-text-4xl);max-width:700px}.page-hero-subtext{font-size:var(--kc-text-lg);color:var(--kc-text-secondary);max-width:60ch;margin-top:var(--kc-space-4)}.breadcrumb ol{list-style:none;padding:0;display:flex;gap:var(--kc-space-2);font-size:var(--kc-text-sm);color:var(--kc-text-tertiary);margin-bottom:var(--kc-space-6)}.breadcrumb a{color:var(--kc-teal);text-decoration:none}.breadcrumb li:not(:last-child)::after{content:'/';margin-left:var(--kc-space-2);color:var(--kc-text-tertiary)}.container--narrow{max-width:var(--kc-container-narrow)}.container--narrow p{font-size:var(--kc-text-base);color:var(--kc-text-secondary);line-height:var(--kc-leading-relaxed);margin-bottom:var(--kc-space-4)}.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-8)}.feature-card{padding:var(--kc-space-6);background:var(--kc-surface-light);border:1px solid var(--kc-border-subtle);border-radius:var(--kc-radius-lg)}.feature-card h3{font-size:var(--kc-text-lg);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-2)}.feature-card p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.connection-list{margin-top:var(--kc-space-4)}.connection-list li{margin-bottom:var(--kc-space-3);font-size:var(--kc-text-base);color:var(--kc-text-secondary)}.connection-list strong{color:var(--kc-text-primary)}.controls-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6);margin-top:var(--kc-space-6)}.control-item{padding:var(--kc-space-5);border-left:3px solid var(--kc-teal)}.control-item h3{font-size:var(--kc-text-base);font-family:var(--kc-font-body);font-weight:var(--kc-weight-semibold);margin-bottom:var(--kc-space-1)}.control-item p{font-size:var(--kc-text-sm);color:var(--kc-text-secondary)}.screenshot-intro{color:var(--kc-text-secondary);margin-bottom:var(--kc-space-6)}.screenshot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--kc-space-6)}.screenshot-placeholder{aspect-ratio:16/10;background:var(--kc-surface-warm);border:2px dashed var(--kc-border);border-radius:var(--kc-radius-lg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--kc-space-2)}.screenshot-label{font-weight:var(--kc-weight-semibold);color:var(--kc-text-primary)}.screenshot-note{font-size:var(--kc-text-sm);color:var(--kc-text-tertiary)}.btn--inverse{display:inline-flex;align-items:center;padding:var(--kc-space-4) var(--kc-space-8);font-weight:var(--kc-weight-semibold);font-size:var(--kc-text-base);border-radius:var(--kc-radius-lg);background:transparent;color:var(--kc-text-inverse);border:2px solid var(--kc-teal-light);transition:all var(--kc-transition-fast);text-decoration:none;margin-top:var(--kc-space-6)}.btn--inverse:hover{background:var(--kc-teal);border-color:var(--kc-teal)}@media(max-width:768px){.page-hero h1{font-size:var(--kc-text-3xl)}.feature-grid,.controls-grid,.screenshot-grid{grid-template-columns:1fr}}
 </style>
