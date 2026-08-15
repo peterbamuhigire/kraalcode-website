@@ -238,6 +238,26 @@ small {
   padding-inline: var(--kc-space-4);
 }
 
+/* Long-form and policy content must show the semantic list markers removed by the reset. */
+.article-body ul,
+.legal-content ul {
+  list-style: disc;
+  padding-inline-start: var(--kc-space-6);
+}
+
+.article-body ol,
+.legal-content ol,
+.article-sources ol {
+  list-style: decimal;
+  padding-inline-start: var(--kc-space-6);
+}
+
+.article-body li,
+.legal-content li,
+.article-sources li {
+  list-style-position: outside;
+}
+
 :where([class$="-card"], [class*="-card "]) {
   padding: max(var(--kc-space-4), var(--card-padding, 0px));
 }

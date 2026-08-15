@@ -1,5 +1,11 @@
 # Release notes
 
+## 2026-08-15 — Blog QA corrections
+
+- Fixed related-article cards so they derive slugs from Astro content entries instead of linking to `/undefined/`.
+- Restored visible disc and decimal markers for blog article bodies, source lists, and legal-content lists while leaving navigation lists unmarked.
+- Rebuilt and verified the site: 135 pages, zero typecheck errors, and no undefined blog URLs.
+
 ## 2026-08-15 — Phase 21 blog publication
 
 ### Added
