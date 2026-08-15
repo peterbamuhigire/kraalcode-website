@@ -32,7 +32,7 @@
 | G-14 | Button styles duplicated across 8+ components | Dev | 04 | Open |
 | G-15 | Swahili bug: OutcomeSection uses `caption` instead of `description` | Dev | 06 | **Resolved** — key changed from `caption` to `description` on line 53 |
 | G-16 | No `@font-face` declarations in CSS | Dev | 05 | **Resolved** — @font-face for Source Serif 4 + Source Sans 3 (weights 400/600/700) added to tokens.css |
-| G-17 | No legal/policy pages (privacy, cookies, terms, accessibility) | Legal + Dev | 09 | **Resolved** — 4 draft legal pages built (privacy, cookies, terms, accessibility), all marked DRAFT pending legal review |
+| G-17 | No legal/policy pages (privacy, cookies, terms, accessibility) | Legal + Dev | 09 | **Partially resolved** — 4 legal pages exist; the English Privacy Notice is approved, while cookies, terms, accessibility, and localized policy pages remain pending legal review |
 | G-18 | No responsible disclosure page | Security + Dev | 09 | **Resolved** — `/en/security/disclosure/` built with reporting process, safe harbour policy, scope definition |
 | G-19 | Trust Centre has no detail sub-pages | Dev | 08 | Open |
 | G-20 | No product screenshots (placeholder images only) | Dev | 16-20 | Open |

@@ -1,0 +1,30 @@
+---
+interface Props {
+  currentPage: number;
+  totalPages: number;
+  basePath: string;
+}
+
+const { currentPage, totalPages, basePath } = Astro.props;
+const pageHref = (page: number) => page === 1 ? `${basePath}/` : `${basePath}/${page}/`;
+const pages = Array.from({ length: totalPages }, (_, index) => index + 1);
+---
+
+{totalPages > 1 && (
+  <nav class="pagination" aria-label="Blog pagination">
+    {currentPage > 1 && <a href={pageHref(currentPage - 1)} rel="prev">Previous</a>}
+    <ol>
+      {pages.map((page) => (
+        <li><a href={pageHref(page)} aria-current={page === currentPage ? 'page' : undefined}>{page}</a></li>
+      ))}
+    </ol>
+    {currentPage < totalPages && <a href={pageHref(currentPage + 1)} rel="next">Next</a>}
+  </nav>
+)}
+
+<style>
+  .pagination { display: flex; justify-content: center; align-items: center; gap: var(--kc-space-4); margin-top: var(--kc-space-12); }
+  .pagination ol { display: flex; gap: var(--kc-space-2); list-style: none; padding: 0; margin: 0; }
+  .pagination a { display: inline-flex; min-width: 2.75rem; min-height: 2.75rem; align-items: center; justify-content: center; padding: var(--kc-space-2) var(--kc-space-3); border: 1px solid var(--kc-border); border-radius: var(--kc-radius-md); color: var(--kc-teal-deep); font-weight: var(--kc-weight-semibold); }
+  .pagination a:hover, .pagination a[aria-current="page"] { background: var(--kc-charcoal); border-color: var(--kc-charcoal); color: var(--kc-text-inverse); }
+</style>

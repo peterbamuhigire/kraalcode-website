@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import FeaturedPost from '../../../components/blog/FeaturedPost.astro';
+import PostCard from '../../../components/blog/PostCard.astro';
+import Pagination from '../../../components/blog/Pagination.astro';
+import { blogSlug, sortPosts } from '../../../utils/blog';
+
+const entries = sortPosts(await getCollection('blog', ({ data }) => data.locale === 'sw' && data.published));
+const featured = entries.find((entry) => entry.data.featured) ?? entries[0];
+const standard = entries.filter((entry) => entry.id !== featured?.id).slice(0, 4);
+---
+
+<BaseLayout title="Blogu — Maarifa ya vitendo kwa mashirika ya Afrika" description="Mwongozo wenye ushahidi kuhusu ERP, fedha, uendeshaji na mifumo ya kidijitali kwa mashirika ya Afrika." locale="sw" canonicalUrl="https://kraalcode.com/sw/blogu/" alternateUrls={{ en: '/en/blog/', fr: '/fr/blogue/', sw: '/sw/blogu/' }}>
+  <section class="blog-hero section--warm section"><div class="container"><nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/sw/">Mwanzo</a></li><li aria-current="page">Blogu</li></ol></nav><p class="eyebrow">Jarida la Kraal Code</p><h1>Maamuzi kwa mashirika yanayofanya kazi halisi.</h1><p class="blog-intro">Maarifa ya vitendo kuhusu fedha, uendeshaji, teknolojia na ukuaji wa mashirika ya Afrika.</p><p class="blog-count">Makala {entries.length} zilizochapishwa</p></div></section>
+  <section class="section" aria-labelledby="latest-heading"><div class="container"><div class="section-heading"><p class="eyebrow">Maarifa mapya</p><h2 id="latest-heading">Soma uchambuzi</h2></div>{featured && <FeaturedPost post={{ slug: blogSlug(featured), data: featured.data }} locale="sw" basePath="/sw/blogu" />}{standard.length > 0 && <div class="post-grid">{standard.map((post) => <PostCard post={{ slug: blogSlug(post), data: post.data }} locale="sw" basePath="/sw/blogu" />)}</div>}<Pagination currentPage={1} totalPages={1} basePath="/sw/blogu" /></div></section>
+</BaseLayout>
+
+<style>
+  .blog-hero { padding-bottom: var(--kc-space-16); } .breadcrumb ol { list-style: none; display: flex; gap: var(--kc-space-2); padding: 0; margin: 0 0 var(--kc-space-8); color: var(--kc-text-tertiary); font-size: var(--kc-text-sm); } .breadcrumb a { color: var(--kc-teal-deep); } .breadcrumb li:not(:last-child)::after { content: '/'; margin-left: var(--kc-space-2); } .eyebrow { margin: 0 0 var(--kc-space-3); color: var(--kc-teal-deep); font-size: var(--kc-text-sm); font-weight: var(--kc-weight-bold); letter-spacing: .08em; text-transform: uppercase; } h1 { max-width: 16ch; font-size: clamp(var(--kc-text-4xl), 7vw, var(--kc-text-5xl)); } .blog-intro { max-width: 62ch; margin-top: var(--kc-space-5); color: var(--kc-text-secondary); font-size: var(--kc-text-lg); } .blog-count { margin-top: var(--kc-space-6); color: var(--kc-text-tertiary); font-size: var(--kc-text-sm); } .section-heading { margin-bottom: var(--kc-space-8); } .section-heading h2 { margin: 0; } .post-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--kc-space-6); margin-top: var(--kc-space-8); } @media (max-width: 640px) { .post-grid { grid-template-columns: 1fr; } }
+</style>

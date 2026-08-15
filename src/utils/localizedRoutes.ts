@@ -24,6 +24,7 @@ type RouteKey =
   | 'why'
   | 'security'
   | 'security.disclosure'
+  | 'blog'
   | 'resources'
   | 'workAnywhere'
   | 'contact'
@@ -56,6 +57,7 @@ const routes: Record<RouteKey, Partial<Record<Locale, string>>> = {
   why: { en: '/en/why/', fr: '/fr/pourquoi/', sw: '/sw/kwa-nini/' },
   security: { en: '/en/security/', fr: '/fr/securite/', sw: '/sw/usalama/' },
   'security.disclosure': { en: '/en/security/disclosure/', fr: '/fr/securite/divulgation/', sw: '/sw/usalama/' },
+  blog: { en: '/en/blog/', fr: '/fr/blogue/', sw: '/sw/blogu/' },
   resources: { en: '/en/resources/', fr: '/fr/ressources/', sw: '/sw/' },
   workAnywhere: { en: '/en/work-from-anywhere/', fr: '/fr/travailler-partout/', sw: '/sw/kazi-popote/' },
   contact: { en: '/en/contact/', fr: '/fr/contact/', sw: '/sw/mawasiliano/' },
@@ -108,11 +110,32 @@ export function getRouteKey(path: string): RouteKey {
 }
 
 export function getLocalizedPath(currentPath: string, targetLocale: Locale): string {
+  const normalized = normalizePath(currentPath);
+  const blogTranslations: Record<string, { en: string; fr: string; sw: string }> = {
+    'beyond-spreadsheets-cloud-erp': { en: 'beyond-spreadsheets-cloud-erp', fr: 'au-dela-des-feuilles-de-calcul', sw: 'kupita-majarida-ya-hesabu' },
+    'choose-east-african-erp': { en: 'choose-east-african-erp', fr: 'choisir-un-erp-est-africain', sw: 'jinsi-ya-kuchagua-erp' },
+    'mobile-money-meets-erp': { en: 'mobile-money-meets-erp', fr: 'mobile-money-et-erp', sw: 'pesa-ya-simu-na-erp' },
+    'multi-branch-without-chaos': { en: 'multi-branch-without-chaos', fr: 'operations-multi-sites', sw: 'biashara-za-matawi-mengi' },
+    'ifrs-for-smes-practice': { en: 'ifrs-for-smes-practice', fr: 'ifrs-pour-pme-pratique', sw: 'ifrs-kwa-sme-vitendo' },
+  };
+  const blogMatch = normalized.match(/^\/(en|fr|sw)\/(?:blog|blogue|blogu)\/([^/]+)\/$/);
+  if (blogMatch) {
+    const currentSlug = blogMatch[2];
+    const translation = Object.values(blogTranslations).find((slugs) => Object.values(slugs).includes(currentSlug));
+    if (translation) {
+      const prefix = targetLocale === 'fr' ? '/fr/blogue' : targetLocale === 'sw' ? '/sw/blogu' : '/en/blog';
+      return `${prefix}/${translation[targetLocale]}/`;
+    }
+    return routes.blog[targetLocale] ?? routes.home[targetLocale]!;
+  }
+  if (/^\/(en|fr|sw)\/(?:blog|blogue|blogu)\/(?:\d+|category)\//.test(normalized)) {
+    return routes.blog[targetLocale] ?? routes.home[targetLocale]!;
+  }
   const key = getRouteKey(currentPath);
   return routes[key][targetLocale] ?? routes.home[targetLocale]!;
 }
 
-export function getNavPath(locale: Locale, key: 'product' | 'capabilities' | 'sectors' | 'why' | 'security' | 'resources' | 'contact'): string {
+export function getNavPath(locale: Locale, key: 'product' | 'capabilities' | 'sectors' | 'why' | 'security' | 'blog' | 'resources' | 'contact'): string {
   return routes[key][locale] ?? routes.home[locale]!;
 }
 

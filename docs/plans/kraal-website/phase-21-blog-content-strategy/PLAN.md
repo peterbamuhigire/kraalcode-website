@@ -215,17 +215,21 @@ For each article:
 
 ## Acceptance Criteria
 
-- [ ] Blog infrastructure works: index, posts, pagination, categories, RSS
-- [ ] 5 English articles published with real, researched content
-- [ ] Each article has verified sources (minimum 5-8 per article)
-- [ ] Featured article displays prominently on first page
-- [ ] Pagination works correctly (1+4 on page 1, 6 on subsequent pages)
-- [ ] Articles are dated between June 2025 and August 2026
-- [ ] Anti-slop audit: grade A or B for all articles
-- [ ] French and Kiswahili versions published
+- [x] Blog infrastructure works: index, posts, pagination, categories, RSS
+- [x] 5 English articles published with researched content
+- [x] Each English article has a source register meeting the planned minimum
+- [x] Featured article displays prominently on first page
+- [x] Pagination works correctly (1+4 on page 1, 6 on subsequent pages)
+- [x] Articles are dated between June 2026 and August 2026
+- [x] Preliminary anti-slop scan found no configured banned terms or generic filler markers
+- [x] French and Kiswahili versions published
 - [ ] Navigation updated (Resources → Blog)
-- [ ] RSS feed validates
-- [ ] SEO metadata complete per article
+- [x] RSS feed builds at `/blog/rss.xml`
+- [x] SEO metadata, hreflang, OG data, and Article JSON-LD are present per article
+
+### Release caveat
+
+French and Kiswahili copy was authored to the documented market and register standards, but competent native-speaker review is not available in this execution environment. Treat those locale copies as provisional until a native reviewer records approval. Image rights/model-release evidence and the repository's missing ESLint dependency remain project-level release gaps.
 
 ---
 

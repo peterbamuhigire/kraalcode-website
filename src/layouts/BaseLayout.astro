@@ -14,6 +14,8 @@ interface Props {
   canonicalUrl: string;
   ogImage?: string;
   noindex?: boolean;
+  alternateUrls?: Partial<Record<'en' | 'fr' | 'sw', string>>;
+  structuredData?: Record<string, unknown>;
 }
 
 const {
@@ -23,12 +25,14 @@ const {
   canonicalUrl,
   ogImage = '/static/og-default.svg',
   noindex = false,
+  alternateUrls,
+  structuredData,
 } = Astro.props;
 
 const siteName = 'Kraal Code';
 const fullTitle = `${title} | ${siteName}`;
 
-const alternates = getLocalizedAlternates(Astro.url.pathname);
+const alternates = alternateUrls ?? getLocalizedAlternates(Astro.url.pathname);
 const routeKey = getRouteKey(Astro.url.pathname);
 const detailHero = getDetailHero(Astro.url.pathname);
 const detailHeroStyle = detailHero
@@ -99,6 +103,7 @@ const detailHeroStyle = detailHero
       "availableLanguage": ["English", "French", "Swahili"]
     }
   })} />
+  {structuredData && <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
 </head>
 <body class:list={{ 'detail-route': Boolean(detailHero) }} data-route={routeKey} style={detailHeroStyle}>
   <a class="skip-link" href="#main-content">Skip to main content</a>

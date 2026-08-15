@@ -1,0 +1,52 @@
+---
+import PostMeta from './PostMeta.astro';
+
+interface Props {
+  post: {
+    slug: string;
+    data: {
+      title: string;
+      excerpt: string;
+      date: Date;
+      author: string;
+      category: string;
+      readingTime: number;
+      image: string;
+      imageAlt: string;
+    };
+  };
+  locale?: 'en' | 'fr' | 'sw';
+  basePath?: string;
+}
+
+const { post, locale = 'en', basePath = '/en/blog' } = Astro.props;
+const articleUrl = `${basePath}/${post.slug}/`;
+const copy = locale === 'fr' ? { read: 'Lire la sélection', aria: 'Lire' } : locale === 'sw' ? { read: 'Soma makala kuu', aria: 'Soma' } : { read: 'Read the feature', aria: 'Read' };
+---
+
+<article class="featured-post">
+  <a class="featured-post__image-link" href={articleUrl} aria-label={`${copy.aria} ${post.data.title}`}>
+    <img src={post.data.image} alt={post.data.imageAlt} width="1440" height="800" />
+  </a>
+  <div class="featured-post__body">
+    <PostMeta {...post.data} locale={locale} />
+    <h2><a href={articleUrl}>{post.data.title}</a></h2>
+    <p>{post.data.excerpt}</p>
+    <a class="read-link" href={articleUrl}>{copy.read} <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+
+<style>
+  .featured-post { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr); background: var(--kc-surface-dark); color: var(--kc-text-inverse); border-radius: var(--kc-radius-xl); overflow: hidden; }
+  .featured-post__image-link { min-height: 360px; background: var(--kc-teal-dark); }
+  .featured-post__image-link img { width: 100%; height: 100%; object-fit: cover; }
+  .featured-post__body { display: flex; flex-direction: column; justify-content: center; gap: var(--kc-space-5); padding: clamp(var(--kc-space-6), 5vw, var(--kc-space-12)); }
+  .featured-post .post-meta { color: var(--kc-text-inverse-muted); }
+  .featured-post .post-meta span:first-child { color: var(--kc-champagne); }
+  .featured-post h2 { margin: 0; font-size: clamp(var(--kc-text-3xl), 4vw, var(--kc-text-5xl)); }
+  .featured-post h2 a:hover { color: var(--kc-champagne); }
+  .featured-post p { margin: 0; color: var(--kc-text-inverse-muted); }
+  .read-link { color: var(--kc-champagne); font-weight: var(--kc-weight-semibold); }
+  .read-link:hover { color: var(--kc-text-inverse); }
+  @media (max-width: 800px) { .featured-post { grid-template-columns: 1fr; } .featured-post__image-link { min-height: 240px; } }
+</style>

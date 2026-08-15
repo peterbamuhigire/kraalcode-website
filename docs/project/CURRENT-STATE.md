@@ -2,7 +2,7 @@
 
 **Audience:** Project owner, delivery team, and maintainers
 **Status:** Current implementation record
-**Last reviewed:** 2026-08-09
+**Last reviewed:** 2026-08-15
 **Repository:** [peterbamuhigire/kraalcode-website](https://github.com/peterbamuhigire/kraalcode-website)
 
 ## Current implementation
@@ -13,7 +13,7 @@
 | Rendering | Static build, served from `dist/` |
 | Locales | English, French, Kiswahili |
 | Source route entrypoints | 86 `index.astro` files |
-| Generated build | 114 static pages in the latest verified build |
+| Generated build | 135 static pages in the latest verified build |
 | Styling | Vanilla CSS with shared `--kc-*` tokens and Astro component styles |
 | Fonts | Self-hosted Source Serif 4 and Source Sans 3, Latin-ext subset |
 | Sitemap | `@astrojs/sitemap` configured with locale support |
@@ -30,11 +30,12 @@
 - Locale-aware navigation, canonical metadata, hreflang links, sitemap output, organisation JSON-LD, and branded 404 page.
 - Shared image-backed detail heroes with lighter glass text-safe panels.
 - Homepage capability cards with capability-specific imagery and medium opacity overlays.
+- Phase 21 blog published in English, French, and Kiswahili: five dated articles per locale, featured index, pagination, categories, localized article routes, source records, Article JSON-LD, and RSS.
 
 ## Verified checks
 
-- `npm run typecheck` passes with zero errors; Astro reports three non-blocking repository hints related to empty content folders and inline JSON-LD scripts.
-- `npm run build` passes and generates 114 pages.
+- `npm run typecheck` passes with zero errors; Astro reports four non-blocking hints for inline JSON-LD scripts.
+- `npm run build` passes and generates 135 pages, including 15 blog articles and `/blog/rss.xml`.
 - Visual checks cover the 48 capability/sector detail routes at 390px and representative desktop/mobile homepages in all three locales.
 - Checked routes return 200, have one `h1`, expose expected hero/card images, and do not horizontally overflow at the tested mobile width.
 
@@ -47,8 +48,10 @@
 | G-03 | No committed automated browser suite | Visual regressions depend on manual/local Playwright checks | Commit a stable browser smoke harness and evidence policy |
 | G-04 | Image rights and model-release evidence are open | Production publication risk | Attach licence/release evidence or replace affected imagery |
 | G-05 | Product screenshot blocks remain placeholders | Reduced product proof on detail pages | Supply approved screenshots and update the asset register |
-| G-06 | Legal pages require legal review | Pages must not be treated as final policy | Complete legal review and record approval |
+| G-06 | English Privacy Notice approved; other legal pages still require legal review | Treat only the approved privacy notice as final policy | Record approval for each remaining legal page before release |
 | G-07 | Analytics and measurement are not wired | Conversion and performance learning is limited | Approve a privacy-aware measurement plan and implement it separately |
+| G-08 | French and Kiswahili blog copy has not had competent native-speaker sign-off in this environment | Locale publication remains provisional | Obtain native review and record approval or corrections |
+| G-09 | Blog/article imagery remains subject to the existing rights and model-release gap | Publication evidence is incomplete | Attach licence/release evidence or replace affected imagery |
 
 ## Source-of-truth order
 

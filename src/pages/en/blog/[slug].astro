@@ -1,0 +1,89 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PostMeta from '../../../components/blog/PostMeta.astro';
+import RelatedPosts from '../../../components/blog/RelatedPosts.astro';
+import { articlePath, blogAlternateUrls, blogSlug, sortPosts } from '../../../utils/blog';
+
+const entries = sortPosts(await getCollection('blog', ({ data }) => data.locale === 'en' && data.published));
+
+export async function getStaticPaths() {
+  const entriesForPaths = sortPosts(await getCollection('blog', ({ data }) => data.locale === 'en' && data.published));
+  return entriesForPaths.map((entry) => ({
+    params: { slug: blogSlug(entry) },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const related = entries.filter((candidate) => candidate.id !== entry.id && candidate.data.category === entry.data.category);
+const canonical = `https://kraalcode.com${articlePath(entry)}`;
+const alternateUrls = blogAlternateUrls(entry);
+---
+
+<BaseLayout
+  title={entry.data.seoTitle ?? entry.data.title}
+  description={entry.data.metaDescription ?? entry.data.excerpt}
+  locale="en"
+  canonicalUrl={canonical}
+  alternateUrls={alternateUrls}
+  ogImage={entry.data.image}
+  structuredData={{
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: entry.data.title,
+    description: entry.data.excerpt,
+    image: `https://kraalcode.com${entry.data.image}`,
+    datePublished: entry.data.date.toISOString(),
+    author: { '@type': 'Organization', name: entry.data.author },
+    mainEntityOfPage: canonical,
+  }}
+>
+  <article class="article-page">
+    <header class="article-header section section--warm">
+      <div class="container article-header__inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><a href="/en/blog/">Blog</a></li><li aria-current="page">{entry.data.title}</li></ol></nav>
+        <PostMeta {...entry.data} />
+        <h1>{entry.data.title}</h1>
+        <p class="standfirst">{entry.data.excerpt}</p>
+        <p class="byline">By {entry.data.author}</p>
+      </div>
+    </header>
+    <figure class="article-hero container"><img src={entry.data.image} alt={entry.data.imageAlt} width="1440" height="800" /><figcaption>Illustrative context for the article.</figcaption></figure>
+    <div class="container article-layout">
+      <div class="article-body"><Content /></div>
+      <aside class="article-sources" aria-labelledby="sources-heading"><h2 id="sources-heading">Sources</h2><ol>{entry.data.sources.map((source) => <li><a href={source.url} rel="noopener noreferrer">{source.title}</a><span>{source.publisher}</span></li>)}</ol></aside>
+    </div>
+    <div class="container"><RelatedPosts posts={related} /></div>
+  </article>
+</BaseLayout>
+
+<style>
+  .article-header { padding-bottom: var(--kc-space-16); }
+  .article-header__inner { max-width: 900px; }
+  .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: var(--kc-space-2); padding: 0; margin: 0 0 var(--kc-space-8); color: var(--kc-text-tertiary); font-size: var(--kc-text-sm); }
+  .breadcrumb a { color: var(--kc-teal-deep); }
+  .breadcrumb li:not(:last-child)::after { content: '/'; margin-left: var(--kc-space-2); }
+  .article-header h1 { max-width: 16ch; margin-top: var(--kc-space-6); font-size: clamp(var(--kc-text-4xl), 7vw, var(--kc-text-5xl)); }
+  .standfirst { max-width: 68ch; margin-top: var(--kc-space-6); color: var(--kc-text-secondary); font-size: var(--kc-text-xl); }
+  .byline { margin-top: var(--kc-space-5); color: var(--kc-text-tertiary); font-size: var(--kc-text-sm); }
+  .article-hero { margin-top: calc(var(--kc-space-12) * -1); position: relative; z-index: 1; }
+  .article-hero img { width: 100%; max-height: 560px; object-fit: cover; border-radius: var(--kc-radius-xl); box-shadow: var(--kc-shadow-lg); }
+  .article-hero figcaption { margin-top: var(--kc-space-2); color: var(--kc-text-tertiary); font-size: var(--kc-text-sm); }
+  .article-layout { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: var(--kc-space-12); align-items: start; margin-top: var(--kc-space-12); }
+  .article-body { max-width: 68ch; font-size: var(--kc-text-lg); line-height: var(--kc-leading-loose); }
+  .article-body :global(h2) { margin-top: var(--kc-space-12); margin-bottom: var(--kc-space-4); font-size: var(--kc-text-3xl); }
+  .article-body :global(h3) { margin-top: var(--kc-space-8); margin-bottom: var(--kc-space-3); font-family: var(--kc-font-body); font-size: var(--kc-text-xl); }
+  .article-body :global(p) { margin-bottom: var(--kc-space-5); }
+  .article-body :global(ul), .article-body :global(ol) { margin: 0 0 var(--kc-space-6); padding-inline-start: var(--kc-space-6); }
+  .article-body :global(li) { margin-bottom: var(--kc-space-3); }
+  .article-body :global(a) { color: var(--kc-teal-deep); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .article-sources { position: sticky; top: 100px; padding: var(--kc-space-5); background: var(--kc-surface-warm); border-top: 3px solid var(--kc-teal); }
+  .article-sources h2 { margin: 0 0 var(--kc-space-4); font-size: var(--kc-text-lg); }
+  .article-sources ol { padding-inline-start: var(--kc-space-5); margin: 0; }
+  .article-sources li { margin-bottom: var(--kc-space-4); font-size: var(--kc-text-sm); }
+  .article-sources a { color: var(--kc-teal-deep); text-decoration: underline; }
+  .article-sources span { display: block; margin-top: 2px; color: var(--kc-text-tertiary); }
+  @media (max-width: 850px) { .article-layout { grid-template-columns: 1fr; } .article-sources { position: static; order: 2; } }
+</style>

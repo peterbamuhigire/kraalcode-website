@@ -177,6 +177,15 @@ Point the web server document root at `dist/` and configure directory index hand
 
 ## Documentation map
 
+- [`docs/design/design-system.md`](docs/design/design-system.md) — implemented typography, palette, spacing, and component rules
+- [`docs/governance/content-governance.md`](docs/governance/content-governance.md) — claim, language, asset, and approval workflow
+- [`docs/deployment/runbook.md`](docs/deployment/runbook.md) — concise Phase 15 release checklist
+- [`docs/maintenance/schedule.md`](docs/maintenance/schedule.md) — recurring review schedule and escalation rules
+- [`docs/analytics/event-dictionary.md`](docs/analytics/event-dictionary.md) — future privacy-aware measurement design
+- [`docs/project/HANDOVER.md`](docs/project/HANDOVER.md) — handover summary, evidence, owners, and launch conditions
+- [`docs/project/approvals-log.md`](docs/project/approvals-log.md) — written record of approvals and scope
+- [`docs/project/screenshot-capture-plan.md`](docs/project/screenshot-capture-plan.md) — synthetic-data capture plan for phases 16–20
+
 - [`docs/README.md`](docs/README.md) — documentation index and source-of-truth order
 - [`docs/architecture/site-architecture.md`](docs/architecture/site-architecture.md) — route, layout, style, and asset architecture
 - [`docs/deployment/site-operations.md`](docs/deployment/site-operations.md) — build, deploy, smoke test, and rollback runbook

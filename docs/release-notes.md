@@ -1,5 +1,36 @@
 # Release notes
 
+## 2026-08-15 — Phase 21 blog publication
+
+### Added
+
+- Five researched English articles dated June–August 2026, with French and Kiswahili authored editions.
+- Blog content collection, featured index, article pages, category pages, pagination, related articles, source sidebars, Article JSON-LD, localized hreflang, and RSS at `/blog/rss.xml`.
+- Research evidence records under `docs/research/blog-articles/` and internal links from each English article to relevant capability, sector, security, or contact pages.
+- Existing image library reused for all 15 article pages; no new photo download is required for this phase.
+
+### Validation
+
+- `npm run typecheck` passed with zero errors.
+- `npm run build` passed and generated 135 pages.
+- Banned-term scan found no configured anti-slop terms in blog content or research notes.
+- `npm run lint` remains unavailable because ESLint is not installed in the repository.
+- French and Kiswahili native review, plus image rights evidence, remain explicit release caveats.
+
+## 2026-08-15 — Phase 15 handover documentation
+
+### Added
+
+- Design-system, content-governance, screenshot-capture, deployment, analytics, maintenance, and handover documents required by the website execution plan.
+- Explicit launch conditions for open legal, rights, screenshot, CI, analytics, and linting work.
+- Legal approval record for the English Privacy Notice and its semantic list styling fix.
+
+### Validation
+
+- `npm run typecheck` passed with zero errors.
+- `npm run build` passed and generated 114 pages.
+- Handover links and operational documents point to current repository paths and known limitations.
+
 ## 2026-08-09 — Website rebuild and documentation baseline
 
 ### Added

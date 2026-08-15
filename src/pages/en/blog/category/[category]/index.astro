@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../../../layouts/BaseLayout.astro';
+import PostCard from '../../../../../components/blog/PostCard.astro';
+import { blogSlug, categoryLabels, categorySlug, sortPosts } from '../../../../../utils/blog';
+
+const entries = sortPosts(await getCollection('blog', ({ data }) => data.locale === 'en' && data.published));
+
+export async function getStaticPaths() {
+  const entriesForPaths = sortPosts(await getCollection('blog', ({ data }) => data.locale === 'en' && data.published));
+  const categoriesForPaths = [...new Set(entriesForPaths.map((entry) => entry.data.category))];
+  return categoriesForPaths.map((category) => ({ params: { category: categorySlug(category) }, props: { category } }));
+}
+
+const { category } = Astro.props;
+const posts = entries.filter((entry) => categorySlug(entry.data.category) === categorySlug(category));
+const label = categoryLabels[category] ?? category;
+---
+
+<BaseLayout
+  title={`${label} — Kraal Code Blog`}
+  description={`Research-backed Kraal Code articles in ${label.toLowerCase()}.`}
+  locale="en"
+  canonicalUrl={`https://kraalcode.com/en/blog/category/${categorySlug(category)}/`}
+  alternateUrls={{ en: `/en/blog/category/${categorySlug(category)}/` }}
+>
+  <section class="section section--warm category-heading"><div class="container"><nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><a href="/en/blog/">Blog</a></li><li aria-current="page">{label}</li></ol></nav><p class="eyebrow">Blog category</p><h1>{label}</h1><p>{posts.length} {posts.length === 1 ? 'article' : 'articles'}</p></div></section>
+  <section class="section"><div class="container"><div class="post-grid">{posts.map((post) => <PostCard post={{ slug: blogSlug(post), data: post.data }} />)}</div></div></section>
+</BaseLayout>
+
+<style>
+  .category-heading { padding-bottom: var(--kc-space-12); }
+  .breadcrumb ol { list-style: none; display: flex; gap: var(--kc-space-2); padding: 0; margin: 0 0 var(--kc-space-8); color: var(--kc-text-tertiary); font-size: var(--kc-text-sm); }
+  .breadcrumb a { color: var(--kc-teal-deep); }
+  .breadcrumb li:not(:last-child)::after { content: '/'; margin-left: var(--kc-space-2); }
+  .eyebrow { margin: 0 0 var(--kc-space-3); color: var(--kc-teal-deep); font-size: var(--kc-text-sm); font-weight: var(--kc-weight-bold); letter-spacing: .08em; text-transform: uppercase; }
+  h1 { font-size: clamp(var(--kc-text-4xl), 7vw, var(--kc-text-5xl)); }
+  .category-heading p:last-child { margin-top: var(--kc-space-4); color: var(--kc-text-secondary); }
+  .post-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--kc-space-6); }
+  @media (max-width: 900px) { .post-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 640px) { .post-grid { grid-template-columns: 1fr; } }
+</style>

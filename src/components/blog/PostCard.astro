@@ -1,0 +1,50 @@
+---
+import PostMeta from './PostMeta.astro';
+
+interface Props {
+  post: {
+    slug: string;
+    data: {
+      title: string;
+      excerpt: string;
+      date: Date;
+      author: string;
+      category: string;
+      readingTime: number;
+      image: string;
+      imageAlt: string;
+    };
+  };
+  locale?: 'en' | 'fr' | 'sw';
+  basePath?: string;
+}
+
+const { post, locale = 'en', basePath = '/en/blog' } = Astro.props;
+const articleUrl = `${basePath}/${post.slug}/`;
+const copy = locale === 'fr' ? { read: 'Lire l’article', aria: 'Lire' } : locale === 'sw' ? { read: 'Soma makala', aria: 'Soma' } : { read: 'Read article', aria: 'Read' };
+---
+
+<article class="post-card">
+  <a class="post-card__image-link" href={articleUrl} aria-label={`${copy.aria} ${post.data.title}`}>
+    <img src={post.data.image} alt={post.data.imageAlt} loading="lazy" width="960" height="600" />
+  </a>
+  <div class="post-card__body">
+    <PostMeta {...post.data} locale={locale} />
+    <h2><a href={articleUrl}>{post.data.title}</a></h2>
+    <p>{post.data.excerpt}</p>
+    <a class="read-link" href={articleUrl}>{copy.read} <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+
+<style>
+  .post-card { display: flex; flex-direction: column; min-width: 0; background: var(--kc-surface-light); border: 1px solid var(--kc-border-subtle); border-radius: var(--kc-radius-lg); overflow: hidden; }
+  .post-card__image-link { display: block; aspect-ratio: 16 / 10; overflow: hidden; background: var(--kc-surface-warm); }
+  .post-card__image-link img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--kc-transition-base); }
+  .post-card__image-link:hover img { transform: scale(1.025); }
+  .post-card__body { display: flex; flex: 1; flex-direction: column; gap: var(--kc-space-3); padding: var(--kc-space-6); }
+  .post-card h2 { margin: 0; font-size: var(--kc-text-2xl); }
+  .post-card h2 a:hover { color: var(--kc-teal); }
+  .post-card p { margin: 0; color: var(--kc-text-secondary); }
+  .read-link { margin-top: auto; color: var(--kc-teal-deep); font-weight: var(--kc-weight-semibold); }
+  .read-link:hover { color: var(--kc-teal); }
+</style>

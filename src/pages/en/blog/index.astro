@@ -1,0 +1,62 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import FeaturedPost from '../../../components/blog/FeaturedPost.astro';
+import PostCard from '../../../components/blog/PostCard.astro';
+import Pagination from '../../../components/blog/Pagination.astro';
+import { blogSlug, sortPosts } from '../../../utils/blog';
+
+const entries = sortPosts(await getCollection('blog', ({ data }) => data.locale === 'en' && data.published));
+const featured = entries.find((entry) => entry.data.featured) ?? entries[0];
+const standard = entries.filter((entry) => entry.id !== featured?.id).slice(0, 4);
+const totalPages = entries.length > 5 ? Math.ceil((entries.length - 1) / 6) + 1 : 1;
+const alternateUrls = { en: '/en/blog/', fr: '/fr/blogue/', sw: '/sw/blogu/' };
+---
+
+<BaseLayout
+  title="Blog — Practical insight for African organisations"
+  description="Research-backed guidance on ERP, finance, operations, security, and digital systems for growing African organisations."
+  locale="en"
+  canonicalUrl="https://kraalcode.com/en/blog/"
+  alternateUrls={alternateUrls}
+>
+  <section class="blog-hero section--warm section">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li aria-current="page">Blog</li></ol></nav>
+      <p class="eyebrow">Kraal Code journal</p>
+      <h1>Decisions for organisations doing real work.</h1>
+      <p class="blog-intro">Practical thinking on finance, operations, technology, and the choices that help African organisations grow without losing control of the details.</p>
+      <p class="blog-count">{entries.length} {entries.length === 1 ? 'article' : 'articles'} published</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="latest-heading">
+    <div class="container">
+      <div class="section-heading"><p class="eyebrow">Latest thinking</p><h2 id="latest-heading">Read the analysis</h2></div>
+      {featured && <FeaturedPost post={{ slug: blogSlug(featured), data: featured.data }} />}
+      {standard.length > 0 && (
+        <div class="post-grid">
+          {standard.map((post) => <PostCard post={{ slug: blogSlug(post), data: post.data }} />)}
+        </div>
+      )}
+      {!featured && <p class="empty-note">The first researched article is being prepared for publication.</p>}
+      <Pagination currentPage={1} totalPages={totalPages} basePath="/en/blog" />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .blog-hero { padding-bottom: var(--kc-space-16); }
+  .breadcrumb ol { list-style: none; display: flex; gap: var(--kc-space-2); padding: 0; margin: 0 0 var(--kc-space-8); color: var(--kc-text-tertiary); font-size: var(--kc-text-sm); }
+  .breadcrumb a { color: var(--kc-teal-deep); }
+  .breadcrumb li:not(:last-child)::after { content: '/'; margin-left: var(--kc-space-2); }
+  .eyebrow { margin: 0 0 var(--kc-space-3); color: var(--kc-teal-deep); font-size: var(--kc-text-sm); font-weight: var(--kc-weight-bold); letter-spacing: .08em; text-transform: uppercase; }
+  h1 { max-width: 14ch; font-size: clamp(var(--kc-text-4xl), 7vw, var(--kc-text-5xl)); }
+  .blog-intro { max-width: 62ch; margin-top: var(--kc-space-5); color: var(--kc-text-secondary); font-size: var(--kc-text-lg); }
+  .blog-count { margin-top: var(--kc-space-6); color: var(--kc-text-tertiary); font-size: var(--kc-text-sm); }
+  .section-heading { margin-bottom: var(--kc-space-8); }
+  .section-heading h2 { margin: 0; }
+  .post-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--kc-space-6); margin-top: var(--kc-space-8); }
+  .empty-note { padding: var(--kc-space-8); border: 1px dashed var(--kc-border); color: var(--kc-text-secondary); }
+  @media (max-width: 640px) { .post-grid { grid-template-columns: 1fr; } }
+</style>
