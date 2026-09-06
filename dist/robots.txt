@@ -1,7 +1,9 @@
 # robots.txt — Kraal Code
+# Search eligibility remains governed by the canonical HTML, links, and sitemap.
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: *
 Allow: /
 
-Sitemap: https://kraalcode.com/sitemap-en.xml
-Sitemap: https://kraalcode.com/sitemap-fr.xml
-Sitemap: https://kraalcode.com/sitemap-sw.xml
+Sitemap: https://kraalcode.com/sitemap-index.xml

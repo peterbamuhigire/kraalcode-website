@@ -1,0 +1,616 @@
+---
+type Locale = 'en' | 'fr' | 'sw';
+
+interface Option {
+  value: string;
+  label: string;
+}
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const copy: Record<Locale, {
+  formTitle: string;
+  invalidMessage: string;
+  unavailableMessage: string;
+  loadingLabel: string;
+  submitLabel: string;
+  formNote: string;
+  labels: {
+    website: string;
+    name: string;
+    email: string;
+    organisation: string;
+    country: string;
+    role: string;
+    size: string;
+    interests: string;
+    message: string;
+    privacy: string;
+    marketing: string;
+  };
+  placeholders: {
+    country: string;
+    role: string;
+    size: string;
+    interests: string;
+    message: string;
+  };
+  errors: {
+    name: string;
+    email: string;
+    organisation: string;
+    country: string;
+    privacy: string;
+  };
+  countries: Option[];
+  roles: Option[];
+  sizes: Option[];
+}> = {
+  en: {
+    formTitle: 'Request a demonstration',
+    invalidMessage: 'Please correct the highlighted fields before continuing.',
+    unavailableMessage: 'This form is not connected to a submission service yet. To contact us now, email info@kraalcode.com.',
+    loadingLabel: 'Checking request…',
+    submitLabel: 'Prepare request',
+    formNote: 'This static form does not send submissions yet. Email info@kraalcode.com to contact the team directly.',
+    labels: {
+      website: 'Website',
+      name: 'Full name',
+      email: 'Work email',
+      organisation: 'Organisation',
+      country: 'Country',
+      role: 'Your role',
+      size: 'Organisation size',
+      interests: 'Areas of interest',
+      message: "Anything else you'd like us to know?",
+      privacy: 'I understand Kraal Code will use this information to respond to my enquiry and provide relevant follow-up.',
+      marketing: 'I would like to receive occasional product updates and insights. (Optional)',
+    },
+    placeholders: {
+      country: 'Select your country',
+      role: 'Select your role',
+      size: 'Select size',
+      interests: 'Which modules or capabilities are you most interested in?',
+      message: 'Tell us about your current systems, challenges, or specific requirements.',
+    },
+    errors: {
+      name: 'Enter your full name.',
+      email: 'Enter a valid work email address.',
+      organisation: 'Enter your organisation name.',
+      country: 'Select your country.',
+      privacy: 'Agree to the information-use notice before continuing.',
+    },
+    countries: [
+      { value: 'UG', label: 'Uganda' },
+      { value: 'KE', label: 'Kenya' },
+      { value: 'TZ', label: 'Tanzania' },
+      { value: 'RW', label: 'Rwanda' },
+      { value: 'CD', label: 'Democratic Republic of Congo' },
+      { value: 'CM', label: 'Cameroon' },
+      { value: 'CI', label: "Côte d'Ivoire" },
+      { value: 'SN', label: 'Senegal' },
+      { value: 'SS', label: 'South Sudan' },
+      { value: 'BI', label: 'Burundi' },
+      { value: 'other', label: 'Other' },
+    ],
+    roles: [
+      { value: 'owner', label: 'Owner / Founder / CEO' },
+      { value: 'finance', label: 'Finance Manager / Accountant' },
+      { value: 'operations', label: 'Operations Manager' },
+      { value: 'it', label: 'IT Manager / System Administrator' },
+      { value: 'hr', label: 'HR Manager' },
+      { value: 'other', label: 'Other' },
+    ],
+    sizes: [
+      { value: '1-5', label: '1–5 employees' },
+      { value: '6-15', label: '6–15 employees' },
+      { value: '16-50', label: '16–50 employees' },
+      { value: '51-100', label: '51–100 employees' },
+      { value: '101-500', label: '101–500 employees' },
+      { value: '500+', label: '500+ employees' },
+    ],
+  },
+  fr: {
+    formTitle: 'Demander une démonstration',
+    invalidMessage: 'Corrigez les champs signalés avant de continuer.',
+    unavailableMessage: "Ce formulaire n'est pas encore relié à un service d'envoi. Pour nous contacter maintenant, écrivez à info@kraalcode.com.",
+    loadingLabel: 'Vérification de la demande…',
+    submitLabel: 'Préparer la demande',
+    formNote: "Ce formulaire statique n'envoie pas encore de demandes. Écrivez à info@kraalcode.com pour contacter l'équipe directement.",
+    labels: {
+      website: 'Site web',
+      name: 'Nom complet',
+      email: 'Email professionnel',
+      organisation: 'Organisation',
+      country: 'Pays',
+      role: 'Votre rôle',
+      size: "Taille de l'organisation",
+      interests: "Domaines d'intérêt",
+      message: 'Autre chose',
+      privacy: "Je comprends que Kraal Code utilisera ces informations pour répondre à ma demande et assurer le suivi pertinent.",
+      marketing: 'Je souhaite recevoir occasionnellement des informations sur les produits. (Facultatif)',
+    },
+    placeholders: {
+      country: 'Sélectionnez votre pays',
+      role: 'Sélectionnez votre rôle',
+      size: 'Sélectionnez la taille',
+      interests: 'Ex. : comptabilité, inventaire, paie, CRM…',
+      message: 'Parlez-nous de vos systèmes actuels, de vos difficultés ou de vos besoins précis.',
+    },
+    errors: {
+      name: 'Saisissez votre nom complet.',
+      email: 'Saisissez une adresse email professionnelle valide.',
+      organisation: 'Saisissez le nom de votre organisation.',
+      country: 'Sélectionnez votre pays.',
+      privacy: "Acceptez l'avis sur l'utilisation des informations avant de continuer.",
+    },
+    countries: [
+      { value: 'CD', label: 'République démocratique du Congo' },
+      { value: 'CG', label: 'Congo-Brazzaville' },
+      { value: 'CM', label: 'Cameroun' },
+      { value: 'CI', label: "Côte d'Ivoire" },
+      { value: 'SN', label: 'Sénégal' },
+      { value: 'ML', label: 'Mali' },
+      { value: 'BF', label: 'Burkina Faso' },
+      { value: 'TG', label: 'Togo' },
+      { value: 'BJ', label: 'Bénin' },
+      { value: 'GA', label: 'Gabon' },
+      { value: 'MG', label: 'Madagascar' },
+      { value: 'BI', label: 'Burundi' },
+      { value: 'RW', label: 'Rwanda' },
+      { value: 'other', label: 'Autre' },
+    ],
+    roles: [
+      { value: 'owner', label: 'Propriétaire / Fondateur / DG' },
+      { value: 'finance', label: 'Directeur financier / Comptable' },
+      { value: 'operations', label: 'Directeur des opérations' },
+      { value: 'it', label: 'Directeur IT / Administrateur système' },
+      { value: 'rh', label: 'Directeur RH' },
+      { value: 'other', label: 'Autre' },
+    ],
+    sizes: [
+      { value: '1-5', label: '1–5 employés' },
+      { value: '6-15', label: '6–15 employés' },
+      { value: '16-50', label: '16–50 employés' },
+      { value: '51-100', label: '51–100 employés' },
+      { value: '101-500', label: '101–500 employés' },
+      { value: '500+', label: '500+ employés' },
+    ],
+  },
+  sw: {
+    formTitle: 'Oma onyesho',
+    invalidMessage: 'Sahihisha sehemu zilizoangaziwa kabla ya kuendelea.',
+    unavailableMessage: 'Fomu hii bado haijaunganishwa na huduma ya kutuma maombi. Ili kuwasiliana nasi sasa, tuma barua pepe kwa info@kraalcode.com.',
+    loadingLabel: 'Inakagua ombi…',
+    submitLabel: 'Andaa ombi',
+    formNote: 'Fomu hii ya tovuti bado haitumi maombi. Tuma barua pepe kwa info@kraalcode.com ili kuwasiliana na timu moja kwa moja.',
+    labels: {
+      website: 'Tovuti',
+      name: 'Jina kamili',
+      email: 'Barua pepe ya kazi',
+      organisation: 'Shirika',
+      country: 'Nchi',
+      role: 'Wajibu wako',
+      size: 'Ukubwa wa shirika',
+      interests: 'Maeneo ya nia',
+      message: 'Mengineyo',
+      privacy: 'Ninaelewa kwamba Kraal Code itatumia taarifa hizi kujibu ombi langu na kutoa ufafanuzi unaofaa.',
+      marketing: 'Ningependa kupokea taarifa za bidhaa mara kwa mara. (Si lazima)',
+    },
+    placeholders: {
+      country: 'Chagua nchi yako',
+      role: 'Chagua wajibu wako',
+      size: 'Chagua ukubwa',
+      interests: 'Mf. fedha, hisa, mishahara, CRM…',
+      message: 'Tuambie kuhusu mifumo yako ya sasa, changamoto au mahitaji maalum.',
+    },
+    errors: {
+      name: 'Weka jina lako kamili.',
+      email: 'Weka barua pepe halali ya kazi.',
+      organisation: 'Weka jina la shirika lako.',
+      country: 'Chagua nchi yako.',
+      privacy: 'Kubali ilani ya matumizi ya taarifa kabla ya kuendelea.',
+    },
+    countries: [
+      { value: 'UG', label: 'Uganda' },
+      { value: 'KE', label: 'Kenya' },
+      { value: 'TZ', label: 'Tanzania' },
+      { value: 'CD', label: 'Jamhuri ya Kidemokrasia ya Congo' },
+      { value: 'RW', label: 'Rwanda' },
+      { value: 'BI', label: 'Burundi' },
+      { value: 'SS', label: 'Kusini mwa Sudan' },
+      { value: 'other', label: 'Nyingine' },
+    ],
+    roles: [
+      { value: 'owner', label: 'Mmiliki / Mwanzilishi / Mkurugenzi' },
+      { value: 'finance', label: 'Meneja wa Fedha / Mhasibu' },
+      { value: 'operations', label: 'Meneja wa Uendeshaji' },
+      { value: 'it', label: 'Meneja wa IT / Msimamizi wa Mfumo' },
+      { value: 'hr', label: 'Meneja wa HR' },
+      { value: 'other', label: 'Nyingine' },
+    ],
+    sizes: [
+      { value: '1-5', label: '1–5 wafanyakazi' },
+      { value: '6-15', label: '6–15 wafanyakazi' },
+      { value: '16-50', label: '16–50 wafanyakazi' },
+      { value: '51-100', label: '51–100 wafanyakazi' },
+      { value: '101-500', label: '101–500 wafanyakazi' },
+      { value: '500+', label: '500+ wafanyakazi' },
+    ],
+  },
+};
+
+const t = copy[locale];
+const required = '*';
+---
+
+<form
+  class="contact-form"
+  data-contact-form
+  data-invalid-message={t.invalidMessage}
+  data-unavailable-message={t.unavailableMessage}
+  data-loading-label={t.loadingLabel}
+  method="POST"
+  action="#"
+  novalidate
+  aria-labelledby="contact-form-heading"
+>
+  <h2 id="contact-form-heading">{t.formTitle}</h2>
+
+  <p id="form-status" class="form-status" role="alert" aria-live="assertive" aria-atomic="true" tabindex="-1" hidden></p>
+
+  <div class="hp-field" aria-hidden="true">
+    <label for="website">{t.labels.website}</label>
+    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+  </div>
+
+  <div class="form-group">
+    <label for="name">{t.labels.name} <span class="required" aria-hidden="true">{required}</span></label>
+    <input type="text" id="name" name="name" required autocomplete="name" aria-invalid="false" aria-describedby="name-error" />
+    <p id="name-error" class="field-error" hidden>{t.errors.name}</p>
+  </div>
+
+  <div class="form-group">
+    <label for="email">{t.labels.email} <span class="required" aria-hidden="true">{required}</span></label>
+    <input type="email" id="email" name="email" required autocomplete="email" aria-invalid="false" aria-describedby="email-error" />
+    <p id="email-error" class="field-error" hidden>{t.errors.email}</p>
+  </div>
+
+  <div class="form-group">
+    <label for="organisation">{t.labels.organisation} <span class="required" aria-hidden="true">{required}</span></label>
+    <input type="text" id="organisation" name="organisation" required autocomplete="organization" aria-invalid="false" aria-describedby="organisation-error" />
+    <p id="organisation-error" class="field-error" hidden>{t.errors.organisation}</p>
+  </div>
+
+  <div class="form-group">
+    <label for="country">{t.labels.country} <span class="required" aria-hidden="true">{required}</span></label>
+    <select id="country" name="country" required aria-invalid="false" aria-describedby="country-error">
+      <option value="">{t.placeholders.country}</option>
+      {t.countries.map((option) => <option value={option.value}>{option.label}</option>)}
+    </select>
+    <p id="country-error" class="field-error" hidden>{t.errors.country}</p>
+  </div>
+
+  <div class="form-group">
+    <label for="role">{t.labels.role}</label>
+    <select id="role" name="role">
+      <option value="">{t.placeholders.role}</option>
+      {t.roles.map((option) => <option value={option.value}>{option.label}</option>)}
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="size">{t.labels.size}</label>
+    <select id="size" name="size">
+      <option value="">{t.placeholders.size}</option>
+      {t.sizes.map((option) => <option value={option.value}>{option.label}</option>)}
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="interests">{t.labels.interests}</label>
+    <textarea id="interests" name="interests" rows="3" placeholder={t.placeholders.interests}></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="message">{t.labels.message}</label>
+    <textarea id="message" name="message" rows="3" placeholder={t.placeholders.message}></textarea>
+  </div>
+
+  <div class="form-group form-checkbox">
+    <input type="checkbox" id="privacy" name="privacy" required aria-invalid="false" aria-describedby="privacy-error" />
+    <div>
+      <label for="privacy">{t.labels.privacy} <span class="required" aria-hidden="true">{required}</span></label>
+      <p id="privacy-error" class="field-error" hidden>{t.errors.privacy}</p>
+    </div>
+  </div>
+
+  <div class="form-group form-checkbox">
+    <input type="checkbox" id="marketing" name="marketing" />
+    <label for="marketing">{t.labels.marketing}</label>
+  </div>
+
+  <button type="submit" class="btn btn--primary btn--full" data-default-label={t.submitLabel}>{t.submitLabel}</button>
+  <p id="form-note" class="form-note">{t.formNote}</p>
+</form>
+
+<style>
+  .contact-form {
+    padding: var(--kc-space-8);
+    background: var(--kc-surface-light);
+    border: 1px solid var(--kc-border-subtle);
+    border-radius: var(--kc-radius-lg);
+  }
+
+  .contact-form h2 {
+    font-size: var(--kc-text-xl);
+    font-family: var(--kc-font-body);
+    font-weight: var(--kc-weight-semibold);
+    margin-bottom: var(--kc-space-6);
+  }
+
+  .form-status {
+    padding: var(--kc-space-4);
+    margin-bottom: var(--kc-space-5);
+    border: 1px solid var(--kc-danger);
+    border-radius: var(--kc-radius-md);
+    background: var(--kc-danger-light);
+    color: var(--kc-danger);
+    font-size: var(--kc-text-sm);
+  }
+
+  .form-group {
+    margin-bottom: var(--kc-space-5);
+    scroll-margin-block: 7rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: var(--kc-space-2);
+    color: var(--kc-text-primary);
+    font-size: var(--kc-text-sm);
+    font-weight: var(--kc-weight-medium);
+  }
+
+  .required {
+    color: var(--kc-danger);
+  }
+
+  .form-group input[type='text'],
+  .form-group input[type='email'],
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: var(--kc-space-3) var(--kc-space-4);
+    border: 1px solid var(--kc-border);
+    border-radius: var(--kc-radius-md);
+    background: var(--kc-surface-light);
+    color: var(--kc-text-primary);
+    font-size: var(--kc-text-base);
+    font-family: var(--kc-font-body);
+    transition: border-color var(--kc-transition-fast), box-shadow var(--kc-transition-fast);
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--kc-teal);
+    box-shadow: 0 0 0 3px rgba(70, 105, 107, 0.14);
+  }
+
+  .form-group input:focus-visible,
+  .form-group select:focus-visible,
+  .form-group textarea:focus-visible {
+    outline: 3px solid var(--kc-focus-ring);
+    outline-offset: 2px;
+  }
+
+  .form-group textarea {
+    min-height: 5rem;
+    resize: vertical;
+  }
+
+  .form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--kc-space-3);
+  }
+
+  .form-checkbox input[type='checkbox'] {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    margin-top: 1px;
+  }
+
+  .form-checkbox > div {
+    flex: 1;
+  }
+
+  .form-checkbox label {
+    margin-bottom: 0;
+    color: var(--kc-text-secondary);
+  }
+
+  .form-group.error input,
+  .form-group.error select,
+  .form-group.error textarea {
+    border-color: var(--kc-danger);
+  }
+
+  .form-group.error input:focus-visible,
+  .form-group.error select:focus-visible,
+  .form-group.error textarea:focus-visible {
+    outline-color: var(--kc-danger);
+  }
+
+  .field-error {
+    margin-top: var(--kc-space-1);
+    color: var(--kc-danger);
+    font-size: var(--kc-text-xs);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    padding: var(--kc-space-4) var(--kc-space-8);
+    border: none;
+    border-radius: var(--kc-radius-lg);
+    background: var(--kc-charcoal);
+    color: var(--kc-text-inverse);
+    font-size: var(--kc-text-base);
+    font-weight: var(--kc-weight-semibold);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color var(--kc-transition-fast), opacity var(--kc-transition-fast);
+  }
+
+  .btn:hover {
+    background: var(--kc-teal-deep);
+    color: var(--kc-text-inverse);
+  }
+
+  .btn:disabled {
+    cursor: wait;
+    opacity: 0.7;
+  }
+
+  .btn--full {
+    width: 100%;
+  }
+
+  .btn--loading::after {
+    width: 1rem;
+    height: 1rem;
+    margin-left: var(--kc-space-2);
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    content: '';
+    animation: contact-form-spin 0.6s linear infinite;
+  }
+
+  .form-note {
+    margin-top: var(--kc-space-4);
+    color: var(--kc-text-tertiary);
+    font-size: var(--kc-text-xs);
+    text-align: center;
+  }
+
+  .hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  @keyframes contact-form-spin {
+    to { transform: rotate(360deg); }
+  }
+</style>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-contact-form]');
+
+  if (form) {
+    const submitButton = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    const status = form.querySelector<HTMLElement>('#form-status');
+    const requiredFields = Array.from(
+      form.querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>('[required]'),
+    );
+    const defaultLabel = submitButton?.dataset.defaultLabel ?? submitButton?.textContent ?? '';
+
+    const hasValue = (field: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement): boolean => {
+      if (field instanceof HTMLInputElement && field.type === 'checkbox') return field.checked;
+      return field.value.trim().length > 0;
+    };
+
+    const isValid = (field: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement): boolean => {
+      const formatIsValid = !(field instanceof HTMLInputElement && field.type === 'email') || field.validity.valid;
+      return hasValue(field) && formatIsValid;
+    };
+
+    const setFieldError = (field: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement, invalid: boolean): void => {
+      const group = field.closest('.form-group');
+      const message = document.getElementById(`${field.id}-error`);
+      group?.classList.toggle('error', invalid);
+      field.setAttribute('aria-invalid', String(invalid));
+      if (message) message.hidden = !invalid;
+    };
+
+    const clearStatus = (): void => {
+      if (!status) return;
+      status.hidden = true;
+      status.textContent = '';
+    };
+
+    const showStatus = (message: string): void => {
+      if (!status) return;
+      status.textContent = message;
+      status.hidden = false;
+    };
+
+    requiredFields.forEach((field) => {
+      const eventName = field instanceof HTMLSelectElement || (field instanceof HTMLInputElement && field.type === 'checkbox')
+        ? 'change'
+        : 'input';
+
+      field.addEventListener(eventName, () => {
+        clearStatus();
+        if (isValid(field)) setFieldError(field, false);
+      });
+    });
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      clearStatus();
+
+      const honeypot = form.querySelector<HTMLInputElement>('#website');
+      if (honeypot?.value) return;
+
+      let valid = true;
+      let firstInvalid: HTMLElement | undefined;
+
+      requiredFields.forEach((field) => {
+        const fieldIsValid = isValid(field);
+        setFieldError(field, !fieldIsValid);
+        if (!fieldIsValid) {
+          valid = false;
+          firstInvalid ??= field;
+        }
+      });
+
+      if (!valid) {
+        showStatus(form.dataset.invalidMessage ?? 'Please correct the highlighted fields.');
+        firstInvalid?.focus();
+        return;
+      }
+
+      if (!submitButton) return;
+      submitButton.disabled = true;
+      submitButton.setAttribute('aria-busy', 'true');
+      submitButton.classList.add('btn--loading');
+      submitButton.textContent = form.dataset.loadingLabel ?? 'Checking request…';
+
+      window.setTimeout(() => {
+        submitButton.disabled = false;
+        submitButton.removeAttribute('aria-busy');
+        submitButton.classList.remove('btn--loading');
+        submitButton.textContent = defaultLabel;
+        showStatus(form.dataset.unavailableMessage ?? 'This form is not connected to a submission service yet.');
+        status?.focus();
+      }, 300);
+    });
+  }
+</script>

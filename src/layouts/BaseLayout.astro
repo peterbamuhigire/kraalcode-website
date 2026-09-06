@@ -31,6 +31,7 @@ const {
 
 const siteName = 'Kraal Code';
 const fullTitle = `${title} | ${siteName}`;
+const absoluteOgImage = new URL(ogImage, Astro.site ?? 'https://kraalcode.com').toString();
 
 const alternates = alternateUrls ?? getLocalizedAlternates(Astro.url.pathname);
 const routeKey = getRouteKey(Astro.url.pathname);
@@ -69,7 +70,7 @@ const detailHeroStyle = detailHero
   <meta property="og:type" content="website" />
   <meta property="og:title" content={fullTitle} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content={ogImage} />
+  <meta property="og:image" content={absoluteOgImage} />
   <meta property="og:url" content={canonicalUrl} />
   <meta property="og:site_name" content={siteName} />
   <meta property="og:locale" content={locale === 'en' ? 'en_UG' : locale === 'fr' ? 'fr_FR' : 'sw_KE'} />
@@ -80,7 +81,7 @@ const detailHeroStyle = detailHero
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={fullTitle} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={ogImage} />
+  <meta name="twitter:image" content={absoluteOgImage} />
 
   {/* Favicons */}
   <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
@@ -89,7 +90,7 @@ const detailHeroStyle = detailHero
   <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
 
   {/* Structured Data: Organization */}
-  <script type="application/ld+json" set:html={JSON.stringify({
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Kraal Code",
@@ -103,7 +104,7 @@ const detailHeroStyle = detailHero
       "availableLanguage": ["English", "French", "Swahili"]
     }
   })} />
-  {structuredData && <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
+  {structuredData && <script type="application/ld+json" is:inline set:html={JSON.stringify(structuredData)} />}
 </head>
 <body class:list={{ 'detail-route': Boolean(detailHero) }} data-route={routeKey} style={detailHeroStyle}>
   <a class="skip-link" href="#main-content">Skip to main content</a>

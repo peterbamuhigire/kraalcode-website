@@ -20,25 +20,19 @@ const locale = 'en';
   canonicalUrl="https://kraalcode.com/en/"
 >
   {/* Structured Data: WebSite + SoftwareApplication */}
-  <script type="application/ld+json" set:html={JSON.stringify({
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Kraal Code",
     "url": "https://kraalcode.com",
     "inLanguage": ["en", "fr", "sw"],
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://kraalcode.com/en/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
   })} />
 
-  <script type="application/ld+json" set:html={JSON.stringify({
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Kraal Code",
     "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web, Android, iOS",
     "description": "Cloud ERP platform for African organisations — finance, inventory, sales, procurement, manufacturing, HR, and projects in one secure system.",
     "offers": {
       "@type": "Offer",
