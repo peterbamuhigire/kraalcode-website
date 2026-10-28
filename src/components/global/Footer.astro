@@ -1,4 +1,5 @@
----
+﻿---
+import ChweziPolicyLinks from "../ChweziPolicyLinks.astro";
 import { getLocalizedPath, type Locale } from '../../utils/localizedRoutes';
 
 interface Props {
@@ -45,18 +46,18 @@ const content: Record<string, {
       address: 'Chwezi Core Systems, P.O Box 117385, Kampala, Uganda',
       demo: 'Request a Demo',
     },
-    copyright: `© ${new Date().getFullYear()} Kraal Code. All rights reserved. A product of Chwezi Core Systems.`,
+    copyright: `Â© ${new Date().getFullYear()} Kraal Code. All rights reserved. A product of Chwezi Core Systems.`,
   },
   fr: {
-    tagline: 'Le système d\'exploitation pour l\'organisation africaine moderne.',
+    tagline: 'Le systÃ¨me d\'exploitation pour l\'organisation africaine moderne.',
     product: {
       heading: 'Produit',
       links: [
         { label: 'Vue d\'ensemble', href: '/fr/produit/' },
-        { label: 'Capacités', href: '/fr/capacites/' },
+        { label: 'CapacitÃ©s', href: '/fr/capacites/' },
         { label: 'Secteurs', href: '/fr/secteurs/' },
         { label: 'Pourquoi Kraal Code', href: '/fr/pourquoi/' },
-        { label: 'Sécurité et confidentialité', href: '/fr/securite/' },
+        { label: 'SÃ©curitÃ© et confidentialitÃ©', href: '/fr/securite/' },
         { label: 'Travailler de partout', href: '/fr/travailler-de-partout/' },
         { label: 'Blogue', href: '/fr/blogue/' },
       ],
@@ -64,19 +65,19 @@ const content: Record<string, {
     legal: {
       heading: 'Juridique',
       links: [
-        { label: 'Politique de confidentialité', href: '/fr/juridique/confidentialite/' },
+        { label: 'Politique de confidentialitÃ©', href: '/fr/juridique/confidentialite/' },
         { label: 'Avis sur les cookies', href: '/fr/juridique/cookies/' },
         { label: 'Conditions d\'utilisation', href: '/fr/juridique/conditions/' },
-        { label: 'Accessibilité', href: '/fr/juridique/accessibilite/' },
+        { label: 'AccessibilitÃ©', href: '/fr/juridique/accessibilite/' },
       ],
     },
     contact: {
       heading: 'Contactez-nous',
       email: 'info@chwezicore.com',
       address: 'Chwezi Core Systems, B.P 117385, Kampala, Ouganda',
-      demo: 'Demander une démo',
+      demo: 'Demander une dÃ©mo',
     },
-    copyright: `© ${new Date().getFullYear()} Kraal Code. Tous droits réservés. Un produit de Chwezi Core Systems.`,
+    copyright: `Â© ${new Date().getFullYear()} Kraal Code. Tous droits rÃ©servÃ©s. Un produit de Chwezi Core Systems.`,
   },
   sw: {
     tagline: 'Mfumo wa uendeshaji kwa shirika la kisasa la Kiafrika.',
@@ -107,7 +108,7 @@ const content: Record<string, {
       address: 'Chwezi Core Systems, S.L.P 117385, Kampala, Uganda',
       demo: 'Oma Onyesho',
     },
-    copyright: `© ${new Date().getFullYear()} Kraal Code. Haki zote zimehifadhiwa. Bidhaa ya Chwezi Core Systems.`,
+    copyright: `Â© ${new Date().getFullYear()} Kraal Code. Haki zote zimehifadhiwa. Bidhaa ya Chwezi Core Systems.`,
   },
 };
 
@@ -159,7 +160,7 @@ const localePaths: Record<Locale, string> = {
         <ul role="list">
           <li class="footer-address">{t.contact.address}</li>
           <li><a href={`mailto:${t.contact.email}`}>{t.contact.email}</a></li>
-          <li><a href={`/${locale}/contact/`} class="footer-cta">{t.contact.demo} →</a></li>
+          <li><a href={`/${locale}/contact/`} class="footer-cta">{t.contact.demo} â†’</a></li>
         </ul>
       </div>
     </div>
@@ -175,6 +176,7 @@ const localePaths: Record<Locale, string> = {
       </div>
     </div>
   </div>
+<ChweziPolicyLinks lang={locale} product="Kraal Code" />
 </footer>
 
 <style>
@@ -304,3 +306,5 @@ const localePaths: Record<Locale, string> = {
     }
   }
 </style>
+
+

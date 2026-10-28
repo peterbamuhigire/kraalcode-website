@@ -335,6 +335,9 @@ const required = '*';
   </div>
 
   <button type="submit" class="btn btn--primary btn--full" data-default-label={t.submitLabel}>{t.submitLabel}</button>
+  <p class="form-note">
+    {locale === 'fr' ? <>En envoyant ce formulaire, vous acceptez que Chwezi Core Systems Limited traite vos coordonnées pour vous répondre, conformément à notre <a href="https://chwezicore.com/fr/data-protection-policy/" target="_blank" rel="noopener noreferrer">Politique de protection des données et de la vie privée</a>. Nos serveurs sont situés aux États-Unis d’Amérique, en Finlande et en Allemagne.</> : <>By submitting this form, you agree that Chwezi Core Systems Limited will process your details to respond to you, as described in our <a href="https://chwezicore.com/en/data-protection-policy/" target="_blank" rel="noopener noreferrer">Data Protection and Privacy Policy</a>. Our servers are located in the United States of America, Finland and Germany.</>}
+  </p>
   <p id="form-note" class="form-note">{t.formNote}</p>
 </form>
 

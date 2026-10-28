@@ -84,3 +84,7 @@ Organisation-wide flat pricing (no per-seat fees):
 
 Kraal Code is built by Chwezi Core Systems.
 Contact: info@kraalcode.com
+
+## Security and data protection
+
+Kraal Code is a product of Chwezi Core Systems Limited, Kampala, Uganda. Product data is covered by the company Information Security Policy and Data Protection and Privacy Policy. Read the [Information Security Policy](https://chwezicore.com/en/information-security-policy/) and [Data Protection and Privacy Policy](https://chwezicore.com/en/data-protection-policy/).
