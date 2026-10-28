@@ -260,7 +260,11 @@ function isActive(key: typeof navKeys[number]): boolean {
   .mobile-menu-toggle {
     display: none;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 5px;
+    width: 44px;
+    height: 44px;
     padding: var(--kc-space-2);
   }
 
@@ -288,7 +292,9 @@ function isActive(key: typeof navKeys[number]): boolean {
     font-size: var(--kc-text-lg);
     font-weight: var(--kc-weight-medium);
     color: var(--kc-text-primary);
-    display: block;
+    display: flex;
+    align-items: center;
+    min-height: 44px;
     padding: var(--kc-space-2) 0;
   }
 
@@ -333,6 +339,14 @@ function isActive(key: typeof navKeys[number]): boolean {
       const expanded = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!expanded));
       nav.hidden = expanded;
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        nav.hidden = true;
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
     });
   }
 </script>
