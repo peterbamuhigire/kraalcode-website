@@ -2,6 +2,9 @@
 
 > Kraal Code is a multi-tenant, modular, cloud-hosted SaaS ERP platform purpose-built for mid-sized and growing organisations in East and Central Africa. Priced per organisation (not per seat), denominated in Ugandan Shillings, and designed so any employee can use it on their first day without training.
 
+Canonical site: https://kraalcode.com/en/
+Last reviewed: 2026-11-19 (links checked against the built site)
+
 ## Product
 
 Kraal Code provides 23 integrated components: 6 core modules (always active) + 13 add-on modules + 4 platform services.
@@ -66,13 +69,20 @@ Organisation-wide flat pricing (no per-seat fees):
 
 ## Links
 
+Canonical English pages (French and Kiswahili equivalents are linked from each page's language switcher and hreflang tags):
+
 - Homepage: https://kraalcode.com/en/
-- Product: https://kraalcode.com/en/product/
+- Platform overview: https://kraalcode.com/en/product/
 - Capabilities: https://kraalcode.com/en/capabilities/
-- Security: https://kraalcode.com/en/security/
 - Sectors: https://kraalcode.com/en/sectors/
-- Contact: https://kraalcode.com/en/contact/
-- Pricing: https://kraalcode.com/en/pricing/
+- Why Kraal Code: https://kraalcode.com/en/why/
+- Security and privacy: https://kraalcode.com/en/security/
+- Work from anywhere: https://kraalcode.com/en/work-from-anywhere/
+- Blog: https://kraalcode.com/en/blog/
+- Pricing summary (homepage section): https://kraalcode.com/en/#pricing-heading
+- Contact and demonstration requests: https://kraalcode.com/en/contact/
+- Responsible disclosure: https://kraalcode.com/en/security/disclosure/
+- Privacy notice: https://kraalcode.com/en/legal/privacy/
 
 ## Languages
 
@@ -84,3 +94,7 @@ Organisation-wide flat pricing (no per-seat fees):
 
 Kraal Code is built by Chwezi Core Systems.
 Contact: info@kraalcode.com
+
+## Security and data protection
+
+Kraal Code is a product of Chwezi Core Systems Limited, Kampala, Uganda. Product data is covered by the company Information Security Policy and Data Protection and Privacy Policy. Read the [Information Security Policy](https://chwezicore.com/en/information-security-policy/) and [Data Protection and Privacy Policy](https://chwezicore.com/en/data-protection-policy/).
