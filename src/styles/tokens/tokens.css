@@ -69,7 +69,7 @@
   /* ── Text Hierarchy ── */
   --kc-text-primary:    #202833;  /* Charcoal on light */
   --kc-text-secondary:  #4a5568;  /* Muted slate */
-  --kc-text-tertiary:   #718096;  /* Lighter slate for captions */
+  --kc-text-tertiary:   #5f6b7d;  /* Lighter slate for captions; was #718096, darkened 2026-11-19 to reach 4.5:1 on warm surfaces */
   --kc-text-inverse:    #ccd9d2;  /* Warm ivory on dark */
   --kc-text-inverse-muted: #9ca8a0; /* Muted ivory for dark secondary text */
 

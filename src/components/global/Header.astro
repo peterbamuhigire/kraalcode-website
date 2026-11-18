@@ -79,12 +79,12 @@ function isActive(key: typeof navKeys[number]): boolean {
 
     <nav class="header-nav" aria-label="Main navigation">
       <ul class="nav-list" role="list">
-        <li><a href={navPaths.product} class={isActive('product') ? 'active' : ''}>{t.product}</a></li>
-        <li><a href={navPaths.capabilities} class={isActive('capabilities') ? 'active' : ''}>{t.capabilities}</a></li>
-        <li><a href={navPaths.sectors} class={isActive('sectors') ? 'active' : ''}>{t.sectors}</a></li>
-        <li><a href={navPaths.why} class={isActive('why') ? 'active' : ''}>{t.why}</a></li>
-        <li><a href={navPaths.security} class={isActive('security') ? 'active' : ''}>{t.security}</a></li>
-        <li><a href={navPaths.blog} class={isActive('blog') ? 'active' : ''}>{t.blog}</a></li>
+        <li><a href={navPaths.product} class={isActive('product') ? 'active' : ''} aria-current={isActive('product') ? 'page' : undefined}>{t.product}</a></li>
+        <li><a href={navPaths.capabilities} class={isActive('capabilities') ? 'active' : ''} aria-current={isActive('capabilities') ? 'page' : undefined}>{t.capabilities}</a></li>
+        <li><a href={navPaths.sectors} class={isActive('sectors') ? 'active' : ''} aria-current={isActive('sectors') ? 'page' : undefined}>{t.sectors}</a></li>
+        <li><a href={navPaths.why} class={isActive('why') ? 'active' : ''} aria-current={isActive('why') ? 'page' : undefined}>{t.why}</a></li>
+        <li><a href={navPaths.security} class={isActive('security') ? 'active' : ''} aria-current={isActive('security') ? 'page' : undefined}>{t.security}</a></li>
+        <li><a href={navPaths.blog} class={isActive('blog') ? 'active' : ''} aria-current={isActive('blog') ? 'page' : undefined}>{t.blog}</a></li>
       </ul>
     </nav>
 
@@ -209,6 +209,12 @@ function isActive(key: typeof navKeys[number]): boolean {
   }
 
   .lang-btn {
+    /* WCAG 2.2 target size (minimum 24px) */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    min-height: 24px;
     font-size: var(--kc-text-xs);
     font-weight: var(--kc-weight-medium);
     padding: var(--kc-space-1) var(--kc-space-2);
@@ -331,7 +337,7 @@ function isActive(key: typeof navKeys[number]): boolean {
 </style>
 
 <script>
-  const toggle = document.querySelector('.mobile-menu-toggle');
+  const toggle = document.querySelector<HTMLButtonElement>('.mobile-menu-toggle');
   const nav = document.getElementById('mobile-nav');
 
   if (toggle && nav) {

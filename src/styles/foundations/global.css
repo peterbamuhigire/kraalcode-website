@@ -181,12 +181,17 @@ small {
   color: rgba(236, 244, 239, 0.68);
 }
 
-.detail-route .page-hero .breadcrumb a {
+/* body prefix outranks page-scoped breadcrumb colours meant for light heroes */
+body.detail-route .page-hero .breadcrumb ol {
+  color: rgba(236, 244, 239, 0.78);
+}
+
+body.detail-route .page-hero .breadcrumb a {
   color: var(--kc-champagne);
 }
 
-.detail-route .page-hero .breadcrumb li:not(:last-child)::after {
-  color: rgba(236, 244, 239, 0.42);
+body.detail-route .page-hero .breadcrumb li:not(:last-child)::after {
+  color: rgba(236, 244, 239, 0.5);
 }
 
 @media (max-width: 640px) {
