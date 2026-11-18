@@ -23,14 +23,18 @@ const {
   description,
   locale,
   canonicalUrl,
-  ogImage = '/static/og-default.svg',
+  ogImage = '/static/og-default.png',
   noindex = false,
   alternateUrls,
   structuredData,
 } = Astro.props;
 
 const siteName = 'Kraal Code';
-const fullTitle = `${title} | ${siteName}`;
+// Some page and post titles already carry the brand; never repeat it.
+const baseTitle = title.replace(/\s*\|\s*Kraal Code\s*$/, '');
+const fullTitle = baseTitle.includes(siteName) ? baseTitle : `${baseTitle} | ${siteName}`;
+const isDefaultOgImage = ogImage === '/static/og-default.png';
+const ogType = structuredData?.['@type'] === 'Article' ? 'article' : 'website';
 const absoluteOgImage = new URL(ogImage, Astro.site ?? 'https://kraalcode.com').toString();
 
 const alternates = alternateUrls ?? getLocalizedAlternates(Astro.url.pathname);
@@ -67,10 +71,13 @@ const detailHeroStyle = detailHero
   <link rel="alternate" hreflang="x-default" href={`https://kraalcode.com${alternates.en}`} />
 
   {/* Open Graph */}
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content={ogType} />
   <meta property="og:title" content={fullTitle} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={absoluteOgImage} />
+  {isDefaultOgImage && <meta property="og:image:width" content="1200" />}
+  {isDefaultOgImage && <meta property="og:image:height" content="630" />}
+  <meta property="og:image:alt" content={fullTitle} />
   <meta property="og:url" content={canonicalUrl} />
   <meta property="og:site_name" content={siteName} />
   <meta property="og:locale" content={locale === 'en' ? 'en_UG' : locale === 'fr' ? 'fr_FR' : 'sw_KE'} />

@@ -12,42 +12,58 @@ const content: Record<string, {
   ctaHref: string;
   tiers: Array<{ name: string; price: string; users: string; branches: string }>;
   note: string;
+  period: string;
+  badge: string;
+  coreIncluded: string;
+  addOns: string;
 }> = {
   en: {
     heading: 'One price for your whole organisation',
     subtext: 'No per-seat fees. No hidden implementation costs. No USD exchange rate surprises. Pay for the plan that fits your size — every employee gets access.',
-    cta: 'See full pricing',
-    ctaHref: '/en/pricing/',
+    cta: 'Ask for full pricing',
+    ctaHref: '/en/contact/',
     tiers: [
       { name: 'Starter', price: 'UGX 250,000', users: 'Up to 5 users', branches: 'Up to 2 branches' },
       { name: 'Professional', price: 'UGX 1,000,000', users: 'Up to 30 users', branches: 'Up to 10 branches' },
       { name: 'Enterprise', price: 'UGX 2,500,000', users: 'Unlimited users', branches: 'Unlimited branches' },
     ],
     note: 'All prices per month. Annual billing: 10 months for 12 months access.',
+    period: '/month',
+    badge: 'Most popular',
+    coreIncluded: '6 core modules included',
+    addOns: 'Add-on modules available',
   },
   fr: {
     heading: 'Un prix pour toute votre organisation',
     subtext: 'Pas de frais par utilisateur. Pas de coûts d\'implémentation cachés. Payez pour le plan qui convient à votre taille.',
-    cta: 'Voir les tarifs complets',
-    ctaHref: '/fr/tarifs/',
+    cta: 'Demander les tarifs complets',
+    ctaHref: '/fr/contact/',
     tiers: [
       { name: 'Starter', price: '250 000 UGX', users: 'Jusqu\'à 5 utilisateurs', branches: 'Jusqu\'à 2 succursales' },
       { name: 'Professionnel', price: '1 000 000 UGX', users: 'Jusqu\'à 30 utilisateurs', branches: 'Jusqu\'à 10 succursales' },
       { name: 'Entreprise', price: '2 500 000 UGX', users: 'Utilisateurs illimités', branches: 'Succursales illimitées' },
     ],
     note: 'Tous les prix par mois. Facturation annuelle : 10 mois pour 12 mois d\'accès.',
+    period: '/mois',
+    badge: 'Le plus populaire',
+    coreIncluded: '6 modules de base inclus',
+    addOns: 'Modules complémentaires disponibles',
   },
   sw: {
     heading: 'Bei moja kwa shirika lako lote',
     subtext: 'Hakuna ada kwa kila mtumiaji. Hakuna gharama za utekelezaji zilizofichwa. Lipa kwa mpango unaofaa ukubwa wako.',
-    cta: 'Ona bei kamili',
-    ctaHref: '/sw/bei/',
+    cta: 'Uliza bei kamili',
+    ctaHref: '/sw/mawasiliano/',
     tiers: [
       { name: 'Starter', price: 'UGX 250,000', users: 'Hadi watumiaji 5', branches: 'Hadi matawi 2' },
       { name: 'Professional', price: 'UGX 1,000,000', users: 'Hadi watumiaji 30', branches: 'Hadi matawi 10' },
       { name: 'Enterprise', price: 'UGX 2,500,000', users: 'Watumiaji wasio na kikomo', branches: 'Matawi yasiyo na kikomo' },
     ],
     note: 'Bei zote kwa mwezi. Bili ya mwaka: miezi 10 kwa miezi 12 ya ufikiaji.',
+    period: '/mwezi',
+    badge: 'Maarufu zaidi',
+    coreIncluded: 'Moduli 6 za msingi zimejumuishwa',
+    addOns: 'Moduli za ziada zinapatikana',
   },
 };
 
@@ -63,15 +79,15 @@ const t = content[locale];
     <div class="pricing-grid grid grid--3">
       {t.tiers.map((tier, i) => (
         <div class:list={['pricing-card', { 'pricing-card--featured': i === 1 }]}>
-          {i === 1 && <span class="pricing-badge">Most popular</span>}
+          {i === 1 && <span class="pricing-badge">{t.badge}</span>}
           <h3>{tier.name}</h3>
           <div class="pricing-amount">{tier.price}</div>
-          <p class="pricing-period">/month</p>
+          <p class="pricing-period">{t.period}</p>
           <ul class="pricing-features" role="list">
             <li>{tier.users}</li>
             <li>{tier.branches}</li>
-            <li>6 core modules included</li>
-            <li>Add-on modules available</li>
+            <li>{t.coreIncluded}</li>
+            <li>{t.addOns}</li>
           </ul>
         </div>
       ))}
@@ -113,7 +129,7 @@ const t = content[locale];
     top: calc(-1 * var(--kc-space-3));
     left: 50%;
     transform: translateX(-50%);
-    background: var(--kc-teal);
+    background: var(--kc-teal-deep);
     color: var(--kc-text-inverse);
     font-size: var(--kc-text-xs);
     font-weight: var(--kc-weight-semibold);
