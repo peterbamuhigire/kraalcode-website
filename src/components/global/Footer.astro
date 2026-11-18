@@ -1,6 +1,6 @@
-﻿---
+---
 import ChweziPolicyLinks from "../ChweziPolicyLinks.astro";
-import { getLocalizedPath, type Locale } from '../../utils/localizedRoutes';
+import { getLocalizedPath, getNavPath, type Locale } from '../../utils/localizedRoutes';
 
 interface Props {
   locale: Locale;
@@ -12,7 +12,7 @@ const { locale, currentPath } = Astro.props;
 const content: Record<string, {
   tagline: string;
   product: { heading: string; links: Array<{ label: string; href: string }> };
-  legal: { heading: string; links: Array<{ label: string; href: string }> };
+  legal: { heading: string; links: Array<{ label: string; href: string; hreflang?: string }> };
   contact: { heading: string; email: string; address: string; demo: string };
   copyright: string;
 }> = {
@@ -46,38 +46,38 @@ const content: Record<string, {
       address: 'Chwezi Core Systems, P.O Box 117385, Kampala, Uganda',
       demo: 'Request a Demo',
     },
-    copyright: `Â© ${new Date().getFullYear()} Kraal Code. All rights reserved. A product of Chwezi Core Systems.`,
+    copyright: `© ${new Date().getFullYear()} Kraal Code. All rights reserved. A product of Chwezi Core Systems.`,
   },
   fr: {
-    tagline: 'Le systÃ¨me d\'exploitation pour l\'organisation africaine moderne.',
+    tagline: 'Le système d\'exploitation pour l\'organisation africaine moderne.',
     product: {
       heading: 'Produit',
       links: [
         { label: 'Vue d\'ensemble', href: '/fr/produit/' },
-        { label: 'CapacitÃ©s', href: '/fr/capacites/' },
+        { label: 'Capacités', href: '/fr/capacites/' },
         { label: 'Secteurs', href: '/fr/secteurs/' },
         { label: 'Pourquoi Kraal Code', href: '/fr/pourquoi/' },
-        { label: 'SÃ©curitÃ© et confidentialitÃ©', href: '/fr/securite/' },
-        { label: 'Travailler de partout', href: '/fr/travailler-de-partout/' },
+        { label: 'Sécurité et confidentialité', href: '/fr/securite/' },
+        { label: 'Travailler de partout', href: '/fr/travailler-partout/' },
         { label: 'Blogue', href: '/fr/blogue/' },
       ],
     },
     legal: {
       heading: 'Juridique',
       links: [
-        { label: 'Politique de confidentialitÃ©', href: '/fr/juridique/confidentialite/' },
-        { label: 'Avis sur les cookies', href: '/fr/juridique/cookies/' },
+        { label: 'Politique de confidentialité', href: '/fr/juridique/confidentialite/' },
+        { label: 'Avis sur les cookies', href: '/fr/juridique/temoins/' },
         { label: 'Conditions d\'utilisation', href: '/fr/juridique/conditions/' },
-        { label: 'AccessibilitÃ©', href: '/fr/juridique/accessibilite/' },
+        { label: 'Accessibilité', href: '/fr/juridique/accessibilite/' },
       ],
     },
     contact: {
       heading: 'Contactez-nous',
       email: 'info@chwezicore.com',
       address: 'Chwezi Core Systems, B.P 117385, Kampala, Ouganda',
-      demo: 'Demander une dÃ©mo',
+      demo: 'Demander une démo',
     },
-    copyright: `Â© ${new Date().getFullYear()} Kraal Code. Tous droits rÃ©servÃ©s. Un produit de Chwezi Core Systems.`,
+    copyright: `© ${new Date().getFullYear()} Kraal Code. Tous droits réservés. Un produit de Chwezi Core Systems.`,
   },
   sw: {
     tagline: 'Mfumo wa uendeshaji kwa shirika la kisasa la Kiafrika.',
@@ -89,17 +89,17 @@ const content: Record<string, {
         { label: 'Sekta', href: '/sw/sekta/' },
         { label: 'Kwa nini Kraal Code', href: '/sw/kwa-nini/' },
         { label: 'Usalama na Faragha', href: '/sw/usalama/' },
-        { label: 'Fanya Kazi Popote', href: '/sw/fanya-kazi-popote/' },
+        { label: 'Fanya Kazi Popote', href: '/sw/kazi-popote/' },
         { label: 'Blogu', href: '/sw/blogu/' },
       ],
     },
     legal: {
       heading: 'Kisheria',
       links: [
-        { label: 'Ilani ya Faragha', href: '/sw/kisheria/faragha/' },
-        { label: 'Ilani ya Vidakuzi', href: '/sw/kisheria/vidakuzi/' },
-        { label: 'Masharti ya Tovuti', href: '/sw/kisheria/masharti/' },
-        { label: 'Ufikiaji', href: '/sw/kisheria/ufikiaji/' },
+        { label: 'Ilani ya Faragha', href: '/en/legal/privacy/', hreflang: 'en' },
+        { label: 'Ilani ya Vidakuzi', href: '/en/legal/cookies/', hreflang: 'en' },
+        { label: 'Masharti ya Tovuti', href: '/en/legal/terms/', hreflang: 'en' },
+        { label: 'Ufikiaji', href: '/en/legal/accessibility/', hreflang: 'en' },
       ],
     },
     contact: {
@@ -108,7 +108,7 @@ const content: Record<string, {
       address: 'Chwezi Core Systems, S.L.P 117385, Kampala, Uganda',
       demo: 'Oma Onyesho',
     },
-    copyright: `Â© ${new Date().getFullYear()} Kraal Code. Haki zote zimehifadhiwa. Bidhaa ya Chwezi Core Systems.`,
+    copyright: `© ${new Date().getFullYear()} Kraal Code. Haki zote zimehifadhiwa. Bidhaa ya Chwezi Core Systems.`,
   },
 };
 
@@ -138,7 +138,7 @@ const localePaths: Record<Locale, string> = {
 
     <div class="footer-links">
       <div class="footer-col">
-        <h4>{t.product.heading}</h4>
+        <h2 class="footer-heading">{t.product.heading}</h2>
         <ul role="list">
           {t.product.links.map((link) => (
             <li><a href={link.href}>{link.label}</a></li>
@@ -147,20 +147,20 @@ const localePaths: Record<Locale, string> = {
       </div>
 
       <div class="footer-col">
-        <h4>{t.legal.heading}</h4>
+        <h2 class="footer-heading">{t.legal.heading}</h2>
         <ul role="list">
           {t.legal.links.map((link) => (
-            <li><a href={link.href}>{link.label}</a></li>
+            <li><a href={link.href} hreflang={link.hreflang}>{link.label}</a></li>
           ))}
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>{t.contact.heading}</h4>
+        <h2 class="footer-heading">{t.contact.heading}</h2>
         <ul role="list">
           <li class="footer-address">{t.contact.address}</li>
           <li><a href={`mailto:${t.contact.email}`}>{t.contact.email}</a></li>
-          <li><a href={`/${locale}/contact/`} class="footer-cta">{t.contact.demo} â†’</a></li>
+          <li><a href={getNavPath(locale, 'contact')} class="footer-cta">{t.contact.demo} →</a></li>
         </ul>
       </div>
     </div>
@@ -170,9 +170,9 @@ const localePaths: Record<Locale, string> = {
     <div class="container footer-bottom-inner">
       <p class="footer-copyright">{t.copyright}</p>
       <div class="footer-lang">
-        <a href={localePaths.en} class:list={[{ active: locale === 'en' }]}>EN</a>
-        <a href={localePaths.fr} class:list={[{ active: locale === 'fr' }]}>FR</a>
-        <a href={localePaths.sw} class:list={[{ active: locale === 'sw' }]}>SW</a>
+        <a href={localePaths.en} hreflang="en" aria-current={locale === 'en' ? 'true' : undefined} class:list={[{ active: locale === 'en' }]}>EN</a>
+        <a href={localePaths.fr} hreflang="fr" aria-current={locale === 'fr' ? 'true' : undefined} class:list={[{ active: locale === 'fr' }]}>FR</a>
+        <a href={localePaths.sw} hreflang="sw" aria-current={locale === 'sw' ? 'true' : undefined} class:list={[{ active: locale === 'sw' }]}>SW</a>
       </div>
     </div>
   </div>
@@ -212,7 +212,7 @@ const localePaths: Record<Locale, string> = {
     gap: var(--kc-space-8);
   }
 
-  .footer-col h4 {
+  .footer-col .footer-heading {
     font-family: var(--kc-font-body);
     font-size: var(--kc-text-sm);
     font-weight: var(--kc-weight-semibold);
@@ -229,6 +229,10 @@ const localePaths: Record<Locale, string> = {
   }
 
   .footer-col a {
+    /* WCAG 2.2 target size (minimum 24px) */
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
     font-size: var(--kc-text-sm);
     color: var(--kc-text-inverse-muted);
     transition: color var(--kc-transition-fast);
